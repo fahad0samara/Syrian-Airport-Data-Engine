@@ -1,0 +1,37 @@
+[
+  {
+    "index": 2,
+    "airportcity": "Erbil",
+    "count": 1
+  },
+  {
+    "index": 3,
+    "airportcity": "Tehran",
+    "count": 1
+  },
+  {
+    "index": 4,
+    "airportcity": "Dubai",
+    "count": 1
+  },
+  {
+    "index": 5,
+    "airportcity": "Najaf",
+    "count": 1
+  },
+  {
+    "index": 6,
+    "airportcity": "Muscat",
+    "count": 1
+  },
+  {
+    "index": 1,
+    "airportcity": "Baghdad",
+    "count": 4
+  },
+  {
+    "index": 0,
+    "airportcity": "Kuwait City",
+    "count": 6
+  }
+]

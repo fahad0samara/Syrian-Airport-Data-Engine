@@ -1,0 +1,5001 @@
+{
+  "pagination": {
+    "limit": 100,
+    "offset": 0,
+    "count": 92,
+    "total": 92
+  },
+  "data": [
+    {
+      "flight_date": "2026-10-10",
+      "flight_status": "scheduled",
+      "departure": {
+        "airport": "Mitiga",
+        "timezone": "Africa/Tripoli",
+        "iata": "MJI",
+        "icao": "HLLM",
+        "terminal": null,
+        "gate": null,
+        "delay": null,
+        "scheduled": "2026-10-10T21:30:00+00:00",
+        "estimated": "2026-10-10T21:30:00+00:00",
+        "actual": null,
+        "estimated_runway": null,
+        "actual_runway": null
+      },
+      "arrival": {
+        "airport": "Damascus International Airport",
+        "timezone": "Asia/Damascus",
+        "iata": "DAM",
+        "icao": "OSDI",
+        "terminal": null,
+        "gate": null,
+        "baggage": null,
+        "scheduled": "2026-10-11T01:15:00+00:00",
+        "delay": null,
+        "estimated": null,
+        "actual": null,
+        "estimated_runway": null,
+        "actual_runway": null
+      },
+      "airline": {
+        "name": "Fly Cham",
+        "iata": null,
+        "icao": "FYC"
+      },
+      "flight": {
+        "number": "362",
+        "iata": null,
+        "icao": "FYC362",
+        "codeshared": null
+      },
+      "aircraft": null,
+      "live": null
+    },
+    {
+      "flight_date": "2026-10-10",
+      "flight_status": "scheduled",
+      "departure": {
+        "airport": "Baghdad International",
+        "timezone": "Asia/Baghdad",
+        "iata": "BGW",
+        "icao": "ORBI",
+        "terminal": null,
+        "gate": null,
+        "delay": null,
+        "scheduled": "2026-10-10T21:00:00+00:00",
+        "estimated": "2026-10-10T21:00:00+00:00",
+        "actual": null,
+        "estimated_runway": null,
+        "actual_runway": null
+      },
+      "arrival": {
+        "airport": "Damascus International Airport",
+        "timezone": "Asia/Damascus",
+        "iata": "DAM",
+        "icao": "OSDI",
+        "terminal": null,
+        "gate": null,
+        "baggage": null,
+        "scheduled": "2026-10-10T22:30:00+00:00",
+        "delay": null,
+        "estimated": null,
+        "actual": null,
+        "estimated_runway": null,
+        "actual_runway": null
+      },
+      "airline": {
+        "name": "Fly Cham",
+        "iata": null,
+        "icao": "FYC"
+      },
+      "flight": {
+        "number": "502",
+        "iata": null,
+        "icao": "FYC502",
+        "codeshared": null
+      },
+      "aircraft": null,
+      "live": null
+    },
+    {
+      "flight_date": "2026-10-10",
+      "flight_status": "active",
+      "departure": {
+        "airport": "Erbil International (irbil Northwest)",
+        "timezone": "Asia/Baghdad",
+        "iata": "EBL",
+        "icao": "ORER",
+        "terminal": null,
+        "gate": null,
+        "delay": 0,
+        "scheduled": "2026-10-10T11:00:00+00:00",
+        "estimated": "2026-10-10T11:00:00+00:00",
+        "actual": "2026-10-10T10:56:00+00:00",
+        "estimated_runway": "2026-10-10T10:56:00+00:00",
+        "actual_runway": "2026-10-10T10:56:00+00:00"
+      },
+      "arrival": {
+        "airport": "Damascus International Airport",
+        "timezone": "Asia/Damascus",
+        "iata": "DAM",
+        "icao": "OSDI",
+        "terminal": null,
+        "gate": null,
+        "baggage": null,
+        "scheduled": "2026-10-10T12:40:00+00:00",
+        "delay": 0,
+        "estimated": "2026-10-10T12:12:00+00:00",
+        "actual": null,
+        "estimated_runway": "2026-10-10T12:12:00+00:00",
+        "actual_runway": null
+      },
+      "airline": {
+        "name": "Dan Air",
+        "iata": "DN",
+        "icao": "FYC"
+      },
+      "flight": {
+        "number": "522",
+        "iata": "DN522",
+        "icao": "FYC522",
+        "codeshared": null
+      },
+      "aircraft": {
+        "registration": null,
+        "iata": null,
+        "icao": null,
+        "icao24": "4A2AAC"
+      },
+      "live": null
+    },
+    {
+      "flight_date": "2026-10-10",
+      "flight_status": "scheduled",
+      "departure": {
+        "airport": "Dubai",
+        "timezone": "Asia/Dubai",
+        "iata": "DXB",
+        "icao": "OMDB",
+        "terminal": "1",
+        "gate": "D1",
+        "delay": 0,
+        "scheduled": "2026-10-10T20:00:00+00:00",
+        "estimated": "2026-10-10T20:00:00+00:00",
+        "actual": null,
+        "estimated_runway": "2026-10-10T19:30:00+00:00",
+        "actual_runway": null
+      },
+      "arrival": {
+        "airport": "Damascus International Airport",
+        "timezone": "Asia/Damascus",
+        "iata": "DAM",
+        "icao": "OSDI",
+        "terminal": null,
+        "gate": null,
+        "baggage": null,
+        "scheduled": "2026-10-10T22:20:00+00:00",
+        "delay": null,
+        "estimated": null,
+        "actual": null,
+        "estimated_runway": null,
+        "actual_runway": null
+      },
+      "airline": {
+        "name": "Fly Cham",
+        "iata": null,
+        "icao": "FYC"
+      },
+      "flight": {
+        "number": "728",
+        "iata": null,
+        "icao": "FYC728",
+        "codeshared": null
+      },
+      "aircraft": null,
+      "live": null
+    },
+    {
+      "flight_date": "2026-10-10",
+      "flight_status": "active",
+      "departure": {
+        "airport": "Sabiha Gokcen",
+        "timezone": "Europe/Istanbul",
+        "iata": "SAW",
+        "icao": "LTFJ",
+        "terminal": null,
+        "gate": "503A",
+        "delay": 22,
+        "scheduled": "2026-10-10T14:50:00+00:00",
+        "estimated": "2026-10-10T14:50:00+00:00",
+        "actual": "2026-10-10T15:12:00+00:00",
+        "estimated_runway": "2026-10-10T15:12:00+00:00",
+        "actual_runway": "2026-10-10T15:12:00+00:00"
+      },
+      "arrival": {
+        "airport": "Damascus International Airport",
+        "timezone": "Asia/Damascus",
+        "iata": "DAM",
+        "icao": "OSDI",
+        "terminal": null,
+        "gate": null,
+        "baggage": null,
+        "scheduled": "2026-10-10T16:50:00+00:00",
+        "delay": 1,
+        "estimated": "2026-10-10T16:51:00+00:00",
+        "actual": null,
+        "estimated_runway": "2026-10-10T16:51:00+00:00",
+        "actual_runway": null
+      },
+      "airline": {
+        "name": "AJet",
+        "iata": "VF",
+        "icao": "TKJ"
+      },
+      "flight": {
+        "number": "317",
+        "iata": "VF317",
+        "icao": "TKJ317",
+        "codeshared": null
+      },
+      "aircraft": {
+        "registration": "TC-JGY",
+        "iata": "B738",
+        "icao": "B738",
+        "icao24": "4BA8F9"
+      },
+      "live": {
+        "updated": "2026-10-10T13:44:43+00:00",
+        "latitude": 36.829,
+        "longitude": 30.7537,
+        "altitude": 2522.22,
+        "direction": 309.67,
+        "speed_horizontal": 887.796,
+        "speed_vertical": -17.568,
+        "is_ground": false
+      }
+    },
+    {
+      "flight_date": "2026-10-10",
+      "flight_status": "landed",
+      "departure": {
+        "airport": "Kuwait International",
+        "timezone": "Asia/Kuwait",
+        "iata": "KWI",
+        "icao": "OKKK",
+        "terminal": "5",
+        "gate": "132",
+        "delay": 10,
+        "scheduled": "2026-10-10T14:25:00+00:00",
+        "estimated": "2026-10-10T14:25:00+00:00",
+        "actual": "2026-10-10T14:35:00+00:00",
+        "estimated_runway": "2026-10-10T14:35:00+00:00",
+        "actual_runway": "2026-10-10T14:35:00+00:00"
+      },
+      "arrival": {
+        "airport": "Damascus International Airport",
+        "timezone": "Asia/Damascus",
+        "iata": "DAM",
+        "icao": "OSDI",
+        "terminal": null,
+        "gate": null,
+        "baggage": null,
+        "scheduled": "2026-10-10T17:00:00+00:00",
+        "delay": 0,
+        "estimated": "2026-10-10T16:38:00+00:00",
+        "actual": "2026-10-10T16:35:00+00:00",
+        "estimated_runway": "2026-10-10T16:35:00+00:00",
+        "actual_runway": "2026-10-10T16:35:00+00:00"
+      },
+      "airline": {
+        "name": "Jazeera Airways",
+        "iata": "J9",
+        "icao": "JZR"
+      },
+      "flight": {
+        "number": "177",
+        "iata": "J9177",
+        "icao": "JZR177",
+        "codeshared": null
+      },
+      "aircraft": {
+        "registration": "9K-CBG",
+        "iata": "A20N",
+        "icao": "A20N",
+        "icao24": "70612D"
+      },
+      "live": null
+    },
+    {
+      "flight_date": "2026-10-10",
+      "flight_status": "scheduled",
+      "departure": {
+        "airport": "Al Jafrah",
+        "timezone": "Asia/Damascus",
+        "iata": "DEZ",
+        "icao": "OSDZ",
+        "terminal": null,
+        "gate": null,
+        "delay": null,
+        "scheduled": "2026-10-10T13:50:00+00:00",
+        "estimated": "2026-10-10T13:50:00+00:00",
+        "actual": null,
+        "estimated_runway": null,
+        "actual_runway": null
+      },
+      "arrival": {
+        "airport": "Damascus International Airport",
+        "timezone": "Asia/Damascus",
+        "iata": "DAM",
+        "icao": "OSDI",
+        "terminal": null,
+        "gate": null,
+        "baggage": null,
+        "scheduled": "2026-10-10T14:50:00+00:00",
+        "delay": null,
+        "estimated": null,
+        "actual": null,
+        "estimated_runway": null,
+        "actual_runway": null
+      },
+      "airline": {
+        "name": "Syrian Air",
+        "iata": "RB",
+        "icao": "SYR"
+      },
+      "flight": {
+        "number": "134",
+        "iata": "RB134",
+        "icao": "SYR134",
+        "codeshared": null
+      },
+      "aircraft": null,
+      "live": null
+    },
+    {
+      "flight_date": "2026-10-10",
+      "flight_status": "landed",
+      "departure": {
+        "airport": "Queen Alia International",
+        "timezone": "Asia/Amman",
+        "iata": "AMM",
+        "icao": "OJAI",
+        "terminal": null,
+        "gate": null,
+        "delay": 14,
+        "scheduled": "2026-10-10T14:00:00+00:00",
+        "estimated": "2026-10-10T14:00:00+00:00",
+        "actual": "2026-10-10T14:14:00+00:00",
+        "estimated_runway": "2026-10-10T14:14:00+00:00",
+        "actual_runway": "2026-10-10T14:14:00+00:00"
+      },
+      "arrival": {
+        "airport": "Damascus International Airport",
+        "timezone": "Asia/Damascus",
+        "iata": "DAM",
+        "icao": "OSDI",
+        "terminal": null,
+        "gate": null,
+        "baggage": null,
+        "scheduled": "2026-10-10T14:55:00+00:00",
+        "delay": 0,
+        "estimated": null,
+        "actual": "2026-10-10T14:45:00+00:00",
+        "estimated_runway": "2026-10-10T14:45:00+00:00",
+        "actual_runway": "2026-10-10T14:45:00+00:00"
+      },
+      "airline": {
+        "name": "Royal Jordanian",
+        "iata": "RJ",
+        "icao": "RJA"
+      },
+      "flight": {
+        "number": "437",
+        "iata": "RJ437",
+        "icao": "RJA437",
+        "codeshared": null
+      },
+      "aircraft": {
+        "registration": null,
+        "iata": null,
+        "icao": null,
+        "icao24": "7448A7"
+      },
+      "live": null
+    },
+    {
+      "flight_date": "2026-10-10",
+      "flight_status": "landed",
+      "departure": {
+        "airport": "Queen Alia International",
+        "timezone": "Asia/Amman",
+        "iata": "AMM",
+        "icao": "OJAI",
+        "terminal": null,
+        "gate": null,
+        "delay": 14,
+        "scheduled": "2026-10-10T14:00:00+00:00",
+        "estimated": "2026-10-10T14:00:00+00:00",
+        "actual": "2026-10-10T14:14:00+00:00",
+        "estimated_runway": "2026-10-10T14:14:00+00:00",
+        "actual_runway": "2026-10-10T14:14:00+00:00"
+      },
+      "arrival": {
+        "airport": "Damascus International Airport",
+        "timezone": "Asia/Damascus",
+        "iata": "DAM",
+        "icao": "OSDI",
+        "terminal": null,
+        "gate": null,
+        "baggage": null,
+        "scheduled": "2026-10-10T14:55:00+00:00",
+        "delay": 0,
+        "estimated": null,
+        "actual": "2026-10-10T14:45:00+00:00",
+        "estimated_runway": "2026-10-10T14:45:00+00:00",
+        "actual_runway": "2026-10-10T14:45:00+00:00"
+      },
+      "airline": {
+        "name": "Oman Air",
+        "iata": "WY",
+        "icao": "OMA"
+      },
+      "flight": {
+        "number": "5233",
+        "iata": "WY5233",
+        "icao": "OMA5233",
+        "codeshared": {
+          "airline_name": "royal jordanian",
+          "airline_iata": "rj",
+          "airline_icao": "rja",
+          "flight_number": "437",
+          "flight_iata": "rj437",
+          "flight_icao": "rja437"
+        }
+      },
+      "aircraft": {
+        "registration": null,
+        "iata": null,
+        "icao": null,
+        "icao24": "7448A7"
+      },
+      "live": null
+    },
+    {
+      "flight_date": "2026-10-10",
+      "flight_status": "landed",
+      "departure": {
+        "airport": "Queen Alia International",
+        "timezone": "Asia/Amman",
+        "iata": "AMM",
+        "icao": "OJAI",
+        "terminal": null,
+        "gate": null,
+        "delay": 14,
+        "scheduled": "2026-10-10T14:00:00+00:00",
+        "estimated": "2026-10-10T14:00:00+00:00",
+        "actual": "2026-10-10T14:14:00+00:00",
+        "estimated_runway": "2026-10-10T14:14:00+00:00",
+        "actual_runway": "2026-10-10T14:14:00+00:00"
+      },
+      "arrival": {
+        "airport": "Damascus International Airport",
+        "timezone": "Asia/Damascus",
+        "iata": "DAM",
+        "icao": "OSDI",
+        "terminal": null,
+        "gate": null,
+        "baggage": null,
+        "scheduled": "2026-10-10T14:55:00+00:00",
+        "delay": 0,
+        "estimated": null,
+        "actual": "2026-10-10T14:45:00+00:00",
+        "estimated_runway": "2026-10-10T14:45:00+00:00",
+        "actual_runway": "2026-10-10T14:45:00+00:00"
+      },
+      "airline": {
+        "name": "Qatar Airways",
+        "iata": "QR",
+        "icao": "QTR"
+      },
+      "flight": {
+        "number": "6119",
+        "iata": "QR6119",
+        "icao": "QTR6119",
+        "codeshared": {
+          "airline_name": "royal jordanian",
+          "airline_iata": "rj",
+          "airline_icao": "rja",
+          "flight_number": "437",
+          "flight_iata": "rj437",
+          "flight_icao": "rja437"
+        }
+      },
+      "aircraft": {
+        "registration": null,
+        "iata": null,
+        "icao": null,
+        "icao24": "7448A7"
+      },
+      "live": null
+    },
+    {
+      "flight_date": "2026-10-10",
+      "flight_status": "active",
+      "departure": {
+        "airport": "Sharjah",
+        "timezone": "Asia/Dubai",
+        "iata": "SHJ",
+        "icao": "OMSJ",
+        "terminal": null,
+        "gate": null,
+        "delay": 14,
+        "scheduled": "2026-10-10T15:00:00+00:00",
+        "estimated": "2026-10-10T15:00:00+00:00",
+        "actual": "2026-10-10T15:14:00+00:00",
+        "estimated_runway": "2026-10-10T15:14:00+00:00",
+        "actual_runway": "2026-10-10T15:14:00+00:00"
+      },
+      "arrival": {
+        "airport": "Damascus International Airport",
+        "timezone": "Asia/Damascus",
+        "iata": "DAM",
+        "icao": "OSDI",
+        "terminal": null,
+        "gate": null,
+        "baggage": null,
+        "scheduled": "2026-10-10T17:15:00+00:00",
+        "delay": 0,
+        "estimated": "2026-10-10T17:09:00+00:00",
+        "actual": null,
+        "estimated_runway": "2026-10-10T17:09:00+00:00",
+        "actual_runway": null
+      },
+      "airline": {
+        "name": "Fly Cham",
+        "iata": null,
+        "icao": "FYC"
+      },
+      "flight": {
+        "number": "744",
+        "iata": null,
+        "icao": "FYC744",
+        "codeshared": null
+      },
+      "aircraft": {
+        "registration": null,
+        "iata": null,
+        "icao": null,
+        "icao24": "778823"
+      },
+      "live": null
+    },
+    {
+      "flight_date": "2026-10-10",
+      "flight_status": "scheduled",
+      "departure": {
+        "airport": "King Khaled International",
+        "timezone": "Asia/Riyadh",
+        "iata": "RUH",
+        "icao": "OERK",
+        "terminal": "1",
+        "gate": "133",
+        "delay": 61,
+        "scheduled": "2026-10-10T14:00:00+00:00",
+        "estimated": "2026-10-10T14:00:00+00:00",
+        "actual": null,
+        "estimated_runway": "2026-10-10T15:01:00+00:00",
+        "actual_runway": null
+      },
+      "arrival": {
+        "airport": "Damascus International Airport",
+        "timezone": "Asia/Damascus",
+        "iata": "DAM",
+        "icao": "OSDI",
+        "terminal": null,
+        "gate": null,
+        "baggage": null,
+        "scheduled": "2026-10-10T16:15:00+00:00",
+        "delay": null,
+        "estimated": null,
+        "actual": null,
+        "estimated_runway": null,
+        "actual_runway": null
+      },
+      "airline": {
+        "name": "flynas",
+        "iata": "XY",
+        "icao": "KNE"
+      },
+      "flight": {
+        "number": "377",
+        "iata": "XY377",
+        "icao": "KNE377",
+        "codeshared": null
+      },
+      "aircraft": {
+        "registration": null,
+        "iata": null,
+        "icao": null,
+        "icao24": "711542"
+      },
+      "live": null
+    },
+    {
+      "flight_date": "2026-10-10",
+      "flight_status": "scheduled",
+      "departure": {
+        "airport": "King Khaled International",
+        "timezone": "Asia/Riyadh",
+        "iata": "RUH",
+        "icao": "OERK",
+        "terminal": "1",
+        "gate": "133",
+        "delay": 61,
+        "scheduled": "2026-10-10T14:00:00+00:00",
+        "estimated": "2026-10-10T14:00:00+00:00",
+        "actual": null,
+        "estimated_runway": "2026-10-10T15:01:00+00:00",
+        "actual_runway": null
+      },
+      "arrival": {
+        "airport": "Damascus International Airport",
+        "timezone": "Asia/Damascus",
+        "iata": "DAM",
+        "icao": "OSDI",
+        "terminal": null,
+        "gate": null,
+        "baggage": null,
+        "scheduled": "2026-10-10T16:15:00+00:00",
+        "delay": null,
+        "estimated": null,
+        "actual": null,
+        "estimated_runway": null,
+        "actual_runway": null
+      },
+      "airline": {
+        "name": "Gulf Air",
+        "iata": "GF",
+        "icao": "GFA"
+      },
+      "flight": {
+        "number": "5952",
+        "iata": "GF5952",
+        "icao": "GFA5952",
+        "codeshared": {
+          "airline_name": "flynas",
+          "airline_iata": "xy",
+          "airline_icao": "kne",
+          "flight_number": "377",
+          "flight_iata": "xy377",
+          "flight_icao": "kne377"
+        }
+      },
+      "aircraft": {
+        "registration": null,
+        "iata": null,
+        "icao": null,
+        "icao24": "711542"
+      },
+      "live": null
+    },
+    {
+      "flight_date": "2026-10-10",
+      "flight_status": "landed",
+      "departure": {
+        "airport": "Kuwait International",
+        "timezone": "Asia/Kuwait",
+        "iata": "KWI",
+        "icao": "OKKK",
+        "terminal": "4",
+        "gate": "79",
+        "delay": 0,
+        "scheduled": "2026-10-10T13:30:00+00:00",
+        "estimated": "2026-10-10T13:30:00+00:00",
+        "actual": "2026-10-10T13:26:00+00:00",
+        "estimated_runway": "2026-10-10T13:26:00+00:00",
+        "actual_runway": "2026-10-10T13:26:00+00:00"
+      },
+      "arrival": {
+        "airport": "Damascus International Airport",
+        "timezone": "Asia/Damascus",
+        "iata": "DAM",
+        "icao": "OSDI",
+        "terminal": null,
+        "gate": null,
+        "baggage": null,
+        "scheduled": "2026-10-10T16:35:00+00:00",
+        "delay": 0,
+        "estimated": "2026-10-10T15:29:00+00:00",
+        "actual": "2026-10-10T15:27:00+00:00",
+        "estimated_runway": "2026-10-10T15:27:00+00:00",
+        "actual_runway": "2026-10-10T15:27:00+00:00"
+      },
+      "airline": {
+        "name": "Fly Cham",
+        "iata": null,
+        "icao": "FYC"
+      },
+      "flight": {
+        "number": "702",
+        "iata": null,
+        "icao": "FYC702",
+        "codeshared": null
+      },
+      "aircraft": {
+        "registration": null,
+        "iata": null,
+        "icao": null,
+        "icao24": "778821"
+      },
+      "live": null
+    },
+    {
+      "flight_date": "2026-10-10",
+      "flight_status": "landed",
+      "departure": {
+        "airport": "Vienna International",
+        "timezone": "Europe/Vienna",
+        "iata": "VIE",
+        "icao": "LOWW",
+        "terminal": null,
+        "gate": null,
+        "delay": 22,
+        "scheduled": "2026-10-10T12:00:00+00:00",
+        "estimated": "2026-10-10T12:00:00+00:00",
+        "actual": "2026-10-10T12:22:00+00:00",
+        "estimated_runway": "2026-10-10T12:22:00+00:00",
+        "actual_runway": "2026-10-10T12:22:00+00:00"
+      },
+      "arrival": {
+        "airport": "Damascus International Airport",
+        "timezone": "Asia/Damascus",
+        "iata": "DAM",
+        "icao": "OSDI",
+        "terminal": null,
+        "gate": null,
+        "baggage": null,
+        "scheduled": "2026-10-10T16:20:00+00:00",
+        "delay": 23,
+        "estimated": "2026-10-10T16:36:00+00:00",
+        "actual": "2026-10-10T16:43:00+00:00",
+        "estimated_runway": "2026-10-10T16:43:00+00:00",
+        "actual_runway": "2026-10-10T16:43:00+00:00"
+      },
+      "airline": {
+        "name": "Syrian Air",
+        "iata": "RB",
+        "icao": "SYR"
+      },
+      "flight": {
+        "number": "273",
+        "iata": "RB273",
+        "icao": "SYR273",
+        "codeshared": null
+      },
+      "aircraft": {
+        "registration": "LY-MAU",
+        "iata": "A320",
+        "icao": "A320",
+        "icao24": "503D4D"
+      },
+      "live": null
+    },
+    {
+      "flight_date": "2026-10-10",
+      "flight_status": "landed",
+      "departure": {
+        "airport": "King Abdulaziz International",
+        "timezone": "Asia/Riyadh",
+        "iata": "JED",
+        "icao": "OEJN",
+        "terminal": "1",
+        "gate": "A24A",
+        "delay": 17,
+        "scheduled": "2026-10-10T13:00:00+00:00",
+        "estimated": "2026-10-10T13:00:00+00:00",
+        "actual": "2026-10-10T13:17:00+00:00",
+        "estimated_runway": "2026-10-10T13:17:00+00:00",
+        "actual_runway": "2026-10-10T13:17:00+00:00"
+      },
+      "arrival": {
+        "airport": "Damascus International Airport",
+        "timezone": "Asia/Damascus",
+        "iata": "DAM",
+        "icao": "OSDI",
+        "terminal": null,
+        "gate": null,
+        "baggage": null,
+        "scheduled": "2026-10-10T15:10:00+00:00",
+        "delay": 0,
+        "estimated": "2026-10-10T15:09:00+00:00",
+        "actual": "2026-10-10T15:09:00+00:00",
+        "estimated_runway": "2026-10-10T15:09:00+00:00",
+        "actual_runway": "2026-10-10T15:09:00+00:00"
+      },
+      "airline": {
+        "name": "flynas",
+        "iata": "XY",
+        "icao": "KNE"
+      },
+      "flight": {
+        "number": "591",
+        "iata": "XY591",
+        "icao": "KNE591",
+        "codeshared": null
+      },
+      "aircraft": {
+        "registration": "HZ-NS55",
+        "iata": "A20N",
+        "icao": "A20N",
+        "icao24": "717CC7"
+      },
+      "live": null
+    },
+    {
+      "flight_date": "2026-10-10",
+      "flight_status": "active",
+      "departure": {
+        "airport": "Doha International",
+        "timezone": "Asia/Qatar",
+        "iata": "DOH",
+        "icao": "OTHH",
+        "terminal": null,
+        "gate": "A8",
+        "delay": 21,
+        "scheduled": "2026-10-10T12:30:00+00:00",
+        "estimated": "2026-10-10T12:30:00+00:00",
+        "actual": "2026-10-10T12:51:00+00:00",
+        "estimated_runway": "2026-10-10T12:51:00+00:00",
+        "actual_runway": "2026-10-10T12:51:00+00:00"
+      },
+      "arrival": {
+        "airport": "Damascus International Airport",
+        "timezone": "Asia/Damascus",
+        "iata": "DAM",
+        "icao": "OSDI",
+        "terminal": null,
+        "gate": null,
+        "baggage": null,
+        "scheduled": "2026-10-10T15:45:00+00:00",
+        "delay": 0,
+        "estimated": "2026-10-10T15:15:00+00:00",
+        "actual": "2026-10-10T15:16:00+00:00",
+        "estimated_runway": "2026-10-10T15:15:00+00:00",
+        "actual_runway": "2026-10-10T15:16:00+00:00"
+      },
+      "airline": {
+        "name": "Syrian Air",
+        "iata": "RB",
+        "icao": "SYR"
+      },
+      "flight": {
+        "number": "522",
+        "iata": "RB522",
+        "icao": "SYR522",
+        "codeshared": null
+      },
+      "aircraft": {
+        "registration": "YK-AKG",
+        "iata": "A320",
+        "icao": "A320",
+        "icao24": "778567"
+      },
+      "live": {
+        "updated": "2026-10-10T12:02:24+00:00",
+        "latitude": 33.356,
+        "longitude": 38.2353,
+        "altitude": 8671.56,
+        "direction": 332,
+        "speed_horizontal": 807.472,
+        "speed_vertical": 0,
+        "is_ground": false
+      }
+    },
+    {
+      "flight_date": "2026-10-10",
+      "flight_status": "scheduled",
+      "departure": {
+        "airport": "Schiphol",
+        "timezone": "Europe/Amsterdam",
+        "iata": "AMS",
+        "icao": "EHAM",
+        "terminal": null,
+        "gate": null,
+        "delay": null,
+        "scheduled": "2026-10-10T10:20:00+00:00",
+        "estimated": "2026-10-10T10:20:00+00:00",
+        "actual": null,
+        "estimated_runway": null,
+        "actual_runway": null
+      },
+      "arrival": {
+        "airport": "Damascus International Airport",
+        "timezone": "Asia/Damascus",
+        "iata": "DAM",
+        "icao": "OSDI",
+        "terminal": null,
+        "gate": null,
+        "baggage": null,
+        "scheduled": "2026-10-10T16:20:00+00:00",
+        "delay": null,
+        "estimated": null,
+        "actual": null,
+        "estimated_runway": null,
+        "actual_runway": null
+      },
+      "airline": {
+        "name": "Syrian Air",
+        "iata": "RB",
+        "icao": "SYR"
+      },
+      "flight": {
+        "number": "271",
+        "iata": "RB271",
+        "icao": "SYR271",
+        "codeshared": null
+      },
+      "aircraft": null,
+      "live": null
+    },
+    {
+      "flight_date": "2026-10-10",
+      "flight_status": "active",
+      "departure": {
+        "airport": "Dubai",
+        "timezone": "Asia/Dubai",
+        "iata": "DXB",
+        "icao": "OMDB",
+        "terminal": "3",
+        "gate": "B4",
+        "delay": 27,
+        "scheduled": "2026-10-10T13:00:00+00:00",
+        "estimated": "2026-10-10T13:00:00+00:00",
+        "actual": "2026-10-10T13:27:00+00:00",
+        "estimated_runway": "2026-10-10T13:27:00+00:00",
+        "actual_runway": "2026-10-10T13:27:00+00:00"
+      },
+      "arrival": {
+        "airport": "Damascus International Airport",
+        "timezone": "Asia/Damascus",
+        "iata": "DAM",
+        "icao": "OSDI",
+        "terminal": null,
+        "gate": null,
+        "baggage": null,
+        "scheduled": "2026-10-10T15:15:00+00:00",
+        "delay": 3,
+        "estimated": "2026-10-10T15:18:00+00:00",
+        "actual": "2026-10-10T15:18:00+00:00",
+        "estimated_runway": "2026-10-10T15:18:00+00:00",
+        "actual_runway": "2026-10-10T15:18:00+00:00"
+      },
+      "airline": {
+        "name": "flydubai",
+        "iata": "FZ",
+        "icao": "FDB"
+      },
+      "flight": {
+        "number": "1113",
+        "iata": "FZ1113",
+        "icao": "FDB1113",
+        "codeshared": null
+      },
+      "aircraft": {
+        "registration": "A6-FEC",
+        "iata": "B738",
+        "icao": "B738",
+        "icao24": "896334"
+      },
+      "live": {
+        "updated": "2026-10-10T12:10:53+00:00",
+        "latitude": 33.4345,
+        "longitude": 37.8494,
+        "altitude": 7475.22,
+        "direction": 266,
+        "speed_horizontal": 674.128,
+        "speed_vertical": 0,
+        "is_ground": false
+      }
+    },
+    {
+      "flight_date": "2026-10-10",
+      "flight_status": "active",
+      "departure": {
+        "airport": "Dubai",
+        "timezone": "Asia/Dubai",
+        "iata": "DXB",
+        "icao": "OMDB",
+        "terminal": "3",
+        "gate": "B4",
+        "delay": 27,
+        "scheduled": "2026-10-10T13:00:00+00:00",
+        "estimated": "2026-10-10T13:00:00+00:00",
+        "actual": "2026-10-10T13:27:00+00:00",
+        "estimated_runway": "2026-10-10T13:27:00+00:00",
+        "actual_runway": "2026-10-10T13:27:00+00:00"
+      },
+      "arrival": {
+        "airport": "Damascus International Airport",
+        "timezone": "Asia/Damascus",
+        "iata": "DAM",
+        "icao": "OSDI",
+        "terminal": null,
+        "gate": null,
+        "baggage": null,
+        "scheduled": "2026-10-10T15:15:00+00:00",
+        "delay": 3,
+        "estimated": "2026-10-10T15:18:00+00:00",
+        "actual": "2026-10-10T15:18:00+00:00",
+        "estimated_runway": "2026-10-10T15:18:00+00:00",
+        "actual_runway": "2026-10-10T15:18:00+00:00"
+      },
+      "airline": {
+        "name": "Emirates",
+        "iata": "EK",
+        "icao": "UAE"
+      },
+      "flight": {
+        "number": "2212",
+        "iata": "EK2212",
+        "icao": "UAE2212",
+        "codeshared": {
+          "airline_name": "flydubai",
+          "airline_iata": "fz",
+          "airline_icao": "fdb",
+          "flight_number": "1113",
+          "flight_iata": "fz1113",
+          "flight_icao": "fdb1113"
+        }
+      },
+      "aircraft": {
+        "registration": null,
+        "iata": null,
+        "icao": null,
+        "icao24": "896334"
+      },
+      "live": {
+        "updated": "2026-10-10T12:10:53+00:00",
+        "latitude": 33.4345,
+        "longitude": 37.8494,
+        "altitude": 7475.22,
+        "direction": 266,
+        "speed_horizontal": 674.128,
+        "speed_vertical": 0,
+        "is_ground": false
+      }
+    },
+    {
+      "flight_date": "2026-10-10",
+      "flight_status": "active",
+      "departure": {
+        "airport": "Dubai",
+        "timezone": "Asia/Dubai",
+        "iata": "DXB",
+        "icao": "OMDB",
+        "terminal": "1",
+        "gate": "D17",
+        "delay": 25,
+        "scheduled": "2026-10-10T13:00:00+00:00",
+        "estimated": "2026-10-10T13:00:00+00:00",
+        "actual": "2026-10-10T13:25:00+00:00",
+        "estimated_runway": "2026-10-10T13:25:00+00:00",
+        "actual_runway": "2026-10-10T13:25:00+00:00"
+      },
+      "arrival": {
+        "airport": "Damascus International Airport",
+        "timezone": "Asia/Damascus",
+        "iata": "DAM",
+        "icao": "OSDI",
+        "terminal": null,
+        "gate": null,
+        "baggage": null,
+        "scheduled": "2026-10-10T15:40:00+00:00",
+        "delay": 0,
+        "estimated": "2026-10-10T15:09:00+00:00",
+        "actual": "2026-10-10T15:06:00+00:00",
+        "estimated_runway": "2026-10-10T15:09:00+00:00",
+        "actual_runway": "2026-10-10T15:06:00+00:00"
+      },
+      "airline": {
+        "name": "Syrian Air",
+        "iata": "RB",
+        "icao": "SYR"
+      },
+      "flight": {
+        "number": "516",
+        "iata": "RB516",
+        "icao": "SYR516",
+        "codeshared": null
+      },
+      "aircraft": {
+        "registration": "YK-AKI",
+        "iata": "A320",
+        "icao": "A320",
+        "icao24": "778569"
+      },
+      "live": {
+        "updated": "2026-10-10T12:00:53+00:00",
+        "latitude": 33.3355,
+        "longitude": 37.8761,
+        "altitude": 7513.32,
+        "direction": 307,
+        "speed_horizontal": 842.66,
+        "speed_vertical": 0,
+        "is_ground": false
+      }
+    },
+    {
+      "flight_date": "2026-10-10",
+      "flight_status": "scheduled",
+      "departure": {
+        "airport": "Kuwait International",
+        "timezone": "Asia/Kuwait",
+        "iata": "KWI",
+        "icao": "OKKK",
+        "terminal": null,
+        "gate": null,
+        "delay": null,
+        "scheduled": "2026-10-10T10:30:00+00:00",
+        "estimated": "2026-10-10T10:30:00+00:00",
+        "actual": null,
+        "estimated_runway": null,
+        "actual_runway": null
+      },
+      "arrival": {
+        "airport": "Damascus International Airport",
+        "timezone": "Asia/Damascus",
+        "iata": "DAM",
+        "icao": "OSDI",
+        "terminal": null,
+        "gate": null,
+        "baggage": null,
+        "scheduled": "2026-10-10T12:50:00+00:00",
+        "delay": null,
+        "estimated": null,
+        "actual": null,
+        "estimated_runway": null,
+        "actual_runway": null
+      },
+      "airline": {
+        "name": "Syrian Air",
+        "iata": "RB",
+        "icao": "SYR"
+      },
+      "flight": {
+        "number": "342",
+        "iata": "RB342",
+        "icao": "SYR342",
+        "codeshared": null
+      },
+      "aircraft": null,
+      "live": null
+    },
+    {
+      "flight_date": "2026-10-10",
+      "flight_status": "active",
+      "departure": {
+        "airport": "Erbil International (irbil Northwest)",
+        "timezone": "Asia/Baghdad",
+        "iata": "EBL",
+        "icao": "ORER",
+        "terminal": null,
+        "gate": null,
+        "delay": null,
+        "scheduled": "2026-10-10T11:00:00+00:00",
+        "estimated": "2026-10-10T11:00:00+00:00",
+        "actual": null,
+        "estimated_runway": null,
+        "actual_runway": null
+      },
+      "arrival": {
+        "airport": "Damascus International Airport",
+        "timezone": "Asia/Damascus",
+        "iata": "DAM",
+        "icao": "OSDI",
+        "terminal": null,
+        "gate": null,
+        "baggage": null,
+        "scheduled": "2026-10-10T12:40:00+00:00",
+        "delay": null,
+        "estimated": null,
+        "actual": null,
+        "estimated_runway": null,
+        "actual_runway": null
+      },
+      "airline": {
+        "name": "Fly Cham",
+        "iata": null,
+        "icao": "FYC"
+      },
+      "flight": {
+        "number": "522",
+        "iata": null,
+        "icao": "FYC522",
+        "codeshared": null
+      },
+      "aircraft": null,
+      "live": null
+    },
+    {
+      "flight_date": "2026-10-10",
+      "flight_status": "landed",
+      "departure": {
+        "airport": "King Khaled International",
+        "timezone": "Asia/Riyadh",
+        "iata": "RUH",
+        "icao": "OERK",
+        "terminal": "1",
+        "gate": "133",
+        "delay": 64,
+        "scheduled": "2026-10-10T09:25:00+00:00",
+        "estimated": "2026-10-10T09:25:00+00:00",
+        "actual": "2026-10-10T10:29:00+00:00",
+        "estimated_runway": "2026-10-10T10:29:00+00:00",
+        "actual_runway": "2026-10-10T10:29:00+00:00"
+      },
+      "arrival": {
+        "airport": "Damascus International Airport",
+        "timezone": "Asia/Damascus",
+        "iata": "DAM",
+        "icao": "OSDI",
+        "terminal": null,
+        "gate": null,
+        "baggage": null,
+        "scheduled": "2026-10-10T11:55:00+00:00",
+        "delay": 29,
+        "estimated": "2026-10-10T12:23:00+00:00",
+        "actual": "2026-10-10T12:24:00+00:00",
+        "estimated_runway": "2026-10-10T12:24:00+00:00",
+        "actual_runway": "2026-10-10T12:24:00+00:00"
+      },
+      "airline": {
+        "name": "flyadeal",
+        "iata": "F3",
+        "icao": "FAD"
+      },
+      "flight": {
+        "number": "561",
+        "iata": "F3561",
+        "icao": "FAD561",
+        "codeshared": null
+      },
+      "aircraft": {
+        "registration": "HZ-FAM",
+        "iata": "A20N",
+        "icao": "A20N",
+        "icao24": "710DC6"
+      },
+      "live": null
+    },
+    {
+      "flight_date": "2026-10-10",
+      "flight_status": "landed",
+      "departure": {
+        "airport": "King Khaled International",
+        "timezone": "Asia/Riyadh",
+        "iata": "RUH",
+        "icao": "OERK",
+        "terminal": "1",
+        "gate": "133",
+        "delay": 64,
+        "scheduled": "2026-10-10T09:25:00+00:00",
+        "estimated": "2026-10-10T09:25:00+00:00",
+        "actual": "2026-10-10T10:29:00+00:00",
+        "estimated_runway": "2026-10-10T10:29:00+00:00",
+        "actual_runway": "2026-10-10T10:29:00+00:00"
+      },
+      "arrival": {
+        "airport": "Damascus International Airport",
+        "timezone": "Asia/Damascus",
+        "iata": "DAM",
+        "icao": "OSDI",
+        "terminal": null,
+        "gate": null,
+        "baggage": null,
+        "scheduled": "2026-10-10T11:55:00+00:00",
+        "delay": 29,
+        "estimated": "2026-10-10T12:23:00+00:00",
+        "actual": "2026-10-10T12:24:00+00:00",
+        "estimated_runway": "2026-10-10T12:24:00+00:00",
+        "actual_runway": "2026-10-10T12:24:00+00:00"
+      },
+      "airline": {
+        "name": "Saudia",
+        "iata": "SV",
+        "icao": "SVA"
+      },
+      "flight": {
+        "number": "4037",
+        "iata": "SV4037",
+        "icao": "SVA4037",
+        "codeshared": {
+          "airline_name": "flyadeal",
+          "airline_iata": "f3",
+          "airline_icao": "fad",
+          "flight_number": "561",
+          "flight_iata": "f3561",
+          "flight_icao": "fad561"
+        }
+      },
+      "aircraft": {
+        "registration": null,
+        "iata": null,
+        "icao": null,
+        "icao24": "710DC6"
+      },
+      "live": null
+    },
+    {
+      "flight_date": "2026-10-10",
+      "flight_status": "active",
+      "departure": {
+        "airport": "Sharjah",
+        "timezone": "Asia/Dubai",
+        "iata": "SHJ",
+        "icao": "OMSJ",
+        "terminal": null,
+        "gate": null,
+        "delay": 19,
+        "scheduled": "2026-10-10T10:45:00+00:00",
+        "estimated": "2026-10-10T10:45:00+00:00",
+        "actual": "2026-10-10T11:04:00+00:00",
+        "estimated_runway": "2026-10-10T11:04:00+00:00",
+        "actual_runway": "2026-10-10T11:04:00+00:00"
+      },
+      "arrival": {
+        "airport": "Damascus International Airport",
+        "timezone": "Asia/Damascus",
+        "iata": "DAM",
+        "icao": "OSDI",
+        "terminal": null,
+        "gate": null,
+        "baggage": null,
+        "scheduled": "2026-10-10T12:55:00+00:00",
+        "delay": 6,
+        "estimated": "2026-10-10T13:01:00+00:00",
+        "actual": null,
+        "estimated_runway": "2026-10-10T13:01:00+00:00",
+        "actual_runway": null
+      },
+      "airline": {
+        "name": "Air Arabia",
+        "iata": "G9",
+        "icao": "ABY"
+      },
+      "flight": {
+        "number": "375",
+        "iata": "G9375",
+        "icao": "ABY375",
+        "codeshared": null
+      },
+      "aircraft": {
+        "registration": "A6-ANQ",
+        "iata": "A320",
+        "icao": "A320",
+        "icao24": "896372"
+      },
+      "live": {
+        "updated": "2026-10-10T09:53:20+00:00",
+        "latitude": 33.5507,
+        "longitude": 37.8402,
+        "altitude": 7094.22,
+        "direction": 293,
+        "speed_horizontal": 687.092,
+        "speed_vertical": 0,
+        "is_ground": false
+      }
+    },
+    {
+      "flight_date": "2026-10-10",
+      "flight_status": "landed",
+      "departure": {
+        "airport": "Kuwait International",
+        "timezone": "Asia/Kuwait",
+        "iata": "KWI",
+        "icao": "OKKK",
+        "terminal": "5",
+        "gate": "132",
+        "delay": 8,
+        "scheduled": "2026-10-10T09:25:00+00:00",
+        "estimated": "2026-10-10T09:25:00+00:00",
+        "actual": "2026-10-10T09:33:00+00:00",
+        "estimated_runway": "2026-10-10T09:33:00+00:00",
+        "actual_runway": "2026-10-10T09:33:00+00:00"
+      },
+      "arrival": {
+        "airport": "Damascus International Airport",
+        "timezone": "Asia/Damascus",
+        "iata": "DAM",
+        "icao": "OSDI",
+        "terminal": null,
+        "gate": null,
+        "baggage": null,
+        "scheduled": "2026-10-10T12:00:00+00:00",
+        "delay": 0,
+        "estimated": "2026-10-10T11:30:00+00:00",
+        "actual": "2026-10-10T11:28:00+00:00",
+        "estimated_runway": "2026-10-10T11:28:00+00:00",
+        "actual_runway": "2026-10-10T11:28:00+00:00"
+      },
+      "airline": {
+        "name": "Jazeera Airways",
+        "iata": "J9",
+        "icao": "JZR"
+      },
+      "flight": {
+        "number": "173",
+        "iata": "J9173",
+        "icao": "JZR173",
+        "codeshared": null
+      },
+      "aircraft": {
+        "registration": "9K-CBE",
+        "iata": "A20N",
+        "icao": "A20N",
+        "icao24": "70612C"
+      },
+      "live": null
+    },
+    {
+      "flight_date": "2026-10-10",
+      "flight_status": "scheduled",
+      "departure": {
+        "airport": "Kuwait International",
+        "timezone": "Asia/Kuwait",
+        "iata": "KWI",
+        "icao": "OKKK",
+        "terminal": "4",
+        "gate": "56B",
+        "delay": 0,
+        "scheduled": "2026-10-10T11:10:00+00:00",
+        "estimated": "2026-10-10T11:10:00+00:00",
+        "actual": "2026-10-10T09:40:00+00:00",
+        "estimated_runway": null,
+        "actual_runway": "2026-10-10T09:40:00+00:00"
+      },
+      "arrival": {
+        "airport": "Damascus International Airport",
+        "timezone": "Asia/Damascus",
+        "iata": "DAM",
+        "icao": "OSDI",
+        "terminal": null,
+        "gate": null,
+        "baggage": null,
+        "scheduled": "2026-10-10T13:40:00+00:00",
+        "delay": 0,
+        "estimated": null,
+        "actual": "2026-10-10T11:36:00+00:00",
+        "estimated_runway": null,
+        "actual_runway": "2026-10-10T11:36:00+00:00"
+      },
+      "airline": {
+        "name": "Kuwait Airways",
+        "iata": "KU",
+        "icao": "KAC"
+      },
+      "flight": {
+        "number": "551",
+        "iata": "KU551",
+        "icao": "KAC551",
+        "codeshared": null
+      },
+      "aircraft": {
+        "registration": "9K-AKP",
+        "iata": "A20N",
+        "icao": "A20N",
+        "icao24": "706069"
+      },
+      "live": {
+        "updated": "2026-10-10T08:35:27+00:00",
+        "latitude": 33.4175,
+        "longitude": 37.4199,
+        "altitude": 5913.12,
+        "direction": 266,
+        "speed_horizontal": 729.688,
+        "speed_vertical": 0,
+        "is_ground": false
+      }
+    },
+    {
+      "flight_date": "2026-10-10",
+      "flight_status": "scheduled",
+      "departure": {
+        "airport": "King Khaled International",
+        "timezone": "Asia/Riyadh",
+        "iata": "RUH",
+        "icao": "OERK",
+        "terminal": "1",
+        "gate": "106",
+        "delay": 95,
+        "scheduled": "2026-10-10T06:55:00+00:00",
+        "estimated": "2026-10-10T06:55:00+00:00",
+        "actual": "2026-10-10T08:30:00+00:00",
+        "estimated_runway": "2026-10-10T08:30:00+00:00",
+        "actual_runway": "2026-10-10T08:30:00+00:00"
+      },
+      "arrival": {
+        "airport": "Damascus International Airport",
+        "timezone": "Asia/Damascus",
+        "iata": "DAM",
+        "icao": "OSDI",
+        "terminal": null,
+        "gate": null,
+        "baggage": null,
+        "scheduled": "2026-10-10T09:10:00+00:00",
+        "delay": 72,
+        "estimated": "2026-10-10T10:22:00+00:00",
+        "actual": null,
+        "estimated_runway": "2026-10-10T10:22:00+00:00",
+        "actual_runway": null
+      },
+      "airline": {
+        "name": "Gulf Air",
+        "iata": "GF",
+        "icao": "GFA"
+      },
+      "flight": {
+        "number": "5950",
+        "iata": "GF5950",
+        "icao": "GFA5950",
+        "codeshared": {
+          "airline_name": "flynas",
+          "airline_iata": "xy",
+          "airline_icao": "kne",
+          "flight_number": "387",
+          "flight_iata": "xy387",
+          "flight_icao": "kne387"
+        }
+      },
+      "aircraft": {
+        "registration": null,
+        "iata": null,
+        "icao": null,
+        "icao24": "711540"
+      },
+      "live": {
+        "updated": "2026-10-10T07:22:21+00:00",
+        "latitude": 33.3928,
+        "longitude": 36.9625,
+        "altitude": 3383.28,
+        "direction": 266,
+        "speed_horizontal": 385.216,
+        "speed_vertical": 0,
+        "is_ground": false
+      }
+    },
+    {
+      "flight_date": "2026-10-10",
+      "flight_status": "landed",
+      "departure": {
+        "airport": "Doha International",
+        "timezone": "Asia/Qatar",
+        "iata": "DOH",
+        "icao": "OTHH",
+        "terminal": null,
+        "gate": "B8",
+        "delay": 26,
+        "scheduled": "2026-10-10T08:50:00+00:00",
+        "estimated": "2026-10-10T08:50:00+00:00",
+        "actual": "2026-10-10T09:16:00+00:00",
+        "estimated_runway": "2026-10-10T09:16:00+00:00",
+        "actual_runway": "2026-10-10T09:16:00+00:00"
+      },
+      "arrival": {
+        "airport": "Damascus International Airport",
+        "timezone": "Asia/Damascus",
+        "iata": "DAM",
+        "icao": "OSDI",
+        "terminal": null,
+        "gate": null,
+        "baggage": null,
+        "scheduled": "2026-10-10T12:00:00+00:00",
+        "delay": 0,
+        "estimated": "2026-10-10T11:32:00+00:00",
+        "actual": "2026-10-10T11:33:00+00:00",
+        "estimated_runway": "2026-10-10T11:33:00+00:00",
+        "actual_runway": "2026-10-10T11:33:00+00:00"
+      },
+      "airline": {
+        "name": "Qatar Airways",
+        "iata": "QR",
+        "icao": "QTR"
+      },
+      "flight": {
+        "number": "410",
+        "iata": "QR410",
+        "icao": "QTR410",
+        "codeshared": null
+      },
+      "aircraft": {
+        "registration": "A7-BEB",
+        "iata": "B77W",
+        "icao": "B77W",
+        "icao24": "06A19D"
+      },
+      "live": null
+    },
+    {
+      "flight_date": "2026-10-10",
+      "flight_status": "landed",
+      "departure": {
+        "airport": "Abu Dhabi International",
+        "timezone": "Asia/Dubai",
+        "iata": "AUH",
+        "icao": "OMAA",
+        "terminal": "A",
+        "gate": null,
+        "delay": 25,
+        "scheduled": "2026-10-10T10:05:00+00:00",
+        "estimated": "2026-10-10T10:05:00+00:00",
+        "actual": "2026-10-10T10:30:00+00:00",
+        "estimated_runway": "2026-10-10T10:30:00+00:00",
+        "actual_runway": "2026-10-10T10:30:00+00:00"
+      },
+      "arrival": {
+        "airport": "Damascus International Airport",
+        "timezone": "Asia/Damascus",
+        "iata": "DAM",
+        "icao": "OSDI",
+        "terminal": null,
+        "gate": null,
+        "baggage": null,
+        "scheduled": "2026-10-10T12:45:00+00:00",
+        "delay": 0,
+        "estimated": "2026-10-10T12:21:00+00:00",
+        "actual": "2026-10-10T12:19:00+00:00",
+        "estimated_runway": "2026-10-10T12:19:00+00:00",
+        "actual_runway": "2026-10-10T12:19:00+00:00"
+      },
+      "airline": {
+        "name": "Air Arabia",
+        "iata": "3L",
+        "icao": "ADY"
+      },
+      "flight": {
+        "number": "504",
+        "iata": "3L504",
+        "icao": "ADY504",
+        "codeshared": null
+      },
+      "aircraft": {
+        "registration": "A6-AUE",
+        "iata": "A320",
+        "icao": "A320",
+        "icao24": "8965EE"
+      },
+      "live": null
+    },
+    {
+      "flight_date": "2026-10-10",
+      "flight_status": "landed",
+      "departure": {
+        "airport": "Istanbul Airport",
+        "timezone": "Europe/Istanbul",
+        "iata": "IST",
+        "icao": "LTFM",
+        "terminal": null,
+        "gate": "C2",
+        "delay": 18,
+        "scheduled": "2026-10-10T07:15:00+00:00",
+        "estimated": "2026-10-10T07:15:00+00:00",
+        "actual": "2026-10-10T07:33:00+00:00",
+        "estimated_runway": "2026-10-10T07:33:00+00:00",
+        "actual_runway": "2026-10-10T07:33:00+00:00"
+      },
+      "arrival": {
+        "airport": "Damascus International Airport",
+        "timezone": "Asia/Damascus",
+        "iata": "DAM",
+        "icao": "OSDI",
+        "terminal": null,
+        "gate": null,
+        "baggage": null,
+        "scheduled": "2026-10-10T09:25:00+00:00",
+        "delay": 0,
+        "estimated": "2026-10-10T09:14:00+00:00",
+        "actual": "2026-10-10T09:16:00+00:00",
+        "estimated_runway": "2026-10-10T09:16:00+00:00",
+        "actual_runway": "2026-10-10T09:16:00+00:00"
+      },
+      "airline": {
+        "name": "Turkish Airlines",
+        "iata": "TK",
+        "icao": "THY"
+      },
+      "flight": {
+        "number": "846",
+        "iata": "TK846",
+        "icao": "THY846",
+        "codeshared": null
+      },
+      "aircraft": {
+        "registration": "TC-JYB",
+        "iata": "B739",
+        "icao": "B739",
+        "icao24": "4BAB22"
+      },
+      "live": null
+    },
+    {
+      "flight_date": "2026-10-10",
+      "flight_status": "landed",
+      "departure": {
+        "airport": "Queen Alia International",
+        "timezone": "Asia/Amman",
+        "iata": "AMM",
+        "icao": "OJAI",
+        "terminal": null,
+        "gate": null,
+        "delay": 7,
+        "scheduled": "2026-10-10T06:45:00+00:00",
+        "estimated": "2026-10-10T06:45:00+00:00",
+        "actual": "2026-10-10T06:52:00+00:00",
+        "estimated_runway": "2026-10-10T06:52:00+00:00",
+        "actual_runway": "2026-10-10T06:52:00+00:00"
+      },
+      "arrival": {
+        "airport": "Damascus International Airport",
+        "timezone": "Asia/Damascus",
+        "iata": "DAM",
+        "icao": "OSDI",
+        "terminal": null,
+        "gate": null,
+        "baggage": null,
+        "scheduled": "2026-10-10T07:40:00+00:00",
+        "delay": 0,
+        "estimated": null,
+        "actual": "2026-10-10T07:22:00+00:00",
+        "estimated_runway": "2026-10-10T07:22:00+00:00",
+        "actual_runway": "2026-10-10T07:22:00+00:00"
+      },
+      "airline": {
+        "name": "Royal Jordanian",
+        "iata": "RJ",
+        "icao": "RJA"
+      },
+      "flight": {
+        "number": "435",
+        "iata": "RJ435",
+        "icao": "RJA435",
+        "codeshared": null
+      },
+      "aircraft": {
+        "registration": "JY-RAN",
+        "iata": "A20N",
+        "icao": "A20N",
+        "icao24": "74482E"
+      },
+      "live": null
+    },
+    {
+      "flight_date": "2026-10-10",
+      "flight_status": "landed",
+      "departure": {
+        "airport": "Queen Alia International",
+        "timezone": "Asia/Amman",
+        "iata": "AMM",
+        "icao": "OJAI",
+        "terminal": null,
+        "gate": null,
+        "delay": 7,
+        "scheduled": "2026-10-10T06:45:00+00:00",
+        "estimated": "2026-10-10T06:45:00+00:00",
+        "actual": "2026-10-10T06:52:00+00:00",
+        "estimated_runway": "2026-10-10T06:52:00+00:00",
+        "actual_runway": "2026-10-10T06:52:00+00:00"
+      },
+      "arrival": {
+        "airport": "Damascus International Airport",
+        "timezone": "Asia/Damascus",
+        "iata": "DAM",
+        "icao": "OSDI",
+        "terminal": null,
+        "gate": null,
+        "baggage": null,
+        "scheduled": "2026-10-10T07:40:00+00:00",
+        "delay": 0,
+        "estimated": null,
+        "actual": "2026-10-10T07:22:00+00:00",
+        "estimated_runway": "2026-10-10T07:22:00+00:00",
+        "actual_runway": "2026-10-10T07:22:00+00:00"
+      },
+      "airline": {
+        "name": "Oman Air",
+        "iata": "WY",
+        "icao": "OMA"
+      },
+      "flight": {
+        "number": "5231",
+        "iata": "WY5231",
+        "icao": "OMA5231",
+        "codeshared": {
+          "airline_name": "royal jordanian",
+          "airline_iata": "rj",
+          "airline_icao": "rja",
+          "flight_number": "435",
+          "flight_iata": "rj435",
+          "flight_icao": "rja435"
+        }
+      },
+      "aircraft": {
+        "registration": null,
+        "iata": null,
+        "icao": null,
+        "icao24": "74482E"
+      },
+      "live": null
+    },
+    {
+      "flight_date": "2026-10-10",
+      "flight_status": "landed",
+      "departure": {
+        "airport": "Sharjah",
+        "timezone": "Asia/Dubai",
+        "iata": "SHJ",
+        "icao": "OMSJ",
+        "terminal": null,
+        "gate": null,
+        "delay": 27,
+        "scheduled": "2026-10-10T08:00:00+00:00",
+        "estimated": "2026-10-10T08:00:00+00:00",
+        "actual": "2026-10-10T08:27:00+00:00",
+        "estimated_runway": "2026-10-10T08:27:00+00:00",
+        "actual_runway": "2026-10-10T08:27:00+00:00"
+      },
+      "arrival": {
+        "airport": "Damascus International Airport",
+        "timezone": "Asia/Damascus",
+        "iata": "DAM",
+        "icao": "OSDI",
+        "terminal": null,
+        "gate": null,
+        "baggage": null,
+        "scheduled": "2026-10-10T10:10:00+00:00",
+        "delay": 14,
+        "estimated": "2026-10-10T10:26:00+00:00",
+        "actual": "2026-10-10T10:24:00+00:00",
+        "estimated_runway": "2026-10-10T10:24:00+00:00",
+        "actual_runway": "2026-10-10T10:24:00+00:00"
+      },
+      "airline": {
+        "name": "Air Arabia",
+        "iata": "G9",
+        "icao": "ABY"
+      },
+      "flight": {
+        "number": "363",
+        "iata": "G9363",
+        "icao": "ABY363",
+        "codeshared": null
+      },
+      "aircraft": {
+        "registration": "A6-AOB",
+        "iata": "A320",
+        "icao": "A320",
+        "icao24": "896401"
+      },
+      "live": null
+    },
+    {
+      "flight_date": "2026-10-10",
+      "flight_status": "scheduled",
+      "departure": {
+        "airport": "King Khaled International",
+        "timezone": "Asia/Riyadh",
+        "iata": "RUH",
+        "icao": "OERK",
+        "terminal": "1",
+        "gate": "106",
+        "delay": 95,
+        "scheduled": "2026-10-10T06:55:00+00:00",
+        "estimated": "2026-10-10T06:55:00+00:00",
+        "actual": "2026-10-10T08:30:00+00:00",
+        "estimated_runway": "2026-10-10T08:30:00+00:00",
+        "actual_runway": "2026-10-10T08:30:00+00:00"
+      },
+      "arrival": {
+        "airport": "Damascus International Airport",
+        "timezone": "Asia/Damascus",
+        "iata": "DAM",
+        "icao": "OSDI",
+        "terminal": null,
+        "gate": null,
+        "baggage": null,
+        "scheduled": "2026-10-10T09:10:00+00:00",
+        "delay": 72,
+        "estimated": "2026-10-10T10:22:00+00:00",
+        "actual": null,
+        "estimated_runway": "2026-10-10T10:22:00+00:00",
+        "actual_runway": null
+      },
+      "airline": {
+        "name": "flynas",
+        "iata": "XY",
+        "icao": "KNE"
+      },
+      "flight": {
+        "number": "387",
+        "iata": "XY387",
+        "icao": "KNE387",
+        "codeshared": null
+      },
+      "aircraft": {
+        "registration": "HZ-NS86",
+        "iata": "A20N",
+        "icao": "A20N",
+        "icao24": "711540"
+      },
+      "live": {
+        "updated": "2026-10-10T07:22:21+00:00",
+        "latitude": 33.3928,
+        "longitude": 36.9625,
+        "altitude": 3383.28,
+        "direction": 266,
+        "speed_horizontal": 385.216,
+        "speed_vertical": 0,
+        "is_ground": false
+      }
+    },
+    {
+      "flight_date": "2026-10-10",
+      "flight_status": "landed",
+      "departure": {
+        "airport": "Dubai",
+        "timezone": "Asia/Dubai",
+        "iata": "DXB",
+        "icao": "OMDB",
+        "terminal": "3",
+        "gate": "C12",
+        "delay": 30,
+        "scheduled": "2026-10-10T07:15:00+00:00",
+        "estimated": "2026-10-10T07:15:00+00:00",
+        "actual": "2026-10-10T07:45:00+00:00",
+        "estimated_runway": "2026-10-10T07:45:00+00:00",
+        "actual_runway": "2026-10-10T07:45:00+00:00"
+      },
+      "arrival": {
+        "airport": "Damascus International Airport",
+        "timezone": "Asia/Damascus",
+        "iata": "DAM",
+        "icao": "OSDI",
+        "terminal": null,
+        "gate": null,
+        "baggage": null,
+        "scheduled": "2026-10-10T09:30:00+00:00",
+        "delay": 6,
+        "estimated": "2026-10-10T09:38:00+00:00",
+        "actual": "2026-10-10T09:36:00+00:00",
+        "estimated_runway": "2026-10-10T09:36:00+00:00",
+        "actual_runway": "2026-10-10T09:36:00+00:00"
+      },
+      "airline": {
+        "name": "flydubai",
+        "iata": "FZ",
+        "icao": "FDB"
+      },
+      "flight": {
+        "number": "1115",
+        "iata": "FZ1115",
+        "icao": "FDB1115",
+        "codeshared": null
+      },
+      "aircraft": {
+        "registration": "A6-FKD",
+        "iata": "B38M",
+        "icao": "B38M",
+        "icao24": "8965CF"
+      },
+      "live": null
+    },
+    {
+      "flight_date": "2026-10-10",
+      "flight_status": "landed",
+      "departure": {
+        "airport": "Dubai",
+        "timezone": "Asia/Dubai",
+        "iata": "DXB",
+        "icao": "OMDB",
+        "terminal": "3",
+        "gate": "C12",
+        "delay": 30,
+        "scheduled": "2026-10-10T07:15:00+00:00",
+        "estimated": "2026-10-10T07:15:00+00:00",
+        "actual": "2026-10-10T07:45:00+00:00",
+        "estimated_runway": "2026-10-10T07:45:00+00:00",
+        "actual_runway": "2026-10-10T07:45:00+00:00"
+      },
+      "arrival": {
+        "airport": "Damascus International Airport",
+        "timezone": "Asia/Damascus",
+        "iata": "DAM",
+        "icao": "OSDI",
+        "terminal": null,
+        "gate": null,
+        "baggage": null,
+        "scheduled": "2026-10-10T09:30:00+00:00",
+        "delay": 6,
+        "estimated": "2026-10-10T09:38:00+00:00",
+        "actual": "2026-10-10T09:36:00+00:00",
+        "estimated_runway": "2026-10-10T09:36:00+00:00",
+        "actual_runway": "2026-10-10T09:36:00+00:00"
+      },
+      "airline": {
+        "name": "Emirates",
+        "iata": "EK",
+        "icao": "UAE"
+      },
+      "flight": {
+        "number": "2179",
+        "iata": "EK2179",
+        "icao": "UAE2179",
+        "codeshared": {
+          "airline_name": "flydubai",
+          "airline_iata": "fz",
+          "airline_icao": "fdb",
+          "flight_number": "1115",
+          "flight_iata": "fz1115",
+          "flight_icao": "fdb1115"
+        }
+      },
+      "aircraft": {
+        "registration": null,
+        "iata": null,
+        "icao": null,
+        "icao24": "8965CF"
+      },
+      "live": null
+    },
+    {
+      "flight_date": "2026-10-10",
+      "flight_status": "active",
+      "departure": {
+        "airport": "Istanbul Airport",
+        "timezone": "Europe/Istanbul",
+        "iata": "IST",
+        "icao": "LTFM",
+        "terminal": null,
+        "gate": "F5B",
+        "delay": 15,
+        "scheduled": "2026-10-10T04:50:00+00:00",
+        "estimated": "2026-10-10T04:50:00+00:00",
+        "actual": "2026-10-10T05:05:00+00:00",
+        "estimated_runway": "2026-10-10T05:05:00+00:00",
+        "actual_runway": "2026-10-10T05:05:00+00:00"
+      },
+      "arrival": {
+        "airport": "Damascus International Airport",
+        "timezone": "Asia/Damascus",
+        "iata": "DAM",
+        "icao": "OSDI",
+        "terminal": null,
+        "gate": null,
+        "baggage": null,
+        "scheduled": "2026-10-10T07:00:00+00:00",
+        "delay": 0,
+        "estimated": "2026-10-10T06:49:00+00:00",
+        "actual": null,
+        "estimated_runway": "2026-10-10T06:49:00+00:00",
+        "actual_runway": null
+      },
+      "airline": {
+        "name": "Turkish Airlines",
+        "iata": "TK",
+        "icao": "THY"
+      },
+      "flight": {
+        "number": "848",
+        "iata": "TK848",
+        "icao": "THY848",
+        "codeshared": null
+      },
+      "aircraft": {
+        "registration": "TC-JYC",
+        "iata": "B739",
+        "icao": "B739",
+        "icao24": "4BAB23"
+      },
+      "live": {
+        "updated": "2026-10-10T03:48:19+00:00",
+        "latitude": 33.5245,
+        "longitude": 36.4856,
+        "altitude": 3398.52,
+        "direction": 256,
+        "speed_horizontal": 351.88,
+        "speed_vertical": 0,
+        "is_ground": false
+      }
+    },
+    {
+      "flight_date": "2026-10-10",
+      "flight_status": "cancelled",
+      "departure": {
+        "airport": "Sabiha Gokcen",
+        "timezone": "Europe/Istanbul",
+        "iata": "SAW",
+        "icao": "LTFJ",
+        "terminal": null,
+        "gate": null,
+        "delay": null,
+        "scheduled": "2026-10-10T04:45:00+00:00",
+        "estimated": "2026-10-10T04:45:00+00:00",
+        "actual": null,
+        "estimated_runway": null,
+        "actual_runway": null
+      },
+      "arrival": {
+        "airport": "Damascus International Airport",
+        "timezone": "Asia/Damascus",
+        "iata": "DAM",
+        "icao": "OSDI",
+        "terminal": null,
+        "gate": null,
+        "baggage": null,
+        "scheduled": "2026-10-10T06:30:00+00:00",
+        "delay": null,
+        "estimated": null,
+        "actual": null,
+        "estimated_runway": null,
+        "actual_runway": null
+      },
+      "airline": {
+        "name": "Fly Cham",
+        "iata": null,
+        "icao": "FYC"
+      },
+      "flight": {
+        "number": "486",
+        "iata": null,
+        "icao": "FYC486",
+        "codeshared": null
+      },
+      "aircraft": null,
+      "live": null
+    },
+    {
+      "flight_date": "2026-10-10",
+      "flight_status": "landed",
+      "departure": {
+        "airport": "Sharjah",
+        "timezone": "Asia/Dubai",
+        "iata": "SHJ",
+        "icao": "OMSJ",
+        "terminal": null,
+        "gate": null,
+        "delay": 20,
+        "scheduled": "2026-10-10T04:15:00+00:00",
+        "estimated": "2026-10-10T04:15:00+00:00",
+        "actual": "2026-10-10T04:35:00+00:00",
+        "estimated_runway": "2026-10-10T04:35:00+00:00",
+        "actual_runway": "2026-10-10T04:35:00+00:00"
+      },
+      "arrival": {
+        "airport": "Damascus International Airport",
+        "timezone": "Asia/Damascus",
+        "iata": "DAM",
+        "icao": "OSDI",
+        "terminal": null,
+        "gate": null,
+        "baggage": null,
+        "scheduled": "2026-10-10T06:25:00+00:00",
+        "delay": 5,
+        "estimated": "2026-10-10T06:31:00+00:00",
+        "actual": "2026-10-10T06:30:00+00:00",
+        "estimated_runway": "2026-10-10T06:30:00+00:00",
+        "actual_runway": "2026-10-10T06:30:00+00:00"
+      },
+      "airline": {
+        "name": "Air Arabia",
+        "iata": "G9",
+        "icao": "ABY"
+      },
+      "flight": {
+        "number": "433",
+        "iata": "G9433",
+        "icao": "ABY433",
+        "codeshared": null
+      },
+      "aircraft": {
+        "registration": "A6-AOC",
+        "iata": "A320",
+        "icao": "A320",
+        "icao24": "8963FF"
+      },
+      "live": null
+    },
+    {
+      "flight_date": "2026-10-10",
+      "flight_status": "active",
+      "departure": {
+        "airport": "Queen Alia International",
+        "timezone": "Asia/Amman",
+        "iata": "AMM",
+        "icao": "OJAI",
+        "terminal": null,
+        "gate": null,
+        "delay": 0,
+        "scheduled": "2026-10-10T02:00:00+00:00",
+        "estimated": "2026-10-10T02:00:00+00:00",
+        "actual": "2026-10-10T01:59:00+00:00",
+        "estimated_runway": "2026-10-10T01:59:00+00:00",
+        "actual_runway": "2026-10-10T01:59:00+00:00"
+      },
+      "arrival": {
+        "airport": "Damascus International Airport",
+        "timezone": "Asia/Damascus",
+        "iata": "DAM",
+        "icao": "OSDI",
+        "terminal": null,
+        "gate": null,
+        "baggage": null,
+        "scheduled": "2026-10-10T02:55:00+00:00",
+        "delay": 0,
+        "estimated": "2026-10-10T02:31:00+00:00",
+        "actual": "2026-10-10T02:30:00+00:00",
+        "estimated_runway": "2026-10-10T02:31:00+00:00",
+        "actual_runway": "2026-10-10T02:30:00+00:00"
+      },
+      "airline": {
+        "name": "Royal Jordanian",
+        "iata": "RJ",
+        "icao": "RJA"
+      },
+      "flight": {
+        "number": "439",
+        "iata": "RJ439",
+        "icao": "RJA439",
+        "codeshared": null
+      },
+      "aircraft": {
+        "registration": "JY-RAD",
+        "iata": "A20N",
+        "icao": "A20N",
+        "icao24": "744824"
+      },
+      "live": {
+        "updated": "2026-10-09T23:33:13+00:00",
+        "latitude": 33.4127,
+        "longitude": 36.5137,
+        "altitude": 0,
+        "direction": 227,
+        "speed_horizontal": 0,
+        "speed_vertical": 0,
+        "is_ground": true
+      }
+    },
+    {
+      "flight_date": "2026-10-09",
+      "flight_status": "landed",
+      "departure": {
+        "airport": "Erbil International (irbil Northwest)",
+        "timezone": "Asia/Baghdad",
+        "iata": "EBL",
+        "icao": "ORER",
+        "terminal": null,
+        "gate": null,
+        "delay": 0,
+        "scheduled": "2026-10-09T21:00:00+00:00",
+        "estimated": "2026-10-09T21:00:00+00:00",
+        "actual": "2026-10-09T20:28:00+00:00",
+        "estimated_runway": "2026-10-09T20:28:00+00:00",
+        "actual_runway": "2026-10-09T20:28:00+00:00"
+      },
+      "arrival": {
+        "airport": "Damascus International Airport",
+        "timezone": "Asia/Damascus",
+        "iata": "DAM",
+        "icao": "OSDI",
+        "terminal": null,
+        "gate": null,
+        "baggage": null,
+        "scheduled": "2026-10-09T22:40:00+00:00",
+        "delay": 0,
+        "estimated": "2026-10-09T21:44:00+00:00",
+        "actual": "2026-10-09T21:41:00+00:00",
+        "estimated_runway": "2026-10-09T21:41:00+00:00",
+        "actual_runway": "2026-10-09T21:41:00+00:00"
+      },
+      "airline": {
+        "name": "Fly Cham",
+        "iata": null,
+        "icao": "FYC"
+      },
+      "flight": {
+        "number": "522",
+        "iata": null,
+        "icao": "FYC522",
+        "codeshared": null
+      },
+      "aircraft": {
+        "registration": null,
+        "iata": null,
+        "icao": null,
+        "icao24": "778823"
+      },
+      "live": null
+    },
+    {
+      "flight_date": "2026-10-09",
+      "flight_status": "landed",
+      "departure": {
+        "airport": "Istanbul Airport",
+        "timezone": "Europe/Istanbul",
+        "iata": "IST",
+        "icao": "LTFM",
+        "terminal": null,
+        "gate": "E1",
+        "delay": 30,
+        "scheduled": "2026-10-09T19:35:00+00:00",
+        "estimated": "2026-10-09T19:35:00+00:00",
+        "actual": "2026-10-09T20:05:00+00:00",
+        "estimated_runway": "2026-10-09T20:05:00+00:00",
+        "actual_runway": "2026-10-09T20:05:00+00:00"
+      },
+      "arrival": {
+        "airport": "Damascus International Airport",
+        "timezone": "Asia/Damascus",
+        "iata": "DAM",
+        "icao": "OSDI",
+        "terminal": null,
+        "gate": null,
+        "baggage": null,
+        "scheduled": "2026-10-09T21:35:00+00:00",
+        "delay": 11,
+        "estimated": "2026-10-09T21:44:00+00:00",
+        "actual": "2026-10-09T21:46:00+00:00",
+        "estimated_runway": "2026-10-09T21:46:00+00:00",
+        "actual_runway": "2026-10-09T21:46:00+00:00"
+      },
+      "airline": {
+        "name": "Syrian Air",
+        "iata": "RB",
+        "icao": "SYR"
+      },
+      "flight": {
+        "number": "444",
+        "iata": "RB444",
+        "icao": "SYR444",
+        "codeshared": null
+      },
+      "aircraft": {
+        "registration": "YK-AKG",
+        "iata": "A320",
+        "icao": "A320",
+        "icao24": "778567"
+      },
+      "live": null
+    },
+    {
+      "flight_date": "2026-10-09",
+      "flight_status": "landed",
+      "departure": {
+        "airport": "Sharjah",
+        "timezone": "Asia/Dubai",
+        "iata": "SHJ",
+        "icao": "OMSJ",
+        "terminal": null,
+        "gate": null,
+        "delay": 35,
+        "scheduled": "2026-10-09T20:00:00+00:00",
+        "estimated": "2026-10-09T20:00:00+00:00",
+        "actual": "2026-10-09T20:35:00+00:00",
+        "estimated_runway": "2026-10-09T20:35:00+00:00",
+        "actual_runway": "2026-10-09T20:35:00+00:00"
+      },
+      "arrival": {
+        "airport": "Damascus International Airport",
+        "timezone": "Asia/Damascus",
+        "iata": "DAM",
+        "icao": "OSDI",
+        "terminal": null,
+        "gate": null,
+        "baggage": null,
+        "scheduled": "2026-10-09T22:45:00+00:00",
+        "delay": 0,
+        "estimated": "2026-10-09T22:32:00+00:00",
+        "actual": "2026-10-09T22:31:00+00:00",
+        "estimated_runway": "2026-10-09T22:31:00+00:00",
+        "actual_runway": "2026-10-09T22:31:00+00:00"
+      },
+      "airline": {
+        "name": "Syrian Air",
+        "iata": "RB",
+        "icao": "SYR"
+      },
+      "flight": {
+        "number": "502",
+        "iata": "RB502",
+        "icao": "SYR502",
+        "codeshared": null
+      },
+      "aircraft": {
+        "registration": "YK-AKI",
+        "iata": "A320",
+        "icao": "A320",
+        "icao24": "778569"
+      },
+      "live": null
+    },
+    {
+      "flight_date": "2026-10-09",
+      "flight_status": "landed",
+      "departure": {
+        "airport": "Abu Dhabi International",
+        "timezone": "Asia/Dubai",
+        "iata": "AUH",
+        "icao": "OMAA",
+        "terminal": null,
+        "gate": null,
+        "delay": 34,
+        "scheduled": "2026-10-09T18:00:00+00:00",
+        "estimated": "2026-10-09T18:00:00+00:00",
+        "actual": "2026-10-09T18:34:00+00:00",
+        "estimated_runway": "2026-10-09T18:34:00+00:00",
+        "actual_runway": "2026-10-09T18:34:00+00:00"
+      },
+      "arrival": {
+        "airport": "Damascus International Airport",
+        "timezone": "Asia/Damascus",
+        "iata": "DAM",
+        "icao": "OSDI",
+        "terminal": null,
+        "gate": null,
+        "baggage": null,
+        "scheduled": "2026-10-09T20:30:00+00:00",
+        "delay": 0,
+        "estimated": "2026-10-09T20:22:00+00:00",
+        "actual": "2026-10-09T20:23:00+00:00",
+        "estimated_runway": "2026-10-09T20:23:00+00:00",
+        "actual_runway": "2026-10-09T20:23:00+00:00"
+      },
+      "airline": {
+        "name": "Syrian Air",
+        "iata": "RB",
+        "icao": "SYR"
+      },
+      "flight": {
+        "number": "504",
+        "iata": "RB504",
+        "icao": "SYR504",
+        "codeshared": null
+      },
+      "aircraft": {
+        "registration": "YK-AKJ",
+        "iata": "A320",
+        "icao": "A320",
+        "icao24": "77856A"
+      },
+      "live": null
+    },
+    {
+      "flight_date": "2026-10-09",
+      "flight_status": "scheduled",
+      "departure": {
+        "airport": "Esenboga International",
+        "timezone": "Europe/Istanbul",
+        "iata": "ESB",
+        "icao": "LTAC",
+        "terminal": null,
+        "gate": null,
+        "delay": 10,
+        "scheduled": "2026-10-09T15:40:00+00:00",
+        "estimated": "2026-10-09T15:40:00+00:00",
+        "actual": "2026-10-09T15:50:00+00:00",
+        "estimated_runway": "2026-10-09T15:50:00+00:00",
+        "actual_runway": "2026-10-09T15:50:00+00:00"
+      },
+      "arrival": {
+        "airport": "Damascus International Airport",
+        "timezone": "Asia/Damascus",
+        "iata": "DAM",
+        "icao": "OSDI",
+        "terminal": null,
+        "gate": null,
+        "baggage": null,
+        "scheduled": "2026-10-09T17:20:00+00:00",
+        "delay": 18,
+        "estimated": "2026-10-09T17:38:00+00:00",
+        "actual": null,
+        "estimated_runway": "2026-10-09T17:38:00+00:00",
+        "actual_runway": null
+      },
+      "airline": {
+        "name": "AJet",
+        "iata": "VF",
+        "icao": "TKJ"
+      },
+      "flight": {
+        "number": "591",
+        "iata": "VF591",
+        "icao": "TKJ591",
+        "codeshared": null
+      },
+      "aircraft": {
+        "registration": "TC-JFC",
+        "iata": "B738",
+        "icao": "B738",
+        "icao24": "4BA8C3"
+      },
+      "live": {
+        "updated": "2026-10-09T14:25:36+00:00",
+        "latitude": 35.8363,
+        "longitude": 37.0517,
+        "altitude": 586.74,
+        "direction": 206,
+        "speed_horizontal": 225.944,
+        "speed_vertical": 0,
+        "is_ground": false
+      }
+    },
+    {
+      "flight_date": "2026-10-09",
+      "flight_status": "scheduled",
+      "departure": {
+        "airport": "Abu Dhabi International",
+        "timezone": "Asia/Dubai",
+        "iata": "AUH",
+        "icao": "OMAA",
+        "terminal": "A",
+        "gate": null,
+        "delay": null,
+        "scheduled": "2026-10-09T10:05:00+00:00",
+        "estimated": "2026-10-09T10:05:00+00:00",
+        "actual": null,
+        "estimated_runway": null,
+        "actual_runway": null
+      },
+      "arrival": {
+        "airport": "Damascus International Airport",
+        "timezone": "Asia/Damascus",
+        "iata": "DAM",
+        "icao": "OSDI",
+        "terminal": null,
+        "gate": null,
+        "baggage": null,
+        "scheduled": "2026-10-09T12:45:00+00:00",
+        "delay": null,
+        "estimated": null,
+        "actual": null,
+        "estimated_runway": null,
+        "actual_runway": null
+      },
+      "airline": {
+        "name": "Air Arabia",
+        "iata": "G9",
+        "icao": "ABY"
+      },
+      "flight": {
+        "number": "504",
+        "iata": "G9504",
+        "icao": "ABY504",
+        "codeshared": null
+      },
+      "aircraft": {
+        "registration": null,
+        "iata": null,
+        "icao": null,
+        "icao24": "8965EE"
+      },
+      "live": null
+    },
+    {
+      "flight_date": "2026-10-09",
+      "flight_status": "landed",
+      "departure": {
+        "airport": "Queen Alia International",
+        "timezone": "Asia/Amman",
+        "iata": "AMM",
+        "icao": "OJAI",
+        "terminal": null,
+        "gate": null,
+        "delay": 0,
+        "scheduled": "2026-10-09T15:15:00+00:00",
+        "estimated": "2026-10-09T15:15:00+00:00",
+        "actual": "2026-10-09T15:11:00+00:00",
+        "estimated_runway": "2026-10-09T15:11:00+00:00",
+        "actual_runway": "2026-10-09T15:11:00+00:00"
+      },
+      "arrival": {
+        "airport": "Damascus International Airport",
+        "timezone": "Asia/Damascus",
+        "iata": "DAM",
+        "icao": "OSDI",
+        "terminal": null,
+        "gate": null,
+        "baggage": null,
+        "scheduled": "2026-10-09T16:10:00+00:00",
+        "delay": 0,
+        "estimated": null,
+        "actual": "2026-10-09T15:44:00+00:00",
+        "estimated_runway": "2026-10-09T15:44:00+00:00",
+        "actual_runway": "2026-10-09T15:44:00+00:00"
+      },
+      "airline": {
+        "name": "Royal Jordanian",
+        "iata": "RJ",
+        "icao": "RJA"
+      },
+      "flight": {
+        "number": "437",
+        "iata": "RJ437",
+        "icao": "RJA437",
+        "codeshared": null
+      },
+      "aircraft": {
+        "registration": null,
+        "iata": null,
+        "icao": null,
+        "icao24": "7448A7"
+      },
+      "live": null
+    },
+    {
+      "flight_date": "2026-10-09",
+      "flight_status": "landed",
+      "departure": {
+        "airport": "Queen Alia International",
+        "timezone": "Asia/Amman",
+        "iata": "AMM",
+        "icao": "OJAI",
+        "terminal": null,
+        "gate": null,
+        "delay": 0,
+        "scheduled": "2026-10-09T15:15:00+00:00",
+        "estimated": "2026-10-09T15:15:00+00:00",
+        "actual": "2026-10-09T15:11:00+00:00",
+        "estimated_runway": "2026-10-09T15:11:00+00:00",
+        "actual_runway": "2026-10-09T15:11:00+00:00"
+      },
+      "arrival": {
+        "airport": "Damascus International Airport",
+        "timezone": "Asia/Damascus",
+        "iata": "DAM",
+        "icao": "OSDI",
+        "terminal": null,
+        "gate": null,
+        "baggage": null,
+        "scheduled": "2026-10-09T16:10:00+00:00",
+        "delay": 0,
+        "estimated": null,
+        "actual": "2026-10-09T15:44:00+00:00",
+        "estimated_runway": "2026-10-09T15:44:00+00:00",
+        "actual_runway": "2026-10-09T15:44:00+00:00"
+      },
+      "airline": {
+        "name": "Oman Air",
+        "iata": "WY",
+        "icao": "OMA"
+      },
+      "flight": {
+        "number": "5233",
+        "iata": "WY5233",
+        "icao": "OMA5233",
+        "codeshared": {
+          "airline_name": "royal jordanian",
+          "airline_iata": "rj",
+          "airline_icao": "rja",
+          "flight_number": "437",
+          "flight_iata": "rj437",
+          "flight_icao": "rja437"
+        }
+      },
+      "aircraft": {
+        "registration": null,
+        "iata": null,
+        "icao": null,
+        "icao24": "7448A7"
+      },
+      "live": null
+    },
+    {
+      "flight_date": "2026-10-09",
+      "flight_status": "landed",
+      "departure": {
+        "airport": "Queen Alia International",
+        "timezone": "Asia/Amman",
+        "iata": "AMM",
+        "icao": "OJAI",
+        "terminal": null,
+        "gate": null,
+        "delay": 0,
+        "scheduled": "2026-10-09T15:15:00+00:00",
+        "estimated": "2026-10-09T15:15:00+00:00",
+        "actual": "2026-10-09T15:11:00+00:00",
+        "estimated_runway": "2026-10-09T15:11:00+00:00",
+        "actual_runway": "2026-10-09T15:11:00+00:00"
+      },
+      "arrival": {
+        "airport": "Damascus International Airport",
+        "timezone": "Asia/Damascus",
+        "iata": "DAM",
+        "icao": "OSDI",
+        "terminal": null,
+        "gate": null,
+        "baggage": null,
+        "scheduled": "2026-10-09T16:10:00+00:00",
+        "delay": 0,
+        "estimated": null,
+        "actual": "2026-10-09T15:44:00+00:00",
+        "estimated_runway": "2026-10-09T15:44:00+00:00",
+        "actual_runway": "2026-10-09T15:44:00+00:00"
+      },
+      "airline": {
+        "name": "Qatar Airways",
+        "iata": "QR",
+        "icao": "QTR"
+      },
+      "flight": {
+        "number": "6119",
+        "iata": "QR6119",
+        "icao": "QTR6119",
+        "codeshared": {
+          "airline_name": "royal jordanian",
+          "airline_iata": "rj",
+          "airline_icao": "rja",
+          "flight_number": "437",
+          "flight_iata": "rj437",
+          "flight_icao": "rja437"
+        }
+      },
+      "aircraft": {
+        "registration": null,
+        "iata": null,
+        "icao": null,
+        "icao24": "7448A7"
+      },
+      "live": null
+    },
+    {
+      "flight_date": "2026-10-09",
+      "flight_status": "landed",
+      "departure": {
+        "airport": "Kuwait International",
+        "timezone": "Asia/Kuwait",
+        "iata": "KWI",
+        "icao": "OKKK",
+        "terminal": "5",
+        "gate": "B2",
+        "delay": 0,
+        "scheduled": "2026-10-09T14:25:00+00:00",
+        "estimated": "2026-10-09T14:25:00+00:00",
+        "actual": "2026-10-09T14:24:00+00:00",
+        "estimated_runway": "2026-10-09T14:24:00+00:00",
+        "actual_runway": "2026-10-09T14:24:00+00:00"
+      },
+      "arrival": {
+        "airport": "Damascus International Airport",
+        "timezone": "Asia/Damascus",
+        "iata": "DAM",
+        "icao": "OSDI",
+        "terminal": null,
+        "gate": null,
+        "baggage": null,
+        "scheduled": "2026-10-09T17:00:00+00:00",
+        "delay": 0,
+        "estimated": "2026-10-09T16:23:00+00:00",
+        "actual": "2026-10-09T16:24:00+00:00",
+        "estimated_runway": "2026-10-09T16:24:00+00:00",
+        "actual_runway": "2026-10-09T16:24:00+00:00"
+      },
+      "airline": {
+        "name": "Jazeera Airways",
+        "iata": "J9",
+        "icao": "JZR"
+      },
+      "flight": {
+        "number": "177",
+        "iata": "J9177",
+        "icao": "JZR177",
+        "codeshared": null
+      },
+      "aircraft": {
+        "registration": "9K-CBF",
+        "iata": "A20N",
+        "icao": "A20N",
+        "icao24": "70612E"
+      },
+      "live": null
+    },
+    {
+      "flight_date": "2026-10-09",
+      "flight_status": "landed",
+      "departure": {
+        "airport": "Sharjah",
+        "timezone": "Asia/Dubai",
+        "iata": "SHJ",
+        "icao": "OMSJ",
+        "terminal": null,
+        "gate": null,
+        "delay": 19,
+        "scheduled": "2026-10-09T15:00:00+00:00",
+        "estimated": "2026-10-09T15:00:00+00:00",
+        "actual": "2026-10-09T15:19:00+00:00",
+        "estimated_runway": "2026-10-09T15:19:00+00:00",
+        "actual_runway": "2026-10-09T15:19:00+00:00"
+      },
+      "arrival": {
+        "airport": "Damascus International Airport",
+        "timezone": "Asia/Damascus",
+        "iata": "DAM",
+        "icao": "OSDI",
+        "terminal": null,
+        "gate": null,
+        "baggage": null,
+        "scheduled": "2026-10-09T17:15:00+00:00",
+        "delay": 3,
+        "estimated": "2026-10-09T17:20:00+00:00",
+        "actual": "2026-10-09T17:18:00+00:00",
+        "estimated_runway": "2026-10-09T17:18:00+00:00",
+        "actual_runway": "2026-10-09T17:18:00+00:00"
+      },
+      "airline": {
+        "name": "Fly Cham",
+        "iata": null,
+        "icao": "FYC"
+      },
+      "flight": {
+        "number": "742",
+        "iata": null,
+        "icao": "FYC742",
+        "codeshared": null
+      },
+      "aircraft": {
+        "registration": null,
+        "iata": null,
+        "icao": null,
+        "icao24": "778821"
+      },
+      "live": null
+    },
+    {
+      "flight_date": "2026-10-09",
+      "flight_status": "active",
+      "departure": {
+        "airport": "Sabiha Gokcen",
+        "timezone": "Europe/Istanbul",
+        "iata": "SAW",
+        "icao": "LTFJ",
+        "terminal": null,
+        "gate": "504A",
+        "delay": 21,
+        "scheduled": "2026-10-09T14:00:00+00:00",
+        "estimated": "2026-10-09T14:00:00+00:00",
+        "actual": "2026-10-09T14:21:00+00:00",
+        "estimated_runway": "2026-10-09T14:21:00+00:00",
+        "actual_runway": "2026-10-09T14:21:00+00:00"
+      },
+      "arrival": {
+        "airport": "Damascus International Airport",
+        "timezone": "Asia/Damascus",
+        "iata": "DAM",
+        "icao": "OSDI",
+        "terminal": null,
+        "gate": null,
+        "baggage": null,
+        "scheduled": "2026-10-09T16:00:00+00:00",
+        "delay": 0,
+        "estimated": "2026-10-09T15:58:00+00:00",
+        "actual": null,
+        "estimated_runway": "2026-10-09T15:58:00+00:00",
+        "actual_runway": null
+      },
+      "airline": {
+        "name": "AJet",
+        "iata": "VF",
+        "icao": "TKJ"
+      },
+      "flight": {
+        "number": "317",
+        "iata": "VF317",
+        "icao": "TKJ317",
+        "codeshared": null
+      },
+      "aircraft": {
+        "registration": "TC-JFH",
+        "iata": "B738",
+        "icao": "B738",
+        "icao24": "4BA8C8"
+      },
+      "live": {
+        "updated": "2026-10-09T12:50:56+00:00",
+        "latitude": 33.9779,
+        "longitude": 36.5469,
+        "altitude": 6461.76,
+        "direction": 192,
+        "speed_horizontal": 661.164,
+        "speed_vertical": 0,
+        "is_ground": false
+      }
+    },
+    {
+      "flight_date": "2026-10-09",
+      "flight_status": "scheduled",
+      "departure": {
+        "airport": "King Khaled International",
+        "timezone": "Asia/Riyadh",
+        "iata": "RUH",
+        "icao": "OERK",
+        "terminal": "1",
+        "gate": "135",
+        "delay": 0,
+        "scheduled": "2026-10-09T14:00:00+00:00",
+        "estimated": "2026-10-09T14:00:00+00:00",
+        "actual": null,
+        "estimated_runway": "2026-10-09T14:00:00+00:00",
+        "actual_runway": null
+      },
+      "arrival": {
+        "airport": "Damascus International Airport",
+        "timezone": "Asia/Damascus",
+        "iata": "DAM",
+        "icao": "OSDI",
+        "terminal": null,
+        "gate": null,
+        "baggage": null,
+        "scheduled": "2026-10-09T16:15:00+00:00",
+        "delay": null,
+        "estimated": null,
+        "actual": null,
+        "estimated_runway": null,
+        "actual_runway": null
+      },
+      "airline": {
+        "name": "flynas",
+        "iata": "XY",
+        "icao": "KNE"
+      },
+      "flight": {
+        "number": "377",
+        "iata": "XY377",
+        "icao": "KNE377",
+        "codeshared": null
+      },
+      "aircraft": {
+        "registration": null,
+        "iata": null,
+        "icao": null,
+        "icao24": "710DBC"
+      },
+      "live": null
+    },
+    {
+      "flight_date": "2026-10-09",
+      "flight_status": "scheduled",
+      "departure": {
+        "airport": "King Khaled International",
+        "timezone": "Asia/Riyadh",
+        "iata": "RUH",
+        "icao": "OERK",
+        "terminal": "1",
+        "gate": "135",
+        "delay": 0,
+        "scheduled": "2026-10-09T14:00:00+00:00",
+        "estimated": "2026-10-09T14:00:00+00:00",
+        "actual": null,
+        "estimated_runway": "2026-10-09T14:00:00+00:00",
+        "actual_runway": null
+      },
+      "arrival": {
+        "airport": "Damascus International Airport",
+        "timezone": "Asia/Damascus",
+        "iata": "DAM",
+        "icao": "OSDI",
+        "terminal": null,
+        "gate": null,
+        "baggage": null,
+        "scheduled": "2026-10-09T16:15:00+00:00",
+        "delay": null,
+        "estimated": null,
+        "actual": null,
+        "estimated_runway": null,
+        "actual_runway": null
+      },
+      "airline": {
+        "name": "Gulf Air",
+        "iata": "GF",
+        "icao": "GFA"
+      },
+      "flight": {
+        "number": "5952",
+        "iata": "GF5952",
+        "icao": "GFA5952",
+        "codeshared": {
+          "airline_name": "flynas",
+          "airline_iata": "xy",
+          "airline_icao": "kne",
+          "flight_number": "377",
+          "flight_iata": "xy377",
+          "flight_icao": "kne377"
+        }
+      },
+      "aircraft": {
+        "registration": null,
+        "iata": null,
+        "icao": null,
+        "icao24": "710DBC"
+      },
+      "live": null
+    },
+    {
+      "flight_date": "2026-10-09",
+      "flight_status": "landed",
+      "departure": {
+        "airport": "Kuwait International",
+        "timezone": "Asia/Kuwait",
+        "iata": "KWI",
+        "icao": "OKKK",
+        "terminal": "4",
+        "gate": "74",
+        "delay": 0,
+        "scheduled": "2026-10-09T13:30:00+00:00",
+        "estimated": "2026-10-09T13:30:00+00:00",
+        "actual": "2026-10-09T13:24:00+00:00",
+        "estimated_runway": "2026-10-09T13:24:00+00:00",
+        "actual_runway": "2026-10-09T13:24:00+00:00"
+      },
+      "arrival": {
+        "airport": "Damascus International Airport",
+        "timezone": "Asia/Damascus",
+        "iata": "DAM",
+        "icao": "OSDI",
+        "terminal": null,
+        "gate": null,
+        "baggage": null,
+        "scheduled": "2026-10-09T16:35:00+00:00",
+        "delay": 0,
+        "estimated": "2026-10-09T15:23:00+00:00",
+        "actual": "2026-10-09T15:19:00+00:00",
+        "estimated_runway": "2026-10-09T15:19:00+00:00",
+        "actual_runway": "2026-10-09T15:19:00+00:00"
+      },
+      "airline": {
+        "name": "Fly Cham",
+        "iata": null,
+        "icao": "FYC"
+      },
+      "flight": {
+        "number": "702",
+        "iata": null,
+        "icao": "FYC702",
+        "codeshared": null
+      },
+      "aircraft": {
+        "registration": null,
+        "iata": null,
+        "icao": null,
+        "icao24": "778823"
+      },
+      "live": null
+    },
+    {
+      "flight_date": "2026-10-09",
+      "flight_status": "scheduled",
+      "departure": {
+        "airport": "King Abdulaziz International",
+        "timezone": "Asia/Riyadh",
+        "iata": "JED",
+        "icao": "OEJN",
+        "terminal": "1",
+        "gate": null,
+        "delay": 0,
+        "scheduled": "2026-10-09T13:00:00+00:00",
+        "estimated": "2026-10-09T13:00:00+00:00",
+        "actual": null,
+        "estimated_runway": "2026-10-09T13:00:00+00:00",
+        "actual_runway": null
+      },
+      "arrival": {
+        "airport": "Damascus International Airport",
+        "timezone": "Asia/Damascus",
+        "iata": "DAM",
+        "icao": "OSDI",
+        "terminal": null,
+        "gate": null,
+        "baggage": null,
+        "scheduled": "2026-10-09T15:10:00+00:00",
+        "delay": null,
+        "estimated": null,
+        "actual": null,
+        "estimated_runway": null,
+        "actual_runway": null
+      },
+      "airline": {
+        "name": "flynas",
+        "iata": "XY",
+        "icao": "KNE"
+      },
+      "flight": {
+        "number": "591",
+        "iata": "XY591",
+        "icao": "KNE591",
+        "codeshared": null
+      },
+      "aircraft": {
+        "registration": null,
+        "iata": null,
+        "icao": null,
+        "icao24": "717C92"
+      },
+      "live": null
+    },
+    {
+      "flight_date": "2026-10-09",
+      "flight_status": "active",
+      "departure": {
+        "airport": "Abu Dhabi International",
+        "timezone": "Asia/Dubai",
+        "iata": "AUH",
+        "icao": "OMAA",
+        "terminal": "A",
+        "gate": "A3",
+        "delay": 16,
+        "scheduled": "2026-10-09T14:00:00+00:00",
+        "estimated": "2026-10-09T14:00:00+00:00",
+        "actual": "2026-10-09T14:16:00+00:00",
+        "estimated_runway": "2026-10-09T14:16:00+00:00",
+        "actual_runway": "2026-10-09T14:16:00+00:00"
+      },
+      "arrival": {
+        "airport": "Damascus International Airport",
+        "timezone": "Asia/Damascus",
+        "iata": "DAM",
+        "icao": "OSDI",
+        "terminal": null,
+        "gate": null,
+        "baggage": null,
+        "scheduled": "2026-10-09T16:20:00+00:00",
+        "delay": 2,
+        "estimated": "2026-10-09T16:22:00+00:00",
+        "actual": null,
+        "estimated_runway": "2026-10-09T16:22:00+00:00",
+        "actual_runway": null
+      },
+      "airline": {
+        "name": "Etihad Airways",
+        "iata": "EY",
+        "icao": "ETD"
+      },
+      "flight": {
+        "number": "561",
+        "iata": "EY561",
+        "icao": "ETD561",
+        "codeshared": null
+      },
+      "aircraft": {
+        "registration": "A6-EIB",
+        "iata": "A320",
+        "icao": "A320",
+        "icao24": "8966EB"
+      },
+      "live": {
+        "updated": "2026-10-09T13:01:05+00:00",
+        "latitude": 33.4397,
+        "longitude": 37.8512,
+        "altitude": 7597.14,
+        "direction": 266,
+        "speed_horizontal": 675.98,
+        "speed_vertical": 0,
+        "is_ground": false
+      }
+    },
+    {
+      "flight_date": "2026-10-09",
+      "flight_status": "active",
+      "departure": {
+        "airport": "Dubai",
+        "timezone": "Asia/Dubai",
+        "iata": "DXB",
+        "icao": "OMDB",
+        "terminal": "3",
+        "gate": "B3",
+        "delay": 27,
+        "scheduled": "2026-10-09T13:00:00+00:00",
+        "estimated": "2026-10-09T13:00:00+00:00",
+        "actual": "2026-10-09T13:27:00+00:00",
+        "estimated_runway": "2026-10-09T13:27:00+00:00",
+        "actual_runway": "2026-10-09T13:27:00+00:00"
+      },
+      "arrival": {
+        "airport": "Damascus International Airport",
+        "timezone": "Asia/Damascus",
+        "iata": "DAM",
+        "icao": "OSDI",
+        "terminal": null,
+        "gate": null,
+        "baggage": null,
+        "scheduled": "2026-10-09T15:15:00+00:00",
+        "delay": 2,
+        "estimated": "2026-10-09T15:17:00+00:00",
+        "actual": null,
+        "estimated_runway": "2026-10-09T15:17:00+00:00",
+        "actual_runway": null
+      },
+      "airline": {
+        "name": "flydubai",
+        "iata": "FZ",
+        "icao": "FDB"
+      },
+      "flight": {
+        "number": "1113",
+        "iata": "FZ1113",
+        "icao": "FDB1113",
+        "codeshared": null
+      },
+      "aircraft": {
+        "registration": "A6-FKL",
+        "iata": "B38M",
+        "icao": "B38M",
+        "icao24": "8965D7"
+      },
+      "live": {
+        "updated": "2026-10-09T12:05:28+00:00",
+        "latitude": 33.2226,
+        "longitude": 38.2135,
+        "altitude": 7802.88,
+        "direction": 297,
+        "speed_horizontal": 770.432,
+        "speed_vertical": 0,
+        "is_ground": false
+      }
+    },
+    {
+      "flight_date": "2026-10-09",
+      "flight_status": "active",
+      "departure": {
+        "airport": "Dubai",
+        "timezone": "Asia/Dubai",
+        "iata": "DXB",
+        "icao": "OMDB",
+        "terminal": "3",
+        "gate": "B3",
+        "delay": 27,
+        "scheduled": "2026-10-09T13:00:00+00:00",
+        "estimated": "2026-10-09T13:00:00+00:00",
+        "actual": "2026-10-09T13:27:00+00:00",
+        "estimated_runway": "2026-10-09T13:27:00+00:00",
+        "actual_runway": "2026-10-09T13:27:00+00:00"
+      },
+      "arrival": {
+        "airport": "Damascus International Airport",
+        "timezone": "Asia/Damascus",
+        "iata": "DAM",
+        "icao": "OSDI",
+        "terminal": null,
+        "gate": null,
+        "baggage": null,
+        "scheduled": "2026-10-09T15:15:00+00:00",
+        "delay": 2,
+        "estimated": "2026-10-09T15:17:00+00:00",
+        "actual": null,
+        "estimated_runway": "2026-10-09T15:17:00+00:00",
+        "actual_runway": null
+      },
+      "airline": {
+        "name": "Emirates",
+        "iata": "EK",
+        "icao": "UAE"
+      },
+      "flight": {
+        "number": "2212",
+        "iata": "EK2212",
+        "icao": "UAE2212",
+        "codeshared": {
+          "airline_name": "flydubai",
+          "airline_iata": "fz",
+          "airline_icao": "fdb",
+          "flight_number": "1113",
+          "flight_iata": "fz1113",
+          "flight_icao": "fdb1113"
+        }
+      },
+      "aircraft": {
+        "registration": null,
+        "iata": null,
+        "icao": null,
+        "icao24": "8965D7"
+      },
+      "live": {
+        "updated": "2026-10-09T12:05:28+00:00",
+        "latitude": 33.2226,
+        "longitude": 38.2135,
+        "altitude": 7802.88,
+        "direction": 297,
+        "speed_horizontal": 770.432,
+        "speed_vertical": 0,
+        "is_ground": false
+      }
+    },
+    {
+      "flight_date": "2026-10-09",
+      "flight_status": "active",
+      "departure": {
+        "airport": "King Khaled International",
+        "timezone": "Asia/Riyadh",
+        "iata": "RUH",
+        "icao": "OERK",
+        "terminal": "1",
+        "gate": "134",
+        "delay": 36,
+        "scheduled": "2026-10-09T08:55:00+00:00",
+        "estimated": "2026-10-09T08:55:00+00:00",
+        "actual": "2026-10-09T09:31:00+00:00",
+        "estimated_runway": "2026-10-09T09:31:00+00:00",
+        "actual_runway": "2026-10-09T09:31:00+00:00"
+      },
+      "arrival": {
+        "airport": "Damascus International Airport",
+        "timezone": "Asia/Damascus",
+        "iata": "DAM",
+        "icao": "OSDI",
+        "terminal": null,
+        "gate": null,
+        "baggage": null,
+        "scheduled": "2026-10-09T11:20:00+00:00",
+        "delay": 10,
+        "estimated": "2026-10-09T11:30:00+00:00",
+        "actual": null,
+        "estimated_runway": "2026-10-09T11:30:00+00:00",
+        "actual_runway": null
+      },
+      "airline": {
+        "name": "Saudia",
+        "iata": "SV",
+        "icao": "SVA"
+      },
+      "flight": {
+        "number": "4037",
+        "iata": "SV4037",
+        "icao": "SVA4037",
+        "codeshared": {
+          "airline_name": "flyadeal",
+          "airline_iata": "f3",
+          "airline_icao": "fad",
+          "flight_number": "561",
+          "flight_iata": "f3561",
+          "flight_icao": "fad561"
+        }
+      },
+      "aircraft": {
+        "registration": null,
+        "iata": null,
+        "icao": null,
+        "icao24": "711462"
+      },
+      "live": {
+        "updated": "2026-10-09T08:25:43+00:00",
+        "latitude": 33.4022,
+        "longitude": 37.1329,
+        "altitude": 5897.88,
+        "direction": 266,
+        "speed_horizontal": 514.856,
+        "speed_vertical": 0,
+        "is_ground": false
+      }
+    },
+    {
+      "flight_date": "2026-10-09",
+      "flight_status": "landed",
+      "departure": {
+        "airport": "Sabiha Gokcen",
+        "timezone": "Europe/Istanbul",
+        "iata": "SAW",
+        "icao": "LTFJ",
+        "terminal": null,
+        "gate": null,
+        "delay": 27,
+        "scheduled": "2026-10-09T04:25:00+00:00",
+        "estimated": "2026-10-09T04:25:00+00:00",
+        "actual": "2026-10-09T04:52:00+00:00",
+        "estimated_runway": "2026-10-09T04:52:00+00:00",
+        "actual_runway": "2026-10-09T04:52:00+00:00"
+      },
+      "arrival": {
+        "airport": "Damascus International Airport",
+        "timezone": "Asia/Damascus",
+        "iata": "DAM",
+        "icao": "OSDI",
+        "terminal": null,
+        "gate": null,
+        "baggage": null,
+        "scheduled": "2026-10-09T06:30:00+00:00",
+        "delay": 0,
+        "estimated": "2026-10-09T06:22:00+00:00",
+        "actual": "2026-10-09T06:27:00+00:00",
+        "estimated_runway": "2026-10-09T06:27:00+00:00",
+        "actual_runway": "2026-10-09T06:27:00+00:00"
+      },
+      "airline": {
+        "name": "Dan Air",
+        "iata": "DN",
+        "icao": "FYC"
+      },
+      "flight": {
+        "number": "486",
+        "iata": "DN486",
+        "icao": "FYC486",
+        "codeshared": null
+      },
+      "aircraft": {
+        "registration": null,
+        "iata": null,
+        "icao": null,
+        "icao24": "4A2AAC"
+      },
+      "live": null
+    },
+    {
+      "flight_date": "2026-10-09",
+      "flight_status": "scheduled",
+      "departure": {
+        "airport": "Kuwait International",
+        "timezone": "Asia/Kuwait",
+        "iata": "KWI",
+        "icao": "OKKK",
+        "terminal": "5",
+        "gate": null,
+        "delay": null,
+        "scheduled": "2026-10-09T09:25:00+00:00",
+        "estimated": "2026-10-09T09:25:00+00:00",
+        "actual": null,
+        "estimated_runway": null,
+        "actual_runway": null
+      },
+      "arrival": {
+        "airport": "Damascus International Airport",
+        "timezone": "Asia/Damascus",
+        "iata": "DAM",
+        "icao": "OSDI",
+        "terminal": null,
+        "gate": null,
+        "baggage": null,
+        "scheduled": "2026-10-09T12:00:00+00:00",
+        "delay": null,
+        "estimated": null,
+        "actual": null,
+        "estimated_runway": null,
+        "actual_runway": null
+      },
+      "airline": {
+        "name": "Jazeera Airways",
+        "iata": "J9",
+        "icao": "JZR"
+      },
+      "flight": {
+        "number": "173",
+        "iata": "J9173",
+        "icao": "JZR173",
+        "codeshared": null
+      },
+      "aircraft": null,
+      "live": null
+    },
+    {
+      "flight_date": "2026-10-09",
+      "flight_status": "scheduled",
+      "departure": {
+        "airport": "Kuwait International",
+        "timezone": "Asia/Kuwait",
+        "iata": "KWI",
+        "icao": "OKKK",
+        "terminal": "4",
+        "gate": "51A",
+        "delay": 0,
+        "scheduled": "2026-10-09T11:10:00+00:00",
+        "estimated": "2026-10-09T11:10:00+00:00",
+        "actual": "2026-10-09T09:19:00+00:00",
+        "estimated_runway": null,
+        "actual_runway": "2026-10-09T09:19:00+00:00"
+      },
+      "arrival": {
+        "airport": "Damascus International Airport",
+        "timezone": "Asia/Damascus",
+        "iata": "DAM",
+        "icao": "OSDI",
+        "terminal": null,
+        "gate": null,
+        "baggage": null,
+        "scheduled": "2026-10-09T13:40:00+00:00",
+        "delay": 0,
+        "estimated": null,
+        "actual": "2026-10-09T11:16:00+00:00",
+        "estimated_runway": null,
+        "actual_runway": "2026-10-09T11:16:00+00:00"
+      },
+      "airline": {
+        "name": "Kuwait Airways",
+        "iata": "KU",
+        "icao": "KAC"
+      },
+      "flight": {
+        "number": "551",
+        "iata": "KU551",
+        "icao": "KAC551",
+        "codeshared": null
+      },
+      "aircraft": {
+        "registration": "9K-AKO",
+        "iata": "A20N",
+        "icao": "A20N",
+        "icao24": "706068"
+      },
+      "live": {
+        "updated": "2026-10-09T08:12:24+00:00",
+        "latitude": 33.4156,
+        "longitude": 37.3863,
+        "altitude": 4853.94,
+        "direction": 266,
+        "speed_horizontal": 692.648,
+        "speed_vertical": 0,
+        "is_ground": false
+      }
+    },
+    {
+      "flight_date": "2026-10-09",
+      "flight_status": "scheduled",
+      "departure": {
+        "airport": "Sharjah",
+        "timezone": "Asia/Dubai",
+        "iata": "SHJ",
+        "icao": "OMSJ",
+        "terminal": null,
+        "gate": null,
+        "delay": null,
+        "scheduled": "2026-10-09T11:00:00+00:00",
+        "estimated": "2026-10-09T11:00:00+00:00",
+        "actual": null,
+        "estimated_runway": null,
+        "actual_runway": null
+      },
+      "arrival": {
+        "airport": "Damascus International Airport",
+        "timezone": "Asia/Damascus",
+        "iata": "DAM",
+        "icao": "OSDI",
+        "terminal": null,
+        "gate": null,
+        "baggage": null,
+        "scheduled": "2026-10-09T13:45:00+00:00",
+        "delay": null,
+        "estimated": null,
+        "actual": null,
+        "estimated_runway": null,
+        "actual_runway": null
+      },
+      "airline": {
+        "name": "Syrian Air",
+        "iata": "RB",
+        "icao": "SYR"
+      },
+      "flight": {
+        "number": "506",
+        "iata": "RB506",
+        "icao": "SYR506",
+        "codeshared": null
+      },
+      "aircraft": null,
+      "live": null
+    },
+    {
+      "flight_date": "2026-10-09",
+      "flight_status": "active",
+      "departure": {
+        "airport": "Sharjah",
+        "timezone": "Asia/Dubai",
+        "iata": "SHJ",
+        "icao": "OMSJ",
+        "terminal": null,
+        "gate": null,
+        "delay": 18,
+        "scheduled": "2026-10-09T10:45:00+00:00",
+        "estimated": "2026-10-09T10:45:00+00:00",
+        "actual": "2026-10-09T11:03:00+00:00",
+        "estimated_runway": "2026-10-09T11:03:00+00:00",
+        "actual_runway": "2026-10-09T11:03:00+00:00"
+      },
+      "arrival": {
+        "airport": "Damascus International Airport",
+        "timezone": "Asia/Damascus",
+        "iata": "DAM",
+        "icao": "OSDI",
+        "terminal": null,
+        "gate": null,
+        "baggage": null,
+        "scheduled": "2026-10-09T12:55:00+00:00",
+        "delay": 0,
+        "estimated": "2026-10-09T12:50:00+00:00",
+        "actual": null,
+        "estimated_runway": "2026-10-09T12:50:00+00:00",
+        "actual_runway": null
+      },
+      "airline": {
+        "name": "Air Arabia",
+        "iata": "G9",
+        "icao": "ABY"
+      },
+      "flight": {
+        "number": "375",
+        "iata": "G9375",
+        "icao": "ABY375",
+        "codeshared": null
+      },
+      "aircraft": {
+        "registration": "A6-AOK",
+        "iata": "A320",
+        "icao": "A320",
+        "icao24": "896434"
+      },
+      "live": {
+        "updated": "2026-10-09T09:42:25+00:00",
+        "latitude": 33.4361,
+        "longitude": 37.7779,
+        "altitude": 6957.06,
+        "direction": 266,
+        "speed_horizontal": 751.912,
+        "speed_vertical": 0,
+        "is_ground": false
+      }
+    },
+    {
+      "flight_date": "2026-10-09",
+      "flight_status": "scheduled",
+      "departure": {
+        "airport": "King Khaled International",
+        "timezone": "Asia/Riyadh",
+        "iata": "RUH",
+        "icao": "OERK",
+        "terminal": "1",
+        "gate": "131",
+        "delay": 95,
+        "scheduled": "2026-10-09T07:00:00+00:00",
+        "estimated": "2026-10-09T07:00:00+00:00",
+        "actual": "2026-10-09T08:35:00+00:00",
+        "estimated_runway": "2026-10-09T08:35:00+00:00",
+        "actual_runway": "2026-10-09T08:35:00+00:00"
+      },
+      "arrival": {
+        "airport": "Damascus International Airport",
+        "timezone": "Asia/Damascus",
+        "iata": "DAM",
+        "icao": "OSDI",
+        "terminal": null,
+        "gate": null,
+        "baggage": null,
+        "scheduled": "2026-10-09T09:15:00+00:00",
+        "delay": 79,
+        "estimated": "2026-10-09T10:34:00+00:00",
+        "actual": null,
+        "estimated_runway": "2026-10-09T10:34:00+00:00",
+        "actual_runway": null
+      },
+      "airline": {
+        "name": "Gulf Air",
+        "iata": "GF",
+        "icao": "GFA"
+      },
+      "flight": {
+        "number": "5950",
+        "iata": "GF5950",
+        "icao": "GFA5950",
+        "codeshared": {
+          "airline_name": "flynas",
+          "airline_iata": "xy",
+          "airline_icao": "kne",
+          "flight_number": "387",
+          "flight_iata": "xy387",
+          "flight_icao": "kne387"
+        }
+      },
+      "aircraft": {
+        "registration": null,
+        "iata": null,
+        "icao": null,
+        "icao24": "717CCF"
+      },
+      "live": {
+        "updated": "2026-10-09T07:35:36+00:00",
+        "latitude": 31.795,
+        "longitude": 35.8272,
+        "altitude": 5486.4,
+        "direction": 300,
+        "speed_horizontal": 9.26,
+        "speed_vertical": 0,
+        "is_ground": false
+      }
+    },
+    {
+      "flight_date": "2026-10-09",
+      "flight_status": "active",
+      "departure": {
+        "airport": "King Khaled International",
+        "timezone": "Asia/Riyadh",
+        "iata": "RUH",
+        "icao": "OERK",
+        "terminal": "1",
+        "gate": "134",
+        "delay": 36,
+        "scheduled": "2026-10-09T08:55:00+00:00",
+        "estimated": "2026-10-09T08:55:00+00:00",
+        "actual": "2026-10-09T09:31:00+00:00",
+        "estimated_runway": "2026-10-09T09:31:00+00:00",
+        "actual_runway": "2026-10-09T09:31:00+00:00"
+      },
+      "arrival": {
+        "airport": "Damascus International Airport",
+        "timezone": "Asia/Damascus",
+        "iata": "DAM",
+        "icao": "OSDI",
+        "terminal": null,
+        "gate": null,
+        "baggage": null,
+        "scheduled": "2026-10-09T11:20:00+00:00",
+        "delay": 10,
+        "estimated": "2026-10-09T11:30:00+00:00",
+        "actual": null,
+        "estimated_runway": "2026-10-09T11:30:00+00:00",
+        "actual_runway": null
+      },
+      "airline": {
+        "name": "flyadeal",
+        "iata": "F3",
+        "icao": "FAD"
+      },
+      "flight": {
+        "number": "561",
+        "iata": "F3561",
+        "icao": "FAD561",
+        "codeshared": null
+      },
+      "aircraft": {
+        "registration": "HZ-FBP",
+        "iata": "A20N",
+        "icao": "A20N",
+        "icao24": "711462"
+      },
+      "live": {
+        "updated": "2026-10-09T08:25:43+00:00",
+        "latitude": 33.4022,
+        "longitude": 37.1329,
+        "altitude": 5897.88,
+        "direction": 266,
+        "speed_horizontal": 514.856,
+        "speed_vertical": 0,
+        "is_ground": false
+      }
+    },
+    {
+      "flight_date": "2026-10-09",
+      "flight_status": "scheduled",
+      "departure": {
+        "airport": "D\u00fcsseldorf International Airport",
+        "timezone": "Europe/Berlin",
+        "iata": "DUS",
+        "icao": "EDDL",
+        "terminal": null,
+        "gate": null,
+        "delay": null,
+        "scheduled": "2026-10-09T07:30:00+00:00",
+        "estimated": "2026-10-09T07:30:00+00:00",
+        "actual": null,
+        "estimated_runway": null,
+        "actual_runway": null
+      },
+      "arrival": {
+        "airport": "Damascus International Airport",
+        "timezone": "Asia/Damascus",
+        "iata": "DAM",
+        "icao": "OSDI",
+        "terminal": null,
+        "gate": null,
+        "baggage": null,
+        "scheduled": "2026-10-09T12:45:00+00:00",
+        "delay": null,
+        "estimated": null,
+        "actual": null,
+        "estimated_runway": null,
+        "actual_runway": null
+      },
+      "airline": {
+        "name": "empty",
+        "iata": null,
+        "icao": null
+      },
+      "flight": {
+        "number": "648",
+        "iata": null,
+        "icao": null,
+        "codeshared": null
+      },
+      "aircraft": null,
+      "live": null
+    },
+    {
+      "flight_date": "2026-10-09",
+      "flight_status": "scheduled",
+      "departure": {
+        "airport": "D\u00fcsseldorf International Airport",
+        "timezone": "Europe/Berlin",
+        "iata": "DUS",
+        "icao": "EDDL",
+        "terminal": null,
+        "gate": "C57",
+        "delay": 44,
+        "scheduled": "2026-10-09T07:30:00+00:00",
+        "estimated": "2026-10-09T07:30:00+00:00",
+        "actual": "2026-10-09T08:14:00+00:00",
+        "estimated_runway": "2026-10-09T08:14:00+00:00",
+        "actual_runway": "2026-10-09T08:14:00+00:00"
+      },
+      "arrival": {
+        "airport": "Damascus International Airport",
+        "timezone": "Asia/Damascus",
+        "iata": "DAM",
+        "icao": "OSDI",
+        "terminal": null,
+        "gate": null,
+        "baggage": null,
+        "scheduled": "2026-10-09T12:45:00+00:00",
+        "delay": 30,
+        "estimated": "2026-10-09T13:15:00+00:00",
+        "actual": null,
+        "estimated_runway": "2026-10-09T13:15:00+00:00",
+        "actual_runway": null
+      },
+      "airline": {
+        "name": "LEAV Aviation",
+        "iata": "KK",
+        "icao": "NGN"
+      },
+      "flight": {
+        "number": "490",
+        "iata": "KK490",
+        "icao": "NGN490",
+        "codeshared": null
+      },
+      "aircraft": {
+        "registration": "D-ADDY",
+        "iata": "A320",
+        "icao": "A320",
+        "icao24": "3C5099"
+      },
+      "live": {
+        "updated": "2026-10-09T10:05:40+00:00",
+        "latitude": 34.3513,
+        "longitude": 36.4013,
+        "altitude": 7559.04,
+        "direction": 119,
+        "speed_horizontal": 837.104,
+        "speed_vertical": 0,
+        "is_ground": false
+      }
+    },
+    {
+      "flight_date": "2026-10-09",
+      "flight_status": "landed",
+      "departure": {
+        "airport": "Doha International",
+        "timezone": "Asia/Qatar",
+        "iata": "DOH",
+        "icao": "OTHH",
+        "terminal": null,
+        "gate": "C34",
+        "delay": 35,
+        "scheduled": "2026-10-09T08:50:00+00:00",
+        "estimated": "2026-10-09T08:50:00+00:00",
+        "actual": "2026-10-09T09:25:00+00:00",
+        "estimated_runway": "2026-10-09T09:25:00+00:00",
+        "actual_runway": "2026-10-09T09:25:00+00:00"
+      },
+      "arrival": {
+        "airport": "Damascus International Airport",
+        "timezone": "Asia/Damascus",
+        "iata": "DAM",
+        "icao": "OSDI",
+        "terminal": null,
+        "gate": null,
+        "baggage": null,
+        "scheduled": "2026-10-09T12:00:00+00:00",
+        "delay": 0,
+        "estimated": "2026-10-09T11:57:00+00:00",
+        "actual": "2026-10-09T11:56:00+00:00",
+        "estimated_runway": "2026-10-09T11:56:00+00:00",
+        "actual_runway": "2026-10-09T11:56:00+00:00"
+      },
+      "airline": {
+        "name": "Qatar Airways",
+        "iata": "QR",
+        "icao": "QTR"
+      },
+      "flight": {
+        "number": "410",
+        "iata": "QR410",
+        "icao": "QTR410",
+        "codeshared": null
+      },
+      "aircraft": {
+        "registration": "A7-BBA",
+        "iata": "B77L",
+        "icao": "B77L",
+        "icao24": "06A066"
+      },
+      "live": null
+    },
+    {
+      "flight_date": "2026-10-09",
+      "flight_status": "landed",
+      "departure": {
+        "airport": "Istanbul Airport",
+        "timezone": "Europe/Istanbul",
+        "iata": "IST",
+        "icao": "LTFM",
+        "terminal": null,
+        "gate": "D8",
+        "delay": 25,
+        "scheduled": "2026-10-09T07:15:00+00:00",
+        "estimated": "2026-10-09T07:15:00+00:00",
+        "actual": "2026-10-09T07:40:00+00:00",
+        "estimated_runway": "2026-10-09T07:40:00+00:00",
+        "actual_runway": "2026-10-09T07:40:00+00:00"
+      },
+      "arrival": {
+        "airport": "Damascus International Airport",
+        "timezone": "Asia/Damascus",
+        "iata": "DAM",
+        "icao": "OSDI",
+        "terminal": null,
+        "gate": null,
+        "baggage": null,
+        "scheduled": "2026-10-09T09:25:00+00:00",
+        "delay": 0,
+        "estimated": "2026-10-09T09:22:00+00:00",
+        "actual": "2026-10-09T09:19:00+00:00",
+        "estimated_runway": "2026-10-09T09:19:00+00:00",
+        "actual_runway": "2026-10-09T09:19:00+00:00"
+      },
+      "airline": {
+        "name": "Turkish Airlines",
+        "iata": "TK",
+        "icao": "THY"
+      },
+      "flight": {
+        "number": "846",
+        "iata": "TK846",
+        "icao": "THY846",
+        "codeshared": null
+      },
+      "aircraft": {
+        "registration": "TC-JNO",
+        "iata": "A333",
+        "icao": "A333",
+        "icao24": "4BA9CF"
+      },
+      "live": null
+    },
+    {
+      "flight_date": "2026-10-09",
+      "flight_status": "landed",
+      "departure": {
+        "airport": "King Abdulaziz International",
+        "timezone": "Asia/Riyadh",
+        "iata": "JED",
+        "icao": "OEJN",
+        "terminal": "1",
+        "gate": "A30C",
+        "delay": 10,
+        "scheduled": "2026-10-09T07:40:00+00:00",
+        "estimated": "2026-10-09T07:40:00+00:00",
+        "actual": "2026-10-09T07:50:00+00:00",
+        "estimated_runway": "2026-10-09T07:50:00+00:00",
+        "actual_runway": "2026-10-09T07:50:00+00:00"
+      },
+      "arrival": {
+        "airport": "Damascus International Airport",
+        "timezone": "Asia/Damascus",
+        "iata": "DAM",
+        "icao": "OSDI",
+        "terminal": null,
+        "gate": null,
+        "baggage": null,
+        "scheduled": "2026-10-09T09:50:00+00:00",
+        "delay": 0,
+        "estimated": "2026-10-09T09:41:00+00:00",
+        "actual": "2026-10-09T09:37:00+00:00",
+        "estimated_runway": "2026-10-09T09:37:00+00:00",
+        "actual_runway": "2026-10-09T09:37:00+00:00"
+      },
+      "airline": {
+        "name": "flyadeal",
+        "iata": "F3",
+        "icao": "FAD"
+      },
+      "flight": {
+        "number": "741",
+        "iata": "F3741",
+        "icao": "FAD741",
+        "codeshared": null
+      },
+      "aircraft": {
+        "registration": "HZ-FBN",
+        "iata": "A20N",
+        "icao": "A20N",
+        "icao24": "7114CE"
+      },
+      "live": null
+    },
+    {
+      "flight_date": "2026-10-09",
+      "flight_status": "landed",
+      "departure": {
+        "airport": "King Abdulaziz International",
+        "timezone": "Asia/Riyadh",
+        "iata": "JED",
+        "icao": "OEJN",
+        "terminal": "1",
+        "gate": "A30C",
+        "delay": 10,
+        "scheduled": "2026-10-09T07:40:00+00:00",
+        "estimated": "2026-10-09T07:40:00+00:00",
+        "actual": "2026-10-09T07:50:00+00:00",
+        "estimated_runway": "2026-10-09T07:50:00+00:00",
+        "actual_runway": "2026-10-09T07:50:00+00:00"
+      },
+      "arrival": {
+        "airport": "Damascus International Airport",
+        "timezone": "Asia/Damascus",
+        "iata": "DAM",
+        "icao": "OSDI",
+        "terminal": null,
+        "gate": null,
+        "baggage": null,
+        "scheduled": "2026-10-09T09:50:00+00:00",
+        "delay": 0,
+        "estimated": "2026-10-09T09:41:00+00:00",
+        "actual": "2026-10-09T09:37:00+00:00",
+        "estimated_runway": "2026-10-09T09:37:00+00:00",
+        "actual_runway": "2026-10-09T09:37:00+00:00"
+      },
+      "airline": {
+        "name": "Saudia",
+        "iata": "SV",
+        "icao": "SVA"
+      },
+      "flight": {
+        "number": "4055",
+        "iata": "SV4055",
+        "icao": "SVA4055",
+        "codeshared": {
+          "airline_name": "flyadeal",
+          "airline_iata": "f3",
+          "airline_icao": "fad",
+          "flight_number": "741",
+          "flight_iata": "f3741",
+          "flight_icao": "fad741"
+        }
+      },
+      "aircraft": {
+        "registration": null,
+        "iata": null,
+        "icao": null,
+        "icao24": "7114CE"
+      },
+      "live": null
+    },
+    {
+      "flight_date": "2026-10-09",
+      "flight_status": "scheduled",
+      "departure": {
+        "airport": "Dubai",
+        "timezone": "Asia/Dubai",
+        "iata": "DXB",
+        "icao": "OMDB",
+        "terminal": null,
+        "gate": null,
+        "delay": null,
+        "scheduled": "2026-10-09T08:40:00+00:00",
+        "estimated": "2026-10-09T08:40:00+00:00",
+        "actual": null,
+        "estimated_runway": null,
+        "actual_runway": null
+      },
+      "arrival": {
+        "airport": "Damascus International Airport",
+        "timezone": "Asia/Damascus",
+        "iata": "DAM",
+        "icao": "OSDI",
+        "terminal": null,
+        "gate": null,
+        "baggage": null,
+        "scheduled": "2026-10-09T11:20:00+00:00",
+        "delay": null,
+        "estimated": null,
+        "actual": null,
+        "estimated_runway": null,
+        "actual_runway": null
+      },
+      "airline": {
+        "name": "Syrian Air",
+        "iata": "RB",
+        "icao": "SYR"
+      },
+      "flight": {
+        "number": "516",
+        "iata": "RB516",
+        "icao": "SYR516",
+        "codeshared": null
+      },
+      "aircraft": null,
+      "live": null
+    },
+    {
+      "flight_date": "2026-10-09",
+      "flight_status": "landed",
+      "departure": {
+        "airport": "Abu Dhabi International",
+        "timezone": "Asia/Dubai",
+        "iata": "AUH",
+        "icao": "OMAA",
+        "terminal": "A",
+        "gate": null,
+        "delay": 11,
+        "scheduled": "2026-10-09T08:05:00+00:00",
+        "estimated": "2026-10-09T08:05:00+00:00",
+        "actual": "2026-10-09T08:16:00+00:00",
+        "estimated_runway": "2026-10-09T08:16:00+00:00",
+        "actual_runway": "2026-10-09T08:16:00+00:00"
+      },
+      "arrival": {
+        "airport": "Damascus International Airport",
+        "timezone": "Asia/Damascus",
+        "iata": "DAM",
+        "icao": "OSDI",
+        "terminal": null,
+        "gate": null,
+        "baggage": null,
+        "scheduled": "2026-10-09T10:45:00+00:00",
+        "delay": 0,
+        "estimated": "2026-10-09T10:03:00+00:00",
+        "actual": "2026-10-09T10:02:00+00:00",
+        "estimated_runway": "2026-10-09T10:02:00+00:00",
+        "actual_runway": "2026-10-09T10:02:00+00:00"
+      },
+      "airline": {
+        "name": "Air Arabia",
+        "iata": "3L",
+        "icao": "ADY"
+      },
+      "flight": {
+        "number": "504",
+        "iata": "3L504",
+        "icao": "ADY504",
+        "codeshared": null
+      },
+      "aircraft": {
+        "registration": "A6-AUE",
+        "iata": "A320",
+        "icao": "A320",
+        "icao24": "8965EE"
+      },
+      "live": null
+    },
+    {
+      "flight_date": "2026-10-09",
+      "flight_status": "scheduled",
+      "departure": {
+        "airport": "Sharjah",
+        "timezone": "Asia/Dubai",
+        "iata": "SHJ",
+        "icao": "OMSJ",
+        "terminal": null,
+        "gate": null,
+        "delay": 40,
+        "scheduled": "2026-10-09T08:00:00+00:00",
+        "estimated": "2026-10-09T08:00:00+00:00",
+        "actual": "2026-10-09T08:40:00+00:00",
+        "estimated_runway": "2026-10-09T08:40:00+00:00",
+        "actual_runway": "2026-10-09T08:40:00+00:00"
+      },
+      "arrival": {
+        "airport": "Damascus International Airport",
+        "timezone": "Asia/Damascus",
+        "iata": "DAM",
+        "icao": "OSDI",
+        "terminal": null,
+        "gate": null,
+        "baggage": null,
+        "scheduled": "2026-10-09T10:10:00+00:00",
+        "delay": 22,
+        "estimated": "2026-10-09T10:32:00+00:00",
+        "actual": null,
+        "estimated_runway": "2026-10-09T10:32:00+00:00",
+        "actual_runway": null
+      },
+      "airline": {
+        "name": "Air Arabia",
+        "iata": "G9",
+        "icao": "ABY"
+      },
+      "flight": {
+        "number": "363",
+        "iata": "G9363",
+        "icao": "ABY363",
+        "codeshared": null
+      },
+      "aircraft": {
+        "registration": "A6-AQH",
+        "iata": "A320",
+        "icao": "A320",
+        "icao24": "896668"
+      },
+      "live": {
+        "updated": "2026-10-09T07:35:36+00:00",
+        "latitude": 31.7459,
+        "longitude": 36.2407,
+        "altitude": 3779.52,
+        "direction": 233,
+        "speed_horizontal": 18.52,
+        "speed_vertical": 0,
+        "is_ground": false
+      }
+    },
+    {
+      "flight_date": "2026-10-09",
+      "flight_status": "scheduled",
+      "departure": {
+        "airport": "King Khaled International",
+        "timezone": "Asia/Riyadh",
+        "iata": "RUH",
+        "icao": "OERK",
+        "terminal": "1",
+        "gate": "131",
+        "delay": 95,
+        "scheduled": "2026-10-09T07:00:00+00:00",
+        "estimated": "2026-10-09T07:00:00+00:00",
+        "actual": "2026-10-09T08:35:00+00:00",
+        "estimated_runway": "2026-10-09T08:35:00+00:00",
+        "actual_runway": "2026-10-09T08:35:00+00:00"
+      },
+      "arrival": {
+        "airport": "Damascus International Airport",
+        "timezone": "Asia/Damascus",
+        "iata": "DAM",
+        "icao": "OSDI",
+        "terminal": null,
+        "gate": null,
+        "baggage": null,
+        "scheduled": "2026-10-09T09:15:00+00:00",
+        "delay": 79,
+        "estimated": "2026-10-09T10:34:00+00:00",
+        "actual": null,
+        "estimated_runway": "2026-10-09T10:34:00+00:00",
+        "actual_runway": null
+      },
+      "airline": {
+        "name": "flynas",
+        "iata": "XY",
+        "icao": "KNE"
+      },
+      "flight": {
+        "number": "387",
+        "iata": "XY387",
+        "icao": "KNE387",
+        "codeshared": null
+      },
+      "aircraft": {
+        "registration": "HZ-NS52",
+        "iata": "A20N",
+        "icao": "A20N",
+        "icao24": "717CCF"
+      },
+      "live": {
+        "updated": "2026-10-09T07:35:36+00:00",
+        "latitude": 31.795,
+        "longitude": 35.8272,
+        "altitude": 5486.4,
+        "direction": 300,
+        "speed_horizontal": 9.26,
+        "speed_vertical": 0,
+        "is_ground": false
+      }
+    },
+    {
+      "flight_date": "2026-10-09",
+      "flight_status": "landed",
+      "departure": {
+        "airport": "Dubai",
+        "timezone": "Asia/Dubai",
+        "iata": "DXB",
+        "icao": "OMDB",
+        "terminal": "3",
+        "gate": "B2",
+        "delay": 28,
+        "scheduled": "2026-10-09T07:15:00+00:00",
+        "estimated": "2026-10-09T07:15:00+00:00",
+        "actual": "2026-10-09T07:43:00+00:00",
+        "estimated_runway": "2026-10-09T07:43:00+00:00",
+        "actual_runway": "2026-10-09T07:43:00+00:00"
+      },
+      "arrival": {
+        "airport": "Damascus International Airport",
+        "timezone": "Asia/Damascus",
+        "iata": "DAM",
+        "icao": "OSDI",
+        "terminal": null,
+        "gate": null,
+        "baggage": null,
+        "scheduled": "2026-10-09T09:30:00+00:00",
+        "delay": 2,
+        "estimated": "2026-10-09T09:31:00+00:00",
+        "actual": "2026-10-09T09:32:00+00:00",
+        "estimated_runway": "2026-10-09T09:32:00+00:00",
+        "actual_runway": "2026-10-09T09:32:00+00:00"
+      },
+      "airline": {
+        "name": "flydubai",
+        "iata": "FZ",
+        "icao": "FDB"
+      },
+      "flight": {
+        "number": "1115",
+        "iata": "FZ1115",
+        "icao": "FDB1115",
+        "codeshared": null
+      },
+      "aircraft": {
+        "registration": "A6-FKG",
+        "iata": "B38M",
+        "icao": "B38M",
+        "icao24": "8965D2"
+      },
+      "live": null
+    },
+    {
+      "flight_date": "2026-10-09",
+      "flight_status": "landed",
+      "departure": {
+        "airport": "Dubai",
+        "timezone": "Asia/Dubai",
+        "iata": "DXB",
+        "icao": "OMDB",
+        "terminal": "3",
+        "gate": "B2",
+        "delay": 28,
+        "scheduled": "2026-10-09T07:15:00+00:00",
+        "estimated": "2026-10-09T07:15:00+00:00",
+        "actual": "2026-10-09T07:43:00+00:00",
+        "estimated_runway": "2026-10-09T07:43:00+00:00",
+        "actual_runway": "2026-10-09T07:43:00+00:00"
+      },
+      "arrival": {
+        "airport": "Damascus International Airport",
+        "timezone": "Asia/Damascus",
+        "iata": "DAM",
+        "icao": "OSDI",
+        "terminal": null,
+        "gate": null,
+        "baggage": null,
+        "scheduled": "2026-10-09T09:30:00+00:00",
+        "delay": 2,
+        "estimated": "2026-10-09T09:31:00+00:00",
+        "actual": "2026-10-09T09:32:00+00:00",
+        "estimated_runway": "2026-10-09T09:32:00+00:00",
+        "actual_runway": "2026-10-09T09:32:00+00:00"
+      },
+      "airline": {
+        "name": "Emirates",
+        "iata": "EK",
+        "icao": "UAE"
+      },
+      "flight": {
+        "number": "2179",
+        "iata": "EK2179",
+        "icao": "UAE2179",
+        "codeshared": {
+          "airline_name": "flydubai",
+          "airline_iata": "fz",
+          "airline_icao": "fdb",
+          "flight_number": "1115",
+          "flight_iata": "fz1115",
+          "flight_icao": "fdb1115"
+        }
+      },
+      "aircraft": {
+        "registration": null,
+        "iata": null,
+        "icao": null,
+        "icao24": "8965D2"
+      },
+      "live": null
+    },
+    {
+      "flight_date": "2026-10-09",
+      "flight_status": "scheduled",
+      "departure": {
+        "airport": "King Fahd International Airport",
+        "timezone": "Asia/Riyadh",
+        "iata": "DMM",
+        "icao": "OEDF",
+        "terminal": null,
+        "gate": "23",
+        "delay": 58,
+        "scheduled": "2026-10-09T07:05:00+00:00",
+        "estimated": "2026-10-09T07:05:00+00:00",
+        "actual": "2026-10-09T08:03:00+00:00",
+        "estimated_runway": "2026-10-09T08:03:00+00:00",
+        "actual_runway": "2026-10-09T08:03:00+00:00"
+      },
+      "arrival": {
+        "airport": "Damascus International Airport",
+        "timezone": "Asia/Damascus",
+        "iata": "DAM",
+        "icao": "OSDI",
+        "terminal": null,
+        "gate": null,
+        "baggage": null,
+        "scheduled": "2026-10-09T09:40:00+00:00",
+        "delay": 29,
+        "estimated": "2026-10-09T10:09:00+00:00",
+        "actual": null,
+        "estimated_runway": "2026-10-09T10:09:00+00:00",
+        "actual_runway": null
+      },
+      "airline": {
+        "name": "flynas",
+        "iata": "XY",
+        "icao": "KNE"
+      },
+      "flight": {
+        "number": "892",
+        "iata": "XY892",
+        "icao": "KNE892",
+        "codeshared": null
+      },
+      "aircraft": {
+        "registration": "HZ-NS75",
+        "iata": "A20N",
+        "icao": "A20N",
+        "icao24": "717C81"
+      },
+      "live": {
+        "updated": "2026-10-09T07:11:35+00:00",
+        "latitude": 33.4296,
+        "longitude": 36.8179,
+        "altitude": 3139.44,
+        "direction": 302,
+        "speed_horizontal": 425.96,
+        "speed_vertical": 0,
+        "is_ground": false
+      }
+    },
+    {
+      "flight_date": "2026-10-09",
+      "flight_status": "scheduled",
+      "departure": {
+        "airport": "King Fahd International Airport",
+        "timezone": "Asia/Riyadh",
+        "iata": "DMM",
+        "icao": "OEDF",
+        "terminal": null,
+        "gate": "23",
+        "delay": 58,
+        "scheduled": "2026-10-09T07:05:00+00:00",
+        "estimated": "2026-10-09T07:05:00+00:00",
+        "actual": "2026-10-09T08:03:00+00:00",
+        "estimated_runway": "2026-10-09T08:03:00+00:00",
+        "actual_runway": "2026-10-09T08:03:00+00:00"
+      },
+      "arrival": {
+        "airport": "Damascus International Airport",
+        "timezone": "Asia/Damascus",
+        "iata": "DAM",
+        "icao": "OSDI",
+        "terminal": null,
+        "gate": null,
+        "baggage": null,
+        "scheduled": "2026-10-09T09:40:00+00:00",
+        "delay": 29,
+        "estimated": "2026-10-09T10:09:00+00:00",
+        "actual": null,
+        "estimated_runway": "2026-10-09T10:09:00+00:00",
+        "actual_runway": null
+      },
+      "airline": {
+        "name": "Gulf Air",
+        "iata": "GF",
+        "icao": "GFA"
+      },
+      "flight": {
+        "number": "5930",
+        "iata": "GF5930",
+        "icao": "GFA5930",
+        "codeshared": {
+          "airline_name": "flynas",
+          "airline_iata": "xy",
+          "airline_icao": "kne",
+          "flight_number": "892",
+          "flight_iata": "xy892",
+          "flight_icao": "kne892"
+        }
+      },
+      "aircraft": {
+        "registration": null,
+        "iata": null,
+        "icao": null,
+        "icao24": "717C81"
+      },
+      "live": {
+        "updated": "2026-10-09T07:11:35+00:00",
+        "latitude": 33.4296,
+        "longitude": 36.8179,
+        "altitude": 3139.44,
+        "direction": 302,
+        "speed_horizontal": 425.96,
+        "speed_vertical": 0,
+        "is_ground": false
+      }
+    },
+    {
+      "flight_date": "2026-10-09",
+      "flight_status": "landed",
+      "departure": {
+        "airport": "Queen Alia International",
+        "timezone": "Asia/Amman",
+        "iata": "AMM",
+        "icao": "OJAI",
+        "terminal": null,
+        "gate": null,
+        "delay": 0,
+        "scheduled": "2026-10-09T06:45:00+00:00",
+        "estimated": "2026-10-09T06:45:00+00:00",
+        "actual": "2026-10-09T06:40:00+00:00",
+        "estimated_runway": "2026-10-09T06:40:00+00:00",
+        "actual_runway": "2026-10-09T06:40:00+00:00"
+      },
+      "arrival": {
+        "airport": "Damascus International Airport",
+        "timezone": "Asia/Damascus",
+        "iata": "DAM",
+        "icao": "OSDI",
+        "terminal": null,
+        "gate": null,
+        "baggage": null,
+        "scheduled": "2026-10-09T07:40:00+00:00",
+        "delay": 0,
+        "estimated": "2026-10-09T07:10:00+00:00",
+        "actual": "2026-10-09T07:11:00+00:00",
+        "estimated_runway": "2026-10-09T07:11:00+00:00",
+        "actual_runway": "2026-10-09T07:11:00+00:00"
+      },
+      "airline": {
+        "name": "Royal Jordanian",
+        "iata": "RJ",
+        "icao": "RJA"
+      },
+      "flight": {
+        "number": "435",
+        "iata": "RJ435",
+        "icao": "RJA435",
+        "codeshared": null
+      },
+      "aircraft": {
+        "registration": "JY-RAL",
+        "iata": "A20N",
+        "icao": "A20N",
+        "icao24": "74482C"
+      },
+      "live": null
+    },
+    {
+      "flight_date": "2026-10-09",
+      "flight_status": "landed",
+      "departure": {
+        "airport": "Queen Alia International",
+        "timezone": "Asia/Amman",
+        "iata": "AMM",
+        "icao": "OJAI",
+        "terminal": null,
+        "gate": null,
+        "delay": 0,
+        "scheduled": "2026-10-09T06:45:00+00:00",
+        "estimated": "2026-10-09T06:45:00+00:00",
+        "actual": "2026-10-09T06:40:00+00:00",
+        "estimated_runway": "2026-10-09T06:40:00+00:00",
+        "actual_runway": "2026-10-09T06:40:00+00:00"
+      },
+      "arrival": {
+        "airport": "Damascus International Airport",
+        "timezone": "Asia/Damascus",
+        "iata": "DAM",
+        "icao": "OSDI",
+        "terminal": null,
+        "gate": null,
+        "baggage": null,
+        "scheduled": "2026-10-09T07:40:00+00:00",
+        "delay": 0,
+        "estimated": "2026-10-09T07:10:00+00:00",
+        "actual": "2026-10-09T07:11:00+00:00",
+        "estimated_runway": "2026-10-09T07:11:00+00:00",
+        "actual_runway": "2026-10-09T07:11:00+00:00"
+      },
+      "airline": {
+        "name": "Oman Air",
+        "iata": "WY",
+        "icao": "OMA"
+      },
+      "flight": {
+        "number": "5231",
+        "iata": "WY5231",
+        "icao": "OMA5231",
+        "codeshared": {
+          "airline_name": "royal jordanian",
+          "airline_iata": "rj",
+          "airline_icao": "rja",
+          "flight_number": "435",
+          "flight_iata": "rj435",
+          "flight_icao": "rja435"
+        }
+      },
+      "aircraft": {
+        "registration": null,
+        "iata": null,
+        "icao": null,
+        "icao24": "74482C"
+      },
+      "live": null
+    },
+    {
+      "flight_date": "2026-10-09",
+      "flight_status": "scheduled",
+      "departure": {
+        "airport": "Sabiha Gokcen",
+        "timezone": "Europe/Istanbul",
+        "iata": "SAW",
+        "icao": "LTFJ",
+        "terminal": null,
+        "gate": null,
+        "delay": 15,
+        "scheduled": "2026-10-09T04:25:00+00:00",
+        "estimated": "2026-10-09T04:25:00+00:00",
+        "actual": null,
+        "estimated_runway": "2026-10-09T04:40:00+00:00",
+        "actual_runway": null
+      },
+      "arrival": {
+        "airport": "Damascus International Airport",
+        "timezone": "Asia/Damascus",
+        "iata": "DAM",
+        "icao": "OSDI",
+        "terminal": null,
+        "gate": null,
+        "baggage": null,
+        "scheduled": "2026-10-09T06:09:00+00:00",
+        "delay": null,
+        "estimated": null,
+        "actual": null,
+        "estimated_runway": null,
+        "actual_runway": null
+      },
+      "airline": {
+        "name": "Dan Air",
+        "iata": "DN",
+        "icao": "FYC"
+      },
+      "flight": {
+        "number": null,
+        "iata": "DN",
+        "icao": "FYC",
+        "codeshared": null
+      },
+      "aircraft": {
+        "registration": null,
+        "iata": null,
+        "icao": null,
+        "icao24": "4A2AAC"
+      },
+      "live": null
+    },
+    {
+      "flight_date": "2026-10-09",
+      "flight_status": "scheduled",
+      "departure": {
+        "airport": "Sabiha Gokcen",
+        "timezone": "Europe/Istanbul",
+        "iata": "SAW",
+        "icao": "LTFJ",
+        "terminal": null,
+        "gate": null,
+        "delay": null,
+        "scheduled": "2026-10-09T04:25:00+00:00",
+        "estimated": "2026-10-09T04:25:00+00:00",
+        "actual": null,
+        "estimated_runway": null,
+        "actual_runway": null
+      },
+      "arrival": {
+        "airport": "Damascus International Airport",
+        "timezone": "Asia/Damascus",
+        "iata": "DAM",
+        "icao": "OSDI",
+        "terminal": null,
+        "gate": null,
+        "baggage": null,
+        "scheduled": "2026-10-09T06:30:00+00:00",
+        "delay": null,
+        "estimated": null,
+        "actual": null,
+        "estimated_runway": null,
+        "actual_runway": null
+      },
+      "airline": {
+        "name": "Fly Cham",
+        "iata": null,
+        "icao": "FYC"
+      },
+      "flight": {
+        "number": "486",
+        "iata": null,
+        "icao": "FYC486",
+        "codeshared": null
+      },
+      "aircraft": null,
+      "live": null
+    },
+    {
+      "flight_date": "2026-10-09",
+      "flight_status": "active",
+      "departure": {
+        "airport": "Istanbul Airport",
+        "timezone": "Europe/Istanbul",
+        "iata": "IST",
+        "icao": "LTFM",
+        "terminal": null,
+        "gate": "C4",
+        "delay": 28,
+        "scheduled": "2026-10-09T04:50:00+00:00",
+        "estimated": "2026-10-09T04:50:00+00:00",
+        "actual": "2026-10-09T05:18:00+00:00",
+        "estimated_runway": "2026-10-09T05:18:00+00:00",
+        "actual_runway": "2026-10-09T05:18:00+00:00"
+      },
+      "arrival": {
+        "airport": "Damascus International Airport",
+        "timezone": "Asia/Damascus",
+        "iata": "DAM",
+        "icao": "OSDI",
+        "terminal": null,
+        "gate": null,
+        "baggage": null,
+        "scheduled": "2026-10-09T07:00:00+00:00",
+        "delay": 0,
+        "estimated": "2026-10-09T06:58:00+00:00",
+        "actual": null,
+        "estimated_runway": "2026-10-09T06:58:00+00:00",
+        "actual_runway": null
+      },
+      "airline": {
+        "name": "Turkish Airlines",
+        "iata": "TK",
+        "icao": "THY"
+      },
+      "flight": {
+        "number": "848",
+        "iata": "TK848",
+        "icao": "THY848",
+        "codeshared": null
+      },
+      "aircraft": {
+        "registration": "TC-JYI",
+        "iata": "B739",
+        "icao": "B739",
+        "icao24": "4BAB29"
+      },
+      "live": {
+        "updated": "2026-10-09T04:04:15+00:00",
+        "latitude": 33.4176,
+        "longitude": 36.5124,
+        "altitude": 0,
+        "direction": 47,
+        "speed_horizontal": 16.668,
+        "speed_vertical": 0,
+        "is_ground": true
+      }
+    },
+    {
+      "flight_date": "2026-10-09",
+      "flight_status": null,
+      "departure": {
+        "airport": "Kuwait International",
+        "timezone": "Asia/Kuwait",
+        "iata": "KWI",
+        "icao": "OKKK",
+        "terminal": "5",
+        "gate": null,
+        "delay": null,
+        "scheduled": "2026-10-09T03:25:00+00:00",
+        "estimated": "2026-10-09T03:25:00+00:00",
+        "actual": null,
+        "estimated_runway": null,
+        "actual_runway": null
+      },
+      "arrival": {
+        "airport": "Damascus International Airport",
+        "timezone": "Asia/Damascus",
+        "iata": "DAM",
+        "icao": "OSDI",
+        "terminal": null,
+        "gate": null,
+        "baggage": null,
+        "scheduled": "2026-10-09T06:00:00+00:00",
+        "delay": null,
+        "estimated": null,
+        "actual": null,
+        "estimated_runway": null,
+        "actual_runway": null
+      },
+      "airline": {
+        "name": "Jazeera Airways",
+        "iata": "J9",
+        "icao": "JZR"
+      },
+      "flight": {
+        "number": "171",
+        "iata": "J9171",
+        "icao": "JZR171",
+        "codeshared": null
+      },
+      "aircraft": null,
+      "live": null
+    },
+    {
+      "flight_date": "2026-10-09",
+      "flight_status": "landed",
+      "departure": {
+        "airport": "Sharjah",
+        "timezone": "Asia/Dubai",
+        "iata": "SHJ",
+        "icao": "OMSJ",
+        "terminal": null,
+        "gate": null,
+        "delay": 20,
+        "scheduled": "2026-10-09T04:15:00+00:00",
+        "estimated": "2026-10-09T04:15:00+00:00",
+        "actual": "2026-10-09T04:35:00+00:00",
+        "estimated_runway": "2026-10-09T04:35:00+00:00",
+        "actual_runway": "2026-10-09T04:35:00+00:00"
+      },
+      "arrival": {
+        "airport": "Damascus International Airport",
+        "timezone": "Asia/Damascus",
+        "iata": "DAM",
+        "icao": "OSDI",
+        "terminal": null,
+        "gate": null,
+        "baggage": null,
+        "scheduled": "2026-10-09T06:25:00+00:00",
+        "delay": 7,
+        "estimated": "2026-10-09T06:28:00+00:00",
+        "actual": "2026-10-09T06:32:00+00:00",
+        "estimated_runway": "2026-10-09T06:32:00+00:00",
+        "actual_runway": "2026-10-09T06:32:00+00:00"
+      },
+      "airline": {
+        "name": "Air Arabia",
+        "iata": "G9",
+        "icao": "ABY"
+      },
+      "flight": {
+        "number": "433",
+        "iata": "G9433",
+        "icao": "ABY433",
+        "codeshared": null
+      },
+      "aircraft": {
+        "registration": "A6-ANB",
+        "iata": "A320",
+        "icao": "A320",
+        "icao24": "8962D1"
+      },
+      "live": null
+    },
+    {
+      "flight_date": "2026-10-09",
+      "flight_status": "active",
+      "departure": {
+        "airport": "Seeb",
+        "timezone": "Asia/Muscat",
+        "iata": "MCT",
+        "icao": "OOMS",
+        "terminal": null,
+        "gate": null,
+        "delay": 28,
+        "scheduled": "2026-10-09T03:00:00+00:00",
+        "estimated": "2026-10-09T03:00:00+00:00",
+        "actual": "2026-10-09T03:28:00+00:00",
+        "estimated_runway": "2026-10-09T03:28:00+00:00",
+        "actual_runway": "2026-10-09T03:28:00+00:00"
+      },
+      "arrival": {
+        "airport": "Damascus International Airport",
+        "timezone": "Asia/Damascus",
+        "iata": "DAM",
+        "icao": "OSDI",
+        "terminal": null,
+        "gate": null,
+        "baggage": null,
+        "scheduled": "2026-10-09T05:45:00+00:00",
+        "delay": 0,
+        "estimated": "2026-10-09T05:41:00+00:00",
+        "actual": null,
+        "estimated_runway": "2026-10-09T05:41:00+00:00",
+        "actual_runway": null
+      },
+      "airline": {
+        "name": "Fly Cham",
+        "iata": null,
+        "icao": "FYC"
+      },
+      "flight": {
+        "number": "782",
+        "iata": null,
+        "icao": "FYC782",
+        "codeshared": null
+      },
+      "aircraft": {
+        "registration": null,
+        "iata": null,
+        "icao": null,
+        "icao24": "778823"
+      },
+      "live": null
+    },
+    {
+      "flight_date": "2026-10-09",
+      "flight_status": "landed",
+      "departure": {
+        "airport": "Queen Alia International",
+        "timezone": "Asia/Amman",
+        "iata": "AMM",
+        "icao": "OJAI",
+        "terminal": null,
+        "gate": null,
+        "delay": 20,
+        "scheduled": "2026-10-09T02:00:00+00:00",
+        "estimated": "2026-10-09T02:00:00+00:00",
+        "actual": "2026-10-09T02:20:00+00:00",
+        "estimated_runway": "2026-10-09T02:20:00+00:00",
+        "actual_runway": "2026-10-09T02:20:00+00:00"
+      },
+      "arrival": {
+        "airport": "Damascus International Airport",
+        "timezone": "Asia/Damascus",
+        "iata": "DAM",
+        "icao": "OSDI",
+        "terminal": null,
+        "gate": null,
+        "baggage": null,
+        "scheduled": "2026-10-09T02:55:00+00:00",
+        "delay": 0,
+        "estimated": null,
+        "actual": "2026-10-09T02:51:00+00:00",
+        "estimated_runway": "2026-10-09T02:51:00+00:00",
+        "actual_runway": "2026-10-09T02:51:00+00:00"
+      },
+      "airline": {
+        "name": "Royal Jordanian",
+        "iata": "RJ",
+        "icao": "RJA"
+      },
+      "flight": {
+        "number": "439",
+        "iata": "RJ439",
+        "icao": "RJA439",
+        "codeshared": null
+      },
+      "aircraft": {
+        "registration": "JY-RAL",
+        "iata": "A20N",
+        "icao": "A20N",
+        "icao24": "74482C"
+      },
+      "live": null
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+[
+  {
+    "index": 5,
+    "airportcity": "Abu Dhabi",
+    "count": 1
+  },
+  {
+    "index": 4,
+    "airportcity": "Dubai",
+    "count": 2
+  },
+  {
+    "index": 3,
+    "airportcity": "Kuwait City",
+    "count": 5
+  },
+  {
+    "index": 2,
+    "airportcity": "Cairo",
+    "count": 6
+  },
+  {
+    "index": 1,
+    "airportcity": "Erbil",
+    "count": 8
+  },
+  {
+    "index": 0,
+    "airportcity": "Doha",
+    "count": 9
+  }
+]

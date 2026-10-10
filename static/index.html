@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Damascus International Airport (DAM/OSDI) — Airport Data Engine</title>
+  <style>
+    :root {
+      --primary: #1e3a8a;
+      --primary-light: #3b82f6;
+      --bg: #f8fafc;
+      --card-bg: #ffffff;
+      --text: #0f172a;
+      --text-muted: #64748b;
+      --border: #e2e8f0;
+      --success: #10b981;
+      --warning: #f59e0b;
+      --danger: #ef4444;
+      --radius: 8px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); line-height: 1.5; padding: 24px; }
+    .header { background: var(--card-bg); border: 1px solid var(--border); padding: 24px; border-radius: var(--radius); margin-bottom: 24px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+    .header h1 { font-size: 24px; font-weight: 700; color: var(--primary); display: flex; align-items: center; gap: 12px; }
+    .badge { display: inline-block; padding: 4px 8px; border-radius: 4px; font-size: 12px; font-weight: 600; text-transform: uppercase; }
+    .badge-primary { background: #e0e7ff; color: #3730a3; }
+    .badge-success { background: #d1fae5; color: #065f46; }
+    .badge-warning { background: #fef3c7; color: #92400e; }
+    .badge-danger { background: #fee2e2; color: #991b1b; }
+    .meta-row { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 16px; font-size: 14px; color: var(--text-muted); }
+    .meta-item strong { color: var(--text); }
+    
+    .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-bottom: 24px; }
+    .stat-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+    .stat-title { font-size: 12px; text-transform: uppercase; font-weight: 600; color: var(--text-muted); margin-bottom: 6px; }
+    .stat-value { font-size: 28px; font-weight: 700; color: var(--primary); }
+    .stat-desc { font-size: 12px; color: var(--text-muted); margin-top: 4px; }
+
+    .tabs { display: flex; gap: 8px; border-bottom: 2px solid var(--border); margin-bottom: 20px; }
+    .tab-btn { background: none; border: none; padding: 10px 18px; font-size: 14px; font-weight: 600; color: var(--text-muted); cursor: pointer; border-bottom: 2px solid transparent; margin-bottom: -2px; }
+    .tab-btn.active { color: var(--primary-light); border-bottom-color: var(--primary-light); }
+    .tab-content { display: none; }
+    .tab-content.active { display: block; }
+
+    .panel { background: var(--card-bg); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); margin-bottom: 24px; }
+    .panel h2 { font-size: 18px; margin-bottom: 16px; color: var(--text); }
+
+    .controls { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 16px; align-items: center; }
+    input, select { padding: 8px 12px; border: 1px solid var(--border); border-radius: 6px; font-size: 14px; }
+    button.btn { background: var(--primary-light); color: #fff; border: none; padding: 8px 16px; border-radius: 6px; font-size: 14px; font-weight: 600; cursor: pointer; }
+    button.btn:hover { background: var(--primary); }
+    button.btn-outline { background: transparent; border: 1px solid var(--border); color: var(--text); }
+    button.btn-outline:hover { background: var(--border); }
+
+    table { width: 100%; border-collapse: collapse; font-size: 13px; text-align: left; }
+    th { background: #f1f5f9; padding: 10px 12px; border-bottom: 2px solid var(--border); color: var(--text); font-weight: 600; }
+    td { padding: 10px 12px; border-bottom: 1px solid var(--border); }
+    tr:hover { background: #f8fafc; }
+    .table-container { overflow-x: auto; max-height: 520px; }
+
+    .coverage-card { border-left: 4px solid var(--primary-light); padding: 12px 16px; background: #f8fafc; margin-bottom: 12px; border-radius: 0 var(--radius) var(--radius) 0; }
+    .coverage-card.paid { border-left-color: var(--warning); }
+    .coverage-card.blocked { border-left-color: var(--danger); }
+    .coverage-title { font-weight: 700; font-size: 14px; display: flex; justify-content: space-between; }
+    .coverage-meta { font-size: 12px; color: var(--text-muted); margin-top: 4px; }
+
+    .download-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; }
+    .download-card { border: 1px solid var(--border); border-radius: var(--radius); padding: 16px; }
+    .download-card h3 { font-size: 15px; margin-bottom: 6px; }
+    .download-card p { font-size: 13px; color: var(--text-muted); margin-bottom: 12px; }
+    .btn-group { display: flex; gap: 8px; }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <h1>
+      <span>✈️ Damascus International Airport</span>
+      <span class="badge badge-primary">IATA: DAM</span>
+      <span class="badge badge-primary">ICAO: OSDI</span>
+      <span class="badge badge-success">Data Engine Live</span>
+    </h1>
+    <div class="meta-row">
+      <div class="meta-item"><strong>Location:</strong> Damascus, Syria (33.4150° N, 36.5152° E)</div>
+      <div class="meta-item"><strong>Elevation:</strong> 2,021 ft</div>
+      <div class="meta-item"><strong>Runways:</strong> 05R/23L (11,811 ft), 05L/23R (9,843 ft)</div>
+      <div class="meta-item"><strong>Engine Core:</strong> SQLite + FastAPI Normalized Architecture</div>
+    </div>
+  </div>
+
+  <div class="stats-grid">
+    <div class="stat-card">
+      <div class="stat-title">Verified Flights Ingested</div>
+      <div class="stat-value" id="stat-total-flights">266</div>
+      <div class="stat-desc">Deduplicated from AviationStack & FR24</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-title">Earliest Verified Record</div>
+      <div class="stat-value" id="stat-earliest">2024-01-01</div>
+      <div class="stat-desc">Syria Economic Monitor time series</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-title">Unique Aircraft Tracked</div>
+      <div class="stat-value" id="stat-aircraft">98</div>
+      <div class="stat-desc">Verified by registration or ICAO24 hex</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-title">Airlines Operating</div>
+      <div class="stat-value" id="stat-airlines">24</div>
+      <div class="stat-desc">Syrian Air, Fly Cham, flynas, etc.</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-title">Data Quality Audit</div>
+      <div class="stat-value" style="color: var(--success);" id="stat-quality">100%</div>
+      <div class="stat-desc">7/7 integrity rules passed</div>
+    </div>
+  </div>
+
+  <div class="tabs">
+    <button class="tab-btn active" onclick="switchTab('flights')">Flights Browser</button>
+    <button class="tab-btn" onclick="switchTab('daily')">Daily Movements</button>
+    <button class="tab-btn" onclick="switchTab('historical')">2024 Historical Research</button>
+    <button class="tab-btn" onclick="switchTab('coverage')">Coverage & Provenance Report</button>
+    <button class="tab-btn" onclick="switchTab('quality')">Quality & Deduplication</button>
+    <button class="tab-btn" onclick="switchTab('exports')">Exports & REST API</button>
+  </div>
+
+  <!-- Tab 1: Flights Browser -->
+  <div id="tab-flights" class="tab-content active">
+    <div class="panel">
+      <h2>Normalized Damascus Flight Events</h2>
+      <div class="controls">
+        <select id="filter-type" onchange="loadFlights()">
+          <option value="">All Movements (Arrivals & Departures)</option>
+          <option value="departure">Departures Only</option>
+          <option value="arrival">Arrivals Only</option>
+        </select>
+        <select id="filter-status" onchange="loadFlights()">
+          <option value="">All Statuses</option>
+          <option value="landed">Landed</option>
+          <option value="scheduled">Scheduled</option>
+          <option value="active">Active</option>
+          <option value="cancelled">Cancelled</option>
+          <option value="diverted">Diverted</option>
+        </select>
+        <select id="filter-route" onchange="loadFlights()">
+          <option value="">All Routes</option>
+          <option value="international">International</option>
+          <option value="domestic">Domestic (Syrian)</option>
+        </select>
+        <input type="text" id="filter-airline" placeholder="Filter by Airline..." onkeyup="if(event.key==='Enter') loadFlights()">
+        <button class="btn" onclick="loadFlights()">Filter</button>
+      </div>
+
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Type</th>
+              <th>Flight</th>
+              <th>Airline</th>
+              <th>Connected Airport</th>
+              <th>Status</th>
+              <th>Route</th>
+              <th>Aircraft / Hex</th>
+              <th>Source Provenance</th>
+            </tr>
+          </thead>
+          <tbody id="flights-table-body">
+            <tr><td colspan="9">Loading flights...</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tab 2: Daily Movements -->
+  <div id="tab-daily" class="tab-content">
+    <div class="panel">
+      <h2>Damascus Airport Daily Operational Summary</h2>
+      <p style="color: var(--text-muted); margin-bottom: 16px; font-size: 13px;">
+        Daily aggregated movement counts calculated strictly from verified physical flight events. Missing dates are preserved as unobserved and never filled with synthetic zeros.
+      </p>
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Arrivals</th>
+              <th>Departures</th>
+              <th>Total Movements</th>
+              <th>Landed</th>
+              <th>Cancelled</th>
+              <th>Diverted</th>
+              <th>Domestic</th>
+              <th>International</th>
+              <th>Unique Aircraft</th>
+              <th>Completeness</th>
+            </tr>
+          </thead>
+          <tbody id="daily-table-body">
+            <tr><td colspan="11">Loading daily movements...</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tab 3: 2024 Historical Research -->
+  <div id="tab-historical" class="tab-content">
+    <div class="panel">
+      <h2>Syria Economic Monitor 2024 Operational Series (DAM, ALP, LTK)</h2>
+      <p style="color: var(--text-muted); margin-bottom: 16px; font-size: 13px;">
+        578 daily records extracted from the World Bank / Data Partnership research notebook covering 2024-01-01 to 2024-10-15. Documented provider outage dates (e.g. 2024-01-28..30, 2024-04-29..30, 2024-06-07..09) are explicitly preserved with provenance notes.
+      </p>
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Movement</th>
+              <th>Scope</th>
+              <th>Landed</th>
+              <th>Scheduled</th>
+              <th>Active</th>
+              <th>Cancelled</th>
+              <th>Diverted</th>
+              <th>Total Operations</th>
+              <th>Data Source & Quality Note</th>
+            </tr>
+          </thead>
+          <tbody id="hist-table-body">
+            <tr><td colspan="10">Loading historical series...</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tab 4: Coverage & Provenance -->
+  <div id="tab-coverage" class="tab-content">
+    <div class="panel">
+      <h2>Evidence-Based Historical Coverage Audit</h2>
+      <div id="coverage-container">
+        Loading coverage report...
+      </div>
+    </div>
+  </div>
+
+  <!-- Tab 5: Quality & Deduplication -->
+  <div id="tab-quality" class="tab-content">
+    <div class="panel">
+      <h2>Data Quality Checklist & Rules Evaluation</h2>
+      <p style="color: var(--text-muted); margin-bottom: 16px; font-size: 13px;">
+        Systematic checklist execution verifying no synthetic zero filling, no speculative passenger/cargo estimation, valid ISO timestamps, and strict deduplication.
+      </p>
+      <div id="quality-container">
+        Loading quality audit...
+      </div>
+    </div>
+  </div>
+
+  <!-- Tab 6: Exports & REST API -->
+  <div id="tab-exports" class="tab-content">
+    <div class="panel">
+      <h2>Data Exports</h2>
+      <div class="download-grid">
+        <div class="download-card">
+          <h3>Damascus Flight Events</h3>
+          <p>266 normalized, deduplicated physical flight operations for Damascus International Airport with aircraft hex, registration, and status.</p>
+          <div class="btn-group">
+            <a href="/api/export/damascus_flights?format=csv" class="btn" download>Download CSV</a>
+            <a href="/api/export/damascus_flights?format=json" class="btn btn-outline" download>Download JSON</a>
+          </div>
+        </div>
+        <div class="download-card">
+          <h3>Damascus Daily Movements</h3>
+          <p>Daily aggregated movements (arrivals, departures, total, cancellations, unique aircraft) with no synthetic zeros.</p>
+          <div class="btn-group">
+            <a href="/api/export/damascus_daily?format=csv" class="btn" download>Download CSV</a>
+            <a href="/api/export/damascus_daily?format=json" class="btn btn-outline" download>Download JSON</a>
+          </div>
+        </div>
+        <div class="download-card">
+          <h3>2024 Historical Series</h3>
+          <p>Syria Economic Monitor 2024 daily operational dataset (289 days, 2024-01-01 to 2024-10-15) by flight status.</p>
+          <div class="btn-group">
+            <a href="/api/export/historical_2024?format=csv" class="btn" download>Download CSV</a>
+            <a href="/api/export/historical_2024?format=json" class="btn btn-outline" download>Download JSON</a>
+          </div>
+        </div>
+        <div class="download-card">
+          <h3>Coverage & Provenance Report</h3>
+          <p>Comprehensive audit of sources, date intervals, paywalled barriers, and verification statuses.</p>
+          <div class="btn-group">
+            <a href="/api/export/coverage_report?format=csv" class="btn" download>Download CSV</a>
+            <a href="/api/export/coverage_report?format=json" class="btn btn-outline" download>Download JSON</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel">
+      <h2>REST API Endpoints</h2>
+      <table style="font-family: monospace;">
+        <tr><td><strong>GET</strong> /api/flights</td><td>Query flights with filters (date, type, status, airline, route_type, limit, offset)</td></tr>
+        <tr><td><strong>GET</strong> /api/flights/{event_id}</td><td>Retrieve single flight event with full raw source JSON and aircraft metadata</td></tr>
+        <tr><td><strong>GET</strong> /api/movements/daily</td><td>Retrieve Damascus daily movements</td></tr>
+        <tr><td><strong>GET</strong> /api/movements/historical-2024</td><td>Retrieve 2024 Syria Economic Monitor operational time series</td></tr>
+        <tr><td><strong>GET</strong> /api/movements/stats</td><td>Aggregate statistics (totals, route breakdown, top destinations, top airlines)</td></tr>
+        <tr><td><strong>GET</strong> /api/coverage</td><td>Retrieve evidence-based coverage matrix in JSON</td></tr>
+        <tr><td><strong>GET</strong> /api/quality</td><td>Retrieve automated data quality check results</td></tr>
+        <tr><td><strong>GET</strong> /api/airport</td><td>Retrieve Damascus Airport infrastructure & runway specifications</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <script>
+    function switchTab(tabId) {
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+      event.target.classList.add('active');
+      document.getElementById('tab-' + tabId).classList.add('active');
+
+      if (tabId === 'daily') loadDaily();
+      if (tabId === 'historical') loadHistorical();
+      if (tabId === 'coverage') loadCoverage();
+      if (tabId === 'quality') loadQuality();
+    }
+
+    async function loadStats() {
+      try {
+        const res = await fetch('/api/movements/stats');
+        const data = await res.json();
+        document.getElementById('stat-total-flights').innerText = data.total_verified_flights;
+        document.getElementById('stat-aircraft').innerText = data.unique_aircraft_tracked;
+        document.getElementById('stat-airlines').innerText = data.top_airlines.length + '+';
+      } catch (e) { console.error(e); }
+    }
+
+    async function loadFlights() {
+      const type = document.getElementById('filter-type').value;
+      const status = document.getElementById('filter-status').value;
+      const route = document.getElementById('filter-route').value;
+      const airline = document.getElementById('filter-airline').value;
+
+      let url = '/api/flights?limit=100';
+      if (type) url += '&movement_type=' + encodeURIComponent(type);
+      if (status) url += '&status=' + encodeURIComponent(status);
+      if (route) url += '&route_type=' + encodeURIComponent(route);
+      if (airline) url += '&airline=' + encodeURIComponent(airline);
+
+      const tbody = document.getElementById('flights-table-body');
+      tbody.innerHTML = '<tr><td colspan="9">Loading flights...</td></tr>';
+
+      try {
+        const res = await fetch(url);
+        const json = await res.json();
+        if (!json.data || json.data.length === 0) {
+          tbody.innerHTML = '<tr><td colspan="9">No flight events match the selected filters.</td></tr>';
+          return;
+        }
+        tbody.innerHTML = json.data.map(f => {
+          const statusClass = f.flight_status === 'landed' ? 'badge-success' : (f.flight_status === 'cancelled' ? 'badge-danger' : 'badge-primary');
+          const routeClass = f.route_type === 'domestic' ? 'badge-warning' : 'badge-primary';
+          const aircraft = (f.aircraft_model || '') + (f.aircraft_registration ? ' (' + f.aircraft_registration + ')' : (f.aircraft_icao24 ? ' [hex:' + f.aircraft_icao24 + ']' : ''));
+          return `
+            <tr>
+              <td><strong>${f.flight_date}</strong></td>
+              <td><span class="badge ${f.movement_type === 'arrival' ? 'badge-primary' : 'badge-warning'}">${f.movement_type}</span></td>
+              <td><strong>${f.flight_number}</strong></td>
+              <td>${f.airline_name || f.airline_iata || 'Unknown'}</td>
+              <td>${f.connected_airport_name || f.connected_airport_iata || 'N/A'} (${f.connected_city || f.connected_country || ''})</td>
+              <td><span class="badge ${statusClass}">${f.flight_status}</span></td>
+              <td><span class="badge ${routeClass}">${f.route_type}</span></td>
+              <td>${aircraft || '—'}</td>
+              <td><small>${f.source}</small></td>
+            </tr>
+          `;
+        }).join('');
+      } catch (e) {
+        tbody.innerHTML = `<tr><td colspan="9">Error loading flights: ${e.message}</td></tr>`;
+      }
+    }
+
+    async function loadDaily() {
+      const tbody = document.getElementById('daily-table-body');
+      try {
+        const res = await fetch('/api/movements/daily');
+        const json = await res.json();
+        tbody.innerHTML = json.data.map(d => `
+          <tr>
+            <td><strong>${d.flight_date}</strong></td>
+            <td>${d.arrival_count}</td>
+            <td>${d.departure_count}</td>
+            <td><strong>${d.total_movements}</strong></td>
+            <td>${d.landed_count}</td>
+            <td>${d.cancelled_count}</td>
+            <td>${d.diverted_count}</td>
+            <td>${d.domestic_count}</td>
+            <td>${d.international_count}</td>
+            <td>${d.unique_aircraft_count}</td>
+            <td><span class="badge badge-success">${d.completeness_status}</span></td>
+          </tr>
+        `).join('');
+      } catch (e) {
+        tbody.innerHTML = `<tr><td colspan="11">Error: ${e.message}</td></tr>`;
+      }
+    }
+
+    async function loadHistorical() {
+      const tbody = document.getElementById('hist-table-body');
+      try {
+        const res = await fetch('/api/movements/historical-2024?limit=150');
+        const json = await res.json();
+        tbody.innerHTML = json.data.map(h => `
+          <tr>
+            <td><strong>${h.flight_date}</strong></td>
+            <td><span class="badge badge-primary">${h.movement_type}</span></td>
+            <td>${h.scope}</td>
+            <td>${h.landed}</td>
+            <td>${h.scheduled}</td>
+            <td>${h.active}</td>
+            <td>${h.cancelled}</td>
+            <td>${h.diverted}</td>
+            <td><strong>${h.total_recorded_operations}</strong></td>
+            <td><small>${h.status_note === 'documented_provider_gap' ? '<span class="badge badge-warning">Provider Outage</span>' : 'Verified Research'}</small></td>
+          </tr>
+        `).join('');
+      } catch (e) {
+        tbody.innerHTML = `<tr><td colspan="10">Error: ${e.message}</td></tr>`;
+      }
+    }
+
+    async function loadCoverage() {
+      const c = document.getElementById('coverage-container');
+      try {
+        const res = await fetch('/api/coverage');
+        const list = await res.json();
+        c.innerHTML = list.map(item => {
+          let cardClass = '';
+          if (item.data_category.includes('Paid')) cardClass = 'paid';
+          if (item.data_category.includes('Blocked')) cardClass = 'blocked';
+          return `
+            <div class="coverage-card ${cardClass}">
+              <div class="coverage-title">
+                <span>${item.source} — <em>${item.metric}</em></span>
+                <span class="badge badge-primary">${item.data_category}</span>
+              </div>
+              <div class="coverage-meta">
+                <strong>Scope:</strong> ${item.scope} | 
+                <strong>Earliest:</strong> ${item.earliest_observed_date} | 
+                <strong>Latest:</strong> ${item.latest_observed_date}
+              </div>
+              <div style="font-size: 13px; margin-top: 6px;">
+                <strong>Verification Status:</strong> ${item.verification_status}<br>
+                <strong>Known Gaps / Failures:</strong> ${item.known_gaps} (${item.failed_requests})<br>
+                <strong>Licensing:</strong> ${item.source_licensing}
+              </div>
+            </div>
+          `;
+        }).join('');
+      } catch (e) {
+        c.innerHTML = 'Error loading coverage: ' + e.message;
+      }
+    }
+
+    async function loadQuality() {
+      const q = document.getElementById('quality-container');
+      try {
+        const res = await fetch('/api/quality');
+        const json = await res.json();
+        q.innerHTML = `
+          <div style="margin-bottom: 16px;">
+            <strong>Overall Status:</strong> <span class="badge badge-success">${json.overall_status}</span> 
+            (${json.passed_checks} of ${json.total_checks} checks passed) | 
+            <small>Audited at: ${json.audit_timestamp}</small>
+          </div>
+          <table>
+            <thead>
+              <tr>
+                <th>Check Name</th>
+                <th>Status</th>
+                <th>Metric Value</th>
+                <th>Audit Details</th>
+              </tr>
+            </thead>
+            <tbody>
+              ${json.checks.map(c => `
+                <tr>
+                  <td><code>${c.check_name}</code></td>
+                  <td><span class="badge ${c.passed ? 'badge-success' : 'badge-danger'}">${c.passed ? 'PASSED' : 'FAILED'}</span></td>
+                  <td>${c.metric_value}</td>
+                  <td>${c.details}</td>
+                </tr>
+              `).join('')}
+            </tbody>
+          </table>
+        `;
+      } catch (e) {
+        q.innerHTML = 'Error loading quality audit: ' + e.message;
+      }
+    }
+
+    // Initial load
+    loadStats();
+    loadFlights();
+  </script>
+</body>
+</html>

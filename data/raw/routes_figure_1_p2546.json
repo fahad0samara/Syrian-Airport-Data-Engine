@@ -1,0 +1,17 @@
+[
+  {
+    "index": 2,
+    "airportcity": "Sharjah",
+    "count": 1
+  },
+  {
+    "index": 1,
+    "airportcity": "Kuwait City",
+    "count": 5
+  },
+  {
+    "index": 0,
+    "airportcity": "Doha",
+    "count": 7
+  }
+]

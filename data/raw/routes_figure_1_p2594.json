@@ -1,0 +1,52 @@
+[
+  {
+    "index": 9,
+    "airportcity": "Doha",
+    "count": 14
+  },
+  {
+    "index": 8,
+    "airportcity": "Basra",
+    "count": 18
+  },
+  {
+    "index": 7,
+    "airportcity": "Tehran",
+    "count": 20
+  },
+  {
+    "index": 6,
+    "airportcity": "Dubai",
+    "count": 27
+  },
+  {
+    "index": 5,
+    "airportcity": "Beirut",
+    "count": 46
+  },
+  {
+    "index": 4,
+    "airportcity": "Baghdad",
+    "count": 71
+  },
+  {
+    "index": 3,
+    "airportcity": "Kuwait City",
+    "count": 120
+  },
+  {
+    "index": 2,
+    "airportcity": "Sharjah",
+    "count": 141
+  },
+  {
+    "index": 1,
+    "airportcity": "Erbil",
+    "count": 213
+  },
+  {
+    "index": 0,
+    "airportcity": "Najaf",
+    "count": 243
+  }
+]

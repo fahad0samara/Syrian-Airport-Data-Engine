@@ -1,0 +1,35 @@
+{
+  "id": "5833",
+  "ident": "OSDI",
+  "type": "large_airport",
+  "name": "Damascus International Airport",
+  "latitude_deg": 33.415001,
+  "longitude_deg": 36.515202,
+  "elevation_ft": 2021,
+  "continent": "AS",
+  "iso_country": "SY",
+  "iso_region": "SY-DI",
+  "municipality": "Damascus",
+  "scheduled_service": "yes",
+  "gps_code": "OSDI",
+  "iata_code": "DAM",
+  "local_code": "",
+  "runways": [
+    {
+      "ident": "05R/23L",
+      "length_ft": 11811,
+      "width_ft": 148,
+      "surface": "ASP",
+      "lighted": 1,
+      "closed": 0
+    },
+    {
+      "ident": "05L/23R",
+      "length_ft": 9843,
+      "width_ft": 148,
+      "surface": "ASP",
+      "lighted": 1,
+      "closed": 0
+    }
+  ]
+}

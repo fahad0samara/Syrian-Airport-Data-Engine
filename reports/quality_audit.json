@@ -1,0 +1,51 @@
+{
+  "audit_timestamp": "2026-10-10T14:29:14Z",
+  "overall_status": "PASSED",
+  "total_checks": 7,
+  "passed_checks": 7,
+  "failed_checks": 0,
+  "checks": [
+    {
+      "check_name": "airport_identifiers_validity",
+      "passed": 1,
+      "metric_value": 0.0,
+      "details": "All 266 events have airport_iata=DAM and airport_icao=OSDI."
+    },
+    {
+      "check_name": "no_synthetic_zeros_on_missing_dates",
+      "passed": 1,
+      "metric_value": 0.0,
+      "details": "Daily movements contains only dates with genuine observed flights; no zero-filled synthetic dates."
+    },
+    {
+      "check_name": "no_speculative_passenger_or_cargo_estimates",
+      "passed": 1,
+      "metric_value": 0.0,
+      "details": "Verified: Zero estimated passenger counts or cargo tonnages generated from aircraft capacity."
+    },
+    {
+      "check_name": "flight_status_taxonomy_validity",
+      "passed": 1,
+      "metric_value": 0.0,
+      "details": "All events adhere to standard statuses ['active', 'cancelled', 'diverted', 'landed', 'scheduled', 'unknown']."
+    },
+    {
+      "check_name": "route_classification_integrity",
+      "passed": 1,
+      "metric_value": 0.0,
+      "details": "Route classification matches IATA/ICAO territorial registry (Syrian domestic vs International). 0 misclassifications."
+    },
+    {
+      "check_name": "deduplication_uniqueness",
+      "passed": 1,
+      "metric_value": 0.0,
+      "details": "All normalized events are unique per movement type, flight number, date, and hourly slot."
+    },
+    {
+      "check_name": "timestamp_iso8601_utc_compliance",
+      "passed": 1,
+      "metric_value": 0.0,
+      "details": "All timestamps comply with ISO 8601 UTC standard. Invalid count: 0."
+    }
+  ]
+}
