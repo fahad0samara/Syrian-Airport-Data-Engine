@@ -1,0 +1,249 @@
+{
+  "test_timestamp_utc": "2026-10-11T10:03:11.169964+00:00",
+  "airport": {
+    "icao": "OSDI",
+    "iata": "DAM",
+    "lat": 33.4115,
+    "lon": 36.5156
+  },
+  "providers": {
+    "opensky": {
+      "http_status": 200,
+      "error": null,
+      "total_returned": 8,
+      "valid_hex": 8,
+      "has_callsign": 8,
+      "has_altitude": 8,
+      "has_speed": 8,
+      "radius_breakdown": {
+        "10": 0,
+        "25": 0,
+        "50": 0,
+        "100": 1,
+        "150": 5
+      },
+      "classifications": {
+        "terminal_area_transit": 3,
+        "overflight_observed": 5
+      },
+      "sample_aircraft": [
+        {
+          "hex": "46b82b",
+          "callsign": "AEE924",
+          "country": "Greece",
+          "lat": 32.1886,
+          "lon": 34.9944,
+          "distance_km": 196.73,
+          "alt_baro_ft": 3025.0,
+          "alt_geom_ft": 3200.0,
+          "speed_kts": 205.9,
+          "track": 174.7,
+          "vertrate_fpm": -1344.5,
+          "onground": false,
+          "squawk": "7436",
+          "classification": "terminal_area_transit"
+        },
+        {
+          "hex": "896401",
+          "callsign": "ABY352",
+          "country": "United Arab Emirates",
+          "lat": 33.7583,
+          "lon": 37.5348,
+          "distance_km": 101.98,
+          "alt_baro_ft": 32250.0,
+          "alt_geom_ft": 33675.0,
+          "speed_kts": 442.3,
+          "track": 153.84,
+          "vertrate_fpm": 960.6,
+          "onground": false,
+          "squawk": null,
+          "classification": "overflight_observed"
+        },
+        {
+          "hex": "739601",
+          "callsign": "HFA605",
+          "country": "Israel",
+          "lat": 32.8305,
+          "lon": 34.948,
+          "distance_km": 159.64,
+          "alt_baro_ft": 3050.0,
+          "alt_geom_ft": 3225.0,
+          "speed_kts": 199.2,
+          "track": 201.8,
+          "vertrate_fpm": 0.0,
+          "onground": false,
+          "squawk": null,
+          "classification": "terminal_area_transit"
+        }
+      ]
+    },
+    "adsb_lol": {
+      "http_status": 200,
+      "error": null,
+      "total_returned": 4,
+      "valid_hex": 4,
+      "has_callsign": 4,
+      "has_altitude": 4,
+      "has_speed": 4,
+      "radius_breakdown": {
+        "10": 0,
+        "25": 0,
+        "50": 0,
+        "100": 0,
+        "150": 4
+      },
+      "classifications": {
+        "overflight_observed": 4
+      },
+      "sample_aircraft": [
+        {
+          "hex": "896401",
+          "callsign": "ABY352",
+          "registration": "A6-AOB",
+          "aircraft_type": "A320",
+          "lat": 33.734405,
+          "lon": 37.548866,
+          "distance_km": 102.24,
+          "alt_baro_ft": 32450,
+          "alt_geom_ft": 33875,
+          "speed_kts": 442.7,
+          "track": 153.72,
+          "vertrate_fpm": 1024,
+          "onground": false,
+          "squawk": "5752",
+          "rssi": -17.7,
+          "classification": "overflight_observed"
+        },
+        {
+          "hex": "70606b",
+          "callsign": "KAC135",
+          "registration": "9K-APH",
+          "aircraft_type": "A338",
+          "lat": 34.094347,
+          "lon": 37.559052,
+          "distance_km": 122.76,
+          "alt_baro_ft": 38000,
+          "alt_geom_ft": 39500,
+          "speed_kts": 464.8,
+          "track": 306.43,
+          "vertrate_fpm": 0,
+          "onground": false,
+          "squawk": "1413",
+          "rssi": -6.3,
+          "classification": "overflight_observed"
+        },
+        {
+          "hex": "4ba9d3",
+          "callsign": "THY1131",
+          "registration": "TC-JNS",
+          "aircraft_type": "A333",
+          "lat": 33.766571,
+          "lon": 37.984389,
+          "distance_km": 141.66,
+          "alt_baro_ft": 38000,
+          "alt_geom_ft": 39500,
+          "speed_kts": 473.8,
+          "track": 330.41,
+          "vertrate_fpm": 0,
+          "onground": false,
+          "squawk": "3572",
+          "rssi": -24.4,
+          "classification": "overflight_observed"
+        }
+      ]
+    },
+    "airplanes_live": {
+      "http_status": 403,
+      "error": "HTTP 403: Forbidden",
+      "total_returned": 0,
+      "valid_hex": 0,
+      "has_callsign": 0,
+      "has_altitude": 0,
+      "has_speed": 0,
+      "radius_breakdown": {
+        "10": 0,
+        "25": 0,
+        "50": 0,
+        "100": 0,
+        "150": 0
+      },
+      "classifications": {},
+      "sample_aircraft": []
+    },
+    "adsb_fi": {
+      "http_status": 200,
+      "error": null,
+      "total_returned": 4,
+      "valid_hex": 4,
+      "has_callsign": 4,
+      "has_altitude": 4,
+      "has_speed": 4,
+      "radius_breakdown": {
+        "10": 0,
+        "25": 0,
+        "50": 0,
+        "100": 0,
+        "150": 4
+      },
+      "classifications": {
+        "overflight_observed": 4
+      },
+      "sample_aircraft": [
+        {
+          "hex": "896401",
+          "callsign": "ABY352",
+          "registration": "A6-AOB",
+          "aircraft_type": "A320",
+          "lat": 33.731735,
+          "lon": 37.550485,
+          "distance_km": 102.28,
+          "alt_baro_ft": 32475,
+          "alt_geom_ft": 33900,
+          "speed_kts": 442.7,
+          "track": 153.72,
+          "vertrate_fpm": 960,
+          "onground": false,
+          "squawk": "5752",
+          "rssi": -17.5,
+          "classification": "overflight_observed"
+        },
+        {
+          "hex": "70606b",
+          "callsign": "KAC135",
+          "registration": "9K-APH",
+          "aircraft_type": "A338",
+          "lat": 34.096985,
+          "lon": 37.554745,
+          "distance_km": 122.63,
+          "alt_baro_ft": 38000,
+          "alt_geom_ft": 39475,
+          "speed_kts": 464.8,
+          "track": 306.43,
+          "vertrate_fpm": 0,
+          "onground": false,
+          "squawk": "1413",
+          "rssi": -2.8,
+          "classification": "overflight_observed"
+        },
+        {
+          "hex": "4ba9d3",
+          "callsign": "THY1131",
+          "registration": "TC-JNS",
+          "aircraft_type": "A333",
+          "lat": 33.758881,
+          "lon": 37.989489,
+          "distance_km": 141.89,
+          "alt_baro_ft": 38000,
+          "alt_geom_ft": 39500,
+          "speed_kts": 475.4,
+          "track": 332.57,
+          "vertrate_fpm": 0,
+          "onground": false,
+          "squawk": "3572",
+          "rssi": -17.6,
+          "classification": "overflight_observed"
+        }
+      ]
+    }
+  }
+}

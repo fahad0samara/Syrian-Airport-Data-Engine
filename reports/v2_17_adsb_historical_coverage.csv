@@ -1,0 +1,5 @@
+provider,target_start_date,target_end_date,accessible_observation_count,unique_aircraft_count,surface_observations,approach_candidates,departure_candidates,overflight_observations,regional_observations,unverified_observations,data_gap_status,reason_for_gap
+OpenSky Network,2024-01-01,2026-10-11,0,0,0,0,0,0,0,0,RESTRICTED_ACCESS_HTTP_403,Historical endpoint requires research account authentication; anonymous requests return HTTP 403.
+ADS-B.lol,2024-01-01,2026-10-11,0,0,0,0,0,0,0,0,NO_POINT_QUERY_API_HTTP_503,Provider does not offer a queryable historical API for airport coordinates; bulk archives only.
+ADSB.fi,2024-01-01,2026-10-11,0,0,0,0,0,0,0,0,NOT_SUPPORTED_HTTP_400,Provider does not offer historical data API.
+Airplanes.live,2024-01-01,2026-10-11,0,0,0,0,0,0,0,0,LIVE_ONLY,Provider does not offer historical data.

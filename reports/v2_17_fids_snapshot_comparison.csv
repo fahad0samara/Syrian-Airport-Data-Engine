@@ -1,0 +1,5 @@
+comparison_pair,baseline_snapshot_id,compared_snapshot_id,status,new_records_count,removed_records_count,changed_schedule_count,duplicate_candidates_count,notes
+snap_wayback_20260709234230_vs_snap_wayback_20260720034051,snap_wayback_20260709234230,snap_wayback_20260720034051,COMPARISON_SKIPPED_NOT_RETRIEVED,0,0,0,0,Target snapshot blocked by Wayback HTTP 429 rate limit. No payload available for diffing.
+snap_wayback_20260709234230_vs_snap_wayback_20260802011114,snap_wayback_20260709234230,snap_wayback_20260802011114,COMPARISON_SKIPPED_NOT_RETRIEVED,0,0,0,0,Target snapshot blocked by Wayback HTTP 429 rate limit. Filtered arrivals-only capture.
+snap_wayback_20260709234230_vs_snap_wayback_20260901001238,snap_wayback_20260709234230,snap_wayback_20260901001238,COMPARISON_SKIPPED_NOT_RETRIEVED,0,0,0,0,Target snapshot blocked by Wayback HTTP 429 rate limit. Filtered arrivals-only capture.
+snap_wayback_20260709234230_vs_snap_wayback_20260909200343,snap_wayback_20260709234230,snap_wayback_20260909200343,COMPARISON_SKIPPED_NOT_RETRIEVED,0,0,0,0,Target snapshot blocked by Wayback HTTP 429 rate limit. Filtered arrivals-only capture.

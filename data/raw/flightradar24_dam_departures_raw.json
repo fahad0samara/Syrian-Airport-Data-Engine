@@ -3,6 +3,145 @@
     "flight": {
       "identification": {
         "id": null,
+        "row": 5873944188,
+        "number": {
+          "default": "XY378",
+          "alternative": null
+        },
+        "callsign": null,
+        "codeshare": null
+      },
+      "status": {
+        "live": false,
+        "text": "Scheduled",
+        "icon": null,
+        "estimated": null,
+        "ambiguous": false,
+        "generic": {
+          "status": {
+            "text": "scheduled",
+            "type": "departure",
+            "color": "gray",
+            "diverted": null
+          },
+          "eventTime": {
+            "utc": null,
+            "local": null
+          }
+        }
+      },
+      "aircraft": {
+        "model": {
+          "code": "A20N",
+          "text": "Airbus A320-251N"
+        },
+        "registration": "HZ-NS85",
+        "country": {
+          "id": 194,
+          "name": "Saudi Arabia",
+          "alpha2": "SA",
+          "alpha3": "SAU"
+        },
+        "hex": "711542",
+        "restricted": false,
+        "serialNo": null,
+        "age": {
+          "availability": true
+        },
+        "availability": {
+          "serialNo": true,
+          "age": true
+        }
+      },
+      "owner": {
+        "name": "flynas",
+        "code": {
+          "iata": "XY",
+          "icao": "KNE"
+        },
+        "logo": "https://cdn.flightradar24.com/assets/airlines/logotypes/674.png"
+      },
+      "airline": {
+        "name": "flynas",
+        "code": {
+          "iata": "XY",
+          "icao": "KNE"
+        },
+        "short": "flynas"
+      },
+      "airport": {
+        "origin": {
+          "timezone": {
+            "name": "Asia/Damascus",
+            "offset": 10800,
+            "abbr": "+03",
+            "abbrName": null,
+            "isDst": false
+          },
+          "info": {
+            "terminal": null,
+            "baggage": null,
+            "gate": null
+          }
+        },
+        "destination": {
+          "code": {
+            "iata": "RUH",
+            "icao": "OERK"
+          },
+          "timezone": {
+            "name": "Asia/Riyadh",
+            "offset": 10800,
+            "abbr": "+03",
+            "abbrName": null,
+            "isDst": false
+          },
+          "info": {
+            "terminal": "1",
+            "baggage": "A11",
+            "gate": null
+          },
+          "name": "Riyadh King Khalid International Airport",
+          "position": {
+            "latitude": 24.95764,
+            "longitude": 46.698769,
+            "country": {
+              "name": "Saudi Arabia",
+              "code": "SA",
+              "id": 194
+            },
+            "region": {
+              "city": "Riyadh"
+            }
+          },
+          "visible": true
+        },
+        "real": null
+      },
+      "time": {
+        "scheduled": {
+          "departure": 1791642600,
+          "arrival": 1791651300
+        },
+        "real": {
+          "departure": null,
+          "arrival": null
+        },
+        "estimated": {
+          "departure": null,
+          "arrival": null
+        },
+        "other": {
+          "eta": null,
+          "duration": null
+        }
+      }
+    }
+  },
+  {
+    "flight": {
+      "identification": {
+        "id": null,
         "row": 5873711767,
         "number": {
           "default": "RB272",
@@ -152,20 +291,20 @@
       },
       "status": {
         "live": true,
-        "text": "Scheduled*",
-        "icon": null,
+        "text": "Departed 17:24",
+        "icon": "yellow",
         "estimated": null,
-        "ambiguous": true,
+        "ambiguous": false,
         "generic": {
           "status": {
-            "text": "scheduled",
+            "text": "departed",
             "type": "departure",
-            "color": "gray",
+            "color": "yellow",
             "diverted": null
           },
           "eventTime": {
-            "utc": null,
-            "local": null
+            "utc": 1791642278,
+            "local": 1791653078
           }
         }
       },
@@ -263,15 +402,15 @@
           "arrival": 1791658500
         },
         "real": {
-          "departure": null,
+          "departure": 1791642278,
           "arrival": null
         },
         "estimated": {
           "departure": null,
-          "arrival": null
+          "arrival": 1791656232
         },
         "other": {
-          "eta": null,
+          "eta": 1791656232,
           "duration": null
         }
       }
@@ -409,10 +548,10 @@
         },
         "estimated": {
           "departure": null,
-          "arrival": 1791650495
+          "arrival": 1791650375
         },
         "other": {
-          "eta": 1791650495,
+          "eta": 1791650375,
           "duration": null
         }
       }
@@ -548,10 +687,10 @@
         },
         "estimated": {
           "departure": null,
-          "arrival": 1791646714
+          "arrival": 1791646788
         },
         "other": {
-          "eta": 1791646714,
+          "eta": 1791646788,
           "duration": null
         }
       }
@@ -8509,17 +8648,17 @@
   {
     "flight": {
       "identification": {
-        "id": null,
-        "row": 5873944188,
+        "id": "421014d5",
+        "row": 5873637695,
         "number": {
-          "default": "XY378",
+          "default": "J9178",
           "alternative": null
         },
-        "callsign": null,
+        "callsign": "JZR178",
         "codeshare": null
       },
       "status": {
-        "live": false,
+        "live": true,
         "text": "Scheduled",
         "icon": null,
         "estimated": null,
@@ -8542,14 +8681,14 @@
           "code": "A20N",
           "text": "Airbus A320-251N"
         },
-        "registration": "HZ-NS85",
+        "registration": "9K-CBG",
         "country": {
-          "id": 194,
-          "name": "Saudi Arabia",
-          "alpha2": "SA",
-          "alpha3": "SAU"
+          "id": 118,
+          "name": "Kuwait",
+          "alpha2": "KW",
+          "alpha3": "KWT"
         },
-        "hex": "711542",
+        "hex": "70612D",
         "restricted": false,
         "serialNo": null,
         "age": {
@@ -8561,132 +8700,13 @@
         }
       },
       "owner": {
-        "name": "flynas",
+        "name": "Jazeera Airways",
         "code": {
-          "iata": "XY",
-          "icao": "KNE"
+          "iata": "J9",
+          "icao": "JZR"
         },
-        "logo": "https://cdn.flightradar24.com/assets/airlines/logotypes/674.png"
+        "logo": "https://cdn.flightradar24.com/assets/airlines/logotypes/538.png"
       },
-      "airline": {
-        "name": "flynas",
-        "code": {
-          "iata": "XY",
-          "icao": "KNE"
-        },
-        "short": "flynas"
-      },
-      "airport": {
-        "origin": {
-          "timezone": {
-            "name": "Asia/Damascus",
-            "offset": 10800,
-            "abbr": "+03",
-            "abbrName": null,
-            "isDst": false
-          },
-          "info": {
-            "terminal": null,
-            "baggage": null,
-            "gate": null
-          }
-        },
-        "destination": {
-          "code": {
-            "iata": "RUH",
-            "icao": "OERK"
-          },
-          "timezone": {
-            "name": "Asia/Riyadh",
-            "offset": 10800,
-            "abbr": "+03",
-            "abbrName": null,
-            "isDst": false
-          },
-          "info": {
-            "terminal": "1",
-            "baggage": "A11",
-            "gate": null
-          },
-          "name": "Riyadh King Khalid International Airport",
-          "position": {
-            "latitude": 24.95764,
-            "longitude": 46.698769,
-            "country": {
-              "name": "Saudi Arabia",
-              "code": "SA",
-              "id": 194
-            },
-            "region": {
-              "city": "Riyadh"
-            }
-          },
-          "visible": true
-        },
-        "real": null
-      },
-      "time": {
-        "scheduled": {
-          "departure": 1791642600,
-          "arrival": 1791651300
-        },
-        "real": {
-          "departure": null,
-          "arrival": null
-        },
-        "estimated": {
-          "departure": null,
-          "arrival": null
-        },
-        "other": {
-          "eta": null,
-          "duration": null
-        }
-      }
-    }
-  },
-  {
-    "flight": {
-      "identification": {
-        "id": null,
-        "row": 5873637695,
-        "number": {
-          "default": "J9178",
-          "alternative": null
-        },
-        "callsign": null,
-        "codeshare": null
-      },
-      "status": {
-        "live": false,
-        "text": "Scheduled",
-        "icon": null,
-        "estimated": null,
-        "ambiguous": false,
-        "generic": {
-          "status": {
-            "text": "scheduled",
-            "type": "departure",
-            "color": "gray",
-            "diverted": null
-          },
-          "eventTime": {
-            "utc": null,
-            "local": null
-          }
-        }
-      },
-      "aircraft": {
-        "model": {
-          "code": "32N",
-          "text": ""
-        },
-        "hex": "",
-        "registration": "",
-        "serialNo": "",
-        "images": null
-      },
-      "owner": null,
       "airline": {
         "name": "Jazeera Airways",
         "code": {

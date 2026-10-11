@@ -1,0 +1,9 @@
+check_id,dataset_id,validation_item,status,details
+VAL-01,DS-ZEN-001,Temporal Horizon Check,FAILED_OUT_OF_PERIOD,OpenSky Zenodo dataset coverage ends 2022-12-31; fails 2024+ requirement.
+VAL-02,DS-ZEN-002,Geographic Horizon Check,FAILED_WRONG_GEOGRAPHY,London Gatwick (EGKK) dataset covers UK airspace only; zero Syrian records.
+VAL-03,DS-S3-001,Temporal Horizon Check,FAILED_OUT_OF_PERIOD,OpenSky S3 sample covers September 2022 only.
+VAL-04,DS-S3-002,Aviation Movement Content Check,FAILED_METADATA_ONLY,"OpenSky complete aircraft database contains registration metadata only, zero flight tracks."
+VAL-05,DS-DTV-001,Aviation Topic Relevance Check,FAILED_NON_AVIATION,"Harvard Dataverse dataset covers urban conflict analysis, zero flight or airport movements."
+VAL-06,DS-LOL-001,Data Partitioning and Accessibility,REJECTED_UNINDEXED_TERABYTE,"ADS-B.lol requires multi-terabyte global download without airport partitioning, rejected per Section 6."
+VAL-07,DS-GOV-001,Aggregate Benchmark Reconciliation,PASSED_AGGREGATE_ONLY,Syrian MOT 2024 annual statistics verified and staged as macro benchmarks (578 daily records); aggregate only.
+VAL-08,DS-WBY-001,FIDS Timetable Integrity,PASSED_SCHEDULED_ONLY,"Damascus FIDS snapshot verified: 1,982 scheduled records across 67 dates; strictly classified as scheduled timetable."

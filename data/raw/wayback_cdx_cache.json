@@ -1,0 +1,50 @@
+{
+  "captures": [
+    {
+      "urlkey": "sy,gov,damairport)/api/flights.php",
+      "timestamp": "20260709234230",
+      "original": "https://damairport.gov.sy/api/flights.php",
+      "mimetype": "application/json",
+      "statuscode": "200",
+      "digest": "LWGQOMIVR7BG55CKGT4LXDRNUVKDA36L",
+      "length": "67953"
+    },
+    {
+      "urlkey": "sy,gov,damairport)/api/flights.php?dexact=2026-07-20&dir=all&page=1&paged=1&wfloor=2026-07-17",
+      "timestamp": "20260720034051",
+      "original": "https://damairport.gov.sy/api/flights.php?paged=1&page=1&dir=all&wfloor=2026-07-17&dexact=2026-07-20",
+      "mimetype": "application/json",
+      "statuscode": "200",
+      "digest": "5XPJUI5F52UOB5LJFQS6V2H7QK53WMZV",
+      "length": "2847"
+    },
+    {
+      "urlkey": "sy,gov,damairport)/api/flights.php?dexact=2026-08-02&dir=arrival&page=auto&paged=1&wfloor=2026-07-30",
+      "timestamp": "20260802011114",
+      "original": "https://www.damairport.gov.sy/api/flights.php?paged=1&page=auto&dir=arrival&wfloor=2026-07-30&dexact=2026-08-02",
+      "mimetype": "application/json",
+      "statuscode": "200",
+      "digest": "5UXRH7MNTOJW3WZ4KTMODHCZASJTC45Y",
+      "length": "3219"
+    },
+    {
+      "urlkey": "sy,gov,damairport)/api/flights.php?dexact=2026-09-01&dir=arrival&page=auto&paged=1&wfloor=2026-08-29",
+      "timestamp": "20260901001238",
+      "original": "https://damairport.gov.sy/api/flights.php?paged=1&page=auto&dir=arrival&wfloor=2026-08-29&dexact=2026-09-01",
+      "mimetype": "application/json",
+      "statuscode": "200",
+      "digest": "MZOHYTG7ISAYZ24ZNYW5EO27E4CEGI4W",
+      "length": "3196"
+    },
+    {
+      "urlkey": "sy,gov,damairport)/api/flights.php?dexact=2026-09-09&dir=arrival&page=auto&paged=1&wfloor=2026-09-06",
+      "timestamp": "20260909200343",
+      "original": "https://www.damairport.gov.sy/api/flights.php?paged=1&page=auto&dir=arrival&wfloor=2026-09-06&dexact=2026-09-09",
+      "mimetype": "application/json",
+      "statuscode": "200",
+      "digest": "25PYEJCFKSNC5ZSM2MMZFOFEQRNIAFSJ",
+      "length": "2624"
+    }
+  ],
+  "last_updated": "2026-10-12T02:57:53.004520"
+}

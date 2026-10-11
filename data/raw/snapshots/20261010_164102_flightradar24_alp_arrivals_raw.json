@@ -1,0 +1,4293 @@
+[
+  {
+    "flight": {
+      "identification": {
+        "id": "420f72f5",
+        "row": 5873695447,
+        "number": {
+          "default": "PC770",
+          "alternative": null
+        },
+        "callsign": "PGT770",
+        "codeshare": null
+      },
+      "status": {
+        "live": false,
+        "text": "Landed 15:51",
+        "icon": "yellow",
+        "estimated": null,
+        "ambiguous": false,
+        "generic": {
+          "status": {
+            "text": "landed",
+            "type": "arrival",
+            "color": "yellow",
+            "diverted": null
+          },
+          "eventTime": {
+            "utc": 1791636675,
+            "local": 1791647475
+          }
+        }
+      },
+      "aircraft": {
+        "model": {
+          "code": "B738",
+          "text": "Boeing 737-82R"
+        },
+        "registration": "TC-AIS",
+        "country": {
+          "id": 228,
+          "name": "Turkey",
+          "alpha2": "TR",
+          "alpha3": "TUR"
+        },
+        "hex": "4B8533",
+        "restricted": false,
+        "serialNo": null,
+        "age": {
+          "availability": true
+        },
+        "availability": {
+          "serialNo": true,
+          "age": true
+        }
+      },
+      "owner": {
+        "name": "Pegasus",
+        "code": {
+          "iata": "PC",
+          "icao": "PGT"
+        },
+        "logo": "https://cdn.flightradar24.com/assets/airlines/logotypes/317.png"
+      },
+      "airline": {
+        "name": "Pegasus",
+        "code": {
+          "iata": "PC",
+          "icao": "PGT"
+        },
+        "short": "Pegasus"
+      },
+      "airport": {
+        "origin": {
+          "code": {
+            "iata": "SAW",
+            "icao": "LTFJ"
+          },
+          "timezone": {
+            "name": "Europe/Istanbul",
+            "offset": 10800,
+            "abbr": "+03",
+            "abbrName": null,
+            "isDst": false
+          },
+          "info": {
+            "terminal": null,
+            "baggage": "D1",
+            "gate": "602B"
+          },
+          "name": "Istanbul Sabiha Gokcen International Airport",
+          "position": {
+            "latitude": 40.898548,
+            "longitude": 29.30921,
+            "country": {
+              "name": "Turkey",
+              "code": "TR",
+              "id": 228
+            },
+            "region": {
+              "city": "Istanbul"
+            }
+          },
+          "visible": true
+        },
+        "destination": {
+          "timezone": {
+            "name": "Asia/Damascus",
+            "offset": 10800,
+            "abbr": "+03",
+            "abbrName": null,
+            "isDst": false
+          },
+          "info": {
+            "terminal": null,
+            "baggage": null,
+            "gate": null
+          }
+        },
+        "real": null
+      },
+      "time": {
+        "scheduled": {
+          "departure": 1791629700,
+          "arrival": 1791635700
+        },
+        "real": {
+          "departure": 1791631511,
+          "arrival": 1791636675
+        },
+        "estimated": {
+          "departure": null,
+          "arrival": null
+        },
+        "other": {
+          "eta": 1791636675,
+          "duration": 5160
+        }
+      }
+    }
+  },
+  {
+    "flight": {
+      "identification": {
+        "id": "420f6ece",
+        "row": 5875006885,
+        "number": {
+          "default": "RJ433",
+          "alternative": null
+        },
+        "callsign": "RJA433",
+        "codeshare": [
+          "QR6117"
+        ]
+      },
+      "status": {
+        "live": false,
+        "text": "Unknown",
+        "icon": null,
+        "estimated": null,
+        "ambiguous": false,
+        "generic": {
+          "status": {
+            "text": "unknown",
+            "type": "arrival",
+            "color": null,
+            "diverted": null
+          },
+          "eventTime": {
+            "utc": null,
+            "local": null
+          }
+        }
+      },
+      "aircraft": {
+        "model": {
+          "code": "E295",
+          "text": "Embraer E195-E2"
+        },
+        "registration": "JY-REA",
+        "country": {
+          "id": 113,
+          "name": "Jordan",
+          "alpha2": "JO",
+          "alpha3": "JOR"
+        },
+        "hex": "7448A1",
+        "restricted": false,
+        "serialNo": null,
+        "age": {
+          "availability": true
+        },
+        "availability": {
+          "serialNo": true,
+          "age": true
+        }
+      },
+      "owner": {
+        "name": "Royal Jordanian",
+        "code": {
+          "iata": "RJ",
+          "icao": "RJA"
+        },
+        "logo": "https://cdn.flightradar24.com/assets/airlines/logotypes/156.png"
+      },
+      "airline": {
+        "name": "Royal Jordanian",
+        "code": {
+          "iata": "RJ",
+          "icao": "RJA"
+        },
+        "short": "Royal Jordanian"
+      },
+      "airport": {
+        "origin": {
+          "code": {
+            "iata": "AMM",
+            "icao": "OJAI"
+          },
+          "timezone": {
+            "name": "Asia/Amman",
+            "offset": 10800,
+            "abbr": "+03",
+            "abbrName": null,
+            "isDst": false
+          },
+          "info": {
+            "terminal": null,
+            "baggage": null,
+            "gate": null
+          },
+          "name": "Amman Queen Alia International Airport",
+          "position": {
+            "latitude": 31.722549,
+            "longitude": 35.99321,
+            "country": {
+              "name": "Jordan",
+              "code": "JO",
+              "id": 113
+            },
+            "region": {
+              "city": "Amman"
+            }
+          },
+          "visible": true
+        },
+        "destination": {
+          "timezone": {
+            "name": "Asia/Damascus",
+            "offset": 10800,
+            "abbr": "+03",
+            "abbrName": null,
+            "isDst": false
+          },
+          "info": {
+            "terminal": null,
+            "baggage": null,
+            "gate": null
+          }
+        },
+        "real": null
+      },
+      "time": {
+        "scheduled": {
+          "departure": 1791629700,
+          "arrival": 1791634800
+        },
+        "real": {
+          "departure": 1791630477,
+          "arrival": null
+        },
+        "estimated": {
+          "departure": null,
+          "arrival": 1791633967
+        },
+        "other": {
+          "eta": null,
+          "duration": null
+        }
+      }
+    }
+  },
+  {
+    "flight": {
+      "identification": {
+        "id": "420f290c",
+        "row": 5873944087,
+        "number": {
+          "default": "XY229",
+          "alternative": null
+        },
+        "callsign": "KNE229",
+        "codeshare": null
+      },
+      "status": {
+        "live": false,
+        "text": "Unknown",
+        "icon": null,
+        "estimated": null,
+        "ambiguous": false,
+        "generic": {
+          "status": {
+            "text": "unknown",
+            "type": "arrival",
+            "color": null,
+            "diverted": null
+          },
+          "eventTime": {
+            "utc": null,
+            "local": null
+          }
+        }
+      },
+      "aircraft": {
+        "model": {
+          "code": "A20N",
+          "text": "Airbus A320-251N"
+        },
+        "registration": "HZ-NS73",
+        "country": {
+          "id": 194,
+          "name": "Saudi Arabia",
+          "alpha2": "SA",
+          "alpha3": "SAU"
+        },
+        "hex": "717C93",
+        "restricted": false,
+        "serialNo": null,
+        "age": {
+          "availability": true
+        },
+        "availability": {
+          "serialNo": true,
+          "age": true
+        }
+      },
+      "owner": {
+        "name": "flynas",
+        "code": {
+          "iata": "XY",
+          "icao": "KNE"
+        },
+        "logo": "https://cdn.flightradar24.com/assets/airlines/logotypes/674.png"
+      },
+      "airline": {
+        "name": "flynas",
+        "code": {
+          "iata": "XY",
+          "icao": "KNE"
+        },
+        "short": "flynas"
+      },
+      "airport": {
+        "origin": {
+          "code": {
+            "iata": "RUH",
+            "icao": "OERK"
+          },
+          "timezone": {
+            "name": "Asia/Riyadh",
+            "offset": 10800,
+            "abbr": "+03",
+            "abbrName": null,
+            "isDst": false
+          },
+          "info": {
+            "terminal": "1",
+            "baggage": "126-",
+            "gate": "104A"
+          },
+          "name": "Riyadh King Khalid International Airport",
+          "position": {
+            "latitude": 24.95764,
+            "longitude": 46.698769,
+            "country": {
+              "name": "Saudi Arabia",
+              "code": "SA",
+              "id": 194
+            },
+            "region": {
+              "city": "Riyadh"
+            }
+          },
+          "visible": true
+        },
+        "destination": {
+          "timezone": {
+            "name": "Asia/Damascus",
+            "offset": 10800,
+            "abbr": "+03",
+            "abbrName": null,
+            "isDst": false
+          },
+          "info": {
+            "terminal": null,
+            "baggage": null,
+            "gate": null
+          }
+        },
+        "real": null
+      },
+      "time": {
+        "scheduled": {
+          "departure": 1791622800,
+          "arrival": 1791631800
+        },
+        "real": {
+          "departure": 1791624494,
+          "arrival": null
+        },
+        "estimated": {
+          "departure": null,
+          "arrival": 1791632154
+        },
+        "other": {
+          "eta": null,
+          "duration": null
+        }
+      }
+    }
+  },
+  {
+    "flight": {
+      "identification": {
+        "id": "420ee923",
+        "row": 5873853532,
+        "number": {
+          "default": "FZ1191",
+          "alternative": null
+        },
+        "callsign": "FDB1191",
+        "codeshare": [
+          "EK2320"
+        ]
+      },
+      "status": {
+        "live": false,
+        "text": "Unknown",
+        "icon": null,
+        "estimated": null,
+        "ambiguous": false,
+        "generic": {
+          "status": {
+            "text": "unknown",
+            "type": "arrival",
+            "color": null,
+            "diverted": null
+          },
+          "eventTime": {
+            "utc": null,
+            "local": null
+          }
+        }
+      },
+      "aircraft": {
+        "model": {
+          "code": "B738",
+          "text": "Boeing 737-8KN"
+        },
+        "registration": "A6-FEK",
+        "country": {
+          "id": 234,
+          "name": "United Arab Emirates",
+          "alpha2": "AE",
+          "alpha3": "ARE"
+        },
+        "hex": "8963AD",
+        "restricted": false,
+        "serialNo": null,
+        "age": {
+          "availability": true
+        },
+        "availability": {
+          "serialNo": true,
+          "age": true
+        }
+      },
+      "owner": {
+        "name": "flydubai",
+        "code": {
+          "iata": "FZ",
+          "icao": "FDB"
+        },
+        "logo": "https://cdn.flightradar24.com/assets/airlines/logotypes/647.png"
+      },
+      "airline": {
+        "name": "flydubai",
+        "code": {
+          "iata": "FZ",
+          "icao": "FDB"
+        },
+        "short": "flydubai"
+      },
+      "airport": {
+        "origin": {
+          "code": {
+            "iata": "DXB",
+            "icao": "OMDB"
+          },
+          "timezone": {
+            "name": "Asia/Dubai",
+            "offset": 14400,
+            "abbr": "+04",
+            "abbrName": null,
+            "isDst": false
+          },
+          "info": {
+            "terminal": "3",
+            "baggage": null,
+            "gate": "C12"
+          },
+          "name": "Dubai International Airport",
+          "position": {
+            "latitude": 25.252769,
+            "longitude": 55.364441,
+            "country": {
+              "name": "United Arab Emirates",
+              "code": "AE",
+              "id": 234
+            },
+            "region": {
+              "city": "Dubai"
+            }
+          },
+          "visible": true
+        },
+        "destination": {
+          "timezone": {
+            "name": "Asia/Damascus",
+            "offset": 10800,
+            "abbr": "+03",
+            "abbrName": null,
+            "isDst": false
+          },
+          "info": {
+            "terminal": null,
+            "baggage": null,
+            "gate": null
+          }
+        },
+        "real": null
+      },
+      "time": {
+        "scheduled": {
+          "departure": 1791615600,
+          "arrival": 1791628800
+        },
+        "real": {
+          "departure": 1791617331,
+          "arrival": null
+        },
+        "estimated": {
+          "departure": null,
+          "arrival": 1791628850
+        },
+        "other": {
+          "eta": null,
+          "duration": null
+        }
+      }
+    }
+  },
+  {
+    "flight": {
+      "identification": {
+        "id": "420eae05",
+        "row": 5873947666,
+        "number": {
+          "default": "3L456",
+          "alternative": null
+        },
+        "callsign": "ADY456",
+        "codeshare": null
+      },
+      "status": {
+        "live": false,
+        "text": "Unknown",
+        "icon": null,
+        "estimated": null,
+        "ambiguous": false,
+        "generic": {
+          "status": {
+            "text": "unknown",
+            "type": "arrival",
+            "color": null,
+            "diverted": null
+          },
+          "eventTime": {
+            "utc": null,
+            "local": null
+          }
+        }
+      },
+      "aircraft": {
+        "model": {
+          "code": "A320",
+          "text": "Airbus A320-214"
+        },
+        "registration": "A6-AUB",
+        "country": {
+          "id": 234,
+          "name": "United Arab Emirates",
+          "alpha2": "AE",
+          "alpha3": "ARE"
+        },
+        "hex": "896586",
+        "restricted": false,
+        "serialNo": null,
+        "age": {
+          "availability": true
+        },
+        "availability": {
+          "serialNo": true,
+          "age": true
+        }
+      },
+      "owner": {
+        "name": "Air Arabia Abu Dhabi",
+        "code": {
+          "iata": "3L",
+          "icao": "ADY"
+        },
+        "logo": "https://cdn.flightradar24.com/assets/airlines/logotypes/1634.png"
+      },
+      "airline": {
+        "name": "Air Arabia",
+        "code": {
+          "iata": "G9",
+          "icao": "ABY"
+        },
+        "short": "Air Arabia"
+      },
+      "airport": {
+        "origin": {
+          "code": {
+            "iata": "AUH",
+            "icao": "OMAA"
+          },
+          "timezone": {
+            "name": "Asia/Dubai",
+            "offset": 14400,
+            "abbr": "+04",
+            "abbrName": null,
+            "isDst": false
+          },
+          "info": {
+            "terminal": "A",
+            "baggage": null,
+            "gate": null
+          },
+          "name": "Abu Dhabi Zayed International Airport",
+          "position": {
+            "latitude": 24.442856,
+            "longitude": 54.651474,
+            "country": {
+              "name": "United Arab Emirates",
+              "code": "AE",
+              "id": 234
+            },
+            "region": {
+              "city": "Abu Dhabi"
+            }
+          },
+          "visible": true
+        },
+        "destination": {
+          "timezone": {
+            "name": "Asia/Damascus",
+            "offset": 10800,
+            "abbr": "+03",
+            "abbrName": null,
+            "isDst": false
+          },
+          "info": {
+            "terminal": null,
+            "baggage": null,
+            "gate": null
+          }
+        },
+        "real": null
+      },
+      "time": {
+        "scheduled": {
+          "departure": 1791608400,
+          "arrival": 1791621000
+        },
+        "real": {
+          "departure": 1791609041,
+          "arrival": null
+        },
+        "estimated": {
+          "departure": null,
+          "arrival": 1791620410
+        },
+        "other": {
+          "eta": null,
+          "duration": null
+        }
+      }
+    }
+  },
+  {
+    "flight": {
+      "identification": {
+        "id": null,
+        "row": 5873941981,
+        "number": {
+          "default": "W1672",
+          "alternative": "KK672"
+        },
+        "callsign": null,
+        "codeshare": null
+      },
+      "status": {
+        "live": false,
+        "text": "Unknown",
+        "icon": null,
+        "estimated": null,
+        "ambiguous": false,
+        "generic": {
+          "status": {
+            "text": "unknown",
+            "type": "arrival",
+            "color": "gray",
+            "diverted": null
+          },
+          "eventTime": {
+            "utc": null,
+            "local": null
+          }
+        }
+      },
+      "aircraft": {
+        "model": {
+          "code": "320",
+          "text": ""
+        },
+        "hex": "",
+        "registration": "",
+        "serialNo": "",
+        "images": null
+      },
+      "owner": null,
+      "airline": null,
+      "airport": {
+        "origin": {
+          "code": {
+            "iata": "CGN",
+            "icao": "EDDK"
+          },
+          "timezone": {
+            "name": "Europe/Berlin",
+            "offset": 7200,
+            "abbr": "CEST",
+            "abbrName": "Central European Summer Time",
+            "isDst": true
+          },
+          "info": {
+            "terminal": null,
+            "baggage": null,
+            "gate": null
+          },
+          "name": "Cologne Bonn Airport",
+          "position": {
+            "latitude": 50.866001,
+            "longitude": 7.143,
+            "country": {
+              "name": "Germany",
+              "code": "DE",
+              "id": 83
+            },
+            "region": {
+              "city": "Cologne"
+            }
+          },
+          "visible": true
+        },
+        "destination": {
+          "timezone": {
+            "name": "Asia/Damascus",
+            "offset": 10800,
+            "abbr": "+03",
+            "abbrName": null,
+            "isDst": false
+          },
+          "info": {
+            "terminal": null,
+            "baggage": null,
+            "gate": null
+          }
+        },
+        "real": null
+      },
+      "time": {
+        "scheduled": {
+          "departure": 1791604800,
+          "arrival": 1791619200
+        },
+        "real": {
+          "departure": null,
+          "arrival": null
+        },
+        "estimated": {
+          "departure": null,
+          "arrival": null
+        },
+        "other": {
+          "eta": null,
+          "duration": null
+        }
+      }
+    }
+  },
+  {
+    "flight": {
+      "identification": {
+        "id": "420e9859",
+        "row": 5873644832,
+        "number": {
+          "default": "KK472",
+          "alternative": null
+        },
+        "callsign": "NGN472",
+        "codeshare": null
+      },
+      "status": {
+        "live": false,
+        "text": "Landed 11:23",
+        "icon": "yellow",
+        "estimated": null,
+        "ambiguous": false,
+        "generic": {
+          "status": {
+            "text": "landed",
+            "type": "arrival",
+            "color": "yellow",
+            "diverted": null
+          },
+          "eventTime": {
+            "utc": 1791620586,
+            "local": 1791631386
+          }
+        }
+      },
+      "aircraft": {
+        "model": {
+          "code": "A320",
+          "text": "Airbus A320-232"
+        },
+        "registration": "D-ANNE",
+        "country": {
+          "id": 83,
+          "name": "Germany",
+          "alpha2": "DE",
+          "alpha3": "DEU"
+        },
+        "hex": "3C79C5",
+        "restricted": false,
+        "serialNo": null,
+        "age": {
+          "availability": true
+        },
+        "availability": {
+          "serialNo": true,
+          "age": true
+        }
+      },
+      "owner": {
+        "name": "LEAV Aviation",
+        "code": {
+          "iata": "KK",
+          "icao": "NGN"
+        },
+        "logo": "https://cdn.flightradar24.com/assets/airlines/logotypes/2094.png"
+      },
+      "airline": {
+        "name": "LEAV Aviation",
+        "code": {
+          "iata": "KK",
+          "icao": "NGN"
+        },
+        "short": "LEAV Aviation"
+      },
+      "airport": {
+        "origin": {
+          "code": {
+            "iata": "CGN",
+            "icao": "EDDK"
+          },
+          "timezone": {
+            "name": "Europe/Berlin",
+            "offset": 7200,
+            "abbr": "CEST",
+            "abbrName": "Central European Summer Time",
+            "isDst": true
+          },
+          "info": {
+            "terminal": null,
+            "baggage": "437",
+            "gate": "D20"
+          },
+          "name": "Cologne Bonn Airport",
+          "position": {
+            "latitude": 50.866001,
+            "longitude": 7.143,
+            "country": {
+              "name": "Germany",
+              "code": "DE",
+              "id": 83
+            },
+            "region": {
+              "city": "Cologne"
+            }
+          },
+          "visible": true
+        },
+        "destination": {
+          "timezone": {
+            "name": "Asia/Damascus",
+            "offset": 10800,
+            "abbr": "+03",
+            "abbrName": null,
+            "isDst": false
+          },
+          "info": {
+            "terminal": null,
+            "baggage": null,
+            "gate": null
+          }
+        },
+        "real": null
+      },
+      "time": {
+        "scheduled": {
+          "departure": 1791604800,
+          "arrival": 1791619200
+        },
+        "real": {
+          "departure": 1791606878,
+          "arrival": 1791620586
+        },
+        "estimated": {
+          "departure": null,
+          "arrival": null
+        },
+        "other": {
+          "eta": 1791620586,
+          "duration": 13680
+        }
+      }
+    }
+  },
+  {
+    "flight": {
+      "identification": {
+        "id": "420e9661",
+        "row": 5873862509,
+        "number": {
+          "default": "G9351",
+          "alternative": null
+        },
+        "callsign": "ABY351",
+        "codeshare": null
+      },
+      "status": {
+        "live": false,
+        "text": "Unknown",
+        "icon": null,
+        "estimated": null,
+        "ambiguous": false,
+        "generic": {
+          "status": {
+            "text": "unknown",
+            "type": "arrival",
+            "color": null,
+            "diverted": null
+          },
+          "eventTime": {
+            "utc": null,
+            "local": null
+          }
+        }
+      },
+      "aircraft": {
+        "model": {
+          "code": "A320",
+          "text": "Airbus A320-214"
+        },
+        "registration": "A6-AOA",
+        "country": {
+          "id": 234,
+          "name": "United Arab Emirates",
+          "alpha2": "AE",
+          "alpha3": "ARE"
+        },
+        "hex": "896727",
+        "restricted": false,
+        "serialNo": null,
+        "age": {
+          "availability": true
+        },
+        "availability": {
+          "serialNo": true,
+          "age": true
+        }
+      },
+      "owner": {
+        "name": "Air Arabia",
+        "code": {
+          "iata": "G9",
+          "icao": "ABY"
+        },
+        "logo": "https://cdn.flightradar24.com/assets/airlines/logotypes/417.png"
+      },
+      "airline": {
+        "name": "Air Arabia",
+        "code": {
+          "iata": "G9",
+          "icao": "ABY"
+        },
+        "short": "Air Arabia"
+      },
+      "airport": {
+        "origin": {
+          "code": {
+            "iata": "SHJ",
+            "icao": "OMSJ"
+          },
+          "timezone": {
+            "name": "Asia/Dubai",
+            "offset": 14400,
+            "abbr": "+04",
+            "abbrName": null,
+            "isDst": false
+          },
+          "info": {
+            "terminal": null,
+            "baggage": null,
+            "gate": null
+          },
+          "name": "Sharjah International Airport",
+          "position": {
+            "latitude": 25.328569,
+            "longitude": 55.517151,
+            "country": {
+              "name": "United Arab Emirates",
+              "code": "AE",
+              "id": 234
+            },
+            "region": {
+              "city": "Sharjah"
+            }
+          },
+          "visible": true
+        },
+        "destination": {
+          "timezone": {
+            "name": "Asia/Damascus",
+            "offset": 10800,
+            "abbr": "+03",
+            "abbrName": null,
+            "isDst": false
+          },
+          "info": {
+            "terminal": null,
+            "baggage": null,
+            "gate": null
+          }
+        },
+        "real": null
+      },
+      "time": {
+        "scheduled": {
+          "departure": 1791604800,
+          "arrival": 1791617700
+        },
+        "real": {
+          "departure": 1791605991,
+          "arrival": null
+        },
+        "estimated": {
+          "departure": null,
+          "arrival": 1791617346
+        },
+        "other": {
+          "eta": null,
+          "duration": null
+        }
+      }
+    }
+  },
+  {
+    "flight": {
+      "identification": {
+        "id": "420eb8b3",
+        "row": 5873774355,
+        "number": {
+          "default": "XQ206",
+          "alternative": null
+        },
+        "callsign": "SXS206",
+        "codeshare": null
+      },
+      "status": {
+        "live": false,
+        "text": "Landed 09:48",
+        "icon": "green",
+        "estimated": null,
+        "ambiguous": false,
+        "generic": {
+          "status": {
+            "text": "landed",
+            "type": "arrival",
+            "color": "green",
+            "diverted": null
+          },
+          "eventTime": {
+            "utc": 1791614892,
+            "local": 1791625692
+          }
+        }
+      },
+      "aircraft": {
+        "model": {
+          "code": "B738",
+          "text": "Boeing 737-8HC"
+        },
+        "registration": "TC-SNN",
+        "country": {
+          "id": 228,
+          "name": "Turkey",
+          "alpha2": "TR",
+          "alpha3": "TUR"
+        },
+        "hex": "4BCDCE",
+        "restricted": false,
+        "serialNo": null,
+        "age": {
+          "availability": true
+        },
+        "availability": {
+          "serialNo": true,
+          "age": true
+        }
+      },
+      "owner": {
+        "name": "SunExpress",
+        "code": {
+          "iata": "XQ",
+          "icao": "SXS"
+        },
+        "logo": "https://cdn.flightradar24.com/assets/airlines/logotypes/176.png"
+      },
+      "airline": {
+        "name": "SunExpress",
+        "code": {
+          "iata": "XQ",
+          "icao": "SXS"
+        },
+        "short": "SunExpress"
+      },
+      "airport": {
+        "origin": {
+          "code": {
+            "iata": "AYT",
+            "icao": "LTAI"
+          },
+          "timezone": {
+            "name": "Europe/Istanbul",
+            "offset": 10800,
+            "abbr": "+03",
+            "abbrName": null,
+            "isDst": false
+          },
+          "info": {
+            "terminal": "2",
+            "baggage": "526",
+            "gate": null
+          },
+          "name": "Antalya Airport",
+          "position": {
+            "latitude": 36.898731,
+            "longitude": 30.800461,
+            "country": {
+              "name": "Turkey",
+              "code": "TR",
+              "id": 228
+            },
+            "region": {
+              "city": "Antalya"
+            }
+          },
+          "visible": true
+        },
+        "destination": {
+          "timezone": {
+            "name": "Asia/Damascus",
+            "offset": 10800,
+            "abbr": "+03",
+            "abbrName": null,
+            "isDst": false
+          },
+          "info": {
+            "terminal": null,
+            "baggage": null,
+            "gate": null
+          }
+        },
+        "real": null
+      },
+      "time": {
+        "scheduled": {
+          "departure": 1791609600,
+          "arrival": 1791615000
+        },
+        "real": {
+          "departure": 1791610933,
+          "arrival": 1791614892
+        },
+        "estimated": {
+          "departure": null,
+          "arrival": null
+        },
+        "other": {
+          "eta": 1791614892,
+          "duration": 3960
+        }
+      }
+    }
+  },
+  {
+    "flight": {
+      "identification": {
+        "id": "420e9e73",
+        "row": 5873920501,
+        "number": {
+          "default": "TK844",
+          "alternative": null
+        },
+        "callsign": "THY844",
+        "codeshare": null
+      },
+      "status": {
+        "live": false,
+        "text": "Landed 09:27",
+        "icon": "green",
+        "estimated": null,
+        "ambiguous": false,
+        "generic": {
+          "status": {
+            "text": "landed",
+            "type": "arrival",
+            "color": "green",
+            "diverted": null
+          },
+          "eventTime": {
+            "utc": 1791613648,
+            "local": 1791624448
+          }
+        }
+      },
+      "aircraft": {
+        "model": {
+          "code": "B739",
+          "text": "Boeing 737-9F2(ER)"
+        },
+        "registration": "TC-JYF",
+        "country": {
+          "id": 228,
+          "name": "Turkey",
+          "alpha2": "TR",
+          "alpha3": "TUR"
+        },
+        "hex": "4BAB26",
+        "restricted": false,
+        "serialNo": null,
+        "age": {
+          "availability": true
+        },
+        "availability": {
+          "serialNo": true,
+          "age": true
+        }
+      },
+      "owner": {
+        "name": "Turkish Airlines",
+        "code": {
+          "iata": "TK",
+          "icao": "THY"
+        },
+        "logo": "https://cdn.flightradar24.com/assets/airlines/logotypes/39.png"
+      },
+      "airline": {
+        "name": "Turkish Airlines",
+        "code": {
+          "iata": "TK",
+          "icao": "THY"
+        },
+        "short": "Turkish Airlines"
+      },
+      "airport": {
+        "origin": {
+          "code": {
+            "iata": "IST",
+            "icao": "LTFM"
+          },
+          "timezone": {
+            "name": "Europe/Istanbul",
+            "offset": 10800,
+            "abbr": "+03",
+            "abbrName": null,
+            "isDst": false
+          },
+          "info": {
+            "terminal": null,
+            "baggage": "E-F",
+            "gate": "A1D"
+          },
+          "name": "Istanbul Airport",
+          "position": {
+            "latitude": 41.270149,
+            "longitude": 28.733362,
+            "country": {
+              "name": "Turkey",
+              "code": "TR",
+              "id": 228
+            },
+            "region": {
+              "city": "Istanbul"
+            }
+          },
+          "visible": true
+        },
+        "destination": {
+          "timezone": {
+            "name": "Asia/Damascus",
+            "offset": 10800,
+            "abbr": "+03",
+            "abbrName": null,
+            "isDst": false
+          },
+          "info": {
+            "terminal": null,
+            "baggage": null,
+            "gate": null
+          }
+        },
+        "real": null
+      },
+      "time": {
+        "scheduled": {
+          "departure": 1791607200,
+          "arrival": 1791614700
+        },
+        "real": {
+          "departure": 1791608328,
+          "arrival": 1791613648
+        },
+        "estimated": {
+          "departure": null,
+          "arrival": null
+        },
+        "other": {
+          "eta": 1791613648,
+          "duration": 5340
+        }
+      }
+    }
+  },
+  {
+    "flight": {
+      "identification": {
+        "id": "420e7b75",
+        "row": 5873935341,
+        "number": {
+          "default": "VF340",
+          "alternative": null
+        },
+        "callsign": "TKJ340",
+        "codeshare": null
+      },
+      "status": {
+        "live": false,
+        "text": "Landed 07:56",
+        "icon": "green",
+        "estimated": null,
+        "ambiguous": false,
+        "generic": {
+          "status": {
+            "text": "landed",
+            "type": "arrival",
+            "color": "green",
+            "diverted": null
+          },
+          "eventTime": {
+            "utc": 1791608175,
+            "local": 1791618975
+          }
+        }
+      },
+      "aircraft": {
+        "model": {
+          "code": "B738",
+          "text": "Boeing 737-8F2"
+        },
+        "registration": "TC-JGY",
+        "country": {
+          "id": 228,
+          "name": "Turkey",
+          "alpha2": "TR",
+          "alpha3": "TUR"
+        },
+        "hex": "4BA8F9",
+        "restricted": false,
+        "serialNo": null,
+        "age": {
+          "availability": true
+        },
+        "availability": {
+          "serialNo": true,
+          "age": true
+        }
+      },
+      "owner": {
+        "name": "AJet",
+        "code": {
+          "iata": "VF",
+          "icao": "TKJ"
+        },
+        "logo": "https://cdn.flightradar24.com/assets/airlines/logotypes/2574.png"
+      },
+      "airline": {
+        "name": "AJet",
+        "code": {
+          "iata": "VF",
+          "icao": "TKJ"
+        },
+        "short": "AJet"
+      },
+      "airport": {
+        "origin": {
+          "code": {
+            "iata": "SAW",
+            "icao": "LTFJ"
+          },
+          "timezone": {
+            "name": "Europe/Istanbul",
+            "offset": 10800,
+            "abbr": "+03",
+            "abbrName": null,
+            "isDst": false
+          },
+          "info": {
+            "terminal": null,
+            "baggage": "H1",
+            "gate": "203B"
+          },
+          "name": "Istanbul Sabiha Gokcen International Airport",
+          "position": {
+            "latitude": 40.898548,
+            "longitude": 29.30921,
+            "country": {
+              "name": "Turkey",
+              "code": "TR",
+              "id": 228
+            },
+            "region": {
+              "city": "Istanbul"
+            }
+          },
+          "visible": true
+        },
+        "destination": {
+          "timezone": {
+            "name": "Asia/Damascus",
+            "offset": 10800,
+            "abbr": "+03",
+            "abbrName": null,
+            "isDst": false
+          },
+          "info": {
+            "terminal": null,
+            "baggage": null,
+            "gate": null
+          }
+        },
+        "real": null
+      },
+      "time": {
+        "scheduled": {
+          "departure": 1791602100,
+          "arrival": 1791608400
+        },
+        "real": {
+          "departure": 1791602951,
+          "arrival": 1791608175
+        },
+        "estimated": {
+          "departure": null,
+          "arrival": null
+        },
+        "other": {
+          "eta": 1791608175,
+          "duration": 5220
+        }
+      }
+    }
+  },
+  {
+    "flight": {
+      "identification": {
+        "id": null,
+        "row": 5873617336,
+        "number": {
+          "default": "FYC762",
+          "alternative": null
+        },
+        "callsign": null,
+        "codeshare": null
+      },
+      "status": {
+        "live": false,
+        "text": "Unknown",
+        "icon": null,
+        "estimated": null,
+        "ambiguous": false,
+        "generic": {
+          "status": {
+            "text": "unknown",
+            "type": "arrival",
+            "color": "gray",
+            "diverted": null
+          },
+          "eventTime": {
+            "utc": null,
+            "local": null
+          }
+        }
+      },
+      "aircraft": {
+        "model": {
+          "code": "320",
+          "text": ""
+        },
+        "hex": "",
+        "registration": "",
+        "serialNo": "",
+        "images": null
+      },
+      "owner": null,
+      "airline": {
+        "name": "Fly Cham",
+        "code": {
+          "iata": null,
+          "icao": "FYC"
+        },
+        "short": "Fly Cham"
+      },
+      "airport": {
+        "origin": {
+          "code": {
+            "iata": "SHJ",
+            "icao": "OMSJ"
+          },
+          "timezone": {
+            "name": "Asia/Dubai",
+            "offset": 14400,
+            "abbr": "+04",
+            "abbrName": null,
+            "isDst": false
+          },
+          "info": {
+            "terminal": null,
+            "baggage": null,
+            "gate": null
+          },
+          "name": "Sharjah International Airport",
+          "position": {
+            "latitude": 25.328569,
+            "longitude": 55.517151,
+            "country": {
+              "name": "United Arab Emirates",
+              "code": "AE",
+              "id": 234
+            },
+            "region": {
+              "city": "Sharjah"
+            }
+          },
+          "visible": true
+        },
+        "destination": {
+          "timezone": {
+            "name": "Asia/Damascus",
+            "offset": 10800,
+            "abbr": "+03",
+            "abbrName": null,
+            "isDst": false
+          },
+          "info": {
+            "terminal": null,
+            "baggage": null,
+            "gate": null
+          }
+        },
+        "real": null
+      },
+      "time": {
+        "scheduled": {
+          "departure": 1791595800,
+          "arrival": 1791607500
+        },
+        "real": {
+          "departure": null,
+          "arrival": null
+        },
+        "estimated": {
+          "departure": null,
+          "arrival": null
+        },
+        "other": {
+          "eta": null,
+          "duration": null
+        }
+      }
+    }
+  },
+  {
+    "flight": {
+      "identification": {
+        "id": "420e6474",
+        "row": 5873711995,
+        "number": {
+          "default": "RJ431",
+          "alternative": null
+        },
+        "callsign": "RJA431",
+        "codeshare": null
+      },
+      "status": {
+        "live": false,
+        "text": "Landed 06:24",
+        "icon": "green",
+        "estimated": null,
+        "ambiguous": false,
+        "generic": {
+          "status": {
+            "text": "landed",
+            "type": "arrival",
+            "color": "green",
+            "diverted": null
+          },
+          "eventTime": {
+            "utc": 1791602646,
+            "local": 1791613446
+          }
+        }
+      },
+      "aircraft": {
+        "model": {
+          "code": "E295",
+          "text": "Embraer E195-E2"
+        },
+        "registration": "JY-REB",
+        "country": {
+          "id": 113,
+          "name": "Jordan",
+          "alpha2": "JO",
+          "alpha3": "JOR"
+        },
+        "hex": "7448A2",
+        "restricted": false,
+        "serialNo": null,
+        "age": {
+          "availability": true
+        },
+        "availability": {
+          "serialNo": true,
+          "age": true
+        }
+      },
+      "owner": {
+        "name": "Royal Jordanian",
+        "code": {
+          "iata": "RJ",
+          "icao": "RJA"
+        },
+        "logo": "https://cdn.flightradar24.com/assets/airlines/logotypes/156.png"
+      },
+      "airline": {
+        "name": "Royal Jordanian",
+        "code": {
+          "iata": "RJ",
+          "icao": "RJA"
+        },
+        "short": "Royal Jordanian"
+      },
+      "airport": {
+        "origin": {
+          "code": {
+            "iata": "AMM",
+            "icao": "OJAI"
+          },
+          "timezone": {
+            "name": "Asia/Amman",
+            "offset": 10800,
+            "abbr": "+03",
+            "abbrName": null,
+            "isDst": false
+          },
+          "info": {
+            "terminal": null,
+            "baggage": null,
+            "gate": null
+          },
+          "name": "Amman Queen Alia International Airport",
+          "position": {
+            "latitude": 31.722549,
+            "longitude": 35.99321,
+            "country": {
+              "name": "Jordan",
+              "code": "JO",
+              "id": 113
+            },
+            "region": {
+              "city": "Amman"
+            }
+          },
+          "visible": true
+        },
+        "destination": {
+          "timezone": {
+            "name": "Asia/Damascus",
+            "offset": 10800,
+            "abbr": "+03",
+            "abbrName": null,
+            "isDst": false
+          },
+          "info": {
+            "terminal": null,
+            "baggage": null,
+            "gate": null
+          }
+        },
+        "real": null
+      },
+      "time": {
+        "scheduled": {
+          "departure": 1791594900,
+          "arrival": 1791603000
+        },
+        "real": {
+          "departure": 1791599170,
+          "arrival": 1791602646
+        },
+        "estimated": {
+          "departure": null,
+          "arrival": null
+        },
+        "other": {
+          "eta": 1791602646,
+          "duration": 3480
+        }
+      }
+    }
+  },
+  {
+    "flight": {
+      "identification": {
+        "id": null,
+        "row": 5873209366,
+        "number": {
+          "default": "FYC726",
+          "alternative": null
+        },
+        "callsign": null,
+        "codeshare": null
+      },
+      "status": {
+        "live": false,
+        "text": "Unknown",
+        "icon": null,
+        "estimated": null,
+        "ambiguous": false,
+        "generic": {
+          "status": {
+            "text": "unknown",
+            "type": "arrival",
+            "color": "gray",
+            "diverted": null
+          },
+          "eventTime": {
+            "utc": null,
+            "local": null
+          }
+        }
+      },
+      "aircraft": {
+        "model": {
+          "code": "320",
+          "text": ""
+        },
+        "hex": "",
+        "registration": "",
+        "serialNo": "",
+        "images": null
+      },
+      "owner": null,
+      "airline": {
+        "name": "Fly Cham",
+        "code": {
+          "iata": null,
+          "icao": "FYC"
+        },
+        "short": "Fly Cham"
+      },
+      "airport": {
+        "origin": {
+          "code": {
+            "iata": "DXB",
+            "icao": "OMDB"
+          },
+          "timezone": {
+            "name": "Asia/Dubai",
+            "offset": 14400,
+            "abbr": "+04",
+            "abbrName": null,
+            "isDst": false
+          },
+          "info": {
+            "terminal": "1",
+            "baggage": null,
+            "gate": null
+          },
+          "name": "Dubai International Airport",
+          "position": {
+            "latitude": 25.252769,
+            "longitude": 55.364441,
+            "country": {
+              "name": "United Arab Emirates",
+              "code": "AE",
+              "id": 234
+            },
+            "region": {
+              "city": "Dubai"
+            }
+          },
+          "visible": true
+        },
+        "destination": {
+          "timezone": {
+            "name": "Asia/Damascus",
+            "offset": 10800,
+            "abbr": "+03",
+            "abbrName": null,
+            "isDst": false
+          },
+          "info": {
+            "terminal": null,
+            "baggage": null,
+            "gate": null
+          }
+        },
+        "real": null
+      },
+      "time": {
+        "scheduled": {
+          "departure": 1791543600,
+          "arrival": 1791556200
+        },
+        "real": {
+          "departure": null,
+          "arrival": null
+        },
+        "estimated": {
+          "departure": null,
+          "arrival": null
+        },
+        "other": {
+          "eta": null,
+          "duration": null
+        }
+      }
+    }
+  },
+  {
+    "flight": {
+      "identification": {
+        "id": "420b573f",
+        "row": 5873325485,
+        "number": {
+          "default": "TK840",
+          "alternative": null
+        },
+        "callsign": "THY840",
+        "codeshare": null
+      },
+      "status": {
+        "live": false,
+        "text": "Landed 15:25",
+        "icon": "green",
+        "estimated": null,
+        "ambiguous": false,
+        "generic": {
+          "status": {
+            "text": "landed",
+            "type": "arrival",
+            "color": "green",
+            "diverted": null
+          },
+          "eventTime": {
+            "utc": 1791548724,
+            "local": 1791559524
+          }
+        }
+      },
+      "aircraft": {
+        "model": {
+          "code": "B739",
+          "text": "Boeing 737-9F2(ER)"
+        },
+        "registration": "TC-JYF",
+        "country": {
+          "id": 228,
+          "name": "Turkey",
+          "alpha2": "TR",
+          "alpha3": "TUR"
+        },
+        "hex": "4BAB26",
+        "restricted": false,
+        "serialNo": null,
+        "age": {
+          "availability": true
+        },
+        "availability": {
+          "serialNo": true,
+          "age": true
+        }
+      },
+      "owner": {
+        "name": "Turkish Airlines",
+        "code": {
+          "iata": "TK",
+          "icao": "THY"
+        },
+        "logo": "https://cdn.flightradar24.com/assets/airlines/logotypes/39.png"
+      },
+      "airline": {
+        "name": "Turkish Airlines",
+        "code": {
+          "iata": "TK",
+          "icao": "THY"
+        },
+        "short": "Turkish Airlines"
+      },
+      "airport": {
+        "origin": {
+          "code": {
+            "iata": "IST",
+            "icao": "LTFM"
+          },
+          "timezone": {
+            "name": "Europe/Istanbul",
+            "offset": 10800,
+            "abbr": "+03",
+            "abbrName": null,
+            "isDst": false
+          },
+          "info": {
+            "terminal": null,
+            "baggage": "E-F",
+            "gate": "B2"
+          },
+          "name": "Istanbul Airport",
+          "position": {
+            "latitude": 41.270149,
+            "longitude": 28.733362,
+            "country": {
+              "name": "Turkey",
+              "code": "TR",
+              "id": 228
+            },
+            "region": {
+              "city": "Istanbul"
+            }
+          },
+          "visible": true
+        },
+        "destination": {
+          "timezone": {
+            "name": "Asia/Damascus",
+            "offset": 10800,
+            "abbr": "+03",
+            "abbrName": null,
+            "isDst": false
+          },
+          "info": {
+            "terminal": null,
+            "baggage": null,
+            "gate": null
+          }
+        },
+        "real": null
+      },
+      "time": {
+        "scheduled": {
+          "departure": 1791541500,
+          "arrival": 1791549000
+        },
+        "real": {
+          "departure": 1791543237,
+          "arrival": 1791548724
+        },
+        "estimated": {
+          "departure": null,
+          "arrival": null
+        },
+        "other": {
+          "eta": 1791548724,
+          "duration": 5460
+        }
+      }
+    }
+  },
+  {
+    "flight": {
+      "identification": {
+        "id": "420af3b0",
+        "row": 5873459138,
+        "number": {
+          "default": "FZ1191",
+          "alternative": null
+        },
+        "callsign": "FDB1191",
+        "codeshare": [
+          "EK2320"
+        ]
+      },
+      "status": {
+        "live": false,
+        "text": "Unknown",
+        "icon": null,
+        "estimated": null,
+        "ambiguous": false,
+        "generic": {
+          "status": {
+            "text": "unknown",
+            "type": "arrival",
+            "color": null,
+            "diverted": null
+          },
+          "eventTime": {
+            "utc": null,
+            "local": null
+          }
+        }
+      },
+      "aircraft": {
+        "model": {
+          "code": "B738",
+          "text": "Boeing 737-8KN"
+        },
+        "registration": "A6-FET",
+        "country": {
+          "id": 234,
+          "name": "United Arab Emirates",
+          "alpha2": "AE",
+          "alpha3": "ARE"
+        },
+        "hex": "8963B6",
+        "restricted": false,
+        "serialNo": null,
+        "age": {
+          "availability": true
+        },
+        "availability": {
+          "serialNo": true,
+          "age": true
+        }
+      },
+      "owner": {
+        "name": "flydubai",
+        "code": {
+          "iata": "FZ",
+          "icao": "FDB"
+        },
+        "logo": "https://cdn.flightradar24.com/assets/airlines/logotypes/647.png"
+      },
+      "airline": {
+        "name": "flydubai",
+        "code": {
+          "iata": "FZ",
+          "icao": "FDB"
+        },
+        "short": "flydubai"
+      },
+      "airport": {
+        "origin": {
+          "code": {
+            "iata": "DXB",
+            "icao": "OMDB"
+          },
+          "timezone": {
+            "name": "Asia/Dubai",
+            "offset": 14400,
+            "abbr": "+04",
+            "abbrName": null,
+            "isDst": false
+          },
+          "info": {
+            "terminal": "3",
+            "baggage": null,
+            "gate": "B2"
+          },
+          "name": "Dubai International Airport",
+          "position": {
+            "latitude": 25.252769,
+            "longitude": 55.364441,
+            "country": {
+              "name": "United Arab Emirates",
+              "code": "AE",
+              "id": 234
+            },
+            "region": {
+              "city": "Dubai"
+            }
+          },
+          "visible": true
+        },
+        "destination": {
+          "timezone": {
+            "name": "Asia/Damascus",
+            "offset": 10800,
+            "abbr": "+03",
+            "abbrName": null,
+            "isDst": false
+          },
+          "info": {
+            "terminal": null,
+            "baggage": null,
+            "gate": null
+          }
+        },
+        "real": null
+      },
+      "time": {
+        "scheduled": {
+          "departure": 1791529200,
+          "arrival": 1791542400
+        },
+        "real": {
+          "departure": 1791531343,
+          "arrival": null
+        },
+        "estimated": {
+          "departure": null,
+          "arrival": 1791542456
+        },
+        "other": {
+          "eta": null,
+          "duration": null
+        }
+      }
+    }
+  },
+  {
+    "flight": {
+      "identification": {
+        "id": "420a92ca",
+        "row": 5873468503,
+        "number": {
+          "default": "G9351",
+          "alternative": null
+        },
+        "callsign": "ABY351",
+        "codeshare": null
+      },
+      "status": {
+        "live": false,
+        "text": "Unknown",
+        "icon": null,
+        "estimated": null,
+        "ambiguous": false,
+        "generic": {
+          "status": {
+            "text": "unknown",
+            "type": "arrival",
+            "color": null,
+            "diverted": null
+          },
+          "eventTime": {
+            "utc": null,
+            "local": null
+          }
+        }
+      },
+      "aircraft": {
+        "model": {
+          "code": "A320",
+          "text": "Airbus A320-214"
+        },
+        "registration": "A6-AOA",
+        "country": {
+          "id": 234,
+          "name": "United Arab Emirates",
+          "alpha2": "AE",
+          "alpha3": "ARE"
+        },
+        "hex": "896727",
+        "restricted": false,
+        "serialNo": null,
+        "age": {
+          "availability": true
+        },
+        "availability": {
+          "serialNo": true,
+          "age": true
+        }
+      },
+      "owner": {
+        "name": "Air Arabia",
+        "code": {
+          "iata": "G9",
+          "icao": "ABY"
+        },
+        "logo": "https://cdn.flightradar24.com/assets/airlines/logotypes/417.png"
+      },
+      "airline": {
+        "name": "Air Arabia",
+        "code": {
+          "iata": "G9",
+          "icao": "ABY"
+        },
+        "short": "Air Arabia"
+      },
+      "airport": {
+        "origin": {
+          "code": {
+            "iata": "SHJ",
+            "icao": "OMSJ"
+          },
+          "timezone": {
+            "name": "Asia/Dubai",
+            "offset": 14400,
+            "abbr": "+04",
+            "abbrName": null,
+            "isDst": false
+          },
+          "info": {
+            "terminal": null,
+            "baggage": null,
+            "gate": null
+          },
+          "name": "Sharjah International Airport",
+          "position": {
+            "latitude": 25.328569,
+            "longitude": 55.517151,
+            "country": {
+              "name": "United Arab Emirates",
+              "code": "AE",
+              "id": 234
+            },
+            "region": {
+              "city": "Sharjah"
+            }
+          },
+          "visible": true
+        },
+        "destination": {
+          "timezone": {
+            "name": "Asia/Damascus",
+            "offset": 10800,
+            "abbr": "+03",
+            "abbrName": null,
+            "isDst": false
+          },
+          "info": {
+            "terminal": null,
+            "baggage": null,
+            "gate": null
+          }
+        },
+        "real": null
+      },
+      "time": {
+        "scheduled": {
+          "departure": 1791518400,
+          "arrival": 1791531300
+        },
+        "real": {
+          "departure": 1791519603,
+          "arrival": null
+        },
+        "estimated": {
+          "departure": null,
+          "arrival": 1791530480
+        },
+        "other": {
+          "eta": null,
+          "duration": null
+        }
+      }
+    }
+  },
+  {
+    "flight": {
+      "identification": {
+        "id": "420aa047",
+        "row": 5873522817,
+        "number": {
+          "default": "TK844",
+          "alternative": null
+        },
+        "callsign": "THY844",
+        "codeshare": null
+      },
+      "status": {
+        "live": false,
+        "text": "Landed 09:30",
+        "icon": "green",
+        "estimated": null,
+        "ambiguous": false,
+        "generic": {
+          "status": {
+            "text": "landed",
+            "type": "arrival",
+            "color": "green",
+            "diverted": null
+          },
+          "eventTime": {
+            "utc": 1791527437,
+            "local": 1791538237
+          }
+        }
+      },
+      "aircraft": {
+        "model": {
+          "code": "B739",
+          "text": "Boeing 737-9F2(ER)"
+        },
+        "registration": "TC-JYC",
+        "country": {
+          "id": 228,
+          "name": "Turkey",
+          "alpha2": "TR",
+          "alpha3": "TUR"
+        },
+        "hex": "4BAB23",
+        "restricted": false,
+        "serialNo": null,
+        "age": {
+          "availability": true
+        },
+        "availability": {
+          "serialNo": true,
+          "age": true
+        }
+      },
+      "owner": {
+        "name": "Turkish Airlines",
+        "code": {
+          "iata": "TK",
+          "icao": "THY"
+        },
+        "logo": "https://cdn.flightradar24.com/assets/airlines/logotypes/39.png"
+      },
+      "airline": {
+        "name": "Turkish Airlines",
+        "code": {
+          "iata": "TK",
+          "icao": "THY"
+        },
+        "short": "Turkish Airlines"
+      },
+      "airport": {
+        "origin": {
+          "code": {
+            "iata": "IST",
+            "icao": "LTFM"
+          },
+          "timezone": {
+            "name": "Europe/Istanbul",
+            "offset": 10800,
+            "abbr": "+03",
+            "abbrName": null,
+            "isDst": false
+          },
+          "info": {
+            "terminal": null,
+            "baggage": "E-F",
+            "gate": "F3B"
+          },
+          "name": "Istanbul Airport",
+          "position": {
+            "latitude": 41.270149,
+            "longitude": 28.733362,
+            "country": {
+              "name": "Turkey",
+              "code": "TR",
+              "id": 228
+            },
+            "region": {
+              "city": "Istanbul"
+            }
+          },
+          "visible": true
+        },
+        "destination": {
+          "timezone": {
+            "name": "Asia/Damascus",
+            "offset": 10800,
+            "abbr": "+03",
+            "abbrName": null,
+            "isDst": false
+          },
+          "info": {
+            "terminal": null,
+            "baggage": null,
+            "gate": null
+          }
+        },
+        "real": null
+      },
+      "time": {
+        "scheduled": {
+          "departure": 1791520800,
+          "arrival": 1791528300
+        },
+        "real": {
+          "departure": 1791522324,
+          "arrival": 1791527437
+        },
+        "estimated": {
+          "departure": null,
+          "arrival": null
+        },
+        "other": {
+          "eta": 1791527437,
+          "duration": 5100
+        }
+      }
+    }
+  },
+  {
+    "flight": {
+      "identification": {
+        "id": "420aad30",
+        "row": 5873290815,
+        "number": {
+          "default": "PC770",
+          "alternative": null
+        },
+        "callsign": "PGT770",
+        "codeshare": null
+      },
+      "status": {
+        "live": false,
+        "text": "Landed 09:41",
+        "icon": "green",
+        "estimated": null,
+        "ambiguous": false,
+        "generic": {
+          "status": {
+            "text": "landed",
+            "type": "arrival",
+            "color": "green",
+            "diverted": null
+          },
+          "eventTime": {
+            "utc": 1791528081,
+            "local": 1791538881
+          }
+        }
+      },
+      "aircraft": {
+        "model": {
+          "code": "B738",
+          "text": "Boeing 737-82R"
+        },
+        "registration": "TC-AIS",
+        "country": {
+          "id": 228,
+          "name": "Turkey",
+          "alpha2": "TR",
+          "alpha3": "TUR"
+        },
+        "hex": "4B8533",
+        "restricted": false,
+        "serialNo": null,
+        "age": {
+          "availability": true
+        },
+        "availability": {
+          "serialNo": true,
+          "age": true
+        }
+      },
+      "owner": {
+        "name": "Pegasus",
+        "code": {
+          "iata": "PC",
+          "icao": "PGT"
+        },
+        "logo": "https://cdn.flightradar24.com/assets/airlines/logotypes/317.png"
+      },
+      "airline": {
+        "name": "Pegasus",
+        "code": {
+          "iata": "PC",
+          "icao": "PGT"
+        },
+        "short": "Pegasus"
+      },
+      "airport": {
+        "origin": {
+          "code": {
+            "iata": "SAW",
+            "icao": "LTFJ"
+          },
+          "timezone": {
+            "name": "Europe/Istanbul",
+            "offset": 10800,
+            "abbr": "+03",
+            "abbrName": null,
+            "isDst": false
+          },
+          "info": {
+            "terminal": null,
+            "baggage": "D1",
+            "gate": "304A"
+          },
+          "name": "Istanbul Sabiha Gokcen International Airport",
+          "position": {
+            "latitude": 40.898548,
+            "longitude": 29.30921,
+            "country": {
+              "name": "Turkey",
+              "code": "TR",
+              "id": 228
+            },
+            "region": {
+              "city": "Istanbul"
+            }
+          },
+          "visible": true
+        },
+        "destination": {
+          "timezone": {
+            "name": "Asia/Damascus",
+            "offset": 10800,
+            "abbr": "+03",
+            "abbrName": null,
+            "isDst": false
+          },
+          "info": {
+            "terminal": null,
+            "baggage": null,
+            "gate": null
+          }
+        },
+        "real": null
+      },
+      "time": {
+        "scheduled": {
+          "departure": 1791521700,
+          "arrival": 1791527700
+        },
+        "real": {
+          "departure": 1791523278,
+          "arrival": 1791528081
+        },
+        "estimated": {
+          "departure": null,
+          "arrival": null
+        },
+        "other": {
+          "eta": 1791528081,
+          "duration": 4800
+        }
+      }
+    }
+  },
+  {
+    "flight": {
+      "identification": {
+        "id": "420aa6cf",
+        "row": 5873544101,
+        "number": {
+          "default": "VF340",
+          "alternative": null
+        },
+        "callsign": "TKJ340",
+        "codeshare": null
+      },
+      "status": {
+        "live": false,
+        "text": "Landed 09:22",
+        "icon": "red",
+        "estimated": null,
+        "ambiguous": false,
+        "generic": {
+          "status": {
+            "text": "landed",
+            "type": "arrival",
+            "color": "red",
+            "diverted": null
+          },
+          "eventTime": {
+            "utc": 1791526921,
+            "local": 1791537721
+          }
+        }
+      },
+      "aircraft": {
+        "model": {
+          "code": "B738",
+          "text": "Boeing 737-8F2"
+        },
+        "registration": "TC-JFH",
+        "country": {
+          "id": 228,
+          "name": "Turkey",
+          "alpha2": "TR",
+          "alpha3": "TUR"
+        },
+        "hex": "4BA8C8",
+        "restricted": false,
+        "serialNo": null,
+        "age": {
+          "availability": true
+        },
+        "availability": {
+          "serialNo": true,
+          "age": true
+        }
+      },
+      "owner": {
+        "name": "AJet",
+        "code": {
+          "iata": "VF",
+          "icao": "TKJ"
+        },
+        "logo": "https://cdn.flightradar24.com/assets/airlines/logotypes/2574.png"
+      },
+      "airline": {
+        "name": "AJet",
+        "code": {
+          "iata": "VF",
+          "icao": "TKJ"
+        },
+        "short": "AJet"
+      },
+      "airport": {
+        "origin": {
+          "code": {
+            "iata": "SAW",
+            "icao": "LTFJ"
+          },
+          "timezone": {
+            "name": "Europe/Istanbul",
+            "offset": 10800,
+            "abbr": "+03",
+            "abbrName": null,
+            "isDst": false
+          },
+          "info": {
+            "terminal": null,
+            "baggage": "H1",
+            "gate": "503B"
+          },
+          "name": "Istanbul Sabiha Gokcen International Airport",
+          "position": {
+            "latitude": 40.898548,
+            "longitude": 29.30921,
+            "country": {
+              "name": "Turkey",
+              "code": "TR",
+              "id": 228
+            },
+            "region": {
+              "city": "Istanbul"
+            }
+          },
+          "visible": true
+        },
+        "destination": {
+          "timezone": {
+            "name": "Asia/Damascus",
+            "offset": 10800,
+            "abbr": "+03",
+            "abbrName": null,
+            "isDst": false
+          },
+          "info": {
+            "terminal": null,
+            "baggage": null,
+            "gate": null
+          }
+        },
+        "real": null
+      },
+      "time": {
+        "scheduled": {
+          "departure": 1791515700,
+          "arrival": 1791522000
+        },
+        "real": {
+          "departure": 1791522223,
+          "arrival": 1791526921
+        },
+        "estimated": {
+          "departure": null,
+          "arrival": null
+        },
+        "other": {
+          "eta": 1791526921,
+          "duration": 4680
+        }
+      }
+    }
+  },
+  {
+    "flight": {
+      "identification": {
+        "id": "420a8d1d",
+        "row": 5873369846,
+        "number": {
+          "default": "XQ808",
+          "alternative": null
+        },
+        "callsign": "SXS808",
+        "codeshare": null
+      },
+      "status": {
+        "live": false,
+        "text": "Landed 08:42",
+        "icon": "yellow",
+        "estimated": null,
+        "ambiguous": false,
+        "generic": {
+          "status": {
+            "text": "landed",
+            "type": "arrival",
+            "color": "yellow",
+            "diverted": null
+          },
+          "eventTime": {
+            "utc": 1791524529,
+            "local": 1791535329
+          }
+        }
+      },
+      "aircraft": {
+        "model": {
+          "code": "B738",
+          "text": "Boeing 737-8HC"
+        },
+        "registration": "TC-SOE",
+        "country": {
+          "id": 228,
+          "name": "Turkey",
+          "alpha2": "TR",
+          "alpha3": "TUR"
+        },
+        "hex": "4BCDE5",
+        "restricted": false,
+        "serialNo": null,
+        "age": {
+          "availability": true
+        },
+        "availability": {
+          "serialNo": true,
+          "age": true
+        }
+      },
+      "owner": {
+        "name": "SunExpress",
+        "code": {
+          "iata": "XQ",
+          "icao": "SXS"
+        },
+        "logo": "https://cdn.flightradar24.com/assets/airlines/logotypes/176.png"
+      },
+      "airline": {
+        "name": "SunExpress",
+        "code": {
+          "iata": "XQ",
+          "icao": "SXS"
+        },
+        "short": "SunExpress"
+      },
+      "airport": {
+        "origin": {
+          "code": {
+            "iata": "ADB",
+            "icao": "LTBJ"
+          },
+          "timezone": {
+            "name": "Europe/Istanbul",
+            "offset": 10800,
+            "abbr": "+03",
+            "abbrName": null,
+            "isDst": false
+          },
+          "info": {
+            "terminal": "I",
+            "baggage": null,
+            "gate": "226"
+          },
+          "name": "Izmir Adnan Menderes International Airport",
+          "position": {
+            "latitude": 38.292389,
+            "longitude": 27.15695,
+            "country": {
+              "name": "Turkey",
+              "code": "TR",
+              "id": 228
+            },
+            "region": {
+              "city": "Izmir"
+            }
+          },
+          "visible": true
+        },
+        "destination": {
+          "timezone": {
+            "name": "Asia/Damascus",
+            "offset": 10800,
+            "abbr": "+03",
+            "abbrName": null,
+            "isDst": false
+          },
+          "info": {
+            "terminal": null,
+            "baggage": null,
+            "gate": null
+          }
+        },
+        "real": null
+      },
+      "time": {
+        "scheduled": {
+          "departure": 1791515400,
+          "arrival": 1791522000
+        },
+        "real": {
+          "departure": 1791519123,
+          "arrival": 1791524529
+        },
+        "estimated": {
+          "departure": null,
+          "arrival": null
+        },
+        "other": {
+          "eta": 1791524529,
+          "duration": 5400
+        }
+      }
+    }
+  },
+  {
+    "flight": {
+      "identification": {
+        "id": null,
+        "row": 5874115711,
+        "number": {
+          "default": "RJ431",
+          "alternative": null
+        },
+        "callsign": null,
+        "codeshare": null
+      },
+      "status": {
+        "live": false,
+        "text": "Scheduled",
+        "icon": null,
+        "estimated": null,
+        "ambiguous": false,
+        "generic": {
+          "status": {
+            "text": "scheduled",
+            "type": "arrival",
+            "color": "gray",
+            "diverted": null
+          },
+          "eventTime": {
+            "utc": null,
+            "local": null
+          }
+        }
+      },
+      "aircraft": {
+        "model": {
+          "code": "295",
+          "text": ""
+        },
+        "hex": "",
+        "registration": "",
+        "serialNo": "",
+        "images": null
+      },
+      "owner": null,
+      "airline": {
+        "name": "Royal Jordanian",
+        "code": {
+          "iata": "RJ",
+          "icao": "RJA"
+        },
+        "short": "Royal Jordanian"
+      },
+      "airport": {
+        "origin": {
+          "code": {
+            "iata": "AMM",
+            "icao": "OJAI"
+          },
+          "timezone": {
+            "name": "Asia/Amman",
+            "offset": 10800,
+            "abbr": "+03",
+            "abbrName": null,
+            "isDst": false
+          },
+          "info": {
+            "terminal": null,
+            "baggage": null,
+            "gate": null
+          },
+          "name": "Amman Queen Alia International Airport",
+          "position": {
+            "latitude": 31.722549,
+            "longitude": 35.99321,
+            "country": {
+              "name": "Jordan",
+              "code": "JO",
+              "id": 113
+            },
+            "region": {
+              "city": "Amman"
+            }
+          },
+          "visible": true
+        },
+        "destination": {
+          "timezone": {
+            "name": "Asia/Damascus",
+            "offset": 10800,
+            "abbr": "+03",
+            "abbrName": null,
+            "isDst": false
+          },
+          "info": {
+            "terminal": null,
+            "baggage": null,
+            "gate": null
+          }
+        },
+        "real": null
+      },
+      "time": {
+        "scheduled": {
+          "departure": 1791684300,
+          "arrival": 1791689400
+        },
+        "real": {
+          "departure": null,
+          "arrival": null
+        },
+        "estimated": {
+          "departure": null,
+          "arrival": null
+        },
+        "other": {
+          "eta": null,
+          "duration": null
+        }
+      }
+    }
+  },
+  {
+    "flight": {
+      "identification": {
+        "id": null,
+        "row": 5874309443,
+        "number": {
+          "default": "VF340",
+          "alternative": null
+        },
+        "callsign": null,
+        "codeshare": null
+      },
+      "status": {
+        "live": false,
+        "text": "Scheduled",
+        "icon": null,
+        "estimated": null,
+        "ambiguous": false,
+        "generic": {
+          "status": {
+            "text": "scheduled",
+            "type": "arrival",
+            "color": "gray",
+            "diverted": null
+          },
+          "eventTime": {
+            "utc": null,
+            "local": null
+          }
+        }
+      },
+      "aircraft": {
+        "model": {
+          "code": "73H",
+          "text": ""
+        },
+        "hex": "",
+        "registration": "",
+        "serialNo": "",
+        "images": null
+      },
+      "owner": null,
+      "airline": {
+        "name": "AJet",
+        "code": {
+          "iata": "VF",
+          "icao": "TKJ"
+        },
+        "short": "AJet"
+      },
+      "airport": {
+        "origin": {
+          "code": {
+            "iata": "SAW",
+            "icao": "LTFJ"
+          },
+          "timezone": {
+            "name": "Europe/Istanbul",
+            "offset": 10800,
+            "abbr": "+03",
+            "abbrName": null,
+            "isDst": false
+          },
+          "info": {
+            "terminal": null,
+            "baggage": "H1",
+            "gate": null
+          },
+          "name": "Istanbul Sabiha Gokcen International Airport",
+          "position": {
+            "latitude": 40.898548,
+            "longitude": 29.30921,
+            "country": {
+              "name": "Turkey",
+              "code": "TR",
+              "id": 228
+            },
+            "region": {
+              "city": "Istanbul"
+            }
+          },
+          "visible": true
+        },
+        "destination": {
+          "timezone": {
+            "name": "Asia/Damascus",
+            "offset": 10800,
+            "abbr": "+03",
+            "abbrName": null,
+            "isDst": false
+          },
+          "info": {
+            "terminal": null,
+            "baggage": null,
+            "gate": null
+          }
+        },
+        "real": null
+      },
+      "time": {
+        "scheduled": {
+          "departure": 1791688500,
+          "arrival": 1791694800
+        },
+        "real": {
+          "departure": null,
+          "arrival": null
+        },
+        "estimated": {
+          "departure": null,
+          "arrival": null
+        },
+        "other": {
+          "eta": null,
+          "duration": null
+        }
+      }
+    }
+  },
+  {
+    "flight": {
+      "identification": {
+        "id": null,
+        "row": 5874316038,
+        "number": {
+          "default": "XQ808",
+          "alternative": null
+        },
+        "callsign": null,
+        "codeshare": null
+      },
+      "status": {
+        "live": false,
+        "text": "Scheduled",
+        "icon": null,
+        "estimated": null,
+        "ambiguous": false,
+        "generic": {
+          "status": {
+            "text": "scheduled",
+            "type": "arrival",
+            "color": "gray",
+            "diverted": null
+          },
+          "eventTime": {
+            "utc": null,
+            "local": null
+          }
+        }
+      },
+      "aircraft": {
+        "model": {
+          "code": "73H",
+          "text": ""
+        },
+        "hex": "",
+        "registration": "",
+        "serialNo": "",
+        "images": null
+      },
+      "owner": null,
+      "airline": {
+        "name": "SunExpress",
+        "code": {
+          "iata": "XQ",
+          "icao": "SXS"
+        },
+        "short": "SunExpress"
+      },
+      "airport": {
+        "origin": {
+          "code": {
+            "iata": "ADB",
+            "icao": "LTBJ"
+          },
+          "timezone": {
+            "name": "Europe/Istanbul",
+            "offset": 10800,
+            "abbr": "+03",
+            "abbrName": null,
+            "isDst": false
+          },
+          "info": {
+            "terminal": "I",
+            "baggage": null,
+            "gate": "233"
+          },
+          "name": "Izmir Adnan Menderes International Airport",
+          "position": {
+            "latitude": 38.292389,
+            "longitude": 27.15695,
+            "country": {
+              "name": "Turkey",
+              "code": "TR",
+              "id": 228
+            },
+            "region": {
+              "city": "Izmir"
+            }
+          },
+          "visible": true
+        },
+        "destination": {
+          "timezone": {
+            "name": "Asia/Damascus",
+            "offset": 10800,
+            "abbr": "+03",
+            "abbrName": null,
+            "isDst": false
+          },
+          "info": {
+            "terminal": null,
+            "baggage": null,
+            "gate": null
+          }
+        },
+        "real": null
+      },
+      "time": {
+        "scheduled": {
+          "departure": 1791688200,
+          "arrival": 1791694800
+        },
+        "real": {
+          "departure": null,
+          "arrival": null
+        },
+        "estimated": {
+          "departure": 1791688200,
+          "arrival": null
+        },
+        "other": {
+          "eta": null,
+          "duration": null
+        }
+      }
+    }
+  },
+  {
+    "flight": {
+      "identification": {
+        "id": null,
+        "row": 5874098566,
+        "number": {
+          "default": "PC770",
+          "alternative": null
+        },
+        "callsign": null,
+        "codeshare": null
+      },
+      "status": {
+        "live": false,
+        "text": "Scheduled",
+        "icon": null,
+        "estimated": null,
+        "ambiguous": false,
+        "generic": {
+          "status": {
+            "text": "scheduled",
+            "type": "arrival",
+            "color": "gray",
+            "diverted": null
+          },
+          "eventTime": {
+            "utc": null,
+            "local": null
+          }
+        }
+      },
+      "aircraft": {
+        "model": {
+          "code": "738",
+          "text": ""
+        },
+        "hex": "",
+        "registration": "",
+        "serialNo": "",
+        "images": null
+      },
+      "owner": null,
+      "airline": {
+        "name": "Pegasus",
+        "code": {
+          "iata": "PC",
+          "icao": "PGT"
+        },
+        "short": "Pegasus"
+      },
+      "airport": {
+        "origin": {
+          "code": {
+            "iata": "SAW",
+            "icao": "LTFJ"
+          },
+          "timezone": {
+            "name": "Europe/Istanbul",
+            "offset": 10800,
+            "abbr": "+03",
+            "abbrName": null,
+            "isDst": false
+          },
+          "info": {
+            "terminal": null,
+            "baggage": "D1",
+            "gate": null
+          },
+          "name": "Istanbul Sabiha Gokcen International Airport",
+          "position": {
+            "latitude": 40.898548,
+            "longitude": 29.30921,
+            "country": {
+              "name": "Turkey",
+              "code": "TR",
+              "id": 228
+            },
+            "region": {
+              "city": "Istanbul"
+            }
+          },
+          "visible": true
+        },
+        "destination": {
+          "timezone": {
+            "name": "Asia/Damascus",
+            "offset": 10800,
+            "abbr": "+03",
+            "abbrName": null,
+            "isDst": false
+          },
+          "info": {
+            "terminal": null,
+            "baggage": null,
+            "gate": null
+          }
+        },
+        "real": null
+      },
+      "time": {
+        "scheduled": {
+          "departure": 1791692100,
+          "arrival": 1791698100
+        },
+        "real": {
+          "departure": null,
+          "arrival": null
+        },
+        "estimated": {
+          "departure": null,
+          "arrival": null
+        },
+        "other": {
+          "eta": null,
+          "duration": null
+        }
+      }
+    }
+  },
+  {
+    "flight": {
+      "identification": {
+        "id": null,
+        "row": 5874295450,
+        "number": {
+          "default": "TK844",
+          "alternative": null
+        },
+        "callsign": null,
+        "codeshare": null
+      },
+      "status": {
+        "live": false,
+        "text": "Scheduled",
+        "icon": null,
+        "estimated": null,
+        "ambiguous": false,
+        "generic": {
+          "status": {
+            "text": "scheduled",
+            "type": "arrival",
+            "color": "gray",
+            "diverted": null
+          },
+          "eventTime": {
+            "utc": null,
+            "local": null
+          }
+        }
+      },
+      "aircraft": {
+        "model": {
+          "code": "73J",
+          "text": ""
+        },
+        "hex": "",
+        "registration": "",
+        "serialNo": "",
+        "images": null
+      },
+      "owner": null,
+      "airline": {
+        "name": "Turkish Airlines",
+        "code": {
+          "iata": "TK",
+          "icao": "THY"
+        },
+        "short": "Turkish Airlines"
+      },
+      "airport": {
+        "origin": {
+          "code": {
+            "iata": "IST",
+            "icao": "LTFM"
+          },
+          "timezone": {
+            "name": "Europe/Istanbul",
+            "offset": 10800,
+            "abbr": "+03",
+            "abbrName": null,
+            "isDst": false
+          },
+          "info": {
+            "terminal": null,
+            "baggage": null,
+            "gate": null
+          },
+          "name": "Istanbul Airport",
+          "position": {
+            "latitude": 41.270149,
+            "longitude": 28.733362,
+            "country": {
+              "name": "Turkey",
+              "code": "TR",
+              "id": 228
+            },
+            "region": {
+              "city": "Istanbul"
+            }
+          },
+          "visible": true
+        },
+        "destination": {
+          "timezone": {
+            "name": "Asia/Damascus",
+            "offset": 10800,
+            "abbr": "+03",
+            "abbrName": null,
+            "isDst": false
+          },
+          "info": {
+            "terminal": null,
+            "baggage": null,
+            "gate": null
+          }
+        },
+        "real": null
+      },
+      "time": {
+        "scheduled": {
+          "departure": 1791693600,
+          "arrival": 1791701100
+        },
+        "real": {
+          "departure": null,
+          "arrival": null
+        },
+        "estimated": {
+          "departure": null,
+          "arrival": null
+        },
+        "other": {
+          "eta": null,
+          "duration": null
+        }
+      }
+    }
+  },
+  {
+    "flight": {
+      "identification": {
+        "id": null,
+        "row": 5874261480,
+        "number": {
+          "default": "G9351",
+          "alternative": null
+        },
+        "callsign": null,
+        "codeshare": null
+      },
+      "status": {
+        "live": false,
+        "text": "Scheduled",
+        "icon": null,
+        "estimated": null,
+        "ambiguous": false,
+        "generic": {
+          "status": {
+            "text": "scheduled",
+            "type": "arrival",
+            "color": "gray",
+            "diverted": null
+          },
+          "eventTime": {
+            "utc": null,
+            "local": null
+          }
+        }
+      },
+      "aircraft": {
+        "model": {
+          "code": "320",
+          "text": ""
+        },
+        "hex": "",
+        "registration": "",
+        "serialNo": "",
+        "images": null
+      },
+      "owner": null,
+      "airline": {
+        "name": "Air Arabia",
+        "code": {
+          "iata": "G9",
+          "icao": "ABY"
+        },
+        "short": "Air Arabia"
+      },
+      "airport": {
+        "origin": {
+          "code": {
+            "iata": "SHJ",
+            "icao": "OMSJ"
+          },
+          "timezone": {
+            "name": "Asia/Dubai",
+            "offset": 14400,
+            "abbr": "+04",
+            "abbrName": null,
+            "isDst": false
+          },
+          "info": {
+            "terminal": null,
+            "baggage": null,
+            "gate": null
+          },
+          "name": "Sharjah International Airport",
+          "position": {
+            "latitude": 25.328569,
+            "longitude": 55.517151,
+            "country": {
+              "name": "United Arab Emirates",
+              "code": "AE",
+              "id": 234
+            },
+            "region": {
+              "city": "Sharjah"
+            }
+          },
+          "visible": true
+        },
+        "destination": {
+          "timezone": {
+            "name": "Asia/Damascus",
+            "offset": 10800,
+            "abbr": "+03",
+            "abbrName": null,
+            "isDst": false
+          },
+          "info": {
+            "terminal": null,
+            "baggage": null,
+            "gate": null
+          }
+        },
+        "real": null
+      },
+      "time": {
+        "scheduled": {
+          "departure": 1791691200,
+          "arrival": 1791704100
+        },
+        "real": {
+          "departure": null,
+          "arrival": null
+        },
+        "estimated": {
+          "departure": 1791691200,
+          "arrival": null
+        },
+        "other": {
+          "eta": null,
+          "duration": null
+        }
+      }
+    }
+  },
+  {
+    "flight": {
+      "identification": {
+        "id": null,
+        "row": 5874000380,
+        "number": {
+          "default": "DN551",
+          "alternative": null
+        },
+        "callsign": null,
+        "codeshare": [
+          "A15632",
+          "X11525"
+        ]
+      },
+      "status": {
+        "live": false,
+        "text": "Scheduled",
+        "icon": null,
+        "estimated": null,
+        "ambiguous": false,
+        "generic": {
+          "status": {
+            "text": "scheduled",
+            "type": "arrival",
+            "color": "gray",
+            "diverted": null
+          },
+          "eventTime": {
+            "utc": null,
+            "local": null
+          }
+        }
+      },
+      "aircraft": {
+        "model": {
+          "code": "320",
+          "text": ""
+        },
+        "hex": "",
+        "registration": "",
+        "serialNo": "",
+        "images": null
+      },
+      "owner": null,
+      "airline": {
+        "name": "Dan Air",
+        "code": {
+          "iata": "DN",
+          "icao": "DNA"
+        },
+        "short": "Dan Air"
+      },
+      "airport": {
+        "origin": {
+          "code": {
+            "iata": "OTP",
+            "icao": "LROP"
+          },
+          "timezone": {
+            "name": "Europe/Bucharest",
+            "offset": 10800,
+            "abbr": "EEST",
+            "abbrName": "Eastern European Summer Time",
+            "isDst": true
+          },
+          "info": {
+            "terminal": null,
+            "baggage": null,
+            "gate": null
+          },
+          "name": "Bucharest Henri Coanda International Airport",
+          "position": {
+            "latitude": 44.572159,
+            "longitude": 26.102171,
+            "country": {
+              "name": "Romania",
+              "code": "RO",
+              "id": 181
+            },
+            "region": {
+              "city": "Bucharest"
+            }
+          },
+          "visible": true
+        },
+        "destination": {
+          "timezone": {
+            "name": "Asia/Damascus",
+            "offset": 10800,
+            "abbr": "+03",
+            "abbrName": null,
+            "isDst": false
+          },
+          "info": {
+            "terminal": null,
+            "baggage": null,
+            "gate": null
+          }
+        },
+        "real": null
+      },
+      "time": {
+        "scheduled": {
+          "departure": 1791713700,
+          "arrival": 1791720900
+        },
+        "real": {
+          "departure": null,
+          "arrival": null
+        },
+        "estimated": {
+          "departure": null,
+          "arrival": null
+        },
+        "other": {
+          "eta": null,
+          "duration": null
+        }
+      }
+    }
+  },
+  {
+    "flight": {
+      "identification": {
+        "id": null,
+        "row": 5874295445,
+        "number": {
+          "default": "TK840",
+          "alternative": null
+        },
+        "callsign": null,
+        "codeshare": null
+      },
+      "status": {
+        "live": false,
+        "text": "Scheduled",
+        "icon": null,
+        "estimated": null,
+        "ambiguous": false,
+        "generic": {
+          "status": {
+            "text": "scheduled",
+            "type": "arrival",
+            "color": "gray",
+            "diverted": null
+          },
+          "eventTime": {
+            "utc": null,
+            "local": null
+          }
+        }
+      },
+      "aircraft": {
+        "model": {
+          "code": "73J",
+          "text": ""
+        },
+        "hex": "",
+        "registration": "",
+        "serialNo": "",
+        "images": null
+      },
+      "owner": null,
+      "airline": {
+        "name": "Turkish Airlines",
+        "code": {
+          "iata": "TK",
+          "icao": "THY"
+        },
+        "short": "Turkish Airlines"
+      },
+      "airport": {
+        "origin": {
+          "code": {
+            "iata": "IST",
+            "icao": "LTFM"
+          },
+          "timezone": {
+            "name": "Europe/Istanbul",
+            "offset": 10800,
+            "abbr": "+03",
+            "abbrName": null,
+            "isDst": false
+          },
+          "info": {
+            "terminal": null,
+            "baggage": null,
+            "gate": null
+          },
+          "name": "Istanbul Airport",
+          "position": {
+            "latitude": 41.270149,
+            "longitude": 28.733362,
+            "country": {
+              "name": "Turkey",
+              "code": "TR",
+              "id": 228
+            },
+            "region": {
+              "city": "Istanbul"
+            }
+          },
+          "visible": true
+        },
+        "destination": {
+          "timezone": {
+            "name": "Asia/Damascus",
+            "offset": 10800,
+            "abbr": "+03",
+            "abbrName": null,
+            "isDst": false
+          },
+          "info": {
+            "terminal": null,
+            "baggage": null,
+            "gate": null
+          }
+        },
+        "real": null
+      },
+      "time": {
+        "scheduled": {
+          "departure": 1791714300,
+          "arrival": 1791721800
+        },
+        "real": {
+          "departure": null,
+          "arrival": null
+        },
+        "estimated": {
+          "departure": null,
+          "arrival": null
+        },
+        "other": {
+          "eta": null,
+          "duration": null
+        }
+      }
+    }
+  },
+  {
+    "flight": {
+      "identification": {
+        "id": null,
+        "row": 5874178056,
+        "number": {
+          "default": "XY559",
+          "alternative": null
+        },
+        "callsign": null,
+        "codeshare": null
+      },
+      "status": {
+        "live": false,
+        "text": "Scheduled",
+        "icon": null,
+        "estimated": null,
+        "ambiguous": false,
+        "generic": {
+          "status": {
+            "text": "scheduled",
+            "type": "arrival",
+            "color": "gray",
+            "diverted": null
+          },
+          "eventTime": {
+            "utc": null,
+            "local": null
+          }
+        }
+      },
+      "aircraft": {
+        "model": {
+          "code": "32N",
+          "text": ""
+        },
+        "hex": "",
+        "registration": "",
+        "serialNo": "",
+        "images": null
+      },
+      "owner": null,
+      "airline": {
+        "name": "flynas",
+        "code": {
+          "iata": "XY",
+          "icao": "KNE"
+        },
+        "short": "flynas"
+      },
+      "airport": {
+        "origin": {
+          "code": {
+            "iata": "JED",
+            "icao": "OEJN"
+          },
+          "timezone": {
+            "name": "Asia/Riyadh",
+            "offset": 10800,
+            "abbr": "+03",
+            "abbrName": null,
+            "isDst": false
+          },
+          "info": {
+            "terminal": "1",
+            "baggage": null,
+            "gate": null
+          },
+          "name": "Jeddah King Abdulaziz International Airport",
+          "position": {
+            "latitude": 21.67956,
+            "longitude": 39.156528,
+            "country": {
+              "name": "Saudi Arabia",
+              "code": "SA",
+              "id": 194
+            },
+            "region": {
+              "city": "Jeddah"
+            }
+          },
+          "visible": true
+        },
+        "destination": {
+          "timezone": {
+            "name": "Asia/Damascus",
+            "offset": 10800,
+            "abbr": "+03",
+            "abbrName": null,
+            "isDst": false
+          },
+          "info": {
+            "terminal": null,
+            "baggage": null,
+            "gate": null
+          }
+        },
+        "real": null
+      },
+      "time": {
+        "scheduled": {
+          "departure": 1791715200,
+          "arrival": 1791724200
+        },
+        "real": {
+          "departure": null,
+          "arrival": null
+        },
+        "estimated": {
+          "departure": null,
+          "arrival": null
+        },
+        "other": {
+          "eta": null,
+          "duration": null
+        }
+      }
+    }
+  },
+  {
+    "flight": {
+      "identification": {
+        "id": null,
+        "row": 5874115710,
+        "number": {
+          "default": "RJ433",
+          "alternative": null
+        },
+        "callsign": null,
+        "codeshare": [
+          "QR6117"
+        ]
+      },
+      "status": {
+        "live": false,
+        "text": "Scheduled",
+        "icon": null,
+        "estimated": null,
+        "ambiguous": false,
+        "generic": {
+          "status": {
+            "text": "scheduled",
+            "type": "arrival",
+            "color": "gray",
+            "diverted": null
+          },
+          "eventTime": {
+            "utc": null,
+            "local": null
+          }
+        }
+      },
+      "aircraft": {
+        "model": {
+          "code": "32N",
+          "text": ""
+        },
+        "hex": "",
+        "registration": "",
+        "serialNo": "",
+        "images": null
+      },
+      "owner": null,
+      "airline": {
+        "name": "Royal Jordanian",
+        "code": {
+          "iata": "RJ",
+          "icao": "RJA"
+        },
+        "short": "Royal Jordanian"
+      },
+      "airport": {
+        "origin": {
+          "code": {
+            "iata": "AMM",
+            "icao": "OJAI"
+          },
+          "timezone": {
+            "name": "Asia/Amman",
+            "offset": 10800,
+            "abbr": "+03",
+            "abbrName": null,
+            "isDst": false
+          },
+          "info": {
+            "terminal": null,
+            "baggage": null,
+            "gate": null
+          },
+          "name": "Amman Queen Alia International Airport",
+          "position": {
+            "latitude": 31.722549,
+            "longitude": 35.99321,
+            "country": {
+              "name": "Jordan",
+              "code": "JO",
+              "id": 113
+            },
+            "region": {
+              "city": "Amman"
+            }
+          },
+          "visible": true
+        },
+        "destination": {
+          "timezone": {
+            "name": "Asia/Damascus",
+            "offset": 10800,
+            "abbr": "+03",
+            "abbrName": null,
+            "isDst": false
+          },
+          "info": {
+            "terminal": null,
+            "baggage": null,
+            "gate": null
+          }
+        },
+        "real": null
+      },
+      "time": {
+        "scheduled": {
+          "departure": 1791719400,
+          "arrival": 1791724500
+        },
+        "real": {
+          "departure": null,
+          "arrival": null
+        },
+        "estimated": {
+          "departure": null,
+          "arrival": null
+        },
+        "other": {
+          "eta": null,
+          "duration": null
+        }
+      }
+    }
+  },
+  {
+    "flight": {
+      "identification": {
+        "id": null,
+        "row": 5874629373,
+        "number": {
+          "default": "RJ431",
+          "alternative": null
+        },
+        "callsign": null,
+        "codeshare": null
+      },
+      "status": {
+        "live": false,
+        "text": "Scheduled",
+        "icon": null,
+        "estimated": null,
+        "ambiguous": false,
+        "generic": {
+          "status": {
+            "text": "scheduled",
+            "type": "arrival",
+            "color": "gray",
+            "diverted": null
+          },
+          "eventTime": {
+            "utc": null,
+            "local": null
+          }
+        }
+      },
+      "aircraft": {
+        "model": {
+          "code": "32N",
+          "text": ""
+        },
+        "hex": "",
+        "registration": "",
+        "serialNo": "",
+        "images": null
+      },
+      "owner": null,
+      "airline": {
+        "name": "Royal Jordanian",
+        "code": {
+          "iata": "RJ",
+          "icao": "RJA"
+        },
+        "short": "Royal Jordanian"
+      },
+      "airport": {
+        "origin": {
+          "code": {
+            "iata": "AMM",
+            "icao": "OJAI"
+          },
+          "timezone": {
+            "name": "Asia/Amman",
+            "offset": 10800,
+            "abbr": "+03",
+            "abbrName": null,
+            "isDst": false
+          },
+          "info": {
+            "terminal": null,
+            "baggage": null,
+            "gate": null
+          },
+          "name": "Amman Queen Alia International Airport",
+          "position": {
+            "latitude": 31.722549,
+            "longitude": 35.99321,
+            "country": {
+              "name": "Jordan",
+              "code": "JO",
+              "id": 113
+            },
+            "region": {
+              "city": "Amman"
+            }
+          },
+          "visible": true
+        },
+        "destination": {
+          "timezone": {
+            "name": "Asia/Damascus",
+            "offset": 10800,
+            "abbr": "+03",
+            "abbrName": null,
+            "isDst": false
+          },
+          "info": {
+            "terminal": null,
+            "baggage": null,
+            "gate": null
+          }
+        },
+        "real": null
+      },
+      "time": {
+        "scheduled": {
+          "departure": 1791767700,
+          "arrival": 1791772800
+        },
+        "real": {
+          "departure": null,
+          "arrival": null
+        },
+        "estimated": {
+          "departure": null,
+          "arrival": null
+        },
+        "other": {
+          "eta": null,
+          "duration": null
+        }
+      }
+    }
+  },
+  {
+    "flight": {
+      "identification": {
+        "id": null,
+        "row": 5874672837,
+        "number": {
+          "default": "VF340",
+          "alternative": null
+        },
+        "callsign": null,
+        "codeshare": null
+      },
+      "status": {
+        "live": false,
+        "text": "Scheduled",
+        "icon": null,
+        "estimated": null,
+        "ambiguous": false,
+        "generic": {
+          "status": {
+            "text": "scheduled",
+            "type": "arrival",
+            "color": "gray",
+            "diverted": null
+          },
+          "eventTime": {
+            "utc": null,
+            "local": null
+          }
+        }
+      },
+      "aircraft": {
+        "model": {
+          "code": "73H",
+          "text": ""
+        },
+        "hex": "",
+        "registration": "",
+        "serialNo": "",
+        "images": null
+      },
+      "owner": null,
+      "airline": {
+        "name": "AJet",
+        "code": {
+          "iata": "VF",
+          "icao": "TKJ"
+        },
+        "short": "AJet"
+      },
+      "airport": {
+        "origin": {
+          "code": {
+            "iata": "SAW",
+            "icao": "LTFJ"
+          },
+          "timezone": {
+            "name": "Europe/Istanbul",
+            "offset": 10800,
+            "abbr": "+03",
+            "abbrName": null,
+            "isDst": false
+          },
+          "info": {
+            "terminal": null,
+            "baggage": null,
+            "gate": null
+          },
+          "name": "Istanbul Sabiha Gokcen International Airport",
+          "position": {
+            "latitude": 40.898548,
+            "longitude": 29.30921,
+            "country": {
+              "name": "Turkey",
+              "code": "TR",
+              "id": 228
+            },
+            "region": {
+              "city": "Istanbul"
+            }
+          },
+          "visible": true
+        },
+        "destination": {
+          "timezone": {
+            "name": "Asia/Damascus",
+            "offset": 10800,
+            "abbr": "+03",
+            "abbrName": null,
+            "isDst": false
+          },
+          "info": {
+            "terminal": null,
+            "baggage": null,
+            "gate": null
+          }
+        },
+        "real": null
+      },
+      "time": {
+        "scheduled": {
+          "departure": 1791773700,
+          "arrival": 1791780000
+        },
+        "real": {
+          "departure": null,
+          "arrival": null
+        },
+        "estimated": {
+          "departure": null,
+          "arrival": null
+        },
+        "other": {
+          "eta": null,
+          "duration": null
+        }
+      }
+    }
+  }
+]

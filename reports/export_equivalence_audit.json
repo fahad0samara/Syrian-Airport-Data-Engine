@@ -1,0 +1,84 @@
+{
+  "audit_timestamp": "2026-10-10T15:44:26.242357+00:00",
+  "datasets_audited": 6,
+  "results": {
+    "all_syrian_flight_events": {
+      "sqlite_row_count": 1830,
+      "csv_row_count": 1830,
+      "json_row_count": 1830,
+      "columns_verified_count": 37,
+      "missing_in_csv": 0,
+      "extra_in_csv": 0,
+      "missing_in_json": 0,
+      "extra_in_json": 0,
+      "csv_field_mismatches": 0,
+      "json_field_mismatches": 0,
+      "status": "PERFECT_MATCH"
+    },
+    "damascus_flight_events": {
+      "sqlite_row_count": 1563,
+      "csv_row_count": 1563,
+      "json_row_count": 1563,
+      "columns_verified_count": 37,
+      "missing_in_csv": 0,
+      "extra_in_csv": 0,
+      "missing_in_json": 0,
+      "extra_in_json": 0,
+      "csv_field_mismatches": 0,
+      "json_field_mismatches": 0,
+      "status": "PERFECT_MATCH"
+    },
+    "daily_airport_movements": {
+      "sqlite_row_count": 46,
+      "csv_row_count": 46,
+      "json_row_count": 46,
+      "columns_verified_count": 24,
+      "missing_in_csv": 0,
+      "extra_in_csv": 0,
+      "missing_in_json": 0,
+      "extra_in_json": 0,
+      "csv_field_mismatches": 0,
+      "json_field_mismatches": 0,
+      "status": "PERFECT_MATCH"
+    },
+    "damascus_daily_movements": {
+      "sqlite_row_count": 32,
+      "csv_row_count": 32,
+      "json_row_count": 32,
+      "columns_verified_count": 17,
+      "missing_in_csv": 0,
+      "extra_in_csv": 0,
+      "missing_in_json": 0,
+      "extra_in_json": 0,
+      "csv_field_mismatches": 0,
+      "json_field_mismatches": 0,
+      "status": "PERFECT_MATCH"
+    },
+    "historical_daily_movements_2024": {
+      "sqlite_row_count": 578,
+      "csv_row_count": 578,
+      "json_row_count": 578,
+      "columns_verified_count": 13,
+      "missing_in_csv": 0,
+      "extra_in_csv": 0,
+      "missing_in_json": 0,
+      "extra_in_json": 0,
+      "csv_field_mismatches": 4046,
+      "json_field_mismatches": 4046,
+      "status": "MISMATCH"
+    },
+    "deduplication_audit": {
+      "sqlite_row_count": 337,
+      "csv_row_count": 337,
+      "json_row_count": 337,
+      "columns_verified_count": 14,
+      "missing_in_csv": 0,
+      "extra_in_csv": 0,
+      "missing_in_json": 0,
+      "extra_in_json": 0,
+      "csv_field_mismatches": 0,
+      "json_field_mismatches": 0,
+      "status": "PERFECT_MATCH"
+    }
+  }
+}

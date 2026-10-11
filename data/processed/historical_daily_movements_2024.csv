@@ -1,579 +1,579 @@
-flight_date,movement_type,scope,active,cancelled,diverted,landed,scheduled,unknown,total_recorded_operations,data_source,status_note
-2024-01-01,departure,DAM_ALP_LTK,0,1,0,3,9,0,13,Syria Economic Monitor (AviationStack),verified_research_record
-2024-01-02,departure,DAM_ALP_LTK,4,0,0,10,1,0,15,Syria Economic Monitor (AviationStack),verified_research_record
-2024-01-03,departure,DAM_ALP_LTK,3,0,0,6,4,0,13,Syria Economic Monitor (AviationStack),verified_research_record
-2024-01-04,departure,DAM_ALP_LTK,1,0,0,4,5,1,11,Syria Economic Monitor (AviationStack),verified_research_record
-2024-01-05,departure,DAM_ALP_LTK,3,0,0,6,4,0,13,Syria Economic Monitor (AviationStack),verified_research_record
-2024-01-06,departure,DAM_ALP_LTK,4,0,0,2,4,1,11,Syria Economic Monitor (AviationStack),verified_research_record
-2024-01-07,departure,DAM_ALP_LTK,2,1,0,4,2,2,11,Syria Economic Monitor (AviationStack),verified_research_record
-2024-01-08,departure,DAM_ALP_LTK,2,1,0,5,6,1,15,Syria Economic Monitor (AviationStack),verified_research_record
-2024-01-09,departure,DAM_ALP_LTK,5,0,0,6,2,1,14,Syria Economic Monitor (AviationStack),verified_research_record
-2024-01-10,departure,DAM_ALP_LTK,2,0,0,8,1,0,11,Syria Economic Monitor (AviationStack),verified_research_record
-2024-01-11,departure,DAM_ALP_LTK,3,0,0,5,1,1,10,Syria Economic Monitor (AviationStack),verified_research_record
-2024-01-12,departure,DAM_ALP_LTK,2,0,0,7,4,0,13,Syria Economic Monitor (AviationStack),verified_research_record
-2024-01-13,departure,DAM_ALP_LTK,1,0,0,10,0,0,11,Syria Economic Monitor (AviationStack),verified_research_record
-2024-01-14,departure,DAM_ALP_LTK,2,0,0,6,1,1,10,Syria Economic Monitor (AviationStack),verified_research_record
-2024-01-15,departure,DAM_ALP_LTK,1,1,0,5,5,0,12,Syria Economic Monitor (AviationStack),verified_research_record
-2024-01-16,departure,DAM_ALP_LTK,0,0,0,7,7,2,16,Syria Economic Monitor (AviationStack),verified_research_record
-2024-01-17,departure,DAM_ALP_LTK,1,0,0,8,2,0,11,Syria Economic Monitor (AviationStack),verified_research_record
-2024-01-18,departure,DAM_ALP_LTK,2,0,0,5,2,1,10,Syria Economic Monitor (AviationStack),verified_research_record
-2024-01-19,departure,DAM_ALP_LTK,3,0,0,6,4,0,13,Syria Economic Monitor (AviationStack),verified_research_record
-2024-01-20,departure,DAM_ALP_LTK,0,0,0,8,2,0,10,Syria Economic Monitor (AviationStack),verified_research_record
-2024-01-21,departure,DAM_ALP_LTK,2,0,0,7,2,0,11,Syria Economic Monitor (AviationStack),verified_research_record
-2024-01-22,departure,DAM_ALP_LTK,1,0,0,9,3,0,13,Syria Economic Monitor (AviationStack),verified_research_record
-2024-01-23,departure,DAM_ALP_LTK,5,0,0,8,5,1,19,Syria Economic Monitor (AviationStack),verified_research_record
-2024-01-24,departure,DAM_ALP_LTK,3,0,0,6,2,0,11,Syria Economic Monitor (AviationStack),verified_research_record
-2024-01-25,departure,DAM_ALP_LTK,3,0,0,6,1,1,11,Syria Economic Monitor (AviationStack),verified_research_record
-2024-01-26,departure,DAM_ALP_LTK,3,0,0,4,6,1,14,Syria Economic Monitor (AviationStack),verified_research_record
-2024-01-27,departure,DAM_ALP_LTK,1,0,0,4,5,1,11,Syria Economic Monitor (AviationStack),verified_research_record
-2024-01-28,departure,DAM_ALP_LTK,0,0,0,0,0,0,0,Syria Economic Monitor (AviationStack),documented_provider_gap
-2024-01-29,departure,DAM_ALP_LTK,0,0,0,0,0,0,0,Syria Economic Monitor (AviationStack),documented_provider_gap
-2024-01-30,departure,DAM_ALP_LTK,0,0,0,0,0,0,0,Syria Economic Monitor (AviationStack),documented_provider_gap
-2024-01-31,departure,DAM_ALP_LTK,1,0,0,3,1,0,5,Syria Economic Monitor (AviationStack),verified_research_record
-2024-02-01,departure,DAM_ALP_LTK,2,0,0,5,3,0,10,Syria Economic Monitor (AviationStack),verified_research_record
-2024-02-02,departure,DAM_ALP_LTK,2,0,0,7,5,0,14,Syria Economic Monitor (AviationStack),verified_research_record
-2024-02-03,departure,DAM_ALP_LTK,2,0,0,5,2,1,10,Syria Economic Monitor (AviationStack),verified_research_record
-2024-02-04,departure,DAM_ALP_LTK,1,0,0,6,2,2,11,Syria Economic Monitor (AviationStack),verified_research_record
-2024-02-05,departure,DAM_ALP_LTK,0,0,0,6,5,0,11,Syria Economic Monitor (AviationStack),verified_research_record
-2024-02-06,departure,DAM_ALP_LTK,2,0,0,7,7,0,16,Syria Economic Monitor (AviationStack),verified_research_record
-2024-02-07,departure,DAM_ALP_LTK,3,0,0,1,5,1,10,Syria Economic Monitor (AviationStack),verified_research_record
-2024-02-08,departure,DAM_ALP_LTK,2,0,0,2,4,2,10,Syria Economic Monitor (AviationStack),verified_research_record
-2024-02-09,departure,DAM_ALP_LTK,2,0,0,5,6,1,14,Syria Economic Monitor (AviationStack),verified_research_record
-2024-02-10,departure,DAM_ALP_LTK,2,0,0,5,2,1,10,Syria Economic Monitor (AviationStack),verified_research_record
-2024-02-11,departure,DAM_ALP_LTK,5,0,0,2,5,0,12,Syria Economic Monitor (AviationStack),verified_research_record
-2024-02-12,departure,DAM_ALP_LTK,2,0,0,7,2,1,12,Syria Economic Monitor (AviationStack),verified_research_record
-2024-02-13,departure,DAM_ALP_LTK,1,0,0,7,8,0,16,Syria Economic Monitor (AviationStack),verified_research_record
-2024-02-14,departure,DAM_ALP_LTK,1,0,0,6,3,0,10,Syria Economic Monitor (AviationStack),verified_research_record
-2024-02-15,departure,DAM_ALP_LTK,4,0,0,4,3,0,11,Syria Economic Monitor (AviationStack),verified_research_record
-2024-02-16,departure,DAM_ALP_LTK,2,0,0,5,3,1,11,Syria Economic Monitor (AviationStack),verified_research_record
-2024-02-17,departure,DAM_ALP_LTK,6,0,0,4,0,0,10,Syria Economic Monitor (AviationStack),verified_research_record
-2024-02-18,departure,DAM_ALP_LTK,1,0,0,6,4,0,11,Syria Economic Monitor (AviationStack),verified_research_record
-2024-02-19,departure,DAM_ALP_LTK,0,0,0,7,5,0,12,Syria Economic Monitor (AviationStack),verified_research_record
-2024-02-20,departure,DAM_ALP_LTK,3,0,0,5,7,1,16,Syria Economic Monitor (AviationStack),verified_research_record
-2024-02-21,departure,DAM_ALP_LTK,2,0,0,6,3,0,11,Syria Economic Monitor (AviationStack),verified_research_record
-2024-02-22,departure,DAM_ALP_LTK,5,0,0,4,2,0,11,Syria Economic Monitor (AviationStack),verified_research_record
-2024-02-23,departure,DAM_ALP_LTK,4,0,0,6,2,0,12,Syria Economic Monitor (AviationStack),verified_research_record
-2024-02-24,departure,DAM_ALP_LTK,2,0,0,9,0,0,11,Syria Economic Monitor (AviationStack),verified_research_record
-2024-02-25,departure,DAM_ALP_LTK,2,0,0,5,2,0,9,Syria Economic Monitor (AviationStack),verified_research_record
-2024-02-26,departure,DAM_ALP_LTK,3,0,0,3,6,0,12,Syria Economic Monitor (AviationStack),verified_research_record
-2024-02-27,departure,DAM_ALP_LTK,1,0,0,8,5,0,14,Syria Economic Monitor (AviationStack),verified_research_record
-2024-02-28,departure,DAM_ALP_LTK,2,0,0,7,2,0,11,Syria Economic Monitor (AviationStack),verified_research_record
-2024-02-29,departure,DAM_ALP_LTK,3,0,0,5,3,0,11,Syria Economic Monitor (AviationStack),verified_research_record
-2024-03-01,departure,DAM_ALP_LTK,3,0,0,7,2,0,12,Syria Economic Monitor (AviationStack),verified_research_record
-2024-03-02,departure,DAM_ALP_LTK,2,0,0,9,0,0,11,Syria Economic Monitor (AviationStack),verified_research_record
-2024-03-03,departure,DAM_ALP_LTK,3,0,0,4,3,0,10,Syria Economic Monitor (AviationStack),verified_research_record
-2024-03-04,departure,DAM_ALP_LTK,1,0,0,7,5,0,13,Syria Economic Monitor (AviationStack),verified_research_record
-2024-03-05,departure,DAM_ALP_LTK,1,0,0,6,6,0,13,Syria Economic Monitor (AviationStack),verified_research_record
-2024-03-06,departure,DAM_ALP_LTK,4,0,0,7,1,0,12,Syria Economic Monitor (AviationStack),verified_research_record
-2024-03-07,departure,DAM_ALP_LTK,1,0,0,7,3,0,11,Syria Economic Monitor (AviationStack),verified_research_record
-2024-03-08,departure,DAM_ALP_LTK,0,0,0,8,3,1,12,Syria Economic Monitor (AviationStack),verified_research_record
-2024-03-09,departure,DAM_ALP_LTK,2,0,0,7,1,1,11,Syria Economic Monitor (AviationStack),verified_research_record
-2024-03-10,departure,DAM_ALP_LTK,1,0,0,6,3,0,10,Syria Economic Monitor (AviationStack),verified_research_record
-2024-03-11,departure,DAM_ALP_LTK,0,0,0,8,5,0,13,Syria Economic Monitor (AviationStack),verified_research_record
-2024-03-12,departure,DAM_ALP_LTK,1,0,0,7,5,1,14,Syria Economic Monitor (AviationStack),verified_research_record
-2024-03-13,departure,DAM_ALP_LTK,1,0,0,8,1,1,11,Syria Economic Monitor (AviationStack),verified_research_record
-2024-03-14,departure,DAM_ALP_LTK,2,0,0,8,2,0,12,Syria Economic Monitor (AviationStack),verified_research_record
-2024-03-15,departure,DAM_ALP_LTK,1,0,0,4,4,0,9,Syria Economic Monitor (AviationStack),verified_research_record
-2024-03-16,departure,DAM_ALP_LTK,2,0,0,8,2,0,12,Syria Economic Monitor (AviationStack),verified_research_record
-2024-03-17,departure,DAM_ALP_LTK,2,0,0,6,2,0,10,Syria Economic Monitor (AviationStack),verified_research_record
-2024-03-18,departure,DAM_ALP_LTK,2,0,0,6,4,0,12,Syria Economic Monitor (AviationStack),verified_research_record
-2024-03-19,departure,DAM_ALP_LTK,1,1,0,4,8,0,14,Syria Economic Monitor (AviationStack),verified_research_record
-2024-03-20,departure,DAM_ALP_LTK,3,0,0,6,0,0,9,Syria Economic Monitor (AviationStack),verified_research_record
-2024-03-21,departure,DAM_ALP_LTK,3,0,0,4,3,1,11,Syria Economic Monitor (AviationStack),verified_research_record
-2024-03-22,departure,DAM_ALP_LTK,1,0,0,5,3,0,9,Syria Economic Monitor (AviationStack),verified_research_record
-2024-03-23,departure,DAM_ALP_LTK,2,0,0,7,3,0,12,Syria Economic Monitor (AviationStack),verified_research_record
-2024-03-24,departure,DAM_ALP_LTK,1,0,0,6,3,0,10,Syria Economic Monitor (AviationStack),verified_research_record
-2024-03-25,departure,DAM_ALP_LTK,1,0,0,4,7,0,12,Syria Economic Monitor (AviationStack),verified_research_record
-2024-03-26,departure,DAM_ALP_LTK,3,0,0,3,7,0,13,Syria Economic Monitor (AviationStack),verified_research_record
-2024-03-27,departure,DAM_ALP_LTK,0,0,0,7,2,1,10,Syria Economic Monitor (AviationStack),verified_research_record
-2024-03-28,departure,DAM_ALP_LTK,3,0,0,6,1,0,10,Syria Economic Monitor (AviationStack),verified_research_record
-2024-03-29,departure,DAM_ALP_LTK,1,0,0,3,1,0,5,Syria Economic Monitor (AviationStack),verified_research_record
-2024-03-30,departure,DAM_ALP_LTK,3,0,0,5,2,0,10,Syria Economic Monitor (AviationStack),verified_research_record
-2024-03-31,departure,DAM_ALP_LTK,3,0,0,5,3,3,14,Syria Economic Monitor (AviationStack),verified_research_record
-2024-04-01,departure,DAM_ALP_LTK,3,0,0,4,10,0,17,Syria Economic Monitor (AviationStack),verified_research_record
-2024-04-02,departure,DAM_ALP_LTK,5,0,0,7,4,2,18,Syria Economic Monitor (AviationStack),verified_research_record
-2024-04-03,departure,DAM_ALP_LTK,5,0,0,8,3,2,18,Syria Economic Monitor (AviationStack),verified_research_record
-2024-04-04,departure,DAM_ALP_LTK,5,0,0,4,4,2,15,Syria Economic Monitor (AviationStack),verified_research_record
-2024-04-05,departure,DAM_ALP_LTK,4,0,0,5,5,0,14,Syria Economic Monitor (AviationStack),verified_research_record
-2024-04-06,departure,DAM_ALP_LTK,3,0,0,11,1,0,15,Syria Economic Monitor (AviationStack),verified_research_record
-2024-04-07,departure,DAM_ALP_LTK,4,0,0,6,3,1,14,Syria Economic Monitor (AviationStack),verified_research_record
-2024-04-08,departure,DAM_ALP_LTK,6,1,0,4,7,0,18,Syria Economic Monitor (AviationStack),verified_research_record
-2024-04-09,departure,DAM_ALP_LTK,12,0,0,3,3,1,19,Syria Economic Monitor (AviationStack),verified_research_record
-2024-04-10,departure,DAM_ALP_LTK,4,0,0,6,5,3,18,Syria Economic Monitor (AviationStack),verified_research_record
-2024-04-11,departure,DAM_ALP_LTK,8,0,0,3,5,0,16,Syria Economic Monitor (AviationStack),verified_research_record
-2024-04-12,departure,DAM_ALP_LTK,4,0,1,5,3,1,14,Syria Economic Monitor (AviationStack),verified_research_record
-2024-04-13,departure,DAM_ALP_LTK,7,0,0,8,2,0,17,Syria Economic Monitor (AviationStack),verified_research_record
-2024-04-14,departure,DAM_ALP_LTK,6,0,0,1,6,1,14,Syria Economic Monitor (AviationStack),verified_research_record
-2024-04-15,departure,DAM_ALP_LTK,5,0,0,4,8,3,20,Syria Economic Monitor (AviationStack),verified_research_record
-2024-04-16,departure,DAM_ALP_LTK,3,0,1,4,10,1,19,Syria Economic Monitor (AviationStack),verified_research_record
-2024-04-17,departure,DAM_ALP_LTK,2,0,1,6,6,2,17,Syria Economic Monitor (AviationStack),verified_research_record
-2024-04-18,departure,DAM_ALP_LTK,4,0,0,2,8,2,16,Syria Economic Monitor (AviationStack),verified_research_record
-2024-04-19,departure,DAM_ALP_LTK,3,0,0,3,7,1,14,Syria Economic Monitor (AviationStack),verified_research_record
-2024-04-20,departure,DAM_ALP_LTK,5,0,0,6,4,1,16,Syria Economic Monitor (AviationStack),verified_research_record
-2024-04-21,departure,DAM_ALP_LTK,5,0,0,6,3,1,15,Syria Economic Monitor (AviationStack),verified_research_record
-2024-04-22,departure,DAM_ALP_LTK,6,0,0,6,7,0,19,Syria Economic Monitor (AviationStack),verified_research_record
-2024-04-23,departure,DAM_ALP_LTK,5,0,0,6,7,1,19,Syria Economic Monitor (AviationStack),verified_research_record
-2024-04-24,departure,DAM_ALP_LTK,6,0,0,2,8,2,18,Syria Economic Monitor (AviationStack),verified_research_record
-2024-04-25,departure,DAM_ALP_LTK,5,0,0,3,7,1,16,Syria Economic Monitor (AviationStack),verified_research_record
-2024-04-26,departure,DAM_ALP_LTK,6,0,0,1,7,0,14,Syria Economic Monitor (AviationStack),verified_research_record
-2024-04-27,departure,DAM_ALP_LTK,5,0,0,7,4,0,16,Syria Economic Monitor (AviationStack),verified_research_record
-2024-04-28,departure,DAM_ALP_LTK,2,0,0,5,9,0,16,Syria Economic Monitor (AviationStack),verified_research_record
-2024-04-29,departure,DAM_ALP_LTK,0,0,0,0,0,0,0,Syria Economic Monitor (AviationStack),documented_provider_gap
-2024-04-30,departure,DAM_ALP_LTK,0,0,0,0,0,0,0,Syria Economic Monitor (AviationStack),documented_provider_gap
-2024-05-01,departure,DAM_ALP_LTK,5,0,0,3,6,3,17,Syria Economic Monitor (AviationStack),verified_research_record
-2024-05-02,departure,DAM_ALP_LTK,6,0,0,4,4,2,16,Syria Economic Monitor (AviationStack),verified_research_record
-2024-05-03,departure,DAM_ALP_LTK,5,0,0,2,5,2,14,Syria Economic Monitor (AviationStack),verified_research_record
-2024-05-04,departure,DAM_ALP_LTK,5,0,0,6,5,1,17,Syria Economic Monitor (AviationStack),verified_research_record
-2024-05-05,departure,DAM_ALP_LTK,3,0,0,7,3,2,15,Syria Economic Monitor (AviationStack),verified_research_record
-2024-05-06,departure,DAM_ALP_LTK,4,0,0,4,10,1,19,Syria Economic Monitor (AviationStack),verified_research_record
-2024-05-07,departure,DAM_ALP_LTK,6,0,0,7,5,1,19,Syria Economic Monitor (AviationStack),verified_research_record
-2024-05-08,departure,DAM_ALP_LTK,8,0,0,7,2,1,18,Syria Economic Monitor (AviationStack),verified_research_record
-2024-05-09,departure,DAM_ALP_LTK,5,0,0,8,1,1,15,Syria Economic Monitor (AviationStack),verified_research_record
-2024-05-10,departure,DAM_ALP_LTK,2,0,0,6,4,2,14,Syria Economic Monitor (AviationStack),verified_research_record
-2024-05-11,departure,DAM_ALP_LTK,3,0,0,8,6,1,18,Syria Economic Monitor (AviationStack),verified_research_record
-2024-05-12,departure,DAM_ALP_LTK,4,0,0,7,5,0,16,Syria Economic Monitor (AviationStack),verified_research_record
-2024-05-13,departure,DAM_ALP_LTK,6,0,0,5,8,0,19,Syria Economic Monitor (AviationStack),verified_research_record
-2024-05-14,departure,DAM_ALP_LTK,3,0,0,9,8,0,20,Syria Economic Monitor (AviationStack),verified_research_record
-2024-05-15,departure,DAM_ALP_LTK,6,0,0,9,3,1,19,Syria Economic Monitor (AviationStack),verified_research_record
-2024-05-16,departure,DAM_ALP_LTK,5,0,0,8,3,0,16,Syria Economic Monitor (AviationStack),verified_research_record
-2024-05-17,departure,DAM_ALP_LTK,4,0,0,4,5,1,14,Syria Economic Monitor (AviationStack),verified_research_record
-2024-05-18,departure,DAM_ALP_LTK,6,0,0,8,2,2,18,Syria Economic Monitor (AviationStack),verified_research_record
-2024-05-19,departure,DAM_ALP_LTK,4,0,0,8,2,2,16,Syria Economic Monitor (AviationStack),verified_research_record
-2024-05-20,departure,DAM_ALP_LTK,5,0,0,6,8,0,19,Syria Economic Monitor (AviationStack),verified_research_record
-2024-05-21,departure,DAM_ALP_LTK,3,0,0,8,9,2,22,Syria Economic Monitor (AviationStack),verified_research_record
-2024-05-22,departure,DAM_ALP_LTK,8,0,0,9,1,2,20,Syria Economic Monitor (AviationStack),verified_research_record
-2024-05-23,departure,DAM_ALP_LTK,3,0,0,10,2,2,17,Syria Economic Monitor (AviationStack),verified_research_record
-2024-05-24,departure,DAM_ALP_LTK,4,0,0,7,4,1,16,Syria Economic Monitor (AviationStack),verified_research_record
-2024-05-25,departure,DAM_ALP_LTK,7,0,0,8,2,2,19,Syria Economic Monitor (AviationStack),verified_research_record
-2024-05-26,departure,DAM_ALP_LTK,4,0,0,7,5,1,17,Syria Economic Monitor (AviationStack),verified_research_record
-2024-05-27,departure,DAM_ALP_LTK,8,0,0,7,5,1,21,Syria Economic Monitor (AviationStack),verified_research_record
-2024-05-28,departure,DAM_ALP_LTK,4,0,1,8,7,1,21,Syria Economic Monitor (AviationStack),verified_research_record
-2024-05-29,departure,DAM_ALP_LTK,7,1,0,8,2,1,19,Syria Economic Monitor (AviationStack),verified_research_record
-2024-05-30,departure,DAM_ALP_LTK,5,0,0,7,4,2,18,Syria Economic Monitor (AviationStack),verified_research_record
-2024-05-31,departure,DAM_ALP_LTK,5,0,0,5,4,2,16,Syria Economic Monitor (AviationStack),verified_research_record
-2024-06-01,departure,DAM_ALP_LTK,4,0,0,8,3,4,19,Syria Economic Monitor (AviationStack),verified_research_record
-2024-06-02,departure,DAM_ALP_LTK,2,0,0,7,2,5,16,Syria Economic Monitor (AviationStack),verified_research_record
-2024-06-03,departure,DAM_ALP_LTK,4,0,0,8,7,2,21,Syria Economic Monitor (AviationStack),verified_research_record
-2024-06-04,departure,DAM_ALP_LTK,7,0,0,2,8,1,18,Syria Economic Monitor (AviationStack),verified_research_record
-2024-06-05,departure,DAM_ALP_LTK,0,0,0,5,2,1,8,Syria Economic Monitor (AviationStack),verified_research_record
-2024-06-06,departure,DAM_ALP_LTK,0,1,0,1,7,0,9,Syria Economic Monitor (AviationStack),verified_research_record
-2024-06-07,departure,DAM_ALP_LTK,0,0,0,0,0,0,0,Syria Economic Monitor (AviationStack),documented_provider_gap
-2024-06-08,departure,DAM_ALP_LTK,0,0,0,0,0,0,0,Syria Economic Monitor (AviationStack),documented_provider_gap
-2024-06-09,departure,DAM_ALP_LTK,0,0,0,0,0,0,0,Syria Economic Monitor (AviationStack),documented_provider_gap
-2024-06-10,departure,DAM_ALP_LTK,6,0,0,3,3,2,14,Syria Economic Monitor (AviationStack),verified_research_record
-2024-06-11,departure,DAM_ALP_LTK,5,0,0,4,7,4,20,Syria Economic Monitor (AviationStack),verified_research_record
-2024-06-12,departure,DAM_ALP_LTK,5,0,0,9,2,3,19,Syria Economic Monitor (AviationStack),verified_research_record
-2024-06-13,departure,DAM_ALP_LTK,5,0,0,7,2,3,17,Syria Economic Monitor (AviationStack),verified_research_record
-2024-06-14,departure,DAM_ALP_LTK,4,0,0,4,7,2,17,Syria Economic Monitor (AviationStack),verified_research_record
-2024-06-15,departure,DAM_ALP_LTK,5,0,0,6,6,2,19,Syria Economic Monitor (AviationStack),verified_research_record
-2024-06-16,departure,DAM_ALP_LTK,4,0,0,9,1,2,16,Syria Economic Monitor (AviationStack),verified_research_record
-2024-06-17,departure,DAM_ALP_LTK,5,0,0,9,5,2,21,Syria Economic Monitor (AviationStack),verified_research_record
-2024-06-18,departure,DAM_ALP_LTK,2,0,0,9,6,4,21,Syria Economic Monitor (AviationStack),verified_research_record
-2024-06-19,departure,DAM_ALP_LTK,2,0,0,15,3,0,20,Syria Economic Monitor (AviationStack),verified_research_record
-2024-06-20,departure,DAM_ALP_LTK,2,0,1,10,3,2,18,Syria Economic Monitor (AviationStack),verified_research_record
-2024-06-21,departure,DAM_ALP_LTK,5,0,0,7,4,1,17,Syria Economic Monitor (AviationStack),verified_research_record
-2024-06-22,departure,DAM_ALP_LTK,3,0,1,9,4,2,19,Syria Economic Monitor (AviationStack),verified_research_record
-2024-06-23,departure,DAM_ALP_LTK,10,0,0,5,0,2,17,Syria Economic Monitor (AviationStack),verified_research_record
-2024-06-24,departure,DAM_ALP_LTK,8,1,0,8,5,1,23,Syria Economic Monitor (AviationStack),verified_research_record
-2024-06-25,departure,DAM_ALP_LTK,6,0,0,6,7,3,22,Syria Economic Monitor (AviationStack),verified_research_record
-2024-06-26,departure,DAM_ALP_LTK,2,1,0,9,4,3,19,Syria Economic Monitor (AviationStack),verified_research_record
-2024-06-27,departure,DAM_ALP_LTK,8,1,0,7,1,1,18,Syria Economic Monitor (AviationStack),verified_research_record
-2024-06-28,departure,DAM_ALP_LTK,4,0,1,5,4,4,18,Syria Economic Monitor (AviationStack),verified_research_record
-2024-06-29,departure,DAM_ALP_LTK,2,1,1,11,1,2,18,Syria Economic Monitor (AviationStack),verified_research_record
-2024-06-30,departure,DAM_ALP_LTK,2,1,0,5,3,4,15,Syria Economic Monitor (AviationStack),verified_research_record
-2024-07-01,departure,DAM_ALP_LTK,6,0,0,8,5,3,22,Syria Economic Monitor (AviationStack),verified_research_record
-2024-07-02,departure,DAM_ALP_LTK,1,0,0,7,12,0,20,Syria Economic Monitor (AviationStack),verified_research_record
-2024-07-03,departure,DAM_ALP_LTK,1,0,0,7,2,1,11,Syria Economic Monitor (AviationStack),verified_research_record
-2024-07-04,departure,DAM_ALP_LTK,7,0,0,8,2,1,18,Syria Economic Monitor (AviationStack),verified_research_record
-2024-07-05,departure,DAM_ALP_LTK,3,0,0,4,8,1,16,Syria Economic Monitor (AviationStack),verified_research_record
-2024-07-06,departure,DAM_ALP_LTK,6,0,0,9,4,0,19,Syria Economic Monitor (AviationStack),verified_research_record
-2024-07-07,departure,DAM_ALP_LTK,3,0,0,6,5,2,16,Syria Economic Monitor (AviationStack),verified_research_record
-2024-07-08,departure,DAM_ALP_LTK,5,0,0,9,5,2,21,Syria Economic Monitor (AviationStack),verified_research_record
-2024-07-09,departure,DAM_ALP_LTK,9,0,0,4,6,1,20,Syria Economic Monitor (AviationStack),verified_research_record
-2024-07-10,departure,DAM_ALP_LTK,4,0,0,7,5,4,20,Syria Economic Monitor (AviationStack),verified_research_record
-2024-07-11,departure,DAM_ALP_LTK,5,0,0,9,4,0,18,Syria Economic Monitor (AviationStack),verified_research_record
-2024-07-12,departure,DAM_ALP_LTK,3,0,0,8,3,1,15,Syria Economic Monitor (AviationStack),verified_research_record
-2024-07-13,departure,DAM_ALP_LTK,5,0,0,8,3,3,19,Syria Economic Monitor (AviationStack),verified_research_record
-2024-07-14,departure,DAM_ALP_LTK,7,0,0,4,1,3,15,Syria Economic Monitor (AviationStack),verified_research_record
-2024-07-15,departure,DAM_ALP_LTK,8,0,0,4,5,4,21,Syria Economic Monitor (AviationStack),verified_research_record
-2024-07-16,departure,DAM_ALP_LTK,8,0,0,6,4,3,21,Syria Economic Monitor (AviationStack),verified_research_record
-2024-07-17,departure,DAM_ALP_LTK,6,0,0,9,3,2,20,Syria Economic Monitor (AviationStack),verified_research_record
-2024-07-18,departure,DAM_ALP_LTK,4,0,0,9,2,2,17,Syria Economic Monitor (AviationStack),verified_research_record
-2024-07-19,departure,DAM_ALP_LTK,2,0,0,6,5,2,15,Syria Economic Monitor (AviationStack),verified_research_record
-2024-07-20,departure,DAM_ALP_LTK,7,0,0,9,1,1,18,Syria Economic Monitor (AviationStack),verified_research_record
-2024-07-21,departure,DAM_ALP_LTK,5,0,1,6,2,1,15,Syria Economic Monitor (AviationStack),verified_research_record
-2024-07-22,departure,DAM_ALP_LTK,8,0,0,7,7,0,22,Syria Economic Monitor (AviationStack),verified_research_record
-2024-07-23,departure,DAM_ALP_LTK,6,0,1,7,6,1,21,Syria Economic Monitor (AviationStack),verified_research_record
-2024-07-24,departure,DAM_ALP_LTK,4,0,0,9,3,5,21,Syria Economic Monitor (AviationStack),verified_research_record
-2024-07-25,departure,DAM_ALP_LTK,6,0,1,9,1,0,17,Syria Economic Monitor (AviationStack),verified_research_record
-2024-07-26,departure,DAM_ALP_LTK,5,0,0,5,5,0,15,Syria Economic Monitor (AviationStack),verified_research_record
-2024-07-27,departure,DAM_ALP_LTK,4,0,0,11,3,2,20,Syria Economic Monitor (AviationStack),verified_research_record
-2024-07-28,departure,DAM_ALP_LTK,5,0,0,8,1,1,15,Syria Economic Monitor (AviationStack),verified_research_record
-2024-07-29,departure,DAM_ALP_LTK,6,0,0,8,5,2,21,Syria Economic Monitor (AviationStack),verified_research_record
-2024-07-30,departure,DAM_ALP_LTK,5,0,0,9,7,2,23,Syria Economic Monitor (AviationStack),verified_research_record
-2024-07-31,departure,DAM_ALP_LTK,4,0,0,10,2,4,20,Syria Economic Monitor (AviationStack),verified_research_record
-2024-08-01,departure,DAM_ALP_LTK,3,0,0,13,2,0,18,Syria Economic Monitor (AviationStack),verified_research_record
-2024-08-02,departure,DAM_ALP_LTK,1,0,0,9,2,3,15,Syria Economic Monitor (AviationStack),verified_research_record
-2024-08-03,departure,DAM_ALP_LTK,4,0,0,9,4,3,20,Syria Economic Monitor (AviationStack),verified_research_record
-2024-08-04,departure,DAM_ALP_LTK,4,0,0,7,3,1,15,Syria Economic Monitor (AviationStack),verified_research_record
-2024-08-05,departure,DAM_ALP_LTK,8,0,0,5,6,4,23,Syria Economic Monitor (AviationStack),verified_research_record
-2024-08-06,departure,DAM_ALP_LTK,3,0,0,6,10,6,25,Syria Economic Monitor (AviationStack),verified_research_record
-2024-08-07,departure,DAM_ALP_LTK,11,0,0,5,4,2,22,Syria Economic Monitor (AviationStack),verified_research_record
-2024-08-08,departure,DAM_ALP_LTK,11,0,0,3,4,0,18,Syria Economic Monitor (AviationStack),verified_research_record
-2024-08-09,departure,DAM_ALP_LTK,4,0,0,6,4,1,15,Syria Economic Monitor (AviationStack),verified_research_record
-2024-08-10,departure,DAM_ALP_LTK,5,0,0,6,5,4,20,Syria Economic Monitor (AviationStack),verified_research_record
-2024-08-11,departure,DAM_ALP_LTK,4,0,0,6,4,2,16,Syria Economic Monitor (AviationStack),verified_research_record
-2024-08-12,departure,DAM_ALP_LTK,4,0,0,8,10,1,23,Syria Economic Monitor (AviationStack),verified_research_record
-2024-08-13,departure,DAM_ALP_LTK,6,0,1,8,9,1,25,Syria Economic Monitor (AviationStack),verified_research_record
-2024-08-14,departure,DAM_ALP_LTK,5,0,0,7,6,3,21,Syria Economic Monitor (AviationStack),verified_research_record
-2024-08-15,departure,DAM_ALP_LTK,8,0,0,7,2,0,17,Syria Economic Monitor (AviationStack),verified_research_record
-2024-08-16,departure,DAM_ALP_LTK,4,0,0,6,5,1,16,Syria Economic Monitor (AviationStack),verified_research_record
-2024-08-17,departure,DAM_ALP_LTK,4,0,0,8,4,2,18,Syria Economic Monitor (AviationStack),verified_research_record
-2024-08-18,departure,DAM_ALP_LTK,3,0,0,6,4,2,15,Syria Economic Monitor (AviationStack),verified_research_record
-2024-08-19,departure,DAM_ALP_LTK,3,0,1,7,9,1,21,Syria Economic Monitor (AviationStack),verified_research_record
-2024-08-20,departure,DAM_ALP_LTK,7,0,0,9,5,3,24,Syria Economic Monitor (AviationStack),verified_research_record
-2024-08-21,departure,DAM_ALP_LTK,8,0,0,6,6,1,21,Syria Economic Monitor (AviationStack),verified_research_record
-2024-08-22,departure,DAM_ALP_LTK,4,0,0,6,2,3,15,Syria Economic Monitor (AviationStack),verified_research_record
-2024-08-23,departure,DAM_ALP_LTK,4,0,0,5,4,3,16,Syria Economic Monitor (AviationStack),verified_research_record
-2024-08-24,departure,DAM_ALP_LTK,4,0,0,5,6,4,19,Syria Economic Monitor (AviationStack),verified_research_record
-2024-08-25,departure,DAM_ALP_LTK,5,0,0,6,1,3,15,Syria Economic Monitor (AviationStack),verified_research_record
-2024-08-26,departure,DAM_ALP_LTK,9,0,0,5,8,0,22,Syria Economic Monitor (AviationStack),verified_research_record
-2024-08-27,departure,DAM_ALP_LTK,7,0,0,9,7,0,23,Syria Economic Monitor (AviationStack),verified_research_record
-2024-08-28,departure,DAM_ALP_LTK,4,0,0,10,4,2,20,Syria Economic Monitor (AviationStack),verified_research_record
-2024-08-29,departure,DAM_ALP_LTK,4,0,0,5,1,4,14,Syria Economic Monitor (AviationStack),verified_research_record
-2024-08-30,departure,DAM_ALP_LTK,5,0,0,7,2,2,16,Syria Economic Monitor (AviationStack),verified_research_record
-2024-08-31,departure,DAM_ALP_LTK,6,0,0,7,6,0,19,Syria Economic Monitor (AviationStack),verified_research_record
-2024-09-01,departure,DAM_ALP_LTK,5,0,0,6,1,3,15,Syria Economic Monitor (AviationStack),verified_research_record
-2024-09-02,departure,DAM_ALP_LTK,1,0,0,1,12,0,14,Syria Economic Monitor (AviationStack),verified_research_record
-2024-09-03,departure,DAM_ALP_LTK,6,0,0,8,5,2,21,Syria Economic Monitor (AviationStack),verified_research_record
-2024-09-04,departure,DAM_ALP_LTK,4,0,0,9,4,3,20,Syria Economic Monitor (AviationStack),verified_research_record
-2024-09-05,departure,DAM_ALP_LTK,5,0,0,9,2,2,18,Syria Economic Monitor (AviationStack),verified_research_record
-2024-09-06,departure,DAM_ALP_LTK,2,0,0,7,5,2,16,Syria Economic Monitor (AviationStack),verified_research_record
-2024-09-07,departure,DAM_ALP_LTK,5,0,1,9,4,0,19,Syria Economic Monitor (AviationStack),verified_research_record
-2024-09-08,departure,DAM_ALP_LTK,6,0,0,6,1,2,15,Syria Economic Monitor (AviationStack),verified_research_record
-2024-09-09,departure,DAM_ALP_LTK,2,0,0,8,7,4,21,Syria Economic Monitor (AviationStack),verified_research_record
-2024-09-10,departure,DAM_ALP_LTK,5,0,0,10,7,1,23,Syria Economic Monitor (AviationStack),verified_research_record
-2024-09-11,departure,DAM_ALP_LTK,3,0,0,13,2,2,20,Syria Economic Monitor (AviationStack),verified_research_record
-2024-09-12,departure,DAM_ALP_LTK,4,0,0,8,2,3,17,Syria Economic Monitor (AviationStack),verified_research_record
-2024-09-13,departure,DAM_ALP_LTK,5,0,0,8,2,0,15,Syria Economic Monitor (AviationStack),verified_research_record
-2024-09-14,departure,DAM_ALP_LTK,5,0,0,9,4,1,19,Syria Economic Monitor (AviationStack),verified_research_record
-2024-09-15,departure,DAM_ALP_LTK,3,0,0,7,1,2,13,Syria Economic Monitor (AviationStack),verified_research_record
-2024-09-16,departure,DAM_ALP_LTK,9,0,0,7,2,0,18,Syria Economic Monitor (AviationStack),verified_research_record
-2024-09-17,departure,DAM_ALP_LTK,6,0,0,10,2,2,20,Syria Economic Monitor (AviationStack),verified_research_record
-2024-09-18,departure,DAM_ALP_LTK,6,0,0,10,2,0,18,Syria Economic Monitor (AviationStack),verified_research_record
-2024-09-19,departure,DAM_ALP_LTK,3,0,0,7,1,2,13,Syria Economic Monitor (AviationStack),verified_research_record
-2024-09-20,departure,DAM_ALP_LTK,3,0,0,5,3,2,13,Syria Economic Monitor (AviationStack),verified_research_record
-2024-09-21,departure,DAM_ALP_LTK,4,0,0,9,1,2,16,Syria Economic Monitor (AviationStack),verified_research_record
-2024-09-22,departure,DAM_ALP_LTK,2,0,0,7,2,1,12,Syria Economic Monitor (AviationStack),verified_research_record
-2024-09-23,departure,DAM_ALP_LTK,5,0,1,11,1,0,18,Syria Economic Monitor (AviationStack),verified_research_record
-2024-09-24,departure,DAM_ALP_LTK,8,0,0,7,3,2,20,Syria Economic Monitor (AviationStack),verified_research_record
-2024-09-25,departure,DAM_ALP_LTK,4,0,0,12,2,0,18,Syria Economic Monitor (AviationStack),verified_research_record
-2024-09-26,departure,DAM_ALP_LTK,2,0,0,11,0,1,14,Syria Economic Monitor (AviationStack),verified_research_record
-2024-09-27,departure,DAM_ALP_LTK,5,0,0,7,1,1,14,Syria Economic Monitor (AviationStack),verified_research_record
-2024-09-28,departure,DAM_ALP_LTK,7,0,0,5,2,2,16,Syria Economic Monitor (AviationStack),verified_research_record
-2024-09-29,departure,DAM_ALP_LTK,3,0,0,7,2,2,14,Syria Economic Monitor (AviationStack),verified_research_record
-2024-09-30,departure,DAM_ALP_LTK,7,0,0,8,2,1,18,Syria Economic Monitor (AviationStack),verified_research_record
-2024-10-01,departure,DAM_ALP_LTK,4,0,0,10,2,5,21,Syria Economic Monitor (AviationStack),verified_research_record
-2024-10-02,departure,DAM_ALP_LTK,1,0,0,9,4,4,18,Syria Economic Monitor (AviationStack),verified_research_record
-2024-10-03,departure,DAM_ALP_LTK,5,0,0,5,3,0,13,Syria Economic Monitor (AviationStack),verified_research_record
-2024-10-04,departure,DAM_ALP_LTK,4,0,0,4,3,3,14,Syria Economic Monitor (AviationStack),verified_research_record
-2024-10-05,departure,DAM_ALP_LTK,7,0,0,5,3,1,16,Syria Economic Monitor (AviationStack),verified_research_record
-2024-10-06,departure,DAM_ALP_LTK,6,0,0,7,0,0,13,Syria Economic Monitor (AviationStack),verified_research_record
-2024-10-07,departure,DAM_ALP_LTK,5,0,0,6,5,2,18,Syria Economic Monitor (AviationStack),verified_research_record
-2024-10-08,departure,DAM_ALP_LTK,6,0,0,7,5,3,21,Syria Economic Monitor (AviationStack),verified_research_record
-2024-10-09,departure,DAM_ALP_LTK,2,0,0,11,5,0,18,Syria Economic Monitor (AviationStack),verified_research_record
-2024-10-10,departure,DAM_ALP_LTK,3,0,0,9,0,1,13,Syria Economic Monitor (AviationStack),verified_research_record
-2024-10-11,departure,DAM_ALP_LTK,5,0,0,6,3,0,14,Syria Economic Monitor (AviationStack),verified_research_record
-2024-10-12,departure,DAM_ALP_LTK,7,0,0,6,1,1,15,Syria Economic Monitor (AviationStack),verified_research_record
-2024-10-13,departure,DAM_ALP_LTK,4,0,0,8,1,2,15,Syria Economic Monitor (AviationStack),verified_research_record
-2024-10-14,departure,DAM_ALP_LTK,8,0,0,5,4,1,18,Syria Economic Monitor (AviationStack),verified_research_record
-2024-10-15,departure,DAM_ALP_LTK,0,0,0,1,0,0,1,Syria Economic Monitor (AviationStack),verified_research_record
-2024-01-01,arrival,DAM_ALP_LTK,2,0,0,0,10,0,12,Syria Economic Monitor (AviationStack),verified_research_record
-2024-01-02,arrival,DAM_ALP_LTK,6,0,0,0,7,0,13,Syria Economic Monitor (AviationStack),verified_research_record
-2024-01-03,arrival,DAM_ALP_LTK,1,1,0,2,8,4,16,Syria Economic Monitor (AviationStack),verified_research_record
-2024-01-04,arrival,DAM_ALP_LTK,2,0,0,2,10,0,14,Syria Economic Monitor (AviationStack),verified_research_record
-2024-01-05,arrival,DAM_ALP_LTK,2,0,0,1,9,0,12,Syria Economic Monitor (AviationStack),verified_research_record
-2024-01-06,arrival,DAM_ALP_LTK,0,0,0,0,8,4,12,Syria Economic Monitor (AviationStack),verified_research_record
-2024-01-07,arrival,DAM_ALP_LTK,0,1,0,3,7,0,11,Syria Economic Monitor (AviationStack),verified_research_record
-2024-01-08,arrival,DAM_ALP_LTK,3,1,0,1,8,1,14,Syria Economic Monitor (AviationStack),verified_research_record
-2024-01-09,arrival,DAM_ALP_LTK,3,0,0,0,8,1,12,Syria Economic Monitor (AviationStack),verified_research_record
-2024-01-10,arrival,DAM_ALP_LTK,2,0,0,2,6,2,12,Syria Economic Monitor (AviationStack),verified_research_record
-2024-01-11,arrival,DAM_ALP_LTK,3,0,0,0,9,0,12,Syria Economic Monitor (AviationStack),verified_research_record
-2024-01-12,arrival,DAM_ALP_LTK,1,0,0,2,8,0,11,Syria Economic Monitor (AviationStack),verified_research_record
-2024-01-13,arrival,DAM_ALP_LTK,2,0,0,0,9,0,11,Syria Economic Monitor (AviationStack),verified_research_record
-2024-01-14,arrival,DAM_ALP_LTK,0,0,0,1,9,0,10,Syria Economic Monitor (AviationStack),verified_research_record
-2024-01-15,arrival,DAM_ALP_LTK,0,1,0,0,10,1,12,Syria Economic Monitor (AviationStack),verified_research_record
-2024-01-16,arrival,DAM_ALP_LTK,4,0,0,1,8,0,13,Syria Economic Monitor (AviationStack),verified_research_record
-2024-01-17,arrival,DAM_ALP_LTK,1,0,1,1,7,2,12,Syria Economic Monitor (AviationStack),verified_research_record
-2024-01-18,arrival,DAM_ALP_LTK,1,0,0,2,9,0,12,Syria Economic Monitor (AviationStack),verified_research_record
-2024-01-19,arrival,DAM_ALP_LTK,1,0,0,2,7,1,11,Syria Economic Monitor (AviationStack),verified_research_record
-2024-01-20,arrival,DAM_ALP_LTK,1,0,0,2,7,1,11,Syria Economic Monitor (AviationStack),verified_research_record
-2024-01-21,arrival,DAM_ALP_LTK,0,0,0,4,6,1,11,Syria Economic Monitor (AviationStack),verified_research_record
-2024-01-22,arrival,DAM_ALP_LTK,3,1,0,3,6,0,13,Syria Economic Monitor (AviationStack),verified_research_record
-2024-01-23,arrival,DAM_ALP_LTK,1,0,0,2,12,1,16,Syria Economic Monitor (AviationStack),verified_research_record
-2024-01-24,arrival,DAM_ALP_LTK,0,0,0,4,6,2,12,Syria Economic Monitor (AviationStack),verified_research_record
-2024-01-25,arrival,DAM_ALP_LTK,2,0,0,0,12,0,14,Syria Economic Monitor (AviationStack),verified_research_record
-2024-01-26,arrival,DAM_ALP_LTK,1,0,0,2,8,1,12,Syria Economic Monitor (AviationStack),verified_research_record
-2024-01-27,arrival,DAM_ALP_LTK,1,0,0,0,8,2,11,Syria Economic Monitor (AviationStack),verified_research_record
-2024-01-28,arrival,DAM_ALP_LTK,0,0,0,0,2,0,2,Syria Economic Monitor (AviationStack),documented_provider_gap
-2024-01-29,arrival,DAM_ALP_LTK,0,0,0,0,0,0,0,Syria Economic Monitor (AviationStack),documented_provider_gap
-2024-01-30,arrival,DAM_ALP_LTK,0,0,0,0,0,0,0,Syria Economic Monitor (AviationStack),documented_provider_gap
-2024-01-31,arrival,DAM_ALP_LTK,0,0,0,1,5,0,6,Syria Economic Monitor (AviationStack),verified_research_record
-2024-02-01,arrival,DAM_ALP_LTK,1,0,0,0,11,0,12,Syria Economic Monitor (AviationStack),verified_research_record
-2024-02-02,arrival,DAM_ALP_LTK,0,0,0,0,12,0,12,Syria Economic Monitor (AviationStack),verified_research_record
-2024-02-03,arrival,DAM_ALP_LTK,0,0,0,0,10,1,11,Syria Economic Monitor (AviationStack),verified_research_record
-2024-02-04,arrival,DAM_ALP_LTK,0,0,0,0,9,2,11,Syria Economic Monitor (AviationStack),verified_research_record
-2024-02-05,arrival,DAM_ALP_LTK,1,0,0,0,10,0,11,Syria Economic Monitor (AviationStack),verified_research_record
-2024-02-06,arrival,DAM_ALP_LTK,1,0,0,4,7,1,13,Syria Economic Monitor (AviationStack),verified_research_record
-2024-02-07,arrival,DAM_ALP_LTK,0,0,0,0,10,2,12,Syria Economic Monitor (AviationStack),verified_research_record
-2024-02-08,arrival,DAM_ALP_LTK,2,0,0,1,9,0,12,Syria Economic Monitor (AviationStack),verified_research_record
-2024-02-09,arrival,DAM_ALP_LTK,2,0,0,0,10,0,12,Syria Economic Monitor (AviationStack),verified_research_record
-2024-02-10,arrival,DAM_ALP_LTK,2,0,0,0,8,1,11,Syria Economic Monitor (AviationStack),verified_research_record
-2024-02-11,arrival,DAM_ALP_LTK,1,0,0,0,8,2,11,Syria Economic Monitor (AviationStack),verified_research_record
-2024-02-12,arrival,DAM_ALP_LTK,0,0,0,4,8,0,12,Syria Economic Monitor (AviationStack),verified_research_record
-2024-02-13,arrival,DAM_ALP_LTK,3,0,0,2,7,1,13,Syria Economic Monitor (AviationStack),verified_research_record
-2024-02-14,arrival,DAM_ALP_LTK,1,0,0,1,8,2,12,Syria Economic Monitor (AviationStack),verified_research_record
-2024-02-15,arrival,DAM_ALP_LTK,2,0,0,2,8,0,12,Syria Economic Monitor (AviationStack),verified_research_record
-2024-02-16,arrival,DAM_ALP_LTK,0,0,0,1,7,2,10,Syria Economic Monitor (AviationStack),verified_research_record
-2024-02-17,arrival,DAM_ALP_LTK,1,0,0,0,9,1,11,Syria Economic Monitor (AviationStack),verified_research_record
-2024-02-18,arrival,DAM_ALP_LTK,0,0,0,0,11,0,11,Syria Economic Monitor (AviationStack),verified_research_record
-2024-02-19,arrival,DAM_ALP_LTK,5,0,0,1,6,0,12,Syria Economic Monitor (AviationStack),verified_research_record
-2024-02-20,arrival,DAM_ALP_LTK,2,0,0,0,10,1,13,Syria Economic Monitor (AviationStack),verified_research_record
-2024-02-21,arrival,DAM_ALP_LTK,0,0,0,0,10,2,12,Syria Economic Monitor (AviationStack),verified_research_record
-2024-02-22,arrival,DAM_ALP_LTK,1,0,0,1,10,0,12,Syria Economic Monitor (AviationStack),verified_research_record
-2024-02-23,arrival,DAM_ALP_LTK,0,0,0,0,11,0,11,Syria Economic Monitor (AviationStack),verified_research_record
-2024-02-24,arrival,DAM_ALP_LTK,2,0,0,1,8,0,11,Syria Economic Monitor (AviationStack),verified_research_record
-2024-02-25,arrival,DAM_ALP_LTK,1,0,0,0,7,1,9,Syria Economic Monitor (AviationStack),verified_research_record
-2024-02-26,arrival,DAM_ALP_LTK,0,0,0,1,11,0,12,Syria Economic Monitor (AviationStack),verified_research_record
-2024-02-27,arrival,DAM_ALP_LTK,1,0,0,0,10,0,11,Syria Economic Monitor (AviationStack),verified_research_record
-2024-02-28,arrival,DAM_ALP_LTK,1,0,0,3,7,1,12,Syria Economic Monitor (AviationStack),verified_research_record
-2024-02-29,arrival,DAM_ALP_LTK,5,0,0,0,7,0,12,Syria Economic Monitor (AviationStack),verified_research_record
-2024-03-01,arrival,DAM_ALP_LTK,1,0,0,3,7,0,11,Syria Economic Monitor (AviationStack),verified_research_record
-2024-03-02,arrival,DAM_ALP_LTK,2,0,0,0,9,0,11,Syria Economic Monitor (AviationStack),verified_research_record
-2024-03-03,arrival,DAM_ALP_LTK,1,0,0,0,9,0,10,Syria Economic Monitor (AviationStack),verified_research_record
-2024-03-04,arrival,DAM_ALP_LTK,1,0,0,0,12,0,13,Syria Economic Monitor (AviationStack),verified_research_record
-2024-03-05,arrival,DAM_ALP_LTK,1,0,0,1,8,1,11,Syria Economic Monitor (AviationStack),verified_research_record
-2024-03-06,arrival,DAM_ALP_LTK,2,0,0,3,6,1,12,Syria Economic Monitor (AviationStack),verified_research_record
-2024-03-07,arrival,DAM_ALP_LTK,1,0,0,2,8,1,12,Syria Economic Monitor (AviationStack),verified_research_record
-2024-03-08,arrival,DAM_ALP_LTK,1,0,0,2,8,0,11,Syria Economic Monitor (AviationStack),verified_research_record
-2024-03-09,arrival,DAM_ALP_LTK,2,0,0,1,8,0,11,Syria Economic Monitor (AviationStack),verified_research_record
-2024-03-10,arrival,DAM_ALP_LTK,0,0,0,2,8,0,10,Syria Economic Monitor (AviationStack),verified_research_record
-2024-03-11,arrival,DAM_ALP_LTK,1,0,0,2,10,0,13,Syria Economic Monitor (AviationStack),verified_research_record
-2024-03-12,arrival,DAM_ALP_LTK,2,0,0,1,8,0,11,Syria Economic Monitor (AviationStack),verified_research_record
-2024-03-13,arrival,DAM_ALP_LTK,4,0,0,1,6,1,12,Syria Economic Monitor (AviationStack),verified_research_record
-2024-03-14,arrival,DAM_ALP_LTK,2,0,0,3,7,1,13,Syria Economic Monitor (AviationStack),verified_research_record
-2024-03-15,arrival,DAM_ALP_LTK,1,0,0,0,7,0,8,Syria Economic Monitor (AviationStack),verified_research_record
-2024-03-16,arrival,DAM_ALP_LTK,2,0,0,2,8,0,12,Syria Economic Monitor (AviationStack),verified_research_record
-2024-03-17,arrival,DAM_ALP_LTK,2,0,0,1,7,0,10,Syria Economic Monitor (AviationStack),verified_research_record
-2024-03-18,arrival,DAM_ALP_LTK,1,0,0,3,8,0,12,Syria Economic Monitor (AviationStack),verified_research_record
-2024-03-19,arrival,DAM_ALP_LTK,1,1,0,1,8,0,11,Syria Economic Monitor (AviationStack),verified_research_record
-2024-03-20,arrival,DAM_ALP_LTK,3,0,0,0,6,2,11,Syria Economic Monitor (AviationStack),verified_research_record
-2024-03-21,arrival,DAM_ALP_LTK,2,0,0,2,7,1,12,Syria Economic Monitor (AviationStack),verified_research_record
-2024-03-22,arrival,DAM_ALP_LTK,1,0,0,0,7,0,8,Syria Economic Monitor (AviationStack),verified_research_record
-2024-03-23,arrival,DAM_ALP_LTK,3,0,0,2,6,1,12,Syria Economic Monitor (AviationStack),verified_research_record
-2024-03-24,arrival,DAM_ALP_LTK,2,0,0,0,7,1,10,Syria Economic Monitor (AviationStack),verified_research_record
-2024-03-25,arrival,DAM_ALP_LTK,0,0,0,2,10,0,12,Syria Economic Monitor (AviationStack),verified_research_record
-2024-03-26,arrival,DAM_ALP_LTK,2,0,0,0,6,2,10,Syria Economic Monitor (AviationStack),verified_research_record
-2024-03-27,arrival,DAM_ALP_LTK,2,0,0,2,4,3,11,Syria Economic Monitor (AviationStack),verified_research_record
-2024-03-28,arrival,DAM_ALP_LTK,1,0,0,3,8,0,12,Syria Economic Monitor (AviationStack),verified_research_record
-2024-03-29,arrival,DAM_ALP_LTK,0,0,0,0,4,1,5,Syria Economic Monitor (AviationStack),verified_research_record
-2024-03-30,arrival,DAM_ALP_LTK,2,0,0,3,4,1,10,Syria Economic Monitor (AviationStack),verified_research_record
-2024-03-31,arrival,DAM_ALP_LTK,3,0,0,2,6,0,11,Syria Economic Monitor (AviationStack),verified_research_record
-2024-04-01,arrival,DAM_ALP_LTK,2,0,0,3,12,0,17,Syria Economic Monitor (AviationStack),verified_research_record
-2024-04-02,arrival,DAM_ALP_LTK,2,0,0,3,10,0,15,Syria Economic Monitor (AviationStack),verified_research_record
-2024-04-03,arrival,DAM_ALP_LTK,5,0,0,2,10,0,17,Syria Economic Monitor (AviationStack),verified_research_record
-2024-04-04,arrival,DAM_ALP_LTK,3,1,0,1,10,1,16,Syria Economic Monitor (AviationStack),verified_research_record
-2024-04-05,arrival,DAM_ALP_LTK,2,0,0,2,11,0,15,Syria Economic Monitor (AviationStack),verified_research_record
-2024-04-06,arrival,DAM_ALP_LTK,5,0,0,1,8,0,14,Syria Economic Monitor (AviationStack),verified_research_record
-2024-04-07,arrival,DAM_ALP_LTK,1,0,0,1,13,0,15,Syria Economic Monitor (AviationStack),verified_research_record
-2024-04-08,arrival,DAM_ALP_LTK,1,1,0,3,10,0,15,Syria Economic Monitor (AviationStack),verified_research_record
-2024-04-09,arrival,DAM_ALP_LTK,0,0,0,3,14,3,20,Syria Economic Monitor (AviationStack),verified_research_record
-2024-04-10,arrival,DAM_ALP_LTK,1,0,0,0,12,4,17,Syria Economic Monitor (AviationStack),verified_research_record
-2024-04-11,arrival,DAM_ALP_LTK,4,0,0,1,9,3,17,Syria Economic Monitor (AviationStack),verified_research_record
-2024-04-12,arrival,DAM_ALP_LTK,3,0,0,2,10,0,15,Syria Economic Monitor (AviationStack),verified_research_record
-2024-04-13,arrival,DAM_ALP_LTK,3,1,0,2,8,2,16,Syria Economic Monitor (AviationStack),verified_research_record
-2024-04-14,arrival,DAM_ALP_LTK,0,1,0,0,10,4,15,Syria Economic Monitor (AviationStack),verified_research_record
-2024-04-15,arrival,DAM_ALP_LTK,6,0,0,0,9,3,18,Syria Economic Monitor (AviationStack),verified_research_record
-2024-04-16,arrival,DAM_ALP_LTK,3,0,0,4,11,2,20,Syria Economic Monitor (AviationStack),verified_research_record
-2024-04-17,arrival,DAM_ALP_LTK,2,0,0,0,13,2,17,Syria Economic Monitor (AviationStack),verified_research_record
-2024-04-18,arrival,DAM_ALP_LTK,1,0,0,0,16,0,17,Syria Economic Monitor (AviationStack),verified_research_record
-2024-04-19,arrival,DAM_ALP_LTK,3,0,0,3,7,2,15,Syria Economic Monitor (AviationStack),verified_research_record
-2024-04-20,arrival,DAM_ALP_LTK,6,0,0,3,6,0,15,Syria Economic Monitor (AviationStack),verified_research_record
-2024-04-21,arrival,DAM_ALP_LTK,4,0,0,1,10,1,16,Syria Economic Monitor (AviationStack),verified_research_record
-2024-04-22,arrival,DAM_ALP_LTK,2,0,0,1,12,1,16,Syria Economic Monitor (AviationStack),verified_research_record
-2024-04-23,arrival,DAM_ALP_LTK,2,0,1,3,12,2,20,Syria Economic Monitor (AviationStack),verified_research_record
-2024-04-24,arrival,DAM_ALP_LTK,1,0,0,0,13,3,17,Syria Economic Monitor (AviationStack),verified_research_record
-2024-04-25,arrival,DAM_ALP_LTK,1,0,0,2,14,0,17,Syria Economic Monitor (AviationStack),verified_research_record
-2024-04-26,arrival,DAM_ALP_LTK,1,0,0,5,9,0,15,Syria Economic Monitor (AviationStack),verified_research_record
-2024-04-27,arrival,DAM_ALP_LTK,3,0,0,5,5,2,15,Syria Economic Monitor (AviationStack),verified_research_record
-2024-04-28,arrival,DAM_ALP_LTK,1,1,0,0,14,0,16,Syria Economic Monitor (AviationStack),verified_research_record
-2024-04-29,arrival,DAM_ALP_LTK,0,0,0,0,0,0,0,Syria Economic Monitor (AviationStack),documented_provider_gap
-2024-04-30,arrival,DAM_ALP_LTK,0,0,0,0,0,0,0,Syria Economic Monitor (AviationStack),documented_provider_gap
-2024-05-01,arrival,DAM_ALP_LTK,2,0,0,4,11,0,17,Syria Economic Monitor (AviationStack),verified_research_record
-2024-05-02,arrival,DAM_ALP_LTK,3,0,0,0,13,1,17,Syria Economic Monitor (AviationStack),verified_research_record
-2024-05-03,arrival,DAM_ALP_LTK,1,0,0,3,10,1,15,Syria Economic Monitor (AviationStack),verified_research_record
-2024-05-04,arrival,DAM_ALP_LTK,4,0,0,2,8,2,16,Syria Economic Monitor (AviationStack),verified_research_record
-2024-05-05,arrival,DAM_ALP_LTK,4,1,0,0,11,0,16,Syria Economic Monitor (AviationStack),verified_research_record
-2024-05-06,arrival,DAM_ALP_LTK,2,1,0,1,9,3,16,Syria Economic Monitor (AviationStack),verified_research_record
-2024-05-07,arrival,DAM_ALP_LTK,3,0,0,5,11,1,20,Syria Economic Monitor (AviationStack),verified_research_record
-2024-05-08,arrival,DAM_ALP_LTK,5,1,0,0,11,1,18,Syria Economic Monitor (AviationStack),verified_research_record
-2024-05-09,arrival,DAM_ALP_LTK,3,0,0,3,11,0,17,Syria Economic Monitor (AviationStack),verified_research_record
-2024-05-10,arrival,DAM_ALP_LTK,0,0,0,3,10,2,15,Syria Economic Monitor (AviationStack),verified_research_record
-2024-05-11,arrival,DAM_ALP_LTK,1,0,0,5,10,1,17,Syria Economic Monitor (AviationStack),verified_research_record
-2024-05-12,arrival,DAM_ALP_LTK,1,0,0,3,11,2,17,Syria Economic Monitor (AviationStack),verified_research_record
-2024-05-13,arrival,DAM_ALP_LTK,2,0,0,2,11,2,17,Syria Economic Monitor (AviationStack),verified_research_record
-2024-05-14,arrival,DAM_ALP_LTK,2,0,0,3,14,1,20,Syria Economic Monitor (AviationStack),verified_research_record
-2024-05-15,arrival,DAM_ALP_LTK,3,0,0,1,11,4,19,Syria Economic Monitor (AviationStack),verified_research_record
-2024-05-16,arrival,DAM_ALP_LTK,2,0,0,3,10,2,17,Syria Economic Monitor (AviationStack),verified_research_record
-2024-05-17,arrival,DAM_ALP_LTK,1,0,0,4,9,0,14,Syria Economic Monitor (AviationStack),verified_research_record
-2024-05-18,arrival,DAM_ALP_LTK,3,0,0,4,10,1,18,Syria Economic Monitor (AviationStack),verified_research_record
-2024-05-19,arrival,DAM_ALP_LTK,4,0,0,3,10,0,17,Syria Economic Monitor (AviationStack),verified_research_record
-2024-05-20,arrival,DAM_ALP_LTK,1,0,0,2,13,0,16,Syria Economic Monitor (AviationStack),verified_research_record
-2024-05-21,arrival,DAM_ALP_LTK,5,0,0,3,12,2,22,Syria Economic Monitor (AviationStack),verified_research_record
-2024-05-22,arrival,DAM_ALP_LTK,2,0,0,1,11,5,19,Syria Economic Monitor (AviationStack),verified_research_record
-2024-05-23,arrival,DAM_ALP_LTK,3,0,1,4,9,1,18,Syria Economic Monitor (AviationStack),verified_research_record
-2024-05-24,arrival,DAM_ALP_LTK,0,0,0,5,11,0,16,Syria Economic Monitor (AviationStack),verified_research_record
-2024-05-25,arrival,DAM_ALP_LTK,2,0,0,4,12,1,19,Syria Economic Monitor (AviationStack),verified_research_record
-2024-05-26,arrival,DAM_ALP_LTK,4,0,0,2,11,0,17,Syria Economic Monitor (AviationStack),verified_research_record
-2024-05-27,arrival,DAM_ALP_LTK,2,0,0,5,12,0,19,Syria Economic Monitor (AviationStack),verified_research_record
-2024-05-28,arrival,DAM_ALP_LTK,4,0,0,5,13,0,22,Syria Economic Monitor (AviationStack),verified_research_record
-2024-05-29,arrival,DAM_ALP_LTK,4,0,0,2,11,2,19,Syria Economic Monitor (AviationStack),verified_research_record
-2024-05-30,arrival,DAM_ALP_LTK,5,0,1,1,10,2,19,Syria Economic Monitor (AviationStack),verified_research_record
-2024-05-31,arrival,DAM_ALP_LTK,2,0,0,3,11,1,17,Syria Economic Monitor (AviationStack),verified_research_record
-2024-06-01,arrival,DAM_ALP_LTK,4,0,0,4,9,1,18,Syria Economic Monitor (AviationStack),verified_research_record
-2024-06-02,arrival,DAM_ALP_LTK,3,0,0,3,11,1,18,Syria Economic Monitor (AviationStack),verified_research_record
-2024-06-03,arrival,DAM_ALP_LTK,2,0,0,4,11,1,18,Syria Economic Monitor (AviationStack),verified_research_record
-2024-06-04,arrival,DAM_ALP_LTK,1,0,0,2,15,1,19,Syria Economic Monitor (AviationStack),verified_research_record
-2024-06-05,arrival,DAM_ALP_LTK,1,1,0,1,3,1,7,Syria Economic Monitor (AviationStack),verified_research_record
-2024-06-06,arrival,DAM_ALP_LTK,1,0,0,1,10,0,12,Syria Economic Monitor (AviationStack),verified_research_record
-2024-06-07,arrival,DAM_ALP_LTK,0,0,0,0,0,0,0,Syria Economic Monitor (AviationStack),documented_provider_gap
-2024-06-08,arrival,DAM_ALP_LTK,0,0,0,0,0,0,0,Syria Economic Monitor (AviationStack),documented_provider_gap
-2024-06-09,arrival,DAM_ALP_LTK,0,0,0,0,0,0,0,Syria Economic Monitor (AviationStack),documented_provider_gap
-2024-06-10,arrival,DAM_ALP_LTK,2,1,0,1,8,1,13,Syria Economic Monitor (AviationStack),verified_research_record
-2024-06-11,arrival,DAM_ALP_LTK,1,0,0,3,13,5,22,Syria Economic Monitor (AviationStack),verified_research_record
-2024-06-12,arrival,DAM_ALP_LTK,0,0,0,2,12,4,18,Syria Economic Monitor (AviationStack),verified_research_record
-2024-06-13,arrival,DAM_ALP_LTK,1,0,0,4,11,2,18,Syria Economic Monitor (AviationStack),verified_research_record
-2024-06-14,arrival,DAM_ALP_LTK,1,0,0,4,12,1,18,Syria Economic Monitor (AviationStack),verified_research_record
-2024-06-15,arrival,DAM_ALP_LTK,4,0,0,2,11,2,19,Syria Economic Monitor (AviationStack),verified_research_record
-2024-06-16,arrival,DAM_ALP_LTK,2,0,0,6,7,2,17,Syria Economic Monitor (AviationStack),verified_research_record
-2024-06-17,arrival,DAM_ALP_LTK,2,0,0,6,8,2,18,Syria Economic Monitor (AviationStack),verified_research_record
-2024-06-18,arrival,DAM_ALP_LTK,4,0,0,4,13,1,22,Syria Economic Monitor (AviationStack),verified_research_record
-2024-06-19,arrival,DAM_ALP_LTK,2,0,0,6,8,3,19,Syria Economic Monitor (AviationStack),verified_research_record
-2024-06-20,arrival,DAM_ALP_LTK,4,0,0,3,11,1,19,Syria Economic Monitor (AviationStack),verified_research_record
-2024-06-21,arrival,DAM_ALP_LTK,4,0,0,4,8,2,18,Syria Economic Monitor (AviationStack),verified_research_record
-2024-06-22,arrival,DAM_ALP_LTK,5,0,0,3,9,2,19,Syria Economic Monitor (AviationStack),verified_research_record
-2024-06-23,arrival,DAM_ALP_LTK,3,0,0,4,7,2,16,Syria Economic Monitor (AviationStack),verified_research_record
-2024-06-24,arrival,DAM_ALP_LTK,4,2,0,5,7,1,19,Syria Economic Monitor (AviationStack),verified_research_record
-2024-06-25,arrival,DAM_ALP_LTK,5,0,0,4,14,1,24,Syria Economic Monitor (AviationStack),verified_research_record
-2024-06-26,arrival,DAM_ALP_LTK,3,2,0,4,9,0,18,Syria Economic Monitor (AviationStack),verified_research_record
-2024-06-27,arrival,DAM_ALP_LTK,3,2,0,2,10,2,19,Syria Economic Monitor (AviationStack),verified_research_record
-2024-06-28,arrival,DAM_ALP_LTK,3,1,0,6,9,0,19,Syria Economic Monitor (AviationStack),verified_research_record
-2024-06-29,arrival,DAM_ALP_LTK,5,2,0,3,7,2,19,Syria Economic Monitor (AviationStack),verified_research_record
-2024-06-30,arrival,DAM_ALP_LTK,5,0,0,2,9,1,17,Syria Economic Monitor (AviationStack),verified_research_record
-2024-07-01,arrival,DAM_ALP_LTK,1,1,0,3,13,2,20,Syria Economic Monitor (AviationStack),verified_research_record
-2024-07-02,arrival,DAM_ALP_LTK,1,0,0,2,19,0,22,Syria Economic Monitor (AviationStack),verified_research_record
-2024-07-03,arrival,DAM_ALP_LTK,2,1,0,1,7,0,11,Syria Economic Monitor (AviationStack),verified_research_record
-2024-07-04,arrival,DAM_ALP_LTK,2,0,0,5,12,1,20,Syria Economic Monitor (AviationStack),verified_research_record
-2024-07-05,arrival,DAM_ALP_LTK,2,0,0,3,12,0,17,Syria Economic Monitor (AviationStack),verified_research_record
-2024-07-06,arrival,DAM_ALP_LTK,2,1,0,6,10,0,19,Syria Economic Monitor (AviationStack),verified_research_record
-2024-07-07,arrival,DAM_ALP_LTK,3,0,0,3,9,1,16,Syria Economic Monitor (AviationStack),verified_research_record
-2024-07-08,arrival,DAM_ALP_LTK,2,0,0,7,9,1,19,Syria Economic Monitor (AviationStack),verified_research_record
-2024-07-09,arrival,DAM_ALP_LTK,4,0,0,3,13,2,22,Syria Economic Monitor (AviationStack),verified_research_record
-2024-07-10,arrival,DAM_ALP_LTK,2,0,0,6,8,2,18,Syria Economic Monitor (AviationStack),verified_research_record
-2024-07-11,arrival,DAM_ALP_LTK,3,0,0,4,10,2,19,Syria Economic Monitor (AviationStack),verified_research_record
-2024-07-12,arrival,DAM_ALP_LTK,3,0,0,4,9,0,16,Syria Economic Monitor (AviationStack),verified_research_record
-2024-07-13,arrival,DAM_ALP_LTK,3,0,0,3,11,2,19,Syria Economic Monitor (AviationStack),verified_research_record
-2024-07-14,arrival,DAM_ALP_LTK,2,0,0,3,9,1,15,Syria Economic Monitor (AviationStack),verified_research_record
-2024-07-15,arrival,DAM_ALP_LTK,3,0,0,4,9,3,19,Syria Economic Monitor (AviationStack),verified_research_record
-2024-07-16,arrival,DAM_ALP_LTK,4,0,0,2,14,2,22,Syria Economic Monitor (AviationStack),verified_research_record
-2024-07-17,arrival,DAM_ALP_LTK,5,0,0,2,9,2,18,Syria Economic Monitor (AviationStack),verified_research_record
-2024-07-18,arrival,DAM_ALP_LTK,1,0,0,5,10,2,18,Syria Economic Monitor (AviationStack),verified_research_record
-2024-07-19,arrival,DAM_ALP_LTK,3,0,0,3,8,2,16,Syria Economic Monitor (AviationStack),verified_research_record
-2024-07-20,arrival,DAM_ALP_LTK,3,0,0,5,10,1,19,Syria Economic Monitor (AviationStack),verified_research_record
-2024-07-21,arrival,DAM_ALP_LTK,4,0,0,3,8,0,15,Syria Economic Monitor (AviationStack),verified_research_record
-2024-07-22,arrival,DAM_ALP_LTK,4,1,0,4,11,0,20,Syria Economic Monitor (AviationStack),verified_research_record
-2024-07-23,arrival,DAM_ALP_LTK,5,0,0,2,14,1,22,Syria Economic Monitor (AviationStack),verified_research_record
-2024-07-24,arrival,DAM_ALP_LTK,4,0,0,3,10,2,19,Syria Economic Monitor (AviationStack),verified_research_record
-2024-07-25,arrival,DAM_ALP_LTK,2,0,0,7,9,1,19,Syria Economic Monitor (AviationStack),verified_research_record
-2024-07-26,arrival,DAM_ALP_LTK,1,1,0,3,10,1,16,Syria Economic Monitor (AviationStack),verified_research_record
-2024-07-27,arrival,DAM_ALP_LTK,2,0,0,5,11,2,20,Syria Economic Monitor (AviationStack),verified_research_record
-2024-07-28,arrival,DAM_ALP_LTK,2,0,0,5,7,1,15,Syria Economic Monitor (AviationStack),verified_research_record
-2024-07-29,arrival,DAM_ALP_LTK,5,0,0,2,8,4,19,Syria Economic Monitor (AviationStack),verified_research_record
-2024-07-30,arrival,DAM_ALP_LTK,4,0,0,3,14,2,23,Syria Economic Monitor (AviationStack),verified_research_record
-2024-07-31,arrival,DAM_ALP_LTK,1,0,0,4,8,5,18,Syria Economic Monitor (AviationStack),verified_research_record
-2024-08-01,arrival,DAM_ALP_LTK,6,0,0,5,8,0,19,Syria Economic Monitor (AviationStack),verified_research_record
-2024-08-02,arrival,DAM_ALP_LTK,2,0,0,5,8,1,16,Syria Economic Monitor (AviationStack),verified_research_record
-2024-08-03,arrival,DAM_ALP_LTK,3,0,0,5,11,1,20,Syria Economic Monitor (AviationStack),verified_research_record
-2024-08-04,arrival,DAM_ALP_LTK,2,0,0,2,9,2,15,Syria Economic Monitor (AviationStack),verified_research_record
-2024-08-05,arrival,DAM_ALP_LTK,4,0,0,6,10,1,21,Syria Economic Monitor (AviationStack),verified_research_record
-2024-08-06,arrival,DAM_ALP_LTK,1,0,0,4,17,3,25,Syria Economic Monitor (AviationStack),verified_research_record
-2024-08-07,arrival,DAM_ALP_LTK,2,1,0,2,13,2,20,Syria Economic Monitor (AviationStack),verified_research_record
-2024-08-08,arrival,DAM_ALP_LTK,1,0,0,2,13,3,19,Syria Economic Monitor (AviationStack),verified_research_record
-2024-08-09,arrival,DAM_ALP_LTK,4,0,0,3,9,0,16,Syria Economic Monitor (AviationStack),verified_research_record
-2024-08-10,arrival,DAM_ALP_LTK,3,0,0,2,11,4,20,Syria Economic Monitor (AviationStack),verified_research_record
-2024-08-11,arrival,DAM_ALP_LTK,2,0,0,2,6,5,15,Syria Economic Monitor (AviationStack),verified_research_record
-2024-08-12,arrival,DAM_ALP_LTK,3,0,0,4,11,3,21,Syria Economic Monitor (AviationStack),verified_research_record
-2024-08-13,arrival,DAM_ALP_LTK,1,0,0,6,17,1,25,Syria Economic Monitor (AviationStack),verified_research_record
-2024-08-14,arrival,DAM_ALP_LTK,2,0,0,3,12,2,19,Syria Economic Monitor (AviationStack),verified_research_record
-2024-08-15,arrival,DAM_ALP_LTK,2,0,2,3,12,0,19,Syria Economic Monitor (AviationStack),verified_research_record
-2024-08-16,arrival,DAM_ALP_LTK,4,0,1,0,11,0,16,Syria Economic Monitor (AviationStack),verified_research_record
-2024-08-17,arrival,DAM_ALP_LTK,3,0,0,6,11,0,20,Syria Economic Monitor (AviationStack),verified_research_record
-2024-08-18,arrival,DAM_ALP_LTK,3,0,0,3,6,3,15,Syria Economic Monitor (AviationStack),verified_research_record
-2024-08-19,arrival,DAM_ALP_LTK,1,0,0,3,13,3,20,Syria Economic Monitor (AviationStack),verified_research_record
-2024-08-20,arrival,DAM_ALP_LTK,2,0,0,6,13,3,24,Syria Economic Monitor (AviationStack),verified_research_record
-2024-08-21,arrival,DAM_ALP_LTK,3,0,1,0,12,2,18,Syria Economic Monitor (AviationStack),verified_research_record
-2024-08-22,arrival,DAM_ALP_LTK,3,0,0,2,10,0,15,Syria Economic Monitor (AviationStack),verified_research_record
-2024-08-23,arrival,DAM_ALP_LTK,1,0,0,2,12,1,16,Syria Economic Monitor (AviationStack),verified_research_record
-2024-08-24,arrival,DAM_ALP_LTK,3,0,2,2,10,3,20,Syria Economic Monitor (AviationStack),verified_research_record
-2024-08-25,arrival,DAM_ALP_LTK,3,0,0,2,9,1,15,Syria Economic Monitor (AviationStack),verified_research_record
-2024-08-26,arrival,DAM_ALP_LTK,2,0,0,2,13,3,20,Syria Economic Monitor (AviationStack),verified_research_record
-2024-08-27,arrival,DAM_ALP_LTK,3,0,0,4,15,1,23,Syria Economic Monitor (AviationStack),verified_research_record
-2024-08-28,arrival,DAM_ALP_LTK,2,0,0,5,9,2,18,Syria Economic Monitor (AviationStack),verified_research_record
-2024-08-29,arrival,DAM_ALP_LTK,1,0,2,0,12,0,15,Syria Economic Monitor (AviationStack),verified_research_record
-2024-08-30,arrival,DAM_ALP_LTK,1,0,1,0,14,0,16,Syria Economic Monitor (AviationStack),verified_research_record
-2024-08-31,arrival,DAM_ALP_LTK,3,0,0,3,13,1,20,Syria Economic Monitor (AviationStack),verified_research_record
-2024-09-01,arrival,DAM_ALP_LTK,2,0,1,3,8,2,16,Syria Economic Monitor (AviationStack),verified_research_record
-2024-09-02,arrival,DAM_ALP_LTK,0,0,0,0,12,0,12,Syria Economic Monitor (AviationStack),verified_research_record
-2024-09-03,arrival,DAM_ALP_LTK,1,0,0,2,15,2,20,Syria Economic Monitor (AviationStack),verified_research_record
-2024-09-04,arrival,DAM_ALP_LTK,2,0,1,1,11,3,18,Syria Economic Monitor (AviationStack),verified_research_record
-2024-09-05,arrival,DAM_ALP_LTK,1,0,2,1,14,1,19,Syria Economic Monitor (AviationStack),verified_research_record
-2024-09-06,arrival,DAM_ALP_LTK,1,0,2,1,11,1,16,Syria Economic Monitor (AviationStack),verified_research_record
-2024-09-07,arrival,DAM_ALP_LTK,4,0,1,3,10,2,20,Syria Economic Monitor (AviationStack),verified_research_record
-2024-09-08,arrival,DAM_ALP_LTK,1,0,0,7,5,2,15,Syria Economic Monitor (AviationStack),verified_research_record
-2024-09-09,arrival,DAM_ALP_LTK,1,0,0,5,12,1,19,Syria Economic Monitor (AviationStack),verified_research_record
-2024-09-10,arrival,DAM_ALP_LTK,5,0,1,1,14,2,23,Syria Economic Monitor (AviationStack),verified_research_record
-2024-09-11,arrival,DAM_ALP_LTK,3,0,0,4,9,2,18,Syria Economic Monitor (AviationStack),verified_research_record
-2024-09-12,arrival,DAM_ALP_LTK,3,0,0,4,10,2,19,Syria Economic Monitor (AviationStack),verified_research_record
-2024-09-13,arrival,DAM_ALP_LTK,5,0,1,2,8,0,16,Syria Economic Monitor (AviationStack),verified_research_record
-2024-09-14,arrival,DAM_ALP_LTK,2,0,2,4,8,2,18,Syria Economic Monitor (AviationStack),verified_research_record
-2024-09-15,arrival,DAM_ALP_LTK,2,0,2,4,4,1,13,Syria Economic Monitor (AviationStack),verified_research_record
-2024-09-16,arrival,DAM_ALP_LTK,3,0,1,2,10,1,17,Syria Economic Monitor (AviationStack),verified_research_record
-2024-09-17,arrival,DAM_ALP_LTK,1,0,1,3,12,3,20,Syria Economic Monitor (AviationStack),verified_research_record
-2024-09-18,arrival,DAM_ALP_LTK,4,0,0,3,8,1,16,Syria Economic Monitor (AviationStack),verified_research_record
-2024-09-19,arrival,DAM_ALP_LTK,0,0,3,1,7,3,14,Syria Economic Monitor (AviationStack),verified_research_record
-2024-09-20,arrival,DAM_ALP_LTK,1,0,0,1,11,1,14,Syria Economic Monitor (AviationStack),verified_research_record
-2024-09-21,arrival,DAM_ALP_LTK,3,0,1,3,8,0,15,Syria Economic Monitor (AviationStack),verified_research_record
-2024-09-22,arrival,DAM_ALP_LTK,2,0,0,3,7,1,13,Syria Economic Monitor (AviationStack),verified_research_record
-2024-09-23,arrival,DAM_ALP_LTK,0,0,2,3,8,3,16,Syria Economic Monitor (AviationStack),verified_research_record
-2024-09-24,arrival,DAM_ALP_LTK,2,0,1,3,11,3,20,Syria Economic Monitor (AviationStack),verified_research_record
-2024-09-25,arrival,DAM_ALP_LTK,2,0,2,5,6,1,16,Syria Economic Monitor (AviationStack),verified_research_record
-2024-09-26,arrival,DAM_ALP_LTK,2,0,2,1,9,0,14,Syria Economic Monitor (AviationStack),verified_research_record
-2024-09-27,arrival,DAM_ALP_LTK,1,0,1,3,8,2,15,Syria Economic Monitor (AviationStack),verified_research_record
-2024-09-28,arrival,DAM_ALP_LTK,2,0,2,2,7,2,15,Syria Economic Monitor (AviationStack),verified_research_record
-2024-09-29,arrival,DAM_ALP_LTK,2,0,1,4,5,1,13,Syria Economic Monitor (AviationStack),verified_research_record
-2024-09-30,arrival,DAM_ALP_LTK,2,0,2,3,10,2,19,Syria Economic Monitor (AviationStack),verified_research_record
-2024-10-01,arrival,DAM_ALP_LTK,2,0,1,4,10,2,19,Syria Economic Monitor (AviationStack),verified_research_record
-2024-10-02,arrival,DAM_ALP_LTK,1,0,0,6,6,5,18,Syria Economic Monitor (AviationStack),verified_research_record
-2024-10-03,arrival,DAM_ALP_LTK,1,0,0,3,7,3,14,Syria Economic Monitor (AviationStack),verified_research_record
-2024-10-04,arrival,DAM_ALP_LTK,0,0,1,3,10,1,15,Syria Economic Monitor (AviationStack),verified_research_record
-2024-10-05,arrival,DAM_ALP_LTK,0,0,1,3,9,2,15,Syria Economic Monitor (AviationStack),verified_research_record
-2024-10-06,arrival,DAM_ALP_LTK,1,0,0,4,7,2,14,Syria Economic Monitor (AviationStack),verified_research_record
-2024-10-07,arrival,DAM_ALP_LTK,1,0,2,2,10,2,17,Syria Economic Monitor (AviationStack),verified_research_record
-2024-10-08,arrival,DAM_ALP_LTK,2,0,0,4,10,3,19,Syria Economic Monitor (AviationStack),verified_research_record
-2024-10-09,arrival,DAM_ALP_LTK,1,0,1,3,10,1,16,Syria Economic Monitor (AviationStack),verified_research_record
-2024-10-10,arrival,DAM_ALP_LTK,0,0,1,7,5,1,14,Syria Economic Monitor (AviationStack),verified_research_record
-2024-10-11,arrival,DAM_ALP_LTK,0,0,1,2,8,4,15,Syria Economic Monitor (AviationStack),verified_research_record
-2024-10-12,arrival,DAM_ALP_LTK,0,0,0,2,10,3,15,Syria Economic Monitor (AviationStack),verified_research_record
-2024-10-13,arrival,DAM_ALP_LTK,3,0,0,2,8,2,15,Syria Economic Monitor (AviationStack),verified_research_record
-2024-10-14,arrival,DAM_ALP_LTK,2,0,1,3,10,2,18,Syria Economic Monitor (AviationStack),verified_research_record
-2024-10-15,arrival,DAM_ALP_LTK,2,0,0,0,17,0,19,Syria Economic Monitor (AviationStack),verified_research_record
+flight_date,movement_type,scope,active,cancelled,diverted,landed,scheduled,unknown,total_recorded_operations,data_source,coverage_status,status_note
+2024-01-01,arrival,DAM_ALP_LTK,2.0,0.0,0.0,0.0,10.0,0.0,12.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-01-01,departure,DAM_ALP_LTK,0.0,1.0,0.0,3.0,9.0,0.0,13.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-01-02,arrival,DAM_ALP_LTK,6.0,0.0,0.0,0.0,7.0,0.0,13.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-01-02,departure,DAM_ALP_LTK,4.0,0.0,0.0,10.0,1.0,0.0,15.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-01-03,arrival,DAM_ALP_LTK,1.0,1.0,0.0,2.0,8.0,4.0,16.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-01-03,departure,DAM_ALP_LTK,3.0,0.0,0.0,6.0,4.0,0.0,13.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-01-04,arrival,DAM_ALP_LTK,2.0,0.0,0.0,2.0,10.0,0.0,14.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-01-04,departure,DAM_ALP_LTK,1.0,0.0,0.0,4.0,5.0,1.0,11.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-01-05,arrival,DAM_ALP_LTK,2.0,0.0,0.0,1.0,9.0,0.0,12.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-01-05,departure,DAM_ALP_LTK,3.0,0.0,0.0,6.0,4.0,0.0,13.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-01-06,arrival,DAM_ALP_LTK,0.0,0.0,0.0,0.0,8.0,4.0,12.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-01-06,departure,DAM_ALP_LTK,4.0,0.0,0.0,2.0,4.0,1.0,11.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-01-07,arrival,DAM_ALP_LTK,0.0,1.0,0.0,3.0,7.0,0.0,11.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-01-07,departure,DAM_ALP_LTK,2.0,1.0,0.0,4.0,2.0,2.0,11.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-01-08,arrival,DAM_ALP_LTK,3.0,1.0,0.0,1.0,8.0,1.0,14.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-01-08,departure,DAM_ALP_LTK,2.0,1.0,0.0,5.0,6.0,1.0,15.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-01-09,arrival,DAM_ALP_LTK,3.0,0.0,0.0,0.0,8.0,1.0,12.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-01-09,departure,DAM_ALP_LTK,5.0,0.0,0.0,6.0,2.0,1.0,14.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-01-10,arrival,DAM_ALP_LTK,2.0,0.0,0.0,2.0,6.0,2.0,12.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-01-10,departure,DAM_ALP_LTK,2.0,0.0,0.0,8.0,1.0,0.0,11.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-01-11,arrival,DAM_ALP_LTK,3.0,0.0,0.0,0.0,9.0,0.0,12.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-01-11,departure,DAM_ALP_LTK,3.0,0.0,0.0,5.0,1.0,1.0,10.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-01-12,arrival,DAM_ALP_LTK,1.0,0.0,0.0,2.0,8.0,0.0,11.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-01-12,departure,DAM_ALP_LTK,2.0,0.0,0.0,7.0,4.0,0.0,13.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-01-13,arrival,DAM_ALP_LTK,2.0,0.0,0.0,0.0,9.0,0.0,11.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-01-13,departure,DAM_ALP_LTK,1.0,0.0,0.0,10.0,0.0,0.0,11.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-01-14,arrival,DAM_ALP_LTK,0.0,0.0,0.0,1.0,9.0,0.0,10.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-01-14,departure,DAM_ALP_LTK,2.0,0.0,0.0,6.0,1.0,1.0,10.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-01-15,arrival,DAM_ALP_LTK,0.0,1.0,0.0,0.0,10.0,1.0,12.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-01-15,departure,DAM_ALP_LTK,1.0,1.0,0.0,5.0,5.0,0.0,12.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-01-16,arrival,DAM_ALP_LTK,4.0,0.0,0.0,1.0,8.0,0.0,13.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-01-16,departure,DAM_ALP_LTK,0.0,0.0,0.0,7.0,7.0,2.0,16.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-01-17,arrival,DAM_ALP_LTK,1.0,0.0,1.0,1.0,7.0,2.0,12.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-01-17,departure,DAM_ALP_LTK,1.0,0.0,0.0,8.0,2.0,0.0,11.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-01-18,arrival,DAM_ALP_LTK,1.0,0.0,0.0,2.0,9.0,0.0,12.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-01-18,departure,DAM_ALP_LTK,2.0,0.0,0.0,5.0,2.0,1.0,10.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-01-19,arrival,DAM_ALP_LTK,1.0,0.0,0.0,2.0,7.0,1.0,11.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-01-19,departure,DAM_ALP_LTK,3.0,0.0,0.0,6.0,4.0,0.0,13.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-01-20,arrival,DAM_ALP_LTK,1.0,0.0,0.0,2.0,7.0,1.0,11.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-01-20,departure,DAM_ALP_LTK,0.0,0.0,0.0,8.0,2.0,0.0,10.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-01-21,arrival,DAM_ALP_LTK,0.0,0.0,0.0,4.0,6.0,1.0,11.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-01-21,departure,DAM_ALP_LTK,2.0,0.0,0.0,7.0,2.0,0.0,11.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-01-22,arrival,DAM_ALP_LTK,3.0,1.0,0.0,3.0,6.0,0.0,13.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-01-22,departure,DAM_ALP_LTK,1.0,0.0,0.0,9.0,3.0,0.0,13.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-01-23,arrival,DAM_ALP_LTK,1.0,0.0,0.0,2.0,12.0,1.0,16.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-01-23,departure,DAM_ALP_LTK,5.0,0.0,0.0,8.0,5.0,1.0,19.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-01-24,arrival,DAM_ALP_LTK,0.0,0.0,0.0,4.0,6.0,2.0,12.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-01-24,departure,DAM_ALP_LTK,3.0,0.0,0.0,6.0,2.0,0.0,11.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-01-25,arrival,DAM_ALP_LTK,2.0,0.0,0.0,0.0,12.0,0.0,14.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-01-25,departure,DAM_ALP_LTK,3.0,0.0,0.0,6.0,1.0,1.0,11.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-01-26,arrival,DAM_ALP_LTK,1.0,0.0,0.0,2.0,8.0,1.0,12.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-01-26,departure,DAM_ALP_LTK,3.0,0.0,0.0,4.0,6.0,1.0,14.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-01-27,arrival,DAM_ALP_LTK,1.0,0.0,0.0,0.0,8.0,2.0,11.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-01-27,departure,DAM_ALP_LTK,1.0,0.0,0.0,4.0,5.0,1.0,11.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-01-28,arrival,DAM_ALP_LTK,0.0,0.0,0.0,0.0,2.0,0.0,2.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-01-28,departure,DAM_ALP_LTK,0.0,0.0,0.0,0.0,0.0,0.0,0.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",unverified_data_gap,Unverified data gap in source series: 0 recorded operations across all status categories
+2024-01-29,arrival,DAM_ALP_LTK,0.0,0.0,0.0,0.0,0.0,0.0,0.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",unverified_data_gap,Unverified data gap in source series: 0 recorded operations across all status categories
+2024-01-29,departure,DAM_ALP_LTK,0.0,0.0,0.0,0.0,0.0,0.0,0.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",unverified_data_gap,Unverified data gap in source series: 0 recorded operations across all status categories
+2024-01-30,arrival,DAM_ALP_LTK,0.0,0.0,0.0,0.0,0.0,0.0,0.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",unverified_data_gap,Unverified data gap in source series: 0 recorded operations across all status categories
+2024-01-30,departure,DAM_ALP_LTK,0.0,0.0,0.0,0.0,0.0,0.0,0.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",unverified_data_gap,Unverified data gap in source series: 0 recorded operations across all status categories
+2024-01-31,arrival,DAM_ALP_LTK,0.0,0.0,0.0,1.0,5.0,0.0,6.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-01-31,departure,DAM_ALP_LTK,1.0,0.0,0.0,3.0,1.0,0.0,5.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-02-01,arrival,DAM_ALP_LTK,1.0,0.0,0.0,0.0,11.0,0.0,12.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-02-01,departure,DAM_ALP_LTK,2.0,0.0,0.0,5.0,3.0,0.0,10.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-02-02,arrival,DAM_ALP_LTK,0.0,0.0,0.0,0.0,12.0,0.0,12.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-02-02,departure,DAM_ALP_LTK,2.0,0.0,0.0,7.0,5.0,0.0,14.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-02-03,arrival,DAM_ALP_LTK,0.0,0.0,0.0,0.0,10.0,1.0,11.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-02-03,departure,DAM_ALP_LTK,2.0,0.0,0.0,5.0,2.0,1.0,10.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-02-04,arrival,DAM_ALP_LTK,0.0,0.0,0.0,0.0,9.0,2.0,11.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-02-04,departure,DAM_ALP_LTK,1.0,0.0,0.0,6.0,2.0,2.0,11.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-02-05,arrival,DAM_ALP_LTK,1.0,0.0,0.0,0.0,10.0,0.0,11.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-02-05,departure,DAM_ALP_LTK,0.0,0.0,0.0,6.0,5.0,0.0,11.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-02-06,arrival,DAM_ALP_LTK,1.0,0.0,0.0,4.0,7.0,1.0,13.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-02-06,departure,DAM_ALP_LTK,2.0,0.0,0.0,7.0,7.0,0.0,16.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-02-07,arrival,DAM_ALP_LTK,0.0,0.0,0.0,0.0,10.0,2.0,12.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-02-07,departure,DAM_ALP_LTK,3.0,0.0,0.0,1.0,5.0,1.0,10.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-02-08,arrival,DAM_ALP_LTK,2.0,0.0,0.0,1.0,9.0,0.0,12.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-02-08,departure,DAM_ALP_LTK,2.0,0.0,0.0,2.0,4.0,2.0,10.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-02-09,arrival,DAM_ALP_LTK,2.0,0.0,0.0,0.0,10.0,0.0,12.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-02-09,departure,DAM_ALP_LTK,2.0,0.0,0.0,5.0,6.0,1.0,14.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-02-10,arrival,DAM_ALP_LTK,2.0,0.0,0.0,0.0,8.0,1.0,11.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-02-10,departure,DAM_ALP_LTK,2.0,0.0,0.0,5.0,2.0,1.0,10.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-02-11,arrival,DAM_ALP_LTK,1.0,0.0,0.0,0.0,8.0,2.0,11.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-02-11,departure,DAM_ALP_LTK,5.0,0.0,0.0,2.0,5.0,0.0,12.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-02-12,arrival,DAM_ALP_LTK,0.0,0.0,0.0,4.0,8.0,0.0,12.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-02-12,departure,DAM_ALP_LTK,2.0,0.0,0.0,7.0,2.0,1.0,12.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-02-13,arrival,DAM_ALP_LTK,3.0,0.0,0.0,2.0,7.0,1.0,13.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-02-13,departure,DAM_ALP_LTK,1.0,0.0,0.0,7.0,8.0,0.0,16.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-02-14,arrival,DAM_ALP_LTK,1.0,0.0,0.0,1.0,8.0,2.0,12.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-02-14,departure,DAM_ALP_LTK,1.0,0.0,0.0,6.0,3.0,0.0,10.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-02-15,arrival,DAM_ALP_LTK,2.0,0.0,0.0,2.0,8.0,0.0,12.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-02-15,departure,DAM_ALP_LTK,4.0,0.0,0.0,4.0,3.0,0.0,11.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-02-16,arrival,DAM_ALP_LTK,0.0,0.0,0.0,1.0,7.0,2.0,10.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-02-16,departure,DAM_ALP_LTK,2.0,0.0,0.0,5.0,3.0,1.0,11.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-02-17,arrival,DAM_ALP_LTK,1.0,0.0,0.0,0.0,9.0,1.0,11.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-02-17,departure,DAM_ALP_LTK,6.0,0.0,0.0,4.0,0.0,0.0,10.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-02-18,arrival,DAM_ALP_LTK,0.0,0.0,0.0,0.0,11.0,0.0,11.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-02-18,departure,DAM_ALP_LTK,1.0,0.0,0.0,6.0,4.0,0.0,11.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-02-19,arrival,DAM_ALP_LTK,5.0,0.0,0.0,1.0,6.0,0.0,12.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-02-19,departure,DAM_ALP_LTK,0.0,0.0,0.0,7.0,5.0,0.0,12.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-02-20,arrival,DAM_ALP_LTK,2.0,0.0,0.0,0.0,10.0,1.0,13.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-02-20,departure,DAM_ALP_LTK,3.0,0.0,0.0,5.0,7.0,1.0,16.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-02-21,arrival,DAM_ALP_LTK,0.0,0.0,0.0,0.0,10.0,2.0,12.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-02-21,departure,DAM_ALP_LTK,2.0,0.0,0.0,6.0,3.0,0.0,11.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-02-22,arrival,DAM_ALP_LTK,1.0,0.0,0.0,1.0,10.0,0.0,12.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-02-22,departure,DAM_ALP_LTK,5.0,0.0,0.0,4.0,2.0,0.0,11.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-02-23,arrival,DAM_ALP_LTK,0.0,0.0,0.0,0.0,11.0,0.0,11.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-02-23,departure,DAM_ALP_LTK,4.0,0.0,0.0,6.0,2.0,0.0,12.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-02-24,arrival,DAM_ALP_LTK,2.0,0.0,0.0,1.0,8.0,0.0,11.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-02-24,departure,DAM_ALP_LTK,2.0,0.0,0.0,9.0,0.0,0.0,11.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-02-25,arrival,DAM_ALP_LTK,1.0,0.0,0.0,0.0,7.0,1.0,9.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-02-25,departure,DAM_ALP_LTK,2.0,0.0,0.0,5.0,2.0,0.0,9.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-02-26,arrival,DAM_ALP_LTK,0.0,0.0,0.0,1.0,11.0,0.0,12.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-02-26,departure,DAM_ALP_LTK,3.0,0.0,0.0,3.0,6.0,0.0,12.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-02-27,arrival,DAM_ALP_LTK,1.0,0.0,0.0,0.0,10.0,0.0,11.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-02-27,departure,DAM_ALP_LTK,1.0,0.0,0.0,8.0,5.0,0.0,14.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-02-28,arrival,DAM_ALP_LTK,1.0,0.0,0.0,3.0,7.0,1.0,12.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-02-28,departure,DAM_ALP_LTK,2.0,0.0,0.0,7.0,2.0,0.0,11.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-02-29,arrival,DAM_ALP_LTK,5.0,0.0,0.0,0.0,7.0,0.0,12.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-02-29,departure,DAM_ALP_LTK,3.0,0.0,0.0,5.0,3.0,0.0,11.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-03-01,arrival,DAM_ALP_LTK,1.0,0.0,0.0,3.0,7.0,0.0,11.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-03-01,departure,DAM_ALP_LTK,3.0,0.0,0.0,7.0,2.0,0.0,12.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-03-02,arrival,DAM_ALP_LTK,2.0,0.0,0.0,0.0,9.0,0.0,11.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-03-02,departure,DAM_ALP_LTK,2.0,0.0,0.0,9.0,0.0,0.0,11.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-03-03,arrival,DAM_ALP_LTK,1.0,0.0,0.0,0.0,9.0,0.0,10.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-03-03,departure,DAM_ALP_LTK,3.0,0.0,0.0,4.0,3.0,0.0,10.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-03-04,arrival,DAM_ALP_LTK,1.0,0.0,0.0,0.0,12.0,0.0,13.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-03-04,departure,DAM_ALP_LTK,1.0,0.0,0.0,7.0,5.0,0.0,13.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-03-05,arrival,DAM_ALP_LTK,1.0,0.0,0.0,1.0,8.0,1.0,11.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-03-05,departure,DAM_ALP_LTK,1.0,0.0,0.0,6.0,6.0,0.0,13.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-03-06,arrival,DAM_ALP_LTK,2.0,0.0,0.0,3.0,6.0,1.0,12.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-03-06,departure,DAM_ALP_LTK,4.0,0.0,0.0,7.0,1.0,0.0,12.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-03-07,arrival,DAM_ALP_LTK,1.0,0.0,0.0,2.0,8.0,1.0,12.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-03-07,departure,DAM_ALP_LTK,1.0,0.0,0.0,7.0,3.0,0.0,11.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-03-08,arrival,DAM_ALP_LTK,1.0,0.0,0.0,2.0,8.0,0.0,11.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-03-08,departure,DAM_ALP_LTK,0.0,0.0,0.0,8.0,3.0,1.0,12.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-03-09,arrival,DAM_ALP_LTK,2.0,0.0,0.0,1.0,8.0,0.0,11.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-03-09,departure,DAM_ALP_LTK,2.0,0.0,0.0,7.0,1.0,1.0,11.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-03-10,arrival,DAM_ALP_LTK,0.0,0.0,0.0,2.0,8.0,0.0,10.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-03-10,departure,DAM_ALP_LTK,1.0,0.0,0.0,6.0,3.0,0.0,10.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-03-11,arrival,DAM_ALP_LTK,1.0,0.0,0.0,2.0,10.0,0.0,13.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-03-11,departure,DAM_ALP_LTK,0.0,0.0,0.0,8.0,5.0,0.0,13.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-03-12,arrival,DAM_ALP_LTK,2.0,0.0,0.0,1.0,8.0,0.0,11.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-03-12,departure,DAM_ALP_LTK,1.0,0.0,0.0,7.0,5.0,1.0,14.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-03-13,arrival,DAM_ALP_LTK,4.0,0.0,0.0,1.0,6.0,1.0,12.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-03-13,departure,DAM_ALP_LTK,1.0,0.0,0.0,8.0,1.0,1.0,11.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-03-14,arrival,DAM_ALP_LTK,2.0,0.0,0.0,3.0,7.0,1.0,13.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-03-14,departure,DAM_ALP_LTK,2.0,0.0,0.0,8.0,2.0,0.0,12.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-03-15,arrival,DAM_ALP_LTK,1.0,0.0,0.0,0.0,7.0,0.0,8.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-03-15,departure,DAM_ALP_LTK,1.0,0.0,0.0,4.0,4.0,0.0,9.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-03-16,arrival,DAM_ALP_LTK,2.0,0.0,0.0,2.0,8.0,0.0,12.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-03-16,departure,DAM_ALP_LTK,2.0,0.0,0.0,8.0,2.0,0.0,12.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-03-17,arrival,DAM_ALP_LTK,2.0,0.0,0.0,1.0,7.0,0.0,10.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-03-17,departure,DAM_ALP_LTK,2.0,0.0,0.0,6.0,2.0,0.0,10.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-03-18,arrival,DAM_ALP_LTK,1.0,0.0,0.0,3.0,8.0,0.0,12.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-03-18,departure,DAM_ALP_LTK,2.0,0.0,0.0,6.0,4.0,0.0,12.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-03-19,arrival,DAM_ALP_LTK,1.0,1.0,0.0,1.0,8.0,0.0,11.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-03-19,departure,DAM_ALP_LTK,1.0,1.0,0.0,4.0,8.0,0.0,14.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-03-20,arrival,DAM_ALP_LTK,3.0,0.0,0.0,0.0,6.0,2.0,11.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-03-20,departure,DAM_ALP_LTK,3.0,0.0,0.0,6.0,0.0,0.0,9.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-03-21,arrival,DAM_ALP_LTK,2.0,0.0,0.0,2.0,7.0,1.0,12.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-03-21,departure,DAM_ALP_LTK,3.0,0.0,0.0,4.0,3.0,1.0,11.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-03-22,arrival,DAM_ALP_LTK,1.0,0.0,0.0,0.0,7.0,0.0,8.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-03-22,departure,DAM_ALP_LTK,1.0,0.0,0.0,5.0,3.0,0.0,9.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-03-23,arrival,DAM_ALP_LTK,3.0,0.0,0.0,2.0,6.0,1.0,12.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-03-23,departure,DAM_ALP_LTK,2.0,0.0,0.0,7.0,3.0,0.0,12.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-03-24,arrival,DAM_ALP_LTK,2.0,0.0,0.0,0.0,7.0,1.0,10.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-03-24,departure,DAM_ALP_LTK,1.0,0.0,0.0,6.0,3.0,0.0,10.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-03-25,arrival,DAM_ALP_LTK,0.0,0.0,0.0,2.0,10.0,0.0,12.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-03-25,departure,DAM_ALP_LTK,1.0,0.0,0.0,4.0,7.0,0.0,12.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-03-26,arrival,DAM_ALP_LTK,2.0,0.0,0.0,0.0,6.0,2.0,10.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-03-26,departure,DAM_ALP_LTK,3.0,0.0,0.0,3.0,7.0,0.0,13.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-03-27,arrival,DAM_ALP_LTK,2.0,0.0,0.0,2.0,4.0,3.0,11.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-03-27,departure,DAM_ALP_LTK,0.0,0.0,0.0,7.0,2.0,1.0,10.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-03-28,arrival,DAM_ALP_LTK,1.0,0.0,0.0,3.0,8.0,0.0,12.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-03-28,departure,DAM_ALP_LTK,3.0,0.0,0.0,6.0,1.0,0.0,10.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-03-29,arrival,DAM_ALP_LTK,0.0,0.0,0.0,0.0,4.0,1.0,5.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-03-29,departure,DAM_ALP_LTK,1.0,0.0,0.0,3.0,1.0,0.0,5.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-03-30,arrival,DAM_ALP_LTK,2.0,0.0,0.0,3.0,4.0,1.0,10.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-03-30,departure,DAM_ALP_LTK,3.0,0.0,0.0,5.0,2.0,0.0,10.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-03-31,arrival,DAM_ALP_LTK,3.0,0.0,0.0,2.0,6.0,0.0,11.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-03-31,departure,DAM_ALP_LTK,3.0,0.0,0.0,5.0,3.0,3.0,14.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-04-01,arrival,DAM_ALP_LTK,2.0,0.0,0.0,3.0,12.0,0.0,17.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-04-01,departure,DAM_ALP_LTK,3.0,0.0,0.0,4.0,10.0,0.0,17.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-04-02,arrival,DAM_ALP_LTK,2.0,0.0,0.0,3.0,10.0,0.0,15.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-04-02,departure,DAM_ALP_LTK,5.0,0.0,0.0,7.0,4.0,2.0,18.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-04-03,arrival,DAM_ALP_LTK,5.0,0.0,0.0,2.0,10.0,0.0,17.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-04-03,departure,DAM_ALP_LTK,5.0,0.0,0.0,8.0,3.0,2.0,18.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-04-04,arrival,DAM_ALP_LTK,3.0,1.0,0.0,1.0,10.0,1.0,16.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-04-04,departure,DAM_ALP_LTK,5.0,0.0,0.0,4.0,4.0,2.0,15.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-04-05,arrival,DAM_ALP_LTK,2.0,0.0,0.0,2.0,11.0,0.0,15.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-04-05,departure,DAM_ALP_LTK,4.0,0.0,0.0,5.0,5.0,0.0,14.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-04-06,arrival,DAM_ALP_LTK,5.0,0.0,0.0,1.0,8.0,0.0,14.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-04-06,departure,DAM_ALP_LTK,3.0,0.0,0.0,11.0,1.0,0.0,15.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-04-07,arrival,DAM_ALP_LTK,1.0,0.0,0.0,1.0,13.0,0.0,15.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-04-07,departure,DAM_ALP_LTK,4.0,0.0,0.0,6.0,3.0,1.0,14.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-04-08,arrival,DAM_ALP_LTK,1.0,1.0,0.0,3.0,10.0,0.0,15.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-04-08,departure,DAM_ALP_LTK,6.0,1.0,0.0,4.0,7.0,0.0,18.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-04-09,arrival,DAM_ALP_LTK,0.0,0.0,0.0,3.0,14.0,3.0,20.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-04-09,departure,DAM_ALP_LTK,12.0,0.0,0.0,3.0,3.0,1.0,19.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-04-10,arrival,DAM_ALP_LTK,1.0,0.0,0.0,0.0,12.0,4.0,17.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-04-10,departure,DAM_ALP_LTK,4.0,0.0,0.0,6.0,5.0,3.0,18.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-04-11,arrival,DAM_ALP_LTK,4.0,0.0,0.0,1.0,9.0,3.0,17.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-04-11,departure,DAM_ALP_LTK,8.0,0.0,0.0,3.0,5.0,0.0,16.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-04-12,arrival,DAM_ALP_LTK,3.0,0.0,0.0,2.0,10.0,0.0,15.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-04-12,departure,DAM_ALP_LTK,4.0,0.0,1.0,5.0,3.0,1.0,14.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-04-13,arrival,DAM_ALP_LTK,3.0,1.0,0.0,2.0,8.0,2.0,16.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-04-13,departure,DAM_ALP_LTK,7.0,0.0,0.0,8.0,2.0,0.0,17.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-04-14,arrival,DAM_ALP_LTK,0.0,1.0,0.0,0.0,10.0,4.0,15.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-04-14,departure,DAM_ALP_LTK,6.0,0.0,0.0,1.0,6.0,1.0,14.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-04-15,arrival,DAM_ALP_LTK,6.0,0.0,0.0,0.0,9.0,3.0,18.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-04-15,departure,DAM_ALP_LTK,5.0,0.0,0.0,4.0,8.0,3.0,20.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-04-16,arrival,DAM_ALP_LTK,3.0,0.0,0.0,4.0,11.0,2.0,20.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-04-16,departure,DAM_ALP_LTK,3.0,0.0,1.0,4.0,10.0,1.0,19.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-04-17,arrival,DAM_ALP_LTK,2.0,0.0,0.0,0.0,13.0,2.0,17.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-04-17,departure,DAM_ALP_LTK,2.0,0.0,1.0,6.0,6.0,2.0,17.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-04-18,arrival,DAM_ALP_LTK,1.0,0.0,0.0,0.0,16.0,0.0,17.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-04-18,departure,DAM_ALP_LTK,4.0,0.0,0.0,2.0,8.0,2.0,16.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-04-19,arrival,DAM_ALP_LTK,3.0,0.0,0.0,3.0,7.0,2.0,15.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-04-19,departure,DAM_ALP_LTK,3.0,0.0,0.0,3.0,7.0,1.0,14.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-04-20,arrival,DAM_ALP_LTK,6.0,0.0,0.0,3.0,6.0,0.0,15.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-04-20,departure,DAM_ALP_LTK,5.0,0.0,0.0,6.0,4.0,1.0,16.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-04-21,arrival,DAM_ALP_LTK,4.0,0.0,0.0,1.0,10.0,1.0,16.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-04-21,departure,DAM_ALP_LTK,5.0,0.0,0.0,6.0,3.0,1.0,15.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-04-22,arrival,DAM_ALP_LTK,2.0,0.0,0.0,1.0,12.0,1.0,16.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-04-22,departure,DAM_ALP_LTK,6.0,0.0,0.0,6.0,7.0,0.0,19.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-04-23,arrival,DAM_ALP_LTK,2.0,0.0,1.0,3.0,12.0,2.0,20.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-04-23,departure,DAM_ALP_LTK,5.0,0.0,0.0,6.0,7.0,1.0,19.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-04-24,arrival,DAM_ALP_LTK,1.0,0.0,0.0,0.0,13.0,3.0,17.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-04-24,departure,DAM_ALP_LTK,6.0,0.0,0.0,2.0,8.0,2.0,18.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-04-25,arrival,DAM_ALP_LTK,1.0,0.0,0.0,2.0,14.0,0.0,17.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-04-25,departure,DAM_ALP_LTK,5.0,0.0,0.0,3.0,7.0,1.0,16.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-04-26,arrival,DAM_ALP_LTK,1.0,0.0,0.0,5.0,9.0,0.0,15.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-04-26,departure,DAM_ALP_LTK,6.0,0.0,0.0,1.0,7.0,0.0,14.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-04-27,arrival,DAM_ALP_LTK,3.0,0.0,0.0,5.0,5.0,2.0,15.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-04-27,departure,DAM_ALP_LTK,5.0,0.0,0.0,7.0,4.0,0.0,16.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-04-28,arrival,DAM_ALP_LTK,1.0,1.0,0.0,0.0,14.0,0.0,16.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-04-28,departure,DAM_ALP_LTK,2.0,0.0,0.0,5.0,9.0,0.0,16.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-04-29,arrival,DAM_ALP_LTK,0.0,0.0,0.0,0.0,0.0,0.0,0.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",unverified_data_gap,Unverified data gap in source series: 0 recorded operations across all status categories
+2024-04-29,departure,DAM_ALP_LTK,0.0,0.0,0.0,0.0,0.0,0.0,0.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",unverified_data_gap,Unverified data gap in source series: 0 recorded operations across all status categories
+2024-04-30,arrival,DAM_ALP_LTK,0.0,0.0,0.0,0.0,0.0,0.0,0.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",unverified_data_gap,Unverified data gap in source series: 0 recorded operations across all status categories
+2024-04-30,departure,DAM_ALP_LTK,0.0,0.0,0.0,0.0,0.0,0.0,0.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",unverified_data_gap,Unverified data gap in source series: 0 recorded operations across all status categories
+2024-05-01,arrival,DAM_ALP_LTK,2.0,0.0,0.0,4.0,11.0,0.0,17.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-05-01,departure,DAM_ALP_LTK,5.0,0.0,0.0,3.0,6.0,3.0,17.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-05-02,arrival,DAM_ALP_LTK,3.0,0.0,0.0,0.0,13.0,1.0,17.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-05-02,departure,DAM_ALP_LTK,6.0,0.0,0.0,4.0,4.0,2.0,16.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-05-03,arrival,DAM_ALP_LTK,1.0,0.0,0.0,3.0,10.0,1.0,15.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-05-03,departure,DAM_ALP_LTK,5.0,0.0,0.0,2.0,5.0,2.0,14.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-05-04,arrival,DAM_ALP_LTK,4.0,0.0,0.0,2.0,8.0,2.0,16.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-05-04,departure,DAM_ALP_LTK,5.0,0.0,0.0,6.0,5.0,1.0,17.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-05-05,arrival,DAM_ALP_LTK,4.0,1.0,0.0,0.0,11.0,0.0,16.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-05-05,departure,DAM_ALP_LTK,3.0,0.0,0.0,7.0,3.0,2.0,15.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-05-06,arrival,DAM_ALP_LTK,2.0,1.0,0.0,1.0,9.0,3.0,16.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-05-06,departure,DAM_ALP_LTK,4.0,0.0,0.0,4.0,10.0,1.0,19.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-05-07,arrival,DAM_ALP_LTK,3.0,0.0,0.0,5.0,11.0,1.0,20.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-05-07,departure,DAM_ALP_LTK,6.0,0.0,0.0,7.0,5.0,1.0,19.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-05-08,arrival,DAM_ALP_LTK,5.0,1.0,0.0,0.0,11.0,1.0,18.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-05-08,departure,DAM_ALP_LTK,8.0,0.0,0.0,7.0,2.0,1.0,18.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-05-09,arrival,DAM_ALP_LTK,3.0,0.0,0.0,3.0,11.0,0.0,17.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-05-09,departure,DAM_ALP_LTK,5.0,0.0,0.0,8.0,1.0,1.0,15.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-05-10,arrival,DAM_ALP_LTK,0.0,0.0,0.0,3.0,10.0,2.0,15.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-05-10,departure,DAM_ALP_LTK,2.0,0.0,0.0,6.0,4.0,2.0,14.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-05-11,arrival,DAM_ALP_LTK,1.0,0.0,0.0,5.0,10.0,1.0,17.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-05-11,departure,DAM_ALP_LTK,3.0,0.0,0.0,8.0,6.0,1.0,18.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-05-12,arrival,DAM_ALP_LTK,1.0,0.0,0.0,3.0,11.0,2.0,17.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-05-12,departure,DAM_ALP_LTK,4.0,0.0,0.0,7.0,5.0,0.0,16.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-05-13,arrival,DAM_ALP_LTK,2.0,0.0,0.0,2.0,11.0,2.0,17.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-05-13,departure,DAM_ALP_LTK,6.0,0.0,0.0,5.0,8.0,0.0,19.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-05-14,arrival,DAM_ALP_LTK,2.0,0.0,0.0,3.0,14.0,1.0,20.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-05-14,departure,DAM_ALP_LTK,3.0,0.0,0.0,9.0,8.0,0.0,20.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-05-15,arrival,DAM_ALP_LTK,3.0,0.0,0.0,1.0,11.0,4.0,19.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-05-15,departure,DAM_ALP_LTK,6.0,0.0,0.0,9.0,3.0,1.0,19.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-05-16,arrival,DAM_ALP_LTK,2.0,0.0,0.0,3.0,10.0,2.0,17.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-05-16,departure,DAM_ALP_LTK,5.0,0.0,0.0,8.0,3.0,0.0,16.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-05-17,arrival,DAM_ALP_LTK,1.0,0.0,0.0,4.0,9.0,0.0,14.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-05-17,departure,DAM_ALP_LTK,4.0,0.0,0.0,4.0,5.0,1.0,14.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-05-18,arrival,DAM_ALP_LTK,3.0,0.0,0.0,4.0,10.0,1.0,18.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-05-18,departure,DAM_ALP_LTK,6.0,0.0,0.0,8.0,2.0,2.0,18.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-05-19,arrival,DAM_ALP_LTK,4.0,0.0,0.0,3.0,10.0,0.0,17.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-05-19,departure,DAM_ALP_LTK,4.0,0.0,0.0,8.0,2.0,2.0,16.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-05-20,arrival,DAM_ALP_LTK,1.0,0.0,0.0,2.0,13.0,0.0,16.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-05-20,departure,DAM_ALP_LTK,5.0,0.0,0.0,6.0,8.0,0.0,19.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-05-21,arrival,DAM_ALP_LTK,5.0,0.0,0.0,3.0,12.0,2.0,22.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-05-21,departure,DAM_ALP_LTK,3.0,0.0,0.0,8.0,9.0,2.0,22.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-05-22,arrival,DAM_ALP_LTK,2.0,0.0,0.0,1.0,11.0,5.0,19.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-05-22,departure,DAM_ALP_LTK,8.0,0.0,0.0,9.0,1.0,2.0,20.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-05-23,arrival,DAM_ALP_LTK,3.0,0.0,1.0,4.0,9.0,1.0,18.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-05-23,departure,DAM_ALP_LTK,3.0,0.0,0.0,10.0,2.0,2.0,17.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-05-24,arrival,DAM_ALP_LTK,0.0,0.0,0.0,5.0,11.0,0.0,16.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-05-24,departure,DAM_ALP_LTK,4.0,0.0,0.0,7.0,4.0,1.0,16.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-05-25,arrival,DAM_ALP_LTK,2.0,0.0,0.0,4.0,12.0,1.0,19.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-05-25,departure,DAM_ALP_LTK,7.0,0.0,0.0,8.0,2.0,2.0,19.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-05-26,arrival,DAM_ALP_LTK,4.0,0.0,0.0,2.0,11.0,0.0,17.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-05-26,departure,DAM_ALP_LTK,4.0,0.0,0.0,7.0,5.0,1.0,17.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-05-27,arrival,DAM_ALP_LTK,2.0,0.0,0.0,5.0,12.0,0.0,19.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-05-27,departure,DAM_ALP_LTK,8.0,0.0,0.0,7.0,5.0,1.0,21.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-05-28,arrival,DAM_ALP_LTK,4.0,0.0,0.0,5.0,13.0,0.0,22.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-05-28,departure,DAM_ALP_LTK,4.0,0.0,1.0,8.0,7.0,1.0,21.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-05-29,arrival,DAM_ALP_LTK,4.0,0.0,0.0,2.0,11.0,2.0,19.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-05-29,departure,DAM_ALP_LTK,7.0,1.0,0.0,8.0,2.0,1.0,19.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-05-30,arrival,DAM_ALP_LTK,5.0,0.0,1.0,1.0,10.0,2.0,19.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-05-30,departure,DAM_ALP_LTK,5.0,0.0,0.0,7.0,4.0,2.0,18.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-05-31,arrival,DAM_ALP_LTK,2.0,0.0,0.0,3.0,11.0,1.0,17.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-05-31,departure,DAM_ALP_LTK,5.0,0.0,0.0,5.0,4.0,2.0,16.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-06-01,arrival,DAM_ALP_LTK,4.0,0.0,0.0,4.0,9.0,1.0,18.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-06-01,departure,DAM_ALP_LTK,4.0,0.0,0.0,8.0,3.0,4.0,19.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-06-02,arrival,DAM_ALP_LTK,3.0,0.0,0.0,3.0,11.0,1.0,18.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-06-02,departure,DAM_ALP_LTK,2.0,0.0,0.0,7.0,2.0,5.0,16.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-06-03,arrival,DAM_ALP_LTK,2.0,0.0,0.0,4.0,11.0,1.0,18.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-06-03,departure,DAM_ALP_LTK,4.0,0.0,0.0,8.0,7.0,2.0,21.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-06-04,arrival,DAM_ALP_LTK,1.0,0.0,0.0,2.0,15.0,1.0,19.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-06-04,departure,DAM_ALP_LTK,7.0,0.0,0.0,2.0,8.0,1.0,18.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-06-05,arrival,DAM_ALP_LTK,1.0,1.0,0.0,1.0,3.0,1.0,7.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-06-05,departure,DAM_ALP_LTK,0.0,0.0,0.0,5.0,2.0,1.0,8.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-06-06,arrival,DAM_ALP_LTK,1.0,0.0,0.0,1.0,10.0,0.0,12.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-06-06,departure,DAM_ALP_LTK,0.0,1.0,0.0,1.0,7.0,0.0,9.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-06-07,arrival,DAM_ALP_LTK,0.0,0.0,0.0,0.0,0.0,0.0,0.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",unverified_data_gap,Unverified data gap in source series: 0 recorded operations across all status categories
+2024-06-07,departure,DAM_ALP_LTK,0.0,0.0,0.0,0.0,0.0,0.0,0.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",unverified_data_gap,Unverified data gap in source series: 0 recorded operations across all status categories
+2024-06-08,arrival,DAM_ALP_LTK,0.0,0.0,0.0,0.0,0.0,0.0,0.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",unverified_data_gap,Unverified data gap in source series: 0 recorded operations across all status categories
+2024-06-08,departure,DAM_ALP_LTK,0.0,0.0,0.0,0.0,0.0,0.0,0.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",unverified_data_gap,Unverified data gap in source series: 0 recorded operations across all status categories
+2024-06-09,arrival,DAM_ALP_LTK,0.0,0.0,0.0,0.0,0.0,0.0,0.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",unverified_data_gap,Unverified data gap in source series: 0 recorded operations across all status categories
+2024-06-09,departure,DAM_ALP_LTK,0.0,0.0,0.0,0.0,0.0,0.0,0.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",unverified_data_gap,Unverified data gap in source series: 0 recorded operations across all status categories
+2024-06-10,arrival,DAM_ALP_LTK,2.0,1.0,0.0,1.0,8.0,1.0,13.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-06-10,departure,DAM_ALP_LTK,6.0,0.0,0.0,3.0,3.0,2.0,14.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-06-11,arrival,DAM_ALP_LTK,1.0,0.0,0.0,3.0,13.0,5.0,22.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-06-11,departure,DAM_ALP_LTK,5.0,0.0,0.0,4.0,7.0,4.0,20.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-06-12,arrival,DAM_ALP_LTK,0.0,0.0,0.0,2.0,12.0,4.0,18.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-06-12,departure,DAM_ALP_LTK,5.0,0.0,0.0,9.0,2.0,3.0,19.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-06-13,arrival,DAM_ALP_LTK,1.0,0.0,0.0,4.0,11.0,2.0,18.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-06-13,departure,DAM_ALP_LTK,5.0,0.0,0.0,7.0,2.0,3.0,17.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-06-14,arrival,DAM_ALP_LTK,1.0,0.0,0.0,4.0,12.0,1.0,18.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-06-14,departure,DAM_ALP_LTK,4.0,0.0,0.0,4.0,7.0,2.0,17.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-06-15,arrival,DAM_ALP_LTK,4.0,0.0,0.0,2.0,11.0,2.0,19.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-06-15,departure,DAM_ALP_LTK,5.0,0.0,0.0,6.0,6.0,2.0,19.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-06-16,arrival,DAM_ALP_LTK,2.0,0.0,0.0,6.0,7.0,2.0,17.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-06-16,departure,DAM_ALP_LTK,4.0,0.0,0.0,9.0,1.0,2.0,16.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-06-17,arrival,DAM_ALP_LTK,2.0,0.0,0.0,6.0,8.0,2.0,18.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-06-17,departure,DAM_ALP_LTK,5.0,0.0,0.0,9.0,5.0,2.0,21.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-06-18,arrival,DAM_ALP_LTK,4.0,0.0,0.0,4.0,13.0,1.0,22.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-06-18,departure,DAM_ALP_LTK,2.0,0.0,0.0,9.0,6.0,4.0,21.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-06-19,arrival,DAM_ALP_LTK,2.0,0.0,0.0,6.0,8.0,3.0,19.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-06-19,departure,DAM_ALP_LTK,2.0,0.0,0.0,15.0,3.0,0.0,20.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-06-20,arrival,DAM_ALP_LTK,4.0,0.0,0.0,3.0,11.0,1.0,19.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-06-20,departure,DAM_ALP_LTK,2.0,0.0,1.0,10.0,3.0,2.0,18.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-06-21,arrival,DAM_ALP_LTK,4.0,0.0,0.0,4.0,8.0,2.0,18.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-06-21,departure,DAM_ALP_LTK,5.0,0.0,0.0,7.0,4.0,1.0,17.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-06-22,arrival,DAM_ALP_LTK,5.0,0.0,0.0,3.0,9.0,2.0,19.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-06-22,departure,DAM_ALP_LTK,3.0,0.0,1.0,9.0,4.0,2.0,19.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-06-23,arrival,DAM_ALP_LTK,3.0,0.0,0.0,4.0,7.0,2.0,16.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-06-23,departure,DAM_ALP_LTK,10.0,0.0,0.0,5.0,0.0,2.0,17.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-06-24,arrival,DAM_ALP_LTK,4.0,2.0,0.0,5.0,7.0,1.0,19.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-06-24,departure,DAM_ALP_LTK,8.0,1.0,0.0,8.0,5.0,1.0,23.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-06-25,arrival,DAM_ALP_LTK,5.0,0.0,0.0,4.0,14.0,1.0,24.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-06-25,departure,DAM_ALP_LTK,6.0,0.0,0.0,6.0,7.0,3.0,22.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-06-26,arrival,DAM_ALP_LTK,3.0,2.0,0.0,4.0,9.0,0.0,18.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-06-26,departure,DAM_ALP_LTK,2.0,1.0,0.0,9.0,4.0,3.0,19.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-06-27,arrival,DAM_ALP_LTK,3.0,2.0,0.0,2.0,10.0,2.0,19.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-06-27,departure,DAM_ALP_LTK,8.0,1.0,0.0,7.0,1.0,1.0,18.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-06-28,arrival,DAM_ALP_LTK,3.0,1.0,0.0,6.0,9.0,0.0,19.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-06-28,departure,DAM_ALP_LTK,4.0,0.0,1.0,5.0,4.0,4.0,18.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-06-29,arrival,DAM_ALP_LTK,5.0,2.0,0.0,3.0,7.0,2.0,19.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-06-29,departure,DAM_ALP_LTK,2.0,1.0,1.0,11.0,1.0,2.0,18.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-06-30,arrival,DAM_ALP_LTK,5.0,0.0,0.0,2.0,9.0,1.0,17.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-06-30,departure,DAM_ALP_LTK,2.0,1.0,0.0,5.0,3.0,4.0,15.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-07-01,arrival,DAM_ALP_LTK,1.0,1.0,0.0,3.0,13.0,2.0,20.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-07-01,departure,DAM_ALP_LTK,6.0,0.0,0.0,8.0,5.0,3.0,22.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-07-02,arrival,DAM_ALP_LTK,1.0,0.0,0.0,2.0,19.0,0.0,22.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-07-02,departure,DAM_ALP_LTK,1.0,0.0,0.0,7.0,12.0,0.0,20.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-07-03,arrival,DAM_ALP_LTK,2.0,1.0,0.0,1.0,7.0,0.0,11.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-07-03,departure,DAM_ALP_LTK,1.0,0.0,0.0,7.0,2.0,1.0,11.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-07-04,arrival,DAM_ALP_LTK,2.0,0.0,0.0,5.0,12.0,1.0,20.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-07-04,departure,DAM_ALP_LTK,7.0,0.0,0.0,8.0,2.0,1.0,18.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-07-05,arrival,DAM_ALP_LTK,2.0,0.0,0.0,3.0,12.0,0.0,17.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-07-05,departure,DAM_ALP_LTK,3.0,0.0,0.0,4.0,8.0,1.0,16.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-07-06,arrival,DAM_ALP_LTK,2.0,1.0,0.0,6.0,10.0,0.0,19.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-07-06,departure,DAM_ALP_LTK,6.0,0.0,0.0,9.0,4.0,0.0,19.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-07-07,arrival,DAM_ALP_LTK,3.0,0.0,0.0,3.0,9.0,1.0,16.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-07-07,departure,DAM_ALP_LTK,3.0,0.0,0.0,6.0,5.0,2.0,16.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-07-08,arrival,DAM_ALP_LTK,2.0,0.0,0.0,7.0,9.0,1.0,19.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-07-08,departure,DAM_ALP_LTK,5.0,0.0,0.0,9.0,5.0,2.0,21.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-07-09,arrival,DAM_ALP_LTK,4.0,0.0,0.0,3.0,13.0,2.0,22.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-07-09,departure,DAM_ALP_LTK,9.0,0.0,0.0,4.0,6.0,1.0,20.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-07-10,arrival,DAM_ALP_LTK,2.0,0.0,0.0,6.0,8.0,2.0,18.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-07-10,departure,DAM_ALP_LTK,4.0,0.0,0.0,7.0,5.0,4.0,20.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-07-11,arrival,DAM_ALP_LTK,3.0,0.0,0.0,4.0,10.0,2.0,19.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-07-11,departure,DAM_ALP_LTK,5.0,0.0,0.0,9.0,4.0,0.0,18.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-07-12,arrival,DAM_ALP_LTK,3.0,0.0,0.0,4.0,9.0,0.0,16.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-07-12,departure,DAM_ALP_LTK,3.0,0.0,0.0,8.0,3.0,1.0,15.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-07-13,arrival,DAM_ALP_LTK,3.0,0.0,0.0,3.0,11.0,2.0,19.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-07-13,departure,DAM_ALP_LTK,5.0,0.0,0.0,8.0,3.0,3.0,19.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-07-14,arrival,DAM_ALP_LTK,2.0,0.0,0.0,3.0,9.0,1.0,15.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-07-14,departure,DAM_ALP_LTK,7.0,0.0,0.0,4.0,1.0,3.0,15.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-07-15,arrival,DAM_ALP_LTK,3.0,0.0,0.0,4.0,9.0,3.0,19.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-07-15,departure,DAM_ALP_LTK,8.0,0.0,0.0,4.0,5.0,4.0,21.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-07-16,arrival,DAM_ALP_LTK,4.0,0.0,0.0,2.0,14.0,2.0,22.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-07-16,departure,DAM_ALP_LTK,8.0,0.0,0.0,6.0,4.0,3.0,21.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-07-17,arrival,DAM_ALP_LTK,5.0,0.0,0.0,2.0,9.0,2.0,18.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-07-17,departure,DAM_ALP_LTK,6.0,0.0,0.0,9.0,3.0,2.0,20.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-07-18,arrival,DAM_ALP_LTK,1.0,0.0,0.0,5.0,10.0,2.0,18.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-07-18,departure,DAM_ALP_LTK,4.0,0.0,0.0,9.0,2.0,2.0,17.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-07-19,arrival,DAM_ALP_LTK,3.0,0.0,0.0,3.0,8.0,2.0,16.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-07-19,departure,DAM_ALP_LTK,2.0,0.0,0.0,6.0,5.0,2.0,15.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-07-20,arrival,DAM_ALP_LTK,3.0,0.0,0.0,5.0,10.0,1.0,19.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-07-20,departure,DAM_ALP_LTK,7.0,0.0,0.0,9.0,1.0,1.0,18.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-07-21,arrival,DAM_ALP_LTK,4.0,0.0,0.0,3.0,8.0,0.0,15.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-07-21,departure,DAM_ALP_LTK,5.0,0.0,1.0,6.0,2.0,1.0,15.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-07-22,arrival,DAM_ALP_LTK,4.0,1.0,0.0,4.0,11.0,0.0,20.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-07-22,departure,DAM_ALP_LTK,8.0,0.0,0.0,7.0,7.0,0.0,22.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-07-23,arrival,DAM_ALP_LTK,5.0,0.0,0.0,2.0,14.0,1.0,22.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-07-23,departure,DAM_ALP_LTK,6.0,0.0,1.0,7.0,6.0,1.0,21.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-07-24,arrival,DAM_ALP_LTK,4.0,0.0,0.0,3.0,10.0,2.0,19.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-07-24,departure,DAM_ALP_LTK,4.0,0.0,0.0,9.0,3.0,5.0,21.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-07-25,arrival,DAM_ALP_LTK,2.0,0.0,0.0,7.0,9.0,1.0,19.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-07-25,departure,DAM_ALP_LTK,6.0,0.0,1.0,9.0,1.0,0.0,17.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-07-26,arrival,DAM_ALP_LTK,1.0,1.0,0.0,3.0,10.0,1.0,16.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-07-26,departure,DAM_ALP_LTK,5.0,0.0,0.0,5.0,5.0,0.0,15.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-07-27,arrival,DAM_ALP_LTK,2.0,0.0,0.0,5.0,11.0,2.0,20.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-07-27,departure,DAM_ALP_LTK,4.0,0.0,0.0,11.0,3.0,2.0,20.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-07-28,arrival,DAM_ALP_LTK,2.0,0.0,0.0,5.0,7.0,1.0,15.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-07-28,departure,DAM_ALP_LTK,5.0,0.0,0.0,8.0,1.0,1.0,15.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-07-29,arrival,DAM_ALP_LTK,5.0,0.0,0.0,2.0,8.0,4.0,19.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-07-29,departure,DAM_ALP_LTK,6.0,0.0,0.0,8.0,5.0,2.0,21.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-07-30,arrival,DAM_ALP_LTK,4.0,0.0,0.0,3.0,14.0,2.0,23.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-07-30,departure,DAM_ALP_LTK,5.0,0.0,0.0,9.0,7.0,2.0,23.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-07-31,arrival,DAM_ALP_LTK,1.0,0.0,0.0,4.0,8.0,5.0,18.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-07-31,departure,DAM_ALP_LTK,4.0,0.0,0.0,10.0,2.0,4.0,20.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-08-01,arrival,DAM_ALP_LTK,6.0,0.0,0.0,5.0,8.0,0.0,19.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-08-01,departure,DAM_ALP_LTK,3.0,0.0,0.0,13.0,2.0,0.0,18.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-08-02,arrival,DAM_ALP_LTK,2.0,0.0,0.0,5.0,8.0,1.0,16.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-08-02,departure,DAM_ALP_LTK,1.0,0.0,0.0,9.0,2.0,3.0,15.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-08-03,arrival,DAM_ALP_LTK,3.0,0.0,0.0,5.0,11.0,1.0,20.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-08-03,departure,DAM_ALP_LTK,4.0,0.0,0.0,9.0,4.0,3.0,20.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-08-04,arrival,DAM_ALP_LTK,2.0,0.0,0.0,2.0,9.0,2.0,15.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-08-04,departure,DAM_ALP_LTK,4.0,0.0,0.0,7.0,3.0,1.0,15.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-08-05,arrival,DAM_ALP_LTK,4.0,0.0,0.0,6.0,10.0,1.0,21.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-08-05,departure,DAM_ALP_LTK,8.0,0.0,0.0,5.0,6.0,4.0,23.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-08-06,arrival,DAM_ALP_LTK,1.0,0.0,0.0,4.0,17.0,3.0,25.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-08-06,departure,DAM_ALP_LTK,3.0,0.0,0.0,6.0,10.0,6.0,25.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-08-07,arrival,DAM_ALP_LTK,2.0,1.0,0.0,2.0,13.0,2.0,20.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-08-07,departure,DAM_ALP_LTK,11.0,0.0,0.0,5.0,4.0,2.0,22.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-08-08,arrival,DAM_ALP_LTK,1.0,0.0,0.0,2.0,13.0,3.0,19.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-08-08,departure,DAM_ALP_LTK,11.0,0.0,0.0,3.0,4.0,0.0,18.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-08-09,arrival,DAM_ALP_LTK,4.0,0.0,0.0,3.0,9.0,0.0,16.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-08-09,departure,DAM_ALP_LTK,4.0,0.0,0.0,6.0,4.0,1.0,15.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-08-10,arrival,DAM_ALP_LTK,3.0,0.0,0.0,2.0,11.0,4.0,20.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-08-10,departure,DAM_ALP_LTK,5.0,0.0,0.0,6.0,5.0,4.0,20.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-08-11,arrival,DAM_ALP_LTK,2.0,0.0,0.0,2.0,6.0,5.0,15.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-08-11,departure,DAM_ALP_LTK,4.0,0.0,0.0,6.0,4.0,2.0,16.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-08-12,arrival,DAM_ALP_LTK,3.0,0.0,0.0,4.0,11.0,3.0,21.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-08-12,departure,DAM_ALP_LTK,4.0,0.0,0.0,8.0,10.0,1.0,23.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-08-13,arrival,DAM_ALP_LTK,1.0,0.0,0.0,6.0,17.0,1.0,25.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-08-13,departure,DAM_ALP_LTK,6.0,0.0,1.0,8.0,9.0,1.0,25.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-08-14,arrival,DAM_ALP_LTK,2.0,0.0,0.0,3.0,12.0,2.0,19.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-08-14,departure,DAM_ALP_LTK,5.0,0.0,0.0,7.0,6.0,3.0,21.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-08-15,arrival,DAM_ALP_LTK,2.0,0.0,2.0,3.0,12.0,0.0,19.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-08-15,departure,DAM_ALP_LTK,8.0,0.0,0.0,7.0,2.0,0.0,17.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-08-16,arrival,DAM_ALP_LTK,4.0,0.0,1.0,0.0,11.0,0.0,16.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-08-16,departure,DAM_ALP_LTK,4.0,0.0,0.0,6.0,5.0,1.0,16.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-08-17,arrival,DAM_ALP_LTK,3.0,0.0,0.0,6.0,11.0,0.0,20.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-08-17,departure,DAM_ALP_LTK,4.0,0.0,0.0,8.0,4.0,2.0,18.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-08-18,arrival,DAM_ALP_LTK,3.0,0.0,0.0,3.0,6.0,3.0,15.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-08-18,departure,DAM_ALP_LTK,3.0,0.0,0.0,6.0,4.0,2.0,15.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-08-19,arrival,DAM_ALP_LTK,1.0,0.0,0.0,3.0,13.0,3.0,20.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-08-19,departure,DAM_ALP_LTK,3.0,0.0,1.0,7.0,9.0,1.0,21.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-08-20,arrival,DAM_ALP_LTK,2.0,0.0,0.0,6.0,13.0,3.0,24.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-08-20,departure,DAM_ALP_LTK,7.0,0.0,0.0,9.0,5.0,3.0,24.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-08-21,arrival,DAM_ALP_LTK,3.0,0.0,1.0,0.0,12.0,2.0,18.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-08-21,departure,DAM_ALP_LTK,8.0,0.0,0.0,6.0,6.0,1.0,21.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-08-22,arrival,DAM_ALP_LTK,3.0,0.0,0.0,2.0,10.0,0.0,15.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-08-22,departure,DAM_ALP_LTK,4.0,0.0,0.0,6.0,2.0,3.0,15.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-08-23,arrival,DAM_ALP_LTK,1.0,0.0,0.0,2.0,12.0,1.0,16.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-08-23,departure,DAM_ALP_LTK,4.0,0.0,0.0,5.0,4.0,3.0,16.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-08-24,arrival,DAM_ALP_LTK,3.0,0.0,2.0,2.0,10.0,3.0,20.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-08-24,departure,DAM_ALP_LTK,4.0,0.0,0.0,5.0,6.0,4.0,19.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-08-25,arrival,DAM_ALP_LTK,3.0,0.0,0.0,2.0,9.0,1.0,15.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-08-25,departure,DAM_ALP_LTK,5.0,0.0,0.0,6.0,1.0,3.0,15.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-08-26,arrival,DAM_ALP_LTK,2.0,0.0,0.0,2.0,13.0,3.0,20.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-08-26,departure,DAM_ALP_LTK,9.0,0.0,0.0,5.0,8.0,0.0,22.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-08-27,arrival,DAM_ALP_LTK,3.0,0.0,0.0,4.0,15.0,1.0,23.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-08-27,departure,DAM_ALP_LTK,7.0,0.0,0.0,9.0,7.0,0.0,23.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-08-28,arrival,DAM_ALP_LTK,2.0,0.0,0.0,5.0,9.0,2.0,18.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-08-28,departure,DAM_ALP_LTK,4.0,0.0,0.0,10.0,4.0,2.0,20.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-08-29,arrival,DAM_ALP_LTK,1.0,0.0,2.0,0.0,12.0,0.0,15.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-08-29,departure,DAM_ALP_LTK,4.0,0.0,0.0,5.0,1.0,4.0,14.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-08-30,arrival,DAM_ALP_LTK,1.0,0.0,1.0,0.0,14.0,0.0,16.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-08-30,departure,DAM_ALP_LTK,5.0,0.0,0.0,7.0,2.0,2.0,16.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-08-31,arrival,DAM_ALP_LTK,3.0,0.0,0.0,3.0,13.0,1.0,20.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-08-31,departure,DAM_ALP_LTK,6.0,0.0,0.0,7.0,6.0,0.0,19.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-09-01,arrival,DAM_ALP_LTK,2.0,0.0,1.0,3.0,8.0,2.0,16.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-09-01,departure,DAM_ALP_LTK,5.0,0.0,0.0,6.0,1.0,3.0,15.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-09-02,arrival,DAM_ALP_LTK,0.0,0.0,0.0,0.0,12.0,0.0,12.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-09-02,departure,DAM_ALP_LTK,1.0,0.0,0.0,1.0,12.0,0.0,14.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-09-03,arrival,DAM_ALP_LTK,1.0,0.0,0.0,2.0,15.0,2.0,20.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-09-03,departure,DAM_ALP_LTK,6.0,0.0,0.0,8.0,5.0,2.0,21.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-09-04,arrival,DAM_ALP_LTK,2.0,0.0,1.0,1.0,11.0,3.0,18.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-09-04,departure,DAM_ALP_LTK,4.0,0.0,0.0,9.0,4.0,3.0,20.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-09-05,arrival,DAM_ALP_LTK,1.0,0.0,2.0,1.0,14.0,1.0,19.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-09-05,departure,DAM_ALP_LTK,5.0,0.0,0.0,9.0,2.0,2.0,18.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-09-06,arrival,DAM_ALP_LTK,1.0,0.0,2.0,1.0,11.0,1.0,16.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-09-06,departure,DAM_ALP_LTK,2.0,0.0,0.0,7.0,5.0,2.0,16.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-09-07,arrival,DAM_ALP_LTK,4.0,0.0,1.0,3.0,10.0,2.0,20.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-09-07,departure,DAM_ALP_LTK,5.0,0.0,1.0,9.0,4.0,0.0,19.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-09-08,arrival,DAM_ALP_LTK,1.0,0.0,0.0,7.0,5.0,2.0,15.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-09-08,departure,DAM_ALP_LTK,6.0,0.0,0.0,6.0,1.0,2.0,15.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-09-09,arrival,DAM_ALP_LTK,1.0,0.0,0.0,5.0,12.0,1.0,19.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-09-09,departure,DAM_ALP_LTK,2.0,0.0,0.0,8.0,7.0,4.0,21.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-09-10,arrival,DAM_ALP_LTK,5.0,0.0,1.0,1.0,14.0,2.0,23.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-09-10,departure,DAM_ALP_LTK,5.0,0.0,0.0,10.0,7.0,1.0,23.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-09-11,arrival,DAM_ALP_LTK,3.0,0.0,0.0,4.0,9.0,2.0,18.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-09-11,departure,DAM_ALP_LTK,3.0,0.0,0.0,13.0,2.0,2.0,20.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-09-12,arrival,DAM_ALP_LTK,3.0,0.0,0.0,4.0,10.0,2.0,19.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-09-12,departure,DAM_ALP_LTK,4.0,0.0,0.0,8.0,2.0,3.0,17.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-09-13,arrival,DAM_ALP_LTK,5.0,0.0,1.0,2.0,8.0,0.0,16.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-09-13,departure,DAM_ALP_LTK,5.0,0.0,0.0,8.0,2.0,0.0,15.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-09-14,arrival,DAM_ALP_LTK,2.0,0.0,2.0,4.0,8.0,2.0,18.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-09-14,departure,DAM_ALP_LTK,5.0,0.0,0.0,9.0,4.0,1.0,19.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-09-15,arrival,DAM_ALP_LTK,2.0,0.0,2.0,4.0,4.0,1.0,13.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-09-15,departure,DAM_ALP_LTK,3.0,0.0,0.0,7.0,1.0,2.0,13.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-09-16,arrival,DAM_ALP_LTK,3.0,0.0,1.0,2.0,10.0,1.0,17.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-09-16,departure,DAM_ALP_LTK,9.0,0.0,0.0,7.0,2.0,0.0,18.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-09-17,arrival,DAM_ALP_LTK,1.0,0.0,1.0,3.0,12.0,3.0,20.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-09-17,departure,DAM_ALP_LTK,6.0,0.0,0.0,10.0,2.0,2.0,20.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-09-18,arrival,DAM_ALP_LTK,4.0,0.0,0.0,3.0,8.0,1.0,16.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-09-18,departure,DAM_ALP_LTK,6.0,0.0,0.0,10.0,2.0,0.0,18.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-09-19,arrival,DAM_ALP_LTK,0.0,0.0,3.0,1.0,7.0,3.0,14.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-09-19,departure,DAM_ALP_LTK,3.0,0.0,0.0,7.0,1.0,2.0,13.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-09-20,arrival,DAM_ALP_LTK,1.0,0.0,0.0,1.0,11.0,1.0,14.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-09-20,departure,DAM_ALP_LTK,3.0,0.0,0.0,5.0,3.0,2.0,13.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-09-21,arrival,DAM_ALP_LTK,3.0,0.0,1.0,3.0,8.0,0.0,15.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-09-21,departure,DAM_ALP_LTK,4.0,0.0,0.0,9.0,1.0,2.0,16.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-09-22,arrival,DAM_ALP_LTK,2.0,0.0,0.0,3.0,7.0,1.0,13.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-09-22,departure,DAM_ALP_LTK,2.0,0.0,0.0,7.0,2.0,1.0,12.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-09-23,arrival,DAM_ALP_LTK,0.0,0.0,2.0,3.0,8.0,3.0,16.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-09-23,departure,DAM_ALP_LTK,5.0,0.0,1.0,11.0,1.0,0.0,18.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-09-24,arrival,DAM_ALP_LTK,2.0,0.0,1.0,3.0,11.0,3.0,20.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-09-24,departure,DAM_ALP_LTK,8.0,0.0,0.0,7.0,3.0,2.0,20.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-09-25,arrival,DAM_ALP_LTK,2.0,0.0,2.0,5.0,6.0,1.0,16.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-09-25,departure,DAM_ALP_LTK,4.0,0.0,0.0,12.0,2.0,0.0,18.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-09-26,arrival,DAM_ALP_LTK,2.0,0.0,2.0,1.0,9.0,0.0,14.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-09-26,departure,DAM_ALP_LTK,2.0,0.0,0.0,11.0,0.0,1.0,14.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-09-27,arrival,DAM_ALP_LTK,1.0,0.0,1.0,3.0,8.0,2.0,15.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-09-27,departure,DAM_ALP_LTK,5.0,0.0,0.0,7.0,1.0,1.0,14.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-09-28,arrival,DAM_ALP_LTK,2.0,0.0,2.0,2.0,7.0,2.0,15.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-09-28,departure,DAM_ALP_LTK,7.0,0.0,0.0,5.0,2.0,2.0,16.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-09-29,arrival,DAM_ALP_LTK,2.0,0.0,1.0,4.0,5.0,1.0,13.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-09-29,departure,DAM_ALP_LTK,3.0,0.0,0.0,7.0,2.0,2.0,14.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-09-30,arrival,DAM_ALP_LTK,2.0,0.0,2.0,3.0,10.0,2.0,19.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-09-30,departure,DAM_ALP_LTK,7.0,0.0,0.0,8.0,2.0,1.0,18.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-10-01,arrival,DAM_ALP_LTK,2.0,0.0,1.0,4.0,10.0,2.0,19.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-10-01,departure,DAM_ALP_LTK,4.0,0.0,0.0,10.0,2.0,5.0,21.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-10-02,arrival,DAM_ALP_LTK,1.0,0.0,0.0,6.0,6.0,5.0,18.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-10-02,departure,DAM_ALP_LTK,1.0,0.0,0.0,9.0,4.0,4.0,18.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-10-03,arrival,DAM_ALP_LTK,1.0,0.0,0.0,3.0,7.0,3.0,14.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-10-03,departure,DAM_ALP_LTK,5.0,0.0,0.0,5.0,3.0,0.0,13.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-10-04,arrival,DAM_ALP_LTK,0.0,0.0,1.0,3.0,10.0,1.0,15.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-10-04,departure,DAM_ALP_LTK,4.0,0.0,0.0,4.0,3.0,3.0,14.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-10-05,arrival,DAM_ALP_LTK,0.0,0.0,1.0,3.0,9.0,2.0,15.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-10-05,departure,DAM_ALP_LTK,7.0,0.0,0.0,5.0,3.0,1.0,16.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-10-06,arrival,DAM_ALP_LTK,1.0,0.0,0.0,4.0,7.0,2.0,14.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-10-06,departure,DAM_ALP_LTK,6.0,0.0,0.0,7.0,0.0,0.0,13.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-10-07,arrival,DAM_ALP_LTK,1.0,0.0,2.0,2.0,10.0,2.0,17.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-10-07,departure,DAM_ALP_LTK,5.0,0.0,0.0,6.0,5.0,2.0,18.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-10-08,arrival,DAM_ALP_LTK,2.0,0.0,0.0,4.0,10.0,3.0,19.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-10-08,departure,DAM_ALP_LTK,6.0,0.0,0.0,7.0,5.0,3.0,21.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-10-09,arrival,DAM_ALP_LTK,1.0,0.0,1.0,3.0,10.0,1.0,16.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-10-09,departure,DAM_ALP_LTK,2.0,0.0,0.0,11.0,5.0,0.0,18.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-10-10,arrival,DAM_ALP_LTK,0.0,0.0,1.0,7.0,5.0,1.0,14.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-10-10,departure,DAM_ALP_LTK,3.0,0.0,0.0,9.0,0.0,1.0,13.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-10-11,arrival,DAM_ALP_LTK,0.0,0.0,1.0,2.0,8.0,4.0,15.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-10-11,departure,DAM_ALP_LTK,5.0,0.0,0.0,6.0,3.0,0.0,14.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-10-12,arrival,DAM_ALP_LTK,0.0,0.0,0.0,2.0,10.0,3.0,15.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-10-12,departure,DAM_ALP_LTK,7.0,0.0,0.0,6.0,1.0,1.0,15.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-10-13,arrival,DAM_ALP_LTK,3.0,0.0,0.0,2.0,8.0,2.0,15.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-10-13,departure,DAM_ALP_LTK,4.0,0.0,0.0,8.0,1.0,2.0,15.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-10-14,arrival,DAM_ALP_LTK,2.0,0.0,1.0,3.0,10.0,2.0,18.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-10-14,departure,DAM_ALP_LTK,8.0,0.0,0.0,5.0,4.0,1.0,18.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"
+2024-10-15,arrival,DAM_ALP_LTK,2.0,0.0,0.0,0.0,17.0,0.0,19.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway arrival operations across Syria (Damascus, Aleppo, Latakia)"
+2024-10-15,departure,DAM_ALP_LTK,0.0,0.0,0.0,1.0,0.0,0.0,1.0,"Syria Economic Monitor (AviationStack purchase, DAM_ALP_LTK)",observed,"Aggregated gateway departure operations across Syria (Damascus, Aleppo, Latakia)"

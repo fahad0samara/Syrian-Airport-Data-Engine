@@ -1,0 +1,4 @@
+month,snapshot_capture_count,unique_snapshot_digests_count,scheduled_service_date_range,distinct_scheduled_dates_count,total_fids_record_observations,deduplicated_source_uuids_count,deduplicated_flight_slots_count,scheduled_arrivals_observations,scheduled_departures_observations,displayed_airlines_count
+2026-07,2,2,2026-07-05 to 2026-07-31,27,956,956,956,480,476,14
+2026-08,1,1,2026-08-01 to 2026-08-31,31,886,886,886,443,443,8
+2026-09,2,2,2026-09-01 to 2026-09-09,9,140,140,140,70,70,8

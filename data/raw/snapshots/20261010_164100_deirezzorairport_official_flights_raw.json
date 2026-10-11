@@ -1,0 +1,25 @@
+{
+  "ok": true,
+  "flights": [],
+  "settings": {
+    "pageSize": 3,
+    "hideOlderThanDays": 3,
+    "flightIconArrival": "/uploads/deirezzor-flight-arrival.webp?v=1785068716",
+    "flightIconDeparture": "/uploads/deirezzor-flight-departure.webp?v=1785068722",
+    "defaultLang": "ar"
+  },
+  "airlines": [
+    {
+      "publicId": "18f6edb5303c736d",
+      "filter": "Syrian Air",
+      "nameAr": "السورية للطيران",
+      "nameEn": "Syrian Air"
+    },
+    {
+      "publicId": "9d0f7faf5ecf3596",
+      "filter": "Jazeera Airways",
+      "nameAr": "طيران الجزيرة",
+      "nameEn": "Jazeera Airways"
+    }
+  ]
+}

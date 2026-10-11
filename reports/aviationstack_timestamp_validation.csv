@@ -1,0 +1,183 @@
+flight_number,direction,flight_date,raw_scheduled_time,raw_actual_time,official_portal_time,fr24_epoch_time,fr24_utc_time,time_delta_to_fr24_minutes,wall_clock_match_with_official,confidence,validation_notes
+RB443,departure,2026-10-10,2026-10-10T23:00:00+00:00,,23:00,1791662400.0,2026-10-10T20:00:00Z,,True,High,Scheduled time matches official portal local time to the minute.
+DN727,departure,2026-10-10,2026-10-10T14:40:00+00:00,2026-10-10T14:30:00+00:00,,,,,False,Low (Single Source Feed),Feed parsed under local wall-clock semantics.
+501,departure,2026-10-10,2026-10-10T18:30:00+00:00,,,,,,False,Low (Single Source Feed),Feed parsed under local wall-clock semantics.
+361,departure,2026-10-10,2026-10-10T18:00:00+00:00,,,,,,False,Low (Single Source Feed),Feed parsed under local wall-clock semantics.
+VF318,departure,2026-10-10,2026-10-10T17:45:00+00:00,,17:00,1791643500.0,2026-10-10T14:45:00Z,,False,Medium,Feed parsed under local wall-clock semantics.
+J9178,departure,2026-10-10,2026-10-10T17:45:00+00:00,,17:45,1791643500.0,2026-10-10T14:45:00Z,,True,High,Scheduled time matches official portal local time to the minute.
+XY378,departure,2026-10-10,2026-10-10T17:30:00+00:00,,17:30,1791642600.0,2026-10-10T14:30:00Z,,True,High,Scheduled time matches official portal local time to the minute.
+RB272,departure,2026-10-10,2026-10-10T17:20:00+00:00,,17:00,1791642000.0,2026-10-10T14:20:00Z,,False,Medium,Feed parsed under local wall-clock semantics.
+RB441,departure,2026-10-10,2026-10-10T17:00:00+00:00,,,1791642278.0,2026-10-10T14:24:38Z,,False,Medium,Feed parsed under local wall-clock semantics.
+FZ1114,departure,2026-10-10,2026-10-10T16:25:00+00:00,2026-10-10T16:54:00+00:00,16:25,1791640456.0,2026-10-10T13:54:16Z,0.3,True,High,Scheduled time matches official portal local time to the minute.; Actual wheels-off aligns with FR24 ground radar within 0.3 min.
+EK2213,departure,2026-10-10,2026-10-10T16:25:00+00:00,2026-10-10T16:54:00+00:00,,,,,False,Low (Single Source Feed),Feed parsed under local wall-clock semantics.
+XY592,departure,2026-10-10,2026-10-10T16:00:00+00:00,2026-10-10T16:26:00+00:00,16:00,1791638817.0,2026-10-10T13:26:57Z,0.9,True,High,Scheduled time matches official portal local time to the minute.; Actual wheels-off aligns with FR24 ground radar within 0.9 min.
+RJ438,departure,2026-10-10,2026-10-10T15:50:00+00:00,2026-10-10T15:46:00+00:00,,1791636404.0,2026-10-10T12:46:44Z,0.7,False,High,Actual wheels-off aligns with FR24 ground radar within 0.7 min.
+WY5234,departure,2026-10-10,2026-10-10T15:50:00+00:00,2026-10-10T15:46:00+00:00,,,,,False,Low (Single Source Feed),Feed parsed under local wall-clock semantics.
+QR6118,departure,2026-10-10,2026-10-10T15:50:00+00:00,2026-10-10T15:46:00+00:00,,,,,False,Low (Single Source Feed),Feed parsed under local wall-clock semantics.
+DN521,departure,2026-10-10,2026-10-10T08:30:00+00:00,2026-10-10T08:27:00+00:00,,,,,False,Low (Single Source Feed),Feed parsed under local wall-clock semantics.
+727,departure,2026-10-10,2026-10-10T14:40:00+00:00,,,,,,False,Low (Single Source Feed),Feed parsed under local wall-clock semantics.
+QR411,departure,2026-10-10,2026-10-10T14:15:00+00:00,2026-10-10T14:24:00+00:00,14:15,1791631448.0,2026-10-10T11:24:08Z,0.1,True,High,Scheduled time matches official portal local time to the minute.; Actual wheels-off aligns with FR24 ground radar within 0.1 min.
+G9376,departure,2026-10-10,2026-10-10T13:55:00+00:00,2026-10-10T14:11:00+00:00,13:55,1791630700.0,2026-10-10T11:11:40Z,0.7,True,High,Scheduled time matches official portal local time to the minute.; Actual wheels-off aligns with FR24 ground radar within 0.7 min.
+3L505,departure,2026-10-10,2026-10-10T13:45:00+00:00,2026-10-10T13:53:00+00:00,13:45,1791629593.0,2026-10-10T10:53:13Z,0.2,True,High,Scheduled time matches official portal local time to the minute.; Actual wheels-off aligns with FR24 ground radar within 0.2 min.
+J9174,departure,2026-10-10,2026-10-10T13:00:00+00:00,2026-10-10T12:57:00+00:00,,1791626274.0,2026-10-10T09:57:54Z,0.9,False,High,Actual wheels-off aligns with FR24 ground radar within 0.9 min.
+F3562,departure,2026-10-10,2026-10-10T12:55:00+00:00,2026-10-10T13:41:00+00:00,,1791628876.0,2026-10-10T10:41:16Z,0.3,False,High,Actual wheels-off aligns with FR24 ground radar within 0.3 min.
+SV4038,departure,2026-10-10,2026-10-10T12:55:00+00:00,2026-10-10T13:41:00+00:00,,,,,False,Low (Single Source Feed),Feed parsed under local wall-clock semantics.
+KU552,departure,2026-10-10,2026-10-10T14:40:00+00:00,2026-10-10T12:53:00+00:00,12:40,1791632400.0,2026-10-10T11:40:00Z,,False,Medium,Feed parsed under local wall-clock semantics.
+TK847,departure,2026-10-10,2026-10-10T11:15:00+00:00,2026-10-10T11:17:00+00:00,11:15,1791620262.0,2026-10-10T08:17:42Z,0.7,True,High,Scheduled time matches official portal local time to the minute.; Actual wheels-off aligns with FR24 ground radar within 0.7 min.
+G9364,departure,2026-10-10,2026-10-10T11:10:00+00:00,2026-10-10T11:33:00+00:00,11:10,1791621218.0,2026-10-10T08:33:38Z,0.6,True,High,Scheduled time matches official portal local time to the minute.; Actual wheels-off aligns with FR24 ground radar within 0.6 min.
+FZ1116,departure,2026-10-10,2026-10-10T10:40:00+00:00,2026-10-10T10:43:00+00:00,10:40,1791618182.0,2026-10-10T07:43:02Z,0.0,True,High,Scheduled time matches official portal local time to the minute.; Actual wheels-off aligns with FR24 ground radar within 0.0 min.
+EK2180,departure,2026-10-10,2026-10-10T10:40:00+00:00,2026-10-10T10:43:00+00:00,,,,,False,Low (Single Source Feed),Feed parsed under local wall-clock semantics.
+XY388,departure,2026-10-10,2026-10-10T10:05:00+00:00,2026-10-10T12:02:00+00:00,10:05,1791622954.0,2026-10-10T09:02:34Z,0.6,True,High,Scheduled time matches official portal local time to the minute.; Actual wheels-off aligns with FR24 ground radar within 0.6 min.
+GF5943,departure,2026-10-10,2026-10-10T10:05:00+00:00,2026-10-10T12:02:00+00:00,,,,,False,Low (Single Source Feed),Feed parsed under local wall-clock semantics.
+701,departure,2026-10-10,2026-10-10T09:45:00+00:00,2026-10-10T10:01:00+00:00,,,,,False,Low (Single Source Feed),Feed parsed under local wall-clock semantics.
+RB521,departure,2026-10-10,2026-10-10T08:45:00+00:00,2026-10-10T08:57:00+00:00,08:45,1791611864.0,2026-10-10T05:57:44Z,0.7,True,High,Scheduled time matches official portal local time to the minute.; Actual wheels-off aligns with FR24 ground radar within 0.7 min.
+RJ436,departure,2026-10-10,2026-10-10T08:40:00+00:00,2026-10-10T08:40:00+00:00,08:40,1791610844.0,2026-10-10T05:40:44Z,0.7,True,High,Scheduled time matches official portal local time to the minute.; Actual wheels-off aligns with FR24 ground radar within 0.7 min.; Actual departure time equals scheduled departure time (unverified operational telemetry).
+WY5232,departure,2026-10-10,2026-10-10T08:40:00+00:00,2026-10-10T08:40:00+00:00,,,,,False,Low (Single Source Feed),Actual departure time equals scheduled departure time (unverified operational telemetry).
+TK849,departure,2026-10-10,2026-10-10T08:30:00+00:00,2026-10-10T08:37:00+00:00,07:50,1791610661.0,2026-10-10T05:37:41Z,0.7,False,High,Actual wheels-off aligns with FR24 ground radar within 0.7 min.
+521,departure,2026-10-10,2026-10-10T08:30:00+00:00,,,,,,False,Low (Single Source Feed),Feed parsed under local wall-clock semantics.
+G9434,departure,2026-10-10,2026-10-10T07:25:00+00:00,2026-10-10T07:53:00+00:00,07:25,1791607980.0,2026-10-10T04:53:00Z,0.0,True,High,Scheduled time matches official portal local time to the minute.; Actual wheels-off aligns with FR24 ground radar within 0.0 min.
+RB341,departure,2026-10-10,2026-10-10T07:00:00+00:00,,,1791604800.0,2026-10-10T04:00:00Z,,False,Medium,Feed parsed under local wall-clock semantics.
+RB515,departure,2026-10-10,2026-10-10T06:50:00+00:00,2026-10-10T06:50:00+00:00,06:45,1791604241.0,2026-10-10T03:50:41Z,0.7,False,High,Actual wheels-off aligns with FR24 ground radar within 0.7 min.; Actual departure time equals scheduled departure time (unverified operational telemetry).
+RB133,departure,2026-10-10,2026-10-10T05:00:00+00:00,,,1791597600.0,2026-10-10T02:00:00Z,,False,Medium,Feed parsed under local wall-clock semantics.
+RJ440,departure,2026-10-10,2026-10-10T04:55:00+00:00,2026-10-10T04:28:00+00:00,04:55,1791595721.0,2026-10-10T01:28:41Z,0.7,True,High,Scheduled time matches official portal local time to the minute.; Actual wheels-off aligns with FR24 ground radar within 0.7 min.
+743,departure,2026-10-10,2026-10-10T00:15:00+00:00,2026-10-10T00:14:00+00:00,,,,,False,Low (Single Source Feed),Feed parsed under local wall-clock semantics.
+G9505,departure,2026-10-09,2026-10-09T13:45:00+00:00,,,,,,False,Low (Single Source Feed),Feed parsed under local wall-clock semantics.
+521,departure,2026-10-09,2026-10-09T18:30:00+00:00,2026-10-09T18:16:00+00:00,,,,,False,Low (Single Source Feed),Feed parsed under local wall-clock semantics.
+VF592,departure,2026-10-09,2026-10-09T18:20:00+00:00,2026-10-09T18:19:00+00:00,18:20,1791559188.0,2026-10-09T15:19:48Z,0.8,True,High,Scheduled time matches official portal local time to the minute.; Actual wheels-off aligns with FR24 ground radar within 0.8 min.
+J9178,departure,2026-10-09,2026-10-09T17:45:00+00:00,2026-10-09T17:42:00+00:00,17:45,1791556923.0,2026-10-09T14:42:03Z,0.1,True,High,Scheduled time matches official portal local time to the minute.; Actual wheels-off aligns with FR24 ground radar within 0.1 min.
+EY562,departure,2026-10-09,2026-10-09T17:45:00+00:00,2026-10-09T18:08:00+00:00,17:50,1791558501.0,2026-10-09T15:08:21Z,0.3,False,High,Actual wheels-off aligns with FR24 ground radar within 0.3 min.
+XY378,departure,2026-10-09,2026-10-09T17:30:00+00:00,,17:30,1791556200.0,2026-10-09T14:30:00Z,,True,High,Scheduled time matches official portal local time to the minute.
+RJ438,departure,2026-10-09,2026-10-09T17:10:00+00:00,2026-10-09T17:08:00+00:00,17:10,1791554909.0,2026-10-09T14:08:29Z,0.5,True,High,Scheduled time matches official portal local time to the minute.; Actual wheels-off aligns with FR24 ground radar within 0.5 min.
+WY5234,departure,2026-10-09,2026-10-09T17:10:00+00:00,2026-10-09T17:08:00+00:00,,,,,False,Low (Single Source Feed),Feed parsed under local wall-clock semantics.
+QR6118,departure,2026-10-09,2026-10-09T17:10:00+00:00,2026-10-09T17:08:00+00:00,,,,,False,Low (Single Source Feed),Feed parsed under local wall-clock semantics.
+VF318,departure,2026-10-09,2026-10-09T17:00:00+00:00,,17:00,1791554400.0,2026-10-09T14:00:00Z,,True,High,Scheduled time matches official portal local time to the minute.
+RB443,departure,2026-10-09,2026-10-09T16:35:00+00:00,2026-10-09T16:34:00+00:00,16:35,1791552863.0,2026-10-09T13:34:23Z,0.4,True,High,Scheduled time matches official portal local time to the minute.; Actual wheels-off aligns with FR24 ground radar within 0.4 min.
+FZ1114,departure,2026-10-09,2026-10-09T16:25:00+00:00,2026-10-09T16:23:00+00:00,16:25,1791552182.0,2026-10-09T13:23:02Z,0.0,True,High,Scheduled time matches official portal local time to the minute.; Actual wheels-off aligns with FR24 ground radar within 0.0 min.
+EK2213,departure,2026-10-09,2026-10-09T16:25:00+00:00,2026-10-09T16:23:00+00:00,,,,,False,Low (Single Source Feed),Feed parsed under local wall-clock semantics.
+XY592,departure,2026-10-09,2026-10-09T16:00:00+00:00,2026-10-09T17:30:00+00:00,,1791556230.0,2026-10-09T14:30:30Z,0.5,False,High,Actual wheels-off aligns with FR24 ground radar within 0.5 min.
+RB501,departure,2026-10-09,2026-10-09T15:00:00+00:00,2026-10-09T15:12:00+00:00,15:00,1791547951.0,2026-10-09T12:12:31Z,0.5,True,High,Scheduled time matches official portal local time to the minute.; Actual wheels-off aligns with FR24 ground radar within 0.5 min.
+QR411,departure,2026-10-09,2026-10-09T14:15:00+00:00,2026-10-09T14:05:00+00:00,14:15,1791543941.0,2026-10-09T11:05:41Z,0.7,True,High,Scheduled time matches official portal local time to the minute.; Actual wheels-off aligns with FR24 ground radar within 0.7 min.
+G9376,departure,2026-10-09,2026-10-09T13:55:00+00:00,,13:55,1791543300.0,2026-10-09T10:55:00Z,,True,High,Scheduled time matches official portal local time to the minute.
+649,departure,2026-10-09,2026-10-09T13:45:00+00:00,,,,,,False,Low (Single Source Feed),Feed parsed under local wall-clock semantics.
+KK491,departure,2026-10-09,2026-10-09T13:45:00+00:00,2026-10-09T15:26:00+00:00,13:45,1791548782.0,2026-10-09T12:26:22Z,0.4,True,High,Scheduled time matches official portal local time to the minute.; Actual wheels-off aligns with FR24 ground radar within 0.4 min.
+RB503,departure,2026-10-09,2026-10-09T13:00:00+00:00,2026-10-09T13:21:00+00:00,13:00,1791541290.0,2026-10-09T10:21:30Z,0.5,True,High,Scheduled time matches official portal local time to the minute.; Actual wheels-off aligns with FR24 ground radar within 0.5 min.
+J9174,departure,2026-10-09,2026-10-09T13:00:00+00:00,,,,,,False,Low (Single Source Feed),Feed parsed under local wall-clock semantics.
+KU552,departure,2026-10-09,2026-10-09T14:40:00+00:00,2026-10-09T12:48:00+00:00,12:40,1791546000.0,2026-10-09T11:40:00Z,,False,Medium,Feed parsed under local wall-clock semantics.
+F3562,departure,2026-10-09,2026-10-09T12:20:00+00:00,2026-10-09T13:16:00+00:00,12:55,1791540989.0,2026-10-09T10:16:29Z,0.5,False,High,Actual wheels-off aligns with FR24 ground radar within 0.5 min.
+SV4038,departure,2026-10-09,2026-10-09T12:20:00+00:00,2026-10-09T13:16:00+00:00,,,,,False,Low (Single Source Feed),Feed parsed under local wall-clock semantics.
+3L505,departure,2026-10-09,2026-10-09T11:45:00+00:00,2026-10-09T11:40:00+00:00,13:15,1791542700.0,2026-10-09T10:45:00Z,,False,Medium,Feed parsed under local wall-clock semantics.
+TK847,departure,2026-10-09,2026-10-09T11:15:00+00:00,2026-10-09T11:29:00+00:00,11:15,1791534541.0,2026-10-09T08:29:01Z,0.0,True,High,Scheduled time matches official portal local time to the minute.; Actual wheels-off aligns with FR24 ground radar within 0.0 min.
+G9364,departure,2026-10-09,2026-10-09T11:10:00+00:00,2026-10-09T11:52:00+00:00,11:10,1791535924.0,2026-10-09T08:52:04Z,0.1,True,High,Scheduled time matches official portal local time to the minute.; Actual wheels-off aligns with FR24 ground radar within 0.1 min.
+XY893,departure,2026-10-09,2026-10-09T10:55:00+00:00,2026-10-09T11:19:00+00:00,10:55,1791533975.0,2026-10-09T08:19:35Z,0.6,True,High,Scheduled time matches official portal local time to the minute.; Actual wheels-off aligns with FR24 ground radar within 0.6 min.
+GF5931,departure,2026-10-09,2026-10-09T10:55:00+00:00,2026-10-09T11:19:00+00:00,,,,,False,Low (Single Source Feed),Feed parsed under local wall-clock semantics.
+F3742,departure,2026-10-09,2026-10-09T10:50:00+00:00,2026-10-09T11:05:00+00:00,10:50,1791533146.0,2026-10-09T08:05:46Z,0.8,True,High,Scheduled time matches official portal local time to the minute.; Actual wheels-off aligns with FR24 ground radar within 0.8 min.
+SV4056,departure,2026-10-09,2026-10-09T10:50:00+00:00,2026-10-09T11:05:00+00:00,,,,,False,Low (Single Source Feed),Feed parsed under local wall-clock semantics.
+FZ1116,departure,2026-10-09,2026-10-09T10:40:00+00:00,2026-10-09T10:41:00+00:00,10:40,1791531668.0,2026-10-09T07:41:08Z,0.1,True,High,Scheduled time matches official portal local time to the minute.; Actual wheels-off aligns with FR24 ground radar within 0.1 min.
+EK2180,departure,2026-10-09,2026-10-09T10:40:00+00:00,2026-10-09T10:41:00+00:00,,,,,False,Low (Single Source Feed),Feed parsed under local wall-clock semantics.
+XY388,departure,2026-10-09,2026-10-09T10:05:00+00:00,2026-10-09T12:01:00+00:00,10:05,1791536505.0,2026-10-09T09:01:45Z,0.8,True,High,Scheduled time matches official portal local time to the minute.; Actual wheels-off aligns with FR24 ground radar within 0.8 min.
+GF5943,departure,2026-10-09,2026-10-09T10:05:00+00:00,,,,,,False,Low (Single Source Feed),Feed parsed under local wall-clock semantics.
+701,departure,2026-10-09,2026-10-09T09:45:00+00:00,2026-10-09T10:11:00+00:00,,,,,False,Low (Single Source Feed),Feed parsed under local wall-clock semantics.
+741,departure,2026-10-09,2026-10-09T09:40:00+00:00,2026-10-09T09:51:00+00:00,,,,,False,Low (Single Source Feed),Feed parsed under local wall-clock semantics.
+RJ436,departure,2026-10-09,2026-10-09T08:40:00+00:00,2026-10-09T08:11:00+00:00,08:40,1791522664.0,2026-10-09T05:11:04Z,0.1,True,High,Scheduled time matches official portal local time to the minute.; Actual wheels-off aligns with FR24 ground radar within 0.1 min.
+WY5232,departure,2026-10-09,2026-10-09T08:40:00+00:00,2026-10-09T08:11:00+00:00,,,,,False,Low (Single Source Feed),Feed parsed under local wall-clock semantics.
+TK849,departure,2026-10-09,2026-10-09T08:30:00+00:00,2026-10-09T08:22:00+00:00,08:30,1791523331.0,2026-10-09T05:22:11Z,0.2,True,High,Scheduled time matches official portal local time to the minute.; Actual wheels-off aligns with FR24 ground radar within 0.2 min.
+DN485,departure,2026-10-09,2026-10-09T01:20:00+00:00,2026-10-09T01:42:00+00:00,,,,,False,Low (Single Source Feed),Feed parsed under local wall-clock semantics.
+G9434,departure,2026-10-09,2026-10-09T07:25:00+00:00,2026-10-09T07:38:00+00:00,07:25,1791520685.0,2026-10-09T04:38:05Z,0.1,True,High,Scheduled time matches official portal local time to the minute.; Actual wheels-off aligns with FR24 ground radar within 0.1 min.
+J9172,departure,2026-10-09,2026-10-09T06:45:00+00:00,,,1791517500.0,2026-10-09T03:45:00Z,,False,Medium,Feed parsed under local wall-clock semantics.
+RB505,departure,2026-10-09,2026-10-09T06:00:00+00:00,,,1791514800.0,2026-10-09T03:00:00Z,,False,Medium,Feed parsed under local wall-clock semantics.
+RJ440,departure,2026-10-09,2026-10-09T04:55:00+00:00,2026-10-09T04:28:00+00:00,04:55,,,,True,High,Scheduled time matches official portal local time to the minute.
+RB515,departure,2026-10-09,2026-10-09T03:15:00+00:00,,,,,,False,Low (Single Source Feed),Feed parsed under local wall-clock semantics.
+DN,departure,2026-10-09,2026-10-09T01:20:00+00:00,,,,,,False,Low (Single Source Feed),Feed parsed under local wall-clock semantics.
+485,departure,2026-10-09,2026-10-09T01:15:00+00:00,,,,,,False,Low (Single Source Feed),Feed parsed under local wall-clock semantics.
+362,arrival,2026-10-10,2026-10-11T01:15:00+00:00,,,,,,False,Low (Single Source Feed),Feed parsed under local wall-clock semantics.
+502,arrival,2026-10-10,2026-10-10T22:30:00+00:00,,,,,,False,Low (Single Source Feed),Feed parsed under local wall-clock semantics.
+DN522,arrival,2026-10-10,2026-10-10T12:40:00+00:00,,,,,,False,Low (Single Source Feed),Feed parsed under local wall-clock semantics.
+728,arrival,2026-10-10,2026-10-10T22:20:00+00:00,,,,,,False,Low (Single Source Feed),Feed parsed under local wall-clock semantics.
+VF317,arrival,2026-10-10,2026-10-10T16:50:00+00:00,,16:00,1791640200.0,2026-10-10T13:50:00Z,,False,Medium,Feed parsed under local wall-clock semantics.
+J9177,arrival,2026-10-10,2026-10-10T17:00:00+00:00,2026-10-10T16:35:00+00:00,17:00,1791639302.0,2026-10-10T13:35:02Z,0.0,True,High,Scheduled time matches official portal local time to the minute.; Actual wheels-down aligns with FR24 ground radar within 0.0 min.
+RB134,arrival,2026-10-10,2026-10-10T14:50:00+00:00,,,1791633000.0,2026-10-10T11:50:00Z,,False,Medium,Feed parsed under local wall-clock semantics.
+RJ437,arrival,2026-10-10,2026-10-10T14:55:00+00:00,2026-10-10T14:45:00+00:00,,1791632738.0,2026-10-10T11:45:38Z,0.6,False,High,Actual wheels-down aligns with FR24 ground radar within 0.6 min.
+WY5233,arrival,2026-10-10,2026-10-10T14:55:00+00:00,2026-10-10T14:45:00+00:00,,,,,False,Low (Single Source Feed),Feed parsed under local wall-clock semantics.
+QR6119,arrival,2026-10-10,2026-10-10T14:55:00+00:00,2026-10-10T14:45:00+00:00,,,,,False,Low (Single Source Feed),Feed parsed under local wall-clock semantics.
+744,arrival,2026-10-10,2026-10-10T17:15:00+00:00,,,,,,False,Low (Single Source Feed),Feed parsed under local wall-clock semantics.
+XY377,arrival,2026-10-10,2026-10-10T16:15:00+00:00,,16:15,1791638100.0,2026-10-10T13:15:00Z,,True,High,Scheduled time matches official portal local time to the minute.
+GF5952,arrival,2026-10-10,2026-10-10T16:15:00+00:00,,,,,,False,Low (Single Source Feed),Feed parsed under local wall-clock semantics.
+702,arrival,2026-10-10,2026-10-10T16:35:00+00:00,2026-10-10T15:27:00+00:00,,,,,False,Low (Single Source Feed),Feed parsed under local wall-clock semantics.
+RB273,arrival,2026-10-10,2026-10-10T16:20:00+00:00,2026-10-10T16:43:00+00:00,16:20,1791639795.0,2026-10-10T13:43:15Z,0.2,True,High,Scheduled time matches official portal local time to the minute.; Actual wheels-down aligns with FR24 ground radar within 0.2 min.
+XY591,arrival,2026-10-10,2026-10-10T15:10:00+00:00,2026-10-10T15:09:00+00:00,15:10,1791634198.0,2026-10-10T12:09:58Z,1.0,True,High,Scheduled time matches official portal local time to the minute.; Actual wheels-down aligns with FR24 ground radar within 1.0 min.
+RB522,arrival,2026-10-10,2026-10-10T15:45:00+00:00,2026-10-10T15:16:00+00:00,15:45,1791634603.0,2026-10-10T12:16:43Z,0.7,True,High,Scheduled time matches official portal local time to the minute.; Actual wheels-down aligns with FR24 ground radar within 0.7 min.
+RB271,arrival,2026-10-10,2026-10-10T16:20:00+00:00,,16:00,1791638400.0,2026-10-10T13:20:00Z,,False,Medium,Feed parsed under local wall-clock semantics.
+FZ1113,arrival,2026-10-10,2026-10-10T15:15:00+00:00,2026-10-10T15:18:00+00:00,15:15,1791634713.0,2026-10-10T12:18:33Z,0.6,True,High,Scheduled time matches official portal local time to the minute.; Actual wheels-down aligns with FR24 ground radar within 0.6 min.
+EK2212,arrival,2026-10-10,2026-10-10T15:15:00+00:00,2026-10-10T15:18:00+00:00,,,,,False,Low (Single Source Feed),Feed parsed under local wall-clock semantics.
+RB516,arrival,2026-10-10,2026-10-10T15:40:00+00:00,2026-10-10T15:06:00+00:00,15:40,1791634006.0,2026-10-10T12:06:46Z,0.8,True,High,Scheduled time matches official portal local time to the minute.; Actual wheels-down aligns with FR24 ground radar within 0.8 min.
+RB342,arrival,2026-10-10,2026-10-10T12:50:00+00:00,,,,,,False,Low (Single Source Feed),Feed parsed under local wall-clock semantics.
+522,arrival,2026-10-10,2026-10-10T12:40:00+00:00,,,,,,False,Low (Single Source Feed),Feed parsed under local wall-clock semantics.
+F3561,arrival,2026-10-10,2026-10-10T11:55:00+00:00,2026-10-10T12:24:00+00:00,,1791624291.0,2026-10-10T09:24:51Z,0.8,False,High,Actual wheels-down aligns with FR24 ground radar within 0.8 min.
+SV4037,arrival,2026-10-10,2026-10-10T11:55:00+00:00,2026-10-10T12:24:00+00:00,,,,,False,Low (Single Source Feed),Feed parsed under local wall-clock semantics.
+G9375,arrival,2026-10-10,2026-10-10T12:55:00+00:00,,12:55,1791626657.0,2026-10-10T10:04:17Z,,True,High,Scheduled time matches official portal local time to the minute.
+J9173,arrival,2026-10-10,2026-10-10T12:00:00+00:00,2026-10-10T11:28:00+00:00,,1791620914.0,2026-10-10T08:28:34Z,0.6,False,High,Actual wheels-down aligns with FR24 ground radar within 0.6 min.
+KU551,arrival,2026-10-10,2026-10-10T13:40:00+00:00,2026-10-10T11:36:00+00:00,11:30,1791628800.0,2026-10-10T10:40:00Z,,False,Medium,Feed parsed under local wall-clock semantics.
+GF5950,arrival,2026-10-10,2026-10-10T09:10:00+00:00,,,,,,False,Low (Single Source Feed),Feed parsed under local wall-clock semantics.
+QR410,arrival,2026-10-10,2026-10-10T12:00:00+00:00,2026-10-10T11:33:00+00:00,12:00,1791621230.0,2026-10-10T08:33:50Z,0.8,True,High,Scheduled time matches official portal local time to the minute.; Actual wheels-down aligns with FR24 ground radar within 0.8 min.
+3L504,arrival,2026-10-10,2026-10-10T12:45:00+00:00,2026-10-10T12:19:00+00:00,12:45,1791623966.0,2026-10-10T09:19:26Z,0.4,True,High,Scheduled time matches official portal local time to the minute.; Actual wheels-down aligns with FR24 ground radar within 0.4 min.
+TK846,arrival,2026-10-10,2026-10-10T09:25:00+00:00,2026-10-10T09:16:00+00:00,09:20,1791612991.0,2026-10-10T06:16:31Z,0.5,False,High,Actual wheels-down aligns with FR24 ground radar within 0.5 min.
+RJ435,arrival,2026-10-10,2026-10-10T07:40:00+00:00,2026-10-10T07:22:00+00:00,07:40,1791606134.0,2026-10-10T04:22:14Z,0.2,True,High,Scheduled time matches official portal local time to the minute.; Actual wheels-down aligns with FR24 ground radar within 0.2 min.
+WY5231,arrival,2026-10-10,2026-10-10T07:40:00+00:00,2026-10-10T07:22:00+00:00,,,,,False,Low (Single Source Feed),Feed parsed under local wall-clock semantics.
+G9363,arrival,2026-10-10,2026-10-10T10:10:00+00:00,2026-10-10T10:24:00+00:00,10:10,1791617076.0,2026-10-10T07:24:36Z,0.6,True,High,Scheduled time matches official portal local time to the minute.; Actual wheels-down aligns with FR24 ground radar within 0.6 min.
+XY387,arrival,2026-10-10,2026-10-10T09:10:00+00:00,,09:15,1791616958.0,2026-10-10T07:22:38Z,,False,Medium,Feed parsed under local wall-clock semantics.
+FZ1115,arrival,2026-10-10,2026-10-10T09:30:00+00:00,2026-10-10T09:36:00+00:00,09:30,1791614176.0,2026-10-10T06:36:16Z,0.3,True,High,Scheduled time matches official portal local time to the minute.; Actual wheels-down aligns with FR24 ground radar within 0.3 min.
+EK2179,arrival,2026-10-10,2026-10-10T09:30:00+00:00,2026-10-10T09:36:00+00:00,,,,,False,Low (Single Source Feed),Feed parsed under local wall-clock semantics.
+TK848,arrival,2026-10-10,2026-10-10T07:00:00+00:00,,06:20,1791604720.0,2026-10-10T03:58:40Z,,False,Medium,Feed parsed under local wall-clock semantics.
+486,arrival,2026-10-10,2026-10-10T06:30:00+00:00,,,,,,False,Low (Single Source Feed),Feed parsed under local wall-clock semantics.
+G9433,arrival,2026-10-10,2026-10-10T06:25:00+00:00,2026-10-10T06:30:00+00:00,06:25,1791603038.0,2026-10-10T03:30:38Z,0.6,True,High,Scheduled time matches official portal local time to the minute.; Actual wheels-down aligns with FR24 ground radar within 0.6 min.
+RJ439,arrival,2026-10-10,2026-10-10T02:55:00+00:00,2026-10-10T02:30:00+00:00,02:45,1791588602.0,2026-10-09T23:30:02Z,0.0,False,High,Actual wheels-down aligns with FR24 ground radar within 0.0 min.
+522,arrival,2026-10-09,2026-10-09T22:40:00+00:00,2026-10-09T21:41:00+00:00,,,,,False,Low (Single Source Feed),Feed parsed under local wall-clock semantics.
+RB444,arrival,2026-10-09,2026-10-09T21:35:00+00:00,2026-10-09T21:46:00+00:00,21:35,1791571574.0,2026-10-09T18:46:14Z,0.2,True,High,Scheduled time matches official portal local time to the minute.; Actual wheels-down aligns with FR24 ground radar within 0.2 min.
+RB502,arrival,2026-10-09,2026-10-09T22:45:00+00:00,2026-10-09T22:31:00+00:00,22:45,1791574319.0,2026-10-09T19:31:59Z,1.0,True,High,Scheduled time matches official portal local time to the minute.; Actual wheels-down aligns with FR24 ground radar within 1.0 min.
+RB504,arrival,2026-10-09,2026-10-09T20:30:00+00:00,2026-10-09T20:23:00+00:00,20:30,1791566633.0,2026-10-09T17:23:53Z,0.9,True,High,Scheduled time matches official portal local time to the minute.; Actual wheels-down aligns with FR24 ground radar within 0.9 min.
+VF591,arrival,2026-10-09,2026-10-09T17:20:00+00:00,,17:20,1791555600.0,2026-10-09T14:20:00Z,,True,High,Scheduled time matches official portal local time to the minute.
+G9504,arrival,2026-10-09,2026-10-09T12:45:00+00:00,,,,,,False,Low (Single Source Feed),Feed parsed under local wall-clock semantics.
+RJ437,arrival,2026-10-09,2026-10-09T16:10:00+00:00,2026-10-09T15:44:00+00:00,16:00,1791549860.0,2026-10-09T12:44:20Z,0.3,False,High,Actual wheels-down aligns with FR24 ground radar within 0.3 min.
+WY5233,arrival,2026-10-09,2026-10-09T16:10:00+00:00,2026-10-09T15:44:00+00:00,,,,,False,Low (Single Source Feed),Feed parsed under local wall-clock semantics.
+QR6119,arrival,2026-10-09,2026-10-09T16:10:00+00:00,2026-10-09T15:44:00+00:00,,,,,False,Low (Single Source Feed),Feed parsed under local wall-clock semantics.
+J9177,arrival,2026-10-09,2026-10-09T17:00:00+00:00,2026-10-09T16:24:00+00:00,17:00,1791552296.0,2026-10-09T13:24:56Z,0.9,True,High,Scheduled time matches official portal local time to the minute.; Actual wheels-down aligns with FR24 ground radar within 0.9 min.
+742,arrival,2026-10-09,2026-10-09T17:15:00+00:00,2026-10-09T17:18:00+00:00,,,,,False,Low (Single Source Feed),Feed parsed under local wall-clock semantics.
+VF317,arrival,2026-10-09,2026-10-09T16:00:00+00:00,,16:00,1791550800.0,2026-10-09T13:00:00Z,,True,High,Scheduled time matches official portal local time to the minute.
+XY377,arrival,2026-10-09,2026-10-09T16:15:00+00:00,,16:15,1791551700.0,2026-10-09T13:15:00Z,,True,High,Scheduled time matches official portal local time to the minute.
+GF5952,arrival,2026-10-09,2026-10-09T16:15:00+00:00,,,,,,False,Low (Single Source Feed),Feed parsed under local wall-clock semantics.
+702,arrival,2026-10-09,2026-10-09T16:35:00+00:00,2026-10-09T15:19:00+00:00,,,,,False,Low (Single Source Feed),Feed parsed under local wall-clock semantics.
+XY591,arrival,2026-10-09,2026-10-09T15:10:00+00:00,,15:10,1791551227.0,2026-10-09T13:07:07Z,,True,High,Scheduled time matches official portal local time to the minute.
+EY561,arrival,2026-10-09,2026-10-09T16:20:00+00:00,,16:20,1791552066.0,2026-10-09T13:21:06Z,,True,High,Scheduled time matches official portal local time to the minute.
+FZ1113,arrival,2026-10-09,2026-10-09T15:15:00+00:00,,15:15,1791548154.0,2026-10-09T12:15:54Z,,True,High,Scheduled time matches official portal local time to the minute.
+EK2212,arrival,2026-10-09,2026-10-09T15:15:00+00:00,,,,,,False,Low (Single Source Feed),Feed parsed under local wall-clock semantics.
+SV4037,arrival,2026-10-09,2026-10-09T11:20:00+00:00,,,,,,False,Low (Single Source Feed),Feed parsed under local wall-clock semantics.
+DN486,arrival,2026-10-09,2026-10-09T06:30:00+00:00,2026-10-09T06:27:00+00:00,,,,,False,Low (Single Source Feed),Feed parsed under local wall-clock semantics.
+J9173,arrival,2026-10-09,2026-10-09T12:00:00+00:00,,,,,,False,Low (Single Source Feed),Feed parsed under local wall-clock semantics.
+KU551,arrival,2026-10-09,2026-10-09T13:40:00+00:00,2026-10-09T11:16:00+00:00,11:30,1791542400.0,2026-10-09T10:40:00Z,,False,Medium,Feed parsed under local wall-clock semantics.
+RB506,arrival,2026-10-09,2026-10-09T13:45:00+00:00,,,1791542700.0,2026-10-09T10:45:00Z,,False,Medium,Feed parsed under local wall-clock semantics.
+G9375,arrival,2026-10-09,2026-10-09T12:55:00+00:00,,12:55,1791539483.0,2026-10-09T09:51:23Z,,True,High,Scheduled time matches official portal local time to the minute.
+GF5950,arrival,2026-10-09,2026-10-09T09:15:00+00:00,,,,,,False,Low (Single Source Feed),Feed parsed under local wall-clock semantics.
+F3561,arrival,2026-10-09,2026-10-09T11:20:00+00:00,,11:55,1791534889.0,2026-10-09T08:34:49Z,,False,Medium,Feed parsed under local wall-clock semantics.
+648,arrival,2026-10-09,2026-10-09T12:45:00+00:00,,,,,,False,Low (Single Source Feed),Feed parsed under local wall-clock semantics.
+KK490,arrival,2026-10-09,2026-10-09T12:45:00+00:00,,12:45,1791540963.0,2026-10-09T10:16:03Z,,True,High,Scheduled time matches official portal local time to the minute.
+QR410,arrival,2026-10-09,2026-10-09T12:00:00+00:00,2026-10-09T11:56:00+00:00,12:00,1791536217.0,2026-10-09T08:56:57Z,0.9,True,High,Scheduled time matches official portal local time to the minute.; Actual wheels-down aligns with FR24 ground radar within 0.9 min.
+TK846,arrival,2026-10-09,2026-10-09T09:25:00+00:00,2026-10-09T09:19:00+00:00,09:20,1791526786.0,2026-10-09T06:19:46Z,0.8,False,High,Actual wheels-down aligns with FR24 ground radar within 0.8 min.
+F3741,arrival,2026-10-09,2026-10-09T09:50:00+00:00,2026-10-09T09:37:00+00:00,09:50,1791527834.0,2026-10-09T06:37:14Z,0.2,True,High,Scheduled time matches official portal local time to the minute.; Actual wheels-down aligns with FR24 ground radar within 0.2 min.
+SV4055,arrival,2026-10-09,2026-10-09T09:50:00+00:00,2026-10-09T09:37:00+00:00,,,,,False,Low (Single Source Feed),Feed parsed under local wall-clock semantics.
+RB516,arrival,2026-10-09,2026-10-09T11:20:00+00:00,,,1791534000.0,2026-10-09T08:20:00Z,,False,Medium,Feed parsed under local wall-clock semantics.
+3L504,arrival,2026-10-09,2026-10-09T10:45:00+00:00,2026-10-09T10:02:00+00:00,12:15,1791539100.0,2026-10-09T09:45:00Z,,False,Medium,Feed parsed under local wall-clock semantics.
+G9363,arrival,2026-10-09,2026-10-09T10:10:00+00:00,,10:10,1791529800.0,2026-10-09T07:10:00Z,,True,High,Scheduled time matches official portal local time to the minute.
+XY387,arrival,2026-10-09,2026-10-09T09:15:00+00:00,,09:15,1791526500.0,2026-10-09T06:15:00Z,,True,High,Scheduled time matches official portal local time to the minute.
+FZ1115,arrival,2026-10-09,2026-10-09T09:30:00+00:00,2026-10-09T09:32:00+00:00,09:30,1791527555.0,2026-10-09T06:32:35Z,0.6,True,High,Scheduled time matches official portal local time to the minute.; Actual wheels-down aligns with FR24 ground radar within 0.6 min.
+EK2179,arrival,2026-10-09,2026-10-09T09:30:00+00:00,2026-10-09T09:32:00+00:00,,,,,False,Low (Single Source Feed),Feed parsed under local wall-clock semantics.
+XY892,arrival,2026-10-09,2026-10-09T09:40:00+00:00,,09:40,1791529644.0,2026-10-09T07:07:24Z,,True,High,Scheduled time matches official portal local time to the minute.
+GF5930,arrival,2026-10-09,2026-10-09T09:40:00+00:00,,,,,,False,Low (Single Source Feed),Feed parsed under local wall-clock semantics.
+RJ435,arrival,2026-10-09,2026-10-09T07:40:00+00:00,2026-10-09T07:11:00+00:00,07:40,1791519114.0,2026-10-09T04:11:54Z,0.9,True,High,Scheduled time matches official portal local time to the minute.; Actual wheels-down aligns with FR24 ground radar within 0.9 min.
+WY5231,arrival,2026-10-09,2026-10-09T07:40:00+00:00,2026-10-09T07:11:00+00:00,,,,,False,Low (Single Source Feed),Feed parsed under local wall-clock semantics.
+DN,arrival,2026-10-09,2026-10-09T06:09:00+00:00,,,,,,False,Low (Single Source Feed),Feed parsed under local wall-clock semantics.
+486,arrival,2026-10-09,2026-10-09T06:30:00+00:00,,,,,,False,Low (Single Source Feed),Feed parsed under local wall-clock semantics.
+TK848,arrival,2026-10-09,2026-10-09T07:00:00+00:00,,06:20,1791518536.0,2026-10-09T04:02:16Z,,False,Medium,Feed parsed under local wall-clock semantics.
+J9171,arrival,2026-10-09,2026-10-09T06:00:00+00:00,,,1791514800.0,2026-10-09T03:00:00Z,,False,Medium,Feed parsed under local wall-clock semantics.
+G9433,arrival,2026-10-09,2026-10-09T06:25:00+00:00,2026-10-09T06:32:00+00:00,06:25,1791516749.0,2026-10-09T03:32:29Z,0.5,True,High,Scheduled time matches official portal local time to the minute.; Actual wheels-down aligns with FR24 ground radar within 0.5 min.
+782,arrival,2026-10-09,2026-10-09T05:45:00+00:00,,,,,,False,Low (Single Source Feed),Feed parsed under local wall-clock semantics.
+RJ439,arrival,2026-10-09,2026-10-09T02:55:00+00:00,2026-10-09T02:51:00+00:00,02:45,,,,False,Medium,Feed parsed under local wall-clock semantics.

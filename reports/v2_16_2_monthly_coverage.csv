@@ -1,0 +1,4 @@
+month,total_records,arrivals_count,departures_count,distinct_scheduled_dates,min_scheduled_date,max_scheduled_date,missing_dates_in_span_count,missing_dates_in_span,displayed_airlines_count,distinct_flight_numbers_count
+2026-07,956,480,476,27,2026-07-05,2026-07-31,0,none,14,159
+2026-08,886,443,443,31,2026-08-01,2026-08-31,0,none,8,34
+2026-09,140,70,70,9,2026-09-01,2026-09-09,0,none,8,34

@@ -1,0 +1,101 @@
+{
+  "audit_version": "v2_18_1",
+  "timestamp_utc": "2026-10-11T14:21:56.979494+00:00",
+  "protected_hashes_verification": {
+    "damascus_airport_db": {
+      "path": "data/damascus_airport.db",
+      "expected_sha256": "c512fd2952976f923010c42da19505d803e3ff96930f713f53284ea74568e28b",
+      "actual_sha256": "c512fd2952976f923010c42da19505d803e3ff96930f713f53284ea74568e28b",
+      "match": true,
+      "size_bytes": 11132928
+    },
+    "archived_fids_staging_db": {
+      "path": "data/archived_fids_staging.db",
+      "expected_sha256": "a90c5faedb3238e0c283f1ddb7f61e0f1a9cb90ca621fc92f316ecfdc7db61d4",
+      "actual_sha256": "a90c5faedb3238e0c283f1ddb7f61e0f1a9cb90ca621fc92f316ecfdc7db61d4",
+      "match": true,
+      "size_bytes": 3121152
+    },
+    "archived_fids_analytics_db": {
+      "path": "data/archived_fids_analytics.db",
+      "expected_sha256": "e1f8f0dea0e72f630d52e40a2d3a0a90b49a514da694fa72ceeb35555f48e1fe",
+      "actual_sha256": "e1f8f0dea0e72f630d52e40a2d3a0a90b49a514da694fa72ceeb35555f48e1fe",
+      "match": true,
+      "size_bytes": 1105920
+    },
+    "archived_fids_history_staging_db": {
+      "path": "data/archived_fids_history_staging.db",
+      "expected_sha256": "39aa323265a6c6ad612cdd4bac0a3ae27deda26e2c16544df0e9f3cc32f83a7f",
+      "actual_sha256": "39aa323265a6c6ad612cdd4bac0a3ae27deda26e2c16544df0e9f3cc32f83a7f",
+      "match": true,
+      "size_bytes": 917504
+    },
+    "baseline_raw_snapshot": {
+      "path": "data/raw/snapshots/wayback_damairport_fids_20260709234230.raw",
+      "expected_sha256": "5a60ee3598c8f6785018c72030b558e472d1b66e7407196eb8cc13b5cc55b4bf",
+      "actual_sha256": "5a60ee3598c8f6785018c72030b558e472d1b66e7407196eb8cc13b5cc55b4bf",
+      "match": true,
+      "size_bytes": 68891
+    },
+    "baseline_json_snapshot": {
+      "path": "data/raw/snapshots/wayback_damairport_fids_20260709234230.json",
+      "expected_sha256": "ba8606e958363e29392743d00a8e84ef37ecbf805f8b48fca66e1f111c416491",
+      "actual_sha256": "ba8606e958363e29392743d00a8e84ef37ecbf805f8b48fca66e1f111c416491",
+      "match": true,
+      "size_bytes": 644922
+    }
+  },
+  "table_counts": {
+    "damascus_airport_db": {
+      "airports": 7,
+      "raw_source_records": 25,
+      "flight_events": 1830,
+      "daily_airport_movements": 46,
+      "damascus_daily_movements": 32,
+      "historical_daily_movements_2024": 578,
+      "source_registry": 12,
+      "deduplication_audit": 337,
+      "data_quality_audit": 27,
+      "ingestion_runs": 33,
+      "historical_coverage_matrix": 5175,
+      "event_evidence": 1508,
+      "schema_migrations": 1,
+      "evidence_retractions": 0
+    },
+    "archived_fids_staging_db": {
+      "archived_snapshots": 1,
+      "archived_fids_raw_records": 1982,
+      "archived_fids_normalized": 1982,
+      "archived_fids_validation_issues": 4050,
+      "archived_fids_daily_coverage": 67
+    },
+    "archived_fids_analytics_db": {
+      "fids_analytics_records": 1982,
+      "fids_duplicate_candidates": 1
+    },
+    "archived_fids_history_staging_db": {
+      "archived_snapshot_registry": 1,
+      "archived_snapshot_records": 1982,
+      "snapshot_comparison_results": 0,
+      "snapshot_validation_issues": 0
+    },
+    "v2_18_staging_db": {
+      "recovered_observations": 16,
+      "monthly_dam_coverage": 34,
+      "validation_results": 8
+    }
+  },
+  "critical_audit_findings": {
+    "historical_578_records_is_dam_specific": false,
+    "historical_578_records_scope": "DAM_ALP_LTK",
+    "historical_578_records_classification": "regional_aggregate",
+    "verified_2024_dam_specific_movements_recovered": 0,
+    "total_verified_historical_dam_physical_movements_added": 0,
+    "fids_jul_sep_2026_classification": "dam_scheduled_fids",
+    "adsb_oct_2026_classification": "live_regional_adsb",
+    "gatwick_egkk_classification": "disqualified_irrelevant",
+    "datasets_downloaded_count": 0,
+    "metadata_artifacts_downloaded_count": 4,
+    "metadata_bytes_downloaded": 37172
+  }
+}

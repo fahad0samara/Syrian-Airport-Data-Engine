@@ -1,0 +1,17 @@
+{
+  "provider": "OpenSky Network",
+  "endpoint": "https://opensky-network.org/api/states/all?lamin=32.0601&lamax=34.7629&lomin=34.8967&lomax=38.1345",
+  "request_timestamp": "2026-10-11T10:03:07.482678+00:00",
+  "test_radius_km": 150,
+  "airport_coordinates": {
+    "lat": 33.4115,
+    "lon": 36.5156,
+    "icao": "OSDI"
+  },
+  "http_status": 200,
+  "response_record_count": 8,
+  "errors": null,
+  "documentation_url": "https://openskynetwork.github.io/opensky-api/",
+  "response_file": "data\\free_api_research\\opensky\\opensky_osdi_150km_20261011T100307Z.json",
+  "file_sha256": "5056a06c3e07be7ff43dda38602fc222c1d7ad51b7789d63e5dedd4d767ae312"
+}

@@ -1,0 +1,379 @@
+[
+  {
+    "flight": {
+      "identification": {
+        "id": null,
+        "row": 5873711773,
+        "number": {
+          "default": "RB342",
+          "alternative": null
+        },
+        "callsign": null,
+        "codeshare": null
+      },
+      "status": {
+        "live": false,
+        "text": "Unknown",
+        "icon": null,
+        "estimated": null,
+        "ambiguous": false,
+        "generic": {
+          "status": {
+            "text": "unknown",
+            "type": "arrival",
+            "color": "gray",
+            "diverted": null
+          },
+          "eventTime": {
+            "utc": null,
+            "local": null
+          }
+        }
+      },
+      "aircraft": {
+        "model": {
+          "code": "320",
+          "text": ""
+        },
+        "hex": "",
+        "registration": "",
+        "serialNo": "",
+        "images": null
+      },
+      "owner": null,
+      "airline": {
+        "name": "SyrianAir",
+        "code": {
+          "iata": "RB",
+          "icao": "SYR"
+        },
+        "short": "SyrianAir"
+      },
+      "airport": {
+        "origin": {
+          "code": {
+            "iata": "KWI",
+            "icao": "OKKK"
+          },
+          "timezone": {
+            "name": "Asia/Kuwait",
+            "offset": 10800,
+            "abbr": "+03",
+            "abbrName": null,
+            "isDst": false
+          },
+          "info": {
+            "terminal": "4",
+            "baggage": null,
+            "gate": "63"
+          },
+          "name": "Kuwait International Airport",
+          "position": {
+            "latitude": 29.226561,
+            "longitude": 47.968922,
+            "country": {
+              "name": "Kuwait",
+              "code": "KW",
+              "id": 118
+            },
+            "region": {
+              "city": "Kuwait City"
+            }
+          },
+          "visible": true
+        },
+        "destination": {
+          "timezone": {
+            "name": "Asia/Damascus",
+            "offset": 10800,
+            "abbr": "+03",
+            "abbrName": null,
+            "isDst": false
+          },
+          "info": {
+            "terminal": null,
+            "baggage": null,
+            "gate": null
+          }
+        },
+        "real": null
+      },
+      "time": {
+        "scheduled": {
+          "departure": 1791617400,
+          "arrival": 1791625800
+        },
+        "real": {
+          "departure": null,
+          "arrival": null
+        },
+        "estimated": {
+          "departure": 1791617400,
+          "arrival": null
+        },
+        "other": {
+          "eta": null,
+          "duration": null
+        }
+      }
+    }
+  },
+  {
+    "flight": {
+      "identification": {
+        "id": "420ea4e3",
+        "row": 5873637688,
+        "number": {
+          "default": "J9179",
+          "alternative": null
+        },
+        "callsign": "JZR179",
+        "codeshare": null
+      },
+      "status": {
+        "live": false,
+        "text": "Unknown",
+        "icon": null,
+        "estimated": null,
+        "ambiguous": false,
+        "generic": {
+          "status": {
+            "text": "unknown",
+            "type": "arrival",
+            "color": null,
+            "diverted": null
+          },
+          "eventTime": {
+            "utc": null,
+            "local": null
+          }
+        }
+      },
+      "aircraft": {
+        "model": {
+          "code": "A20N",
+          "text": "Airbus A320-251N"
+        },
+        "registration": "9K-CBI",
+        "country": {
+          "id": 118,
+          "name": "Kuwait",
+          "alpha2": "KW",
+          "alpha3": "KWT"
+        },
+        "hex": "706130",
+        "restricted": false,
+        "serialNo": null,
+        "age": {
+          "availability": true
+        },
+        "availability": {
+          "serialNo": true,
+          "age": true
+        }
+      },
+      "owner": {
+        "name": "Jazeera Airways",
+        "code": {
+          "iata": "J9",
+          "icao": "JZR"
+        },
+        "logo": "https://cdn.flightradar24.com/assets/airlines/logotypes/538.png"
+      },
+      "airline": {
+        "name": "Jazeera Airways",
+        "code": {
+          "iata": "J9",
+          "icao": "JZR"
+        },
+        "short": "Jazeera Airways"
+      },
+      "airport": {
+        "origin": {
+          "code": {
+            "iata": "KWI",
+            "icao": "OKKK"
+          },
+          "timezone": {
+            "name": "Asia/Kuwait",
+            "offset": 10800,
+            "abbr": "+03",
+            "abbrName": null,
+            "isDst": false
+          },
+          "info": {
+            "terminal": "5",
+            "baggage": null,
+            "gate": "131"
+          },
+          "name": "Kuwait International Airport",
+          "position": {
+            "latitude": 29.226561,
+            "longitude": 47.968922,
+            "country": {
+              "name": "Kuwait",
+              "code": "KW",
+              "id": 118
+            },
+            "region": {
+              "city": "Kuwait City"
+            }
+          },
+          "visible": true
+        },
+        "destination": {
+          "timezone": {
+            "name": "Asia/Damascus",
+            "offset": 10800,
+            "abbr": "+03",
+            "abbrName": null,
+            "isDst": false
+          },
+          "info": {
+            "terminal": null,
+            "baggage": null,
+            "gate": null
+          }
+        },
+        "real": null
+      },
+      "time": {
+        "scheduled": {
+          "departure": 1791607200,
+          "arrival": 1791616500
+        },
+        "real": {
+          "departure": 1791607562,
+          "arrival": null
+        },
+        "estimated": {
+          "departure": null,
+          "arrival": 1791615157
+        },
+        "other": {
+          "eta": null,
+          "duration": null
+        }
+      }
+    }
+  },
+  {
+    "flight": {
+      "identification": {
+        "id": null,
+        "row": 5873909259,
+        "number": {
+          "default": "RB133",
+          "alternative": null
+        },
+        "callsign": null,
+        "codeshare": null
+      },
+      "status": {
+        "live": false,
+        "text": "Unknown",
+        "icon": null,
+        "estimated": null,
+        "ambiguous": false,
+        "generic": {
+          "status": {
+            "text": "unknown",
+            "type": "arrival",
+            "color": "gray",
+            "diverted": null
+          },
+          "eventTime": {
+            "utc": null,
+            "local": null
+          }
+        }
+      },
+      "aircraft": {
+        "model": {
+          "code": "320",
+          "text": ""
+        },
+        "hex": "",
+        "registration": "",
+        "serialNo": "",
+        "images": null
+      },
+      "owner": null,
+      "airline": {
+        "name": "SyrianAir",
+        "code": {
+          "iata": "RB",
+          "icao": "SYR"
+        },
+        "short": "SyrianAir"
+      },
+      "airport": {
+        "origin": {
+          "code": {
+            "iata": "DAM",
+            "icao": "OSDI"
+          },
+          "timezone": {
+            "name": "Asia/Damascus",
+            "offset": 10800,
+            "abbr": "+03",
+            "abbrName": null,
+            "isDst": false
+          },
+          "info": {
+            "terminal": null,
+            "baggage": null,
+            "gate": null
+          },
+          "name": "Damascus International Airport",
+          "position": {
+            "latitude": 33.410629,
+            "longitude": 36.514259,
+            "country": {
+              "name": "Syria",
+              "code": "SY",
+              "id": 217
+            },
+            "region": {
+              "city": "Damascus"
+            }
+          },
+          "visible": true
+        },
+        "destination": {
+          "timezone": {
+            "name": "Asia/Damascus",
+            "offset": 10800,
+            "abbr": "+03",
+            "abbrName": null,
+            "isDst": false
+          },
+          "info": {
+            "terminal": null,
+            "baggage": null,
+            "gate": null
+          }
+        },
+        "real": null
+      },
+      "time": {
+        "scheduled": {
+          "departure": 1791597600,
+          "arrival": 1791601200
+        },
+        "real": {
+          "departure": null,
+          "arrival": null
+        },
+        "estimated": {
+          "departure": null,
+          "arrival": null
+        },
+        "other": {
+          "eta": null,
+          "duration": null
+        }
+      }
+    }
+  }
+]

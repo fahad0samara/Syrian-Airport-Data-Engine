@@ -1,0 +1,6 @@
+capture_id,capture_timestamp,is_complete,validation_status,error_type,description,field_errors,route_errors,syntax_errors
+snap_wayback_20260709234230,20260709234230,YES,PASSED,NONE,"Baseline snapshot passed all JSON syntax, schema validation, and SHA-256 integrity checks (1,982 records).",0,0,0
+snap_wayback_20260720034051,20260720034051,NO (Filtered),HALTED_RATE_LIMITED,HTTP_429,Wayback Machine rate limited replay request (HTTP 429); retrieval halted to comply with safety rules.,0,0,0
+snap_wayback_20260802011114,20260802011114,NO (Filtered),HALTED_RATE_LIMITED,HTTP_429,Wayback Machine rate limited replay request (HTTP 429); retrieval halted to comply with safety rules.,0,0,0
+snap_wayback_20260901001238,20260901001238,NO (Filtered),HALTED_RATE_LIMITED,HTTP_429,Wayback Machine rate limited replay request (HTTP 429); retrieval halted to comply with safety rules.,0,0,0
+snap_wayback_20260909200343,20260909200343,NO (Filtered),HALTED_RATE_LIMITED,HTTP_429,Wayback Machine rate limited replay request (HTTP 429); retrieval halted to comply with safety rules.,0,0,0

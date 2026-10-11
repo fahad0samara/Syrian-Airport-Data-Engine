@@ -1,0 +1,2 @@
+snapshot_id,validation_status,total_records,arrivals,departures,unique_uuids,missing_uuids,duplicate_uuids,duplicate_candidates,scheduled_dates_count,earliest_date,latest_date,unique_airlines_count,json_sha256,raw_sha256,issues_count
+snap_wayback_20260709234230,VALID_WITH_CANDIDATE_DUPLICATES,1982,993,989,1982,0,0,1,67,2026-07-05,2026-09-09,14,ba8606e958363e29392743d00a8e84ef37ecbf805f8b48fca66e1f111c416491,5a60ee3598c8f6785018c72030b558e472d1b66e7407196eb8cc13b5cc55b4bf,0

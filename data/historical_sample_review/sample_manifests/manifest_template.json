@@ -1,0 +1,109 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "HistoricalSampleManifest",
+  "description": "Schema and manifest template for incoming historical aviation samples at Damascus International Airport (DAM / OSDI).",
+  "type": "object",
+  "required": [
+    "provider",
+    "original_filename",
+    "acquisition_date",
+    "requested_historical_dates",
+    "airport_identifier",
+    "file_sha256",
+    "license_usage_restrictions",
+    "export_permissions",
+    "retention_permissions",
+    "sample_status",
+    "validation_status"
+  ],
+  "properties": {
+    "manifest_id": {
+      "type": "string",
+      "example": "MNF-20261011-FR24-OSDI"
+    },
+    "provider": {
+      "type": "string",
+      "enum": ["opensky", "flightradar24", "flightaware", "official_statistics", "other"],
+      "description": "Name of the upstream data provider or authority."
+    },
+    "original_filename": {
+      "type": "string",
+      "example": "osdi_historical_sample_2024.csv"
+    },
+    "acquisition_date": {
+      "type": "string",
+      "format": "date",
+      "example": "2026-10-11"
+    },
+    "requested_historical_dates": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "format": "date"
+      },
+      "example": [
+        "2024-01-15",
+        "2024-03-15",
+        "2024-05-15",
+        "2024-07-15",
+        "2024-09-15",
+        "2024-10-10",
+        "2025-06-15",
+        "2026-06-15"
+      ]
+    },
+    "airport_identifier": {
+      "type": "object",
+      "properties": {
+        "icao": { "type": "string", "example": "OSDI" },
+        "iata": { "type": "string", "example": "DAM" }
+      },
+      "required": ["icao", "iata"]
+    },
+    "file_sha256": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{64}$",
+      "description": "Cryptographic SHA-256 hash of the received unmutated raw file."
+    },
+    "license_usage_restrictions": {
+      "type": "string",
+      "description": "Summary of contractual licensing terms governing the sample."
+    },
+    "export_permissions": {
+      "type": "string",
+      "enum": ["permitted_public", "permitted_academic_derivative_only", "prohibited", "pending_review"],
+      "description": "Downstream rights to export or publish derivative data."
+    },
+    "retention_permissions": {
+      "type": "string",
+      "enum": ["permanent_local_db_allowed", "temporary_eval_cache_only", "mandatory_purge_required", "pending_review"],
+      "description": "Rights to retain records long-term in an internal SQLite database."
+    },
+    "sample_status": {
+      "type": "string",
+      "enum": ["pending_outreach", "awaiting_provider_response", "sample_received", "sample_declined", "unverified"],
+      "description": "Operational procurement state of the sample."
+    },
+    "validation_status": {
+      "type": "string",
+      "enum": ["unvalidated", "partially_validated", "validated_accepted", "validated_rejected"],
+      "description": "State of forensic verification against the 10 assessment criteria."
+    },
+    "record_counts": {
+      "type": "object",
+      "properties": {
+        "total_rows": { "type": "integer", "default": 0 },
+        "arrival_records": { "type": "integer", "default": 0 },
+        "departure_records": { "type": "integer", "default": 0 },
+        "confirmed_physical": { "type": "integer", "default": 0 },
+        "corroborated_physical": { "type": "integer", "default": 0 },
+        "probable_movement": { "type": "integer", "default": 0 },
+        "unverified_movement": { "type": "integer", "default": 0 },
+        "scheduled_service": { "type": "integer", "default": 0 }
+      }
+    },
+    "reviewer_notes": {
+      "type": "string"
+    }
+  }
+}

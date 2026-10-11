@@ -2,12 +2,13 @@
   "airport_iata": "DAM",
   "airport_icao": "OSDI",
   "airport_name": "Damascus International Airport",
-  "total_verified_damascus_flights": 266,
-  "earliest_damascus_flight_date": "2026-10-08",
+  "total_verified_damascus_flights": 394,
+  "earliest_damascus_flight_date": "2026-10-09",
   "latest_damascus_flight_date": "2026-10-12",
   "historical_2024_records_count": 578,
   "historical_2024_earliest_date": "2024-01-01",
   "historical_2024_latest_date": "2024-10-15",
   "total_unique_aircraft": 98,
-  "total_unique_airlines": 24
+  "total_unique_airlines": 25,
+  "deduplication_records_audited": 579
 }

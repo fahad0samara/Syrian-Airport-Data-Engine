@@ -1,0 +1,3 @@
+flight_status,classification,record_count,percentage,with_actual_timestamps
+scheduled,archived_scheduled_service,1981,99.95,0
+arrived,archived_actual_movement_candidate,1,0.05,0

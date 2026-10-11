@@ -1,0 +1,15 @@
+airline_name_ar,airline_name_en,airline_iata,entity_classification,total_flights,percentage_of_total,arrival_records,departure_records,distinct_flight_numbers,active_days_count
+طيران العربية,Air Arabia,G9,commercial_airline_brand,509,25.68%,256,253,12,67
+فلاي ناس,Flynas,XY,commercial_airline_brand,382,19.27%,191,191,13,63
+فلاي دبي,flydubai,FZ,commercial_airline_brand,262,13.22%,131,131,10,63
+الخطوط التركية,Turkish Airlines,TK,commercial_airline_brand,252,12.71%,126,126,7,63
+أناضول جت,AJet,VF,commercial_airline_brand,180,9.08%,90,90,5,63
+الخطوط القطرية,Qatar Airways,QR,commercial_airline_brand,118,5.95%,59,59,2,59
+الاتحاد,Etihad Airways,EY,commercial_airline_brand,72,3.63%,36,36,2,36
+فلاي شام,Fly Cham,XH,commercial_airline_brand,62,3.13%,31,31,31,6
+السورية للطيران,Syrian Airlines,RB,commercial_airline_brand,43,2.17%,22,21,29,5
+دان أير,Dan Air,DN,commercial_airline_brand,36,1.82%,18,18,3,18
+طيران الجزيرة,Jazeera Airways,J9,commercial_airline_brand,30,1.51%,15,15,12,5
+الملكية الأردنية,Royal Jordanian,RJ,commercial_airline_brand,20,1.01%,10,10,8,5
+فلاي إديل,Flyadeal,F3,commercial_airline_brand,12,0.61%,6,6,8,4
+الأمم المتحدة,United Nations,UN,humanitarian_organization,4,0.20%,2,2,1,2

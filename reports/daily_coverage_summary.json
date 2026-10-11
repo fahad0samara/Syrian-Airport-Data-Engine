@@ -1,0 +1,68 @@
+{
+  "generated_at": "2026-10-10T14:45:00Z",
+  "operational_metrics": {
+    "ingestion_runs_by_status": {
+      "EMPTY": {
+        "count": 2,
+        "records": 0
+      },
+      "FAILED": {
+        "count": 23,
+        "records": 0
+      },
+      "SUCCESS": {
+        "count": 4,
+        "records": 1896
+      }
+    },
+    "airports_checked": {
+      "ALP": {
+        "airport_id": "ALP",
+        "sources_checked": 1,
+        "total_runs": 1
+      },
+      "DAM": {
+        "airport_id": "DAM",
+        "sources_checked": 2,
+        "total_runs": 26
+      },
+      "DEZ": {
+        "airport_id": "DEZ",
+        "sources_checked": 1,
+        "total_runs": 1
+      },
+      "KAC": {
+        "airport_id": "KAC",
+        "sources_checked": 1,
+        "total_runs": 1
+      }
+    },
+    "flight_events_by_nature": {
+      "ALP": {
+        "physical_movement": 32,
+        "scheduled_service": 229
+      },
+      "DAM": {
+        "marketing_codeshare": 34,
+        "physical_movement": 98,
+        "scheduled_service": 1428,
+        "unverified_movement": 3
+      },
+      "DEZ": {
+        "physical_movement": 1,
+        "scheduled_service": 5
+      }
+    },
+    "deduplication_audit": {
+      "AMBIGUOUS_KEPT_SEPARATE": 15,
+      "MERGED_VERIFIED": 322
+    },
+    "coverage_matrix_distribution": {
+      "commercial_schedule_only": 18,
+      "future_schedule": 23,
+      "source_checked_no_records": 51,
+      "unverified_data_gap": 5078,
+      "verified_coverage": 5
+    }
+  }
+}

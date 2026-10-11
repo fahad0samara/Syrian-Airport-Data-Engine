@@ -1,0 +1,17 @@
+{
+  "provider": "ADS-B.lol",
+  "endpoint": "https://api.adsb.lol/v2/point/33.4115/36.5156/81",
+  "request_timestamp": "2026-10-11T10:02:26.679390+00:00",
+  "test_radius_km": 150,
+  "airport_coordinates": {
+    "lat": 33.4115,
+    "lon": 36.5156,
+    "icao": "OSDI"
+  },
+  "http_status": 200,
+  "response_record_count": 4,
+  "errors": null,
+  "documentation_url": "https://adsb.lol/",
+  "response_file": "data\\free_api_research\\adsb_lol\\adsb_lol_osdi_150km_20261011T100227Z.json",
+  "file_sha256": "2f6100b78aba93abe462f6de5c990ed25cd0d8c1c3b90201c187734e371b2673"
+}

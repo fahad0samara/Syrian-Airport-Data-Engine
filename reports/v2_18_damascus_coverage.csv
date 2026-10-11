@@ -1,0 +1,35 @@
+year_month,dataset_category,verified_status,raw_records_count,unique_aircraft_count,approach_candidates,departure_candidates,overflights,regional_observations,confirmed_dam_movements,coverage_notes
+2024-01,regional_aggregate,regional_aggregate_dam_alp_ltk,50,0,0,0,0,0,0,"Classified as regional_aggregate (Syria Economic Monitor gateway aggregate covering DAM, ALP, LTK combined). Zero DAM-specific disaggregation available. Does NOT constitute DAM historical coverage."
+2024-02,regional_aggregate,regional_aggregate_dam_alp_ltk,48,0,0,0,0,0,0,"Regional aggregate for DAM, ALP, LTK combined; zero DAM-only movements."
+2024-03,regional_aggregate,regional_aggregate_dam_alp_ltk,52,0,0,0,0,0,0,"Regional aggregate for DAM, ALP, LTK combined; zero DAM-only movements."
+2024-04,regional_aggregate,regional_aggregate_dam_alp_ltk,50,0,0,0,0,0,0,"Regional aggregate for DAM, ALP, LTK combined; zero DAM-only movements."
+2024-05,regional_aggregate,regional_aggregate_dam_alp_ltk,54,0,0,0,0,0,0,"Regional aggregate for DAM, ALP, LTK combined; zero DAM-only movements."
+2024-06,regional_aggregate,regional_aggregate_dam_alp_ltk,52,0,0,0,0,0,0,"Regional aggregate for DAM, ALP, LTK combined; zero DAM-only movements."
+2024-07,regional_aggregate,regional_aggregate_dam_alp_ltk,56,0,0,0,0,0,0,"Regional aggregate for DAM, ALP, LTK combined; zero DAM-only movements."
+2024-08,regional_aggregate,regional_aggregate_dam_alp_ltk,58,0,0,0,0,0,0,"Regional aggregate for DAM, ALP, LTK combined; zero DAM-only movements."
+2024-09,regional_aggregate,regional_aggregate_dam_alp_ltk,52,0,0,0,0,0,0,"Regional aggregate for DAM, ALP, LTK combined; zero DAM-only movements."
+2024-10,regional_aggregate,regional_aggregate_dam_alp_ltk,56,0,0,0,0,0,0,"Regional aggregate for DAM, ALP, LTK combined (terminates 2024-10-15); zero DAM-only movements."
+2024-11,no_verified_dam_data,not_covered,0,0,0,0,0,0,0,SEM series terminated 2024-10-15; zero records in source. Reclassified from erroneous covered status to no_verified_dam_data.
+2024-12,no_verified_dam_data,not_covered,0,0,0,0,0,0,0,SEM series terminated 2024-10-15; zero records in source. Reclassified to no_verified_dam_data.
+2025-01,no_verified_dam_data,not_covered,0,0,0,0,0,0,0,Confirmed historical data gap. No public flight-level dataset identified.
+2025-02,no_verified_dam_data,not_covered,0,0,0,0,0,0,0,Confirmed historical data gap.
+2025-03,no_verified_dam_data,not_covered,0,0,0,0,0,0,0,Confirmed historical data gap.
+2025-04,no_verified_dam_data,not_covered,0,0,0,0,0,0,0,Confirmed historical data gap.
+2025-05,no_verified_dam_data,not_covered,0,0,0,0,0,0,0,Confirmed historical data gap.
+2025-06,no_verified_dam_data,not_covered,0,0,0,0,0,0,0,Confirmed historical data gap.
+2025-07,no_verified_dam_data,not_covered,0,0,0,0,0,0,0,Confirmed historical data gap.
+2025-08,no_verified_dam_data,not_covered,0,0,0,0,0,0,0,Confirmed historical data gap.
+2025-09,no_verified_dam_data,not_covered,0,0,0,0,0,0,0,Confirmed historical data gap.
+2025-10,no_verified_dam_data,not_covered,0,0,0,0,0,0,0,Confirmed historical data gap.
+2025-11,no_verified_dam_data,not_covered,0,0,0,0,0,0,0,Confirmed historical data gap.
+2025-12,no_verified_dam_data,not_covered,0,0,0,0,0,0,0,Confirmed historical data gap.
+2026-01,no_verified_dam_data,not_covered,0,0,0,0,0,0,0,Confirmed historical data gap.
+2026-02,no_verified_dam_data,not_covered,0,0,0,0,0,0,0,Confirmed historical data gap.
+2026-03,no_verified_dam_data,not_covered,0,0,0,0,0,0,0,Confirmed historical data gap.
+2026-04,no_verified_dam_data,not_covered,0,0,0,0,0,0,0,Confirmed historical data gap.
+2026-05,no_verified_dam_data,not_covered,0,0,0,0,0,0,0,Confirmed historical data gap.
+2026-06,no_verified_dam_data,not_covered,0,0,0,0,0,0,0,Confirmed historical data gap.
+2026-07,dam_scheduled_fids,covered_scheduled_timetable_only,956,0,0,0,0,0,0,"Official FIDS baseline snapshot (956 scheduled flight records: 480 arr, 476 dep). Scheduled display data only; NOT verified physical aircraft movements."
+2026-08,dam_scheduled_fids,covered_scheduled_timetable_only,886,0,0,0,0,0,0,"Official FIDS baseline snapshot (886 scheduled flight records: 443 arr, 443 dep). Scheduled display data only."
+2026-09,dam_scheduled_fids,covered_scheduled_timetable_only,140,0,0,0,0,0,0,"Official FIDS baseline snapshot (140 scheduled flight records: 70 arr, 70 dep). Scheduled display data only."
+2026-10,live_regional_adsb,live_regional_sample_only,16,9,0,0,15,1,0,"Live regional ADS-B query sample (16 observations: 15 high-altitude overflights, 1 Beirut regional transit). Zero DAM airport movements."

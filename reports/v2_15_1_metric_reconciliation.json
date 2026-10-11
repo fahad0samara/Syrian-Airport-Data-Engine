@@ -1,0 +1,551 @@
+{
+  "metadata": {
+    "audit_title": "Archived FIDS Analytics Reconciliation & Metric Integrity Audit",
+    "version": "2.15.1",
+    "generated_at": "2026-10-11T15:08:54.540139",
+    "scope": "Independent verification of 1,982 records in data/archived_fids_staging.db",
+    "dataset_origin": {
+      "source_url": "https://damairport.gov.sy/api/flights.php",
+      "archive_url": "https://web.archive.org/web/20260709234230id_/https://damairport.gov.sy/api/flights.php",
+      "memento_timestamp": "2026-07-09T23:42:30Z",
+      "snapshot_id": "snap_wayback_20260709234230",
+      "coverage_start": "2026-07-05",
+      "coverage_end": "2026-09-09",
+      "total_calendar_days": 67
+    },
+    "hashes": {
+      "production_db_sha256": "c512fd2952976f923010c42da19505d803e3ff96930f713f53284ea74568e28b",
+      "staging_db_sha256": "a90c5faedb3238e0c283f1ddb7f61e0f1a9cb90ca621fc92f316ecfdc7db61d4",
+      "raw_json_snapshot_sha256": "ba8606e958363e29392743d00a8e84ef37ecbf805f8b48fca66e1f111c416491"
+    }
+  },
+  "critical_daily_coverage_reconciliation": {
+    "discrepancy_investigation": {
+      "v2_14_prose_claim": "Every single day has between 24 and 36 scheduled movements (docs/V2_14_FINAL_DECISION.md line 47).",
+      "empirical_staging_truth": "Daily records range from MIN=2 to MAX=69.",
+      "root_cause_finding": "The V2.14 narrative statement was a superficial drafting oversight by the report author, who observed only the mid-period cruising range (July 10–August 31, where daily flights fluctuate between 26 and 32) and overlooked the 5-day opening surge (July 5–9, 60–69 flights) and the 4-day closing tail (September 6–9, 2 flights/day). The raw JSON snapshot and staging DB have always contained the exact same 1,982 records with min 2 and max 69. No data was altered or synthesized.",
+      "status": "reconciled_and_corrected"
+    },
+    "metrics": {
+      "total_records": 1982,
+      "total_consecutive_days": 67,
+      "earliest_date": "2026-07-05",
+      "latest_date": "2026-09-09",
+      "missing_dates_count": 0,
+      "min_daily_count": 2,
+      "max_daily_count": 69,
+      "overall_daily_average": 29.5821,
+      "peak_dates": [
+        {
+          "date": "2026-07-06",
+          "count": 69
+        },
+        {
+          "date": "2026-07-09",
+          "count": 68
+        },
+        {
+          "date": "2026-07-05",
+          "count": 64
+        },
+        {
+          "date": "2026-07-08",
+          "count": 63
+        },
+        {
+          "date": "2026-07-07",
+          "count": 60
+        }
+      ],
+      "quietest_dates": [
+        {
+          "date": "2026-09-06",
+          "count": 2
+        },
+        {
+          "date": "2026-09-07",
+          "count": 2
+        },
+        {
+          "date": "2026-09-08",
+          "count": 2
+        },
+        {
+          "date": "2026-09-09",
+          "count": 2
+        }
+      ]
+    }
+  },
+  "weekly_metric_verification": {
+    "total_records": 1982,
+    "weighted_weekday_average": 29.5821,
+    "overall_daily_average": 29.5821,
+    "unweighted_weekday_average": 29.5714,
+    "mathematical_reconciliation": {
+      "is_weighted_average_exact": true,
+      "discrepancy_with_daily_average": 0.0,
+      "weighting_explanation": "Across 67 consecutive calendar days starting on a Sunday (2026-07-05) and ending on a Wednesday (2026-09-09), Sunday, Monday, Tuesday, and Wednesday each occur 10 times, whereas Thursday, Friday, and Saturday occur only 9 times. The unweighted mean of weekday averages (29.43) slightly underestimates the true daily average (29.58) because Thursday, Friday, and Saturday had lower flight volumes and fewer occurrences. Weighting by day occurrence yields exactly 1,982 / 67 = 29.5821."
+    },
+    "weekdays": [
+      {
+        "weekday_index": 0,
+        "weekday_name": "Monday",
+        "occurrences": 10,
+        "total_records": 295,
+        "average_records": 29.5,
+        "min_daily_count": 2,
+        "max_daily_count": 69
+      },
+      {
+        "weekday_index": 1,
+        "weekday_name": "Tuesday",
+        "occurrences": 10,
+        "total_records": 286,
+        "average_records": 28.6,
+        "min_daily_count": 2,
+        "max_daily_count": 60
+      },
+      {
+        "weekday_index": 2,
+        "weekday_name": "Wednesday",
+        "occurrences": 10,
+        "total_records": 287,
+        "average_records": 28.7,
+        "min_daily_count": 2,
+        "max_daily_count": 63
+      },
+      {
+        "weekday_index": 3,
+        "weekday_name": "Thursday",
+        "occurrences": 9,
+        "total_records": 290,
+        "average_records": 32.22,
+        "min_daily_count": 26,
+        "max_daily_count": 68
+      },
+      {
+        "weekday_index": 4,
+        "weekday_name": "Friday",
+        "occurrences": 9,
+        "total_records": 270,
+        "average_records": 30.0,
+        "min_daily_count": 28,
+        "max_daily_count": 32
+      },
+      {
+        "weekday_index": 5,
+        "weekday_name": "Saturday",
+        "occurrences": 9,
+        "total_records": 232,
+        "average_records": 25.78,
+        "min_daily_count": 24,
+        "max_daily_count": 26
+      },
+      {
+        "weekday_index": 6,
+        "weekday_name": "Sunday",
+        "occurrences": 10,
+        "total_records": 322,
+        "average_records": 32.2,
+        "min_daily_count": 2,
+        "max_daily_count": 64
+      }
+    ]
+  },
+  "entity_classification_audit": {
+    "total_displayed_entities": 14,
+    "commercial_airline_brands_count": 13,
+    "humanitarian_organizations_count": 1,
+    "total_records": 1982,
+    "percentage_sum": 100.0,
+    "humanitarian_organization_details": {
+      "entity_name_en": "United Nations",
+      "entity_name_ar": "الامم المتحدة",
+      "source_iata_code": "UN",
+      "distinct_flights": [
+        "UNO 501"
+      ],
+      "total_records": 4,
+      "percentage": "0.20%",
+      "classification": "humanitarian_organization",
+      "operational_note": "International intergovernmental organization operating humanitarian charter and peacekeeping logistics; not a commercial passenger airline."
+    },
+    "entities": [
+      {
+        "airline_name_ar": "طيران العربية",
+        "airline_name_en": "Air Arabia",
+        "airline_iata": "G9",
+        "entity_classification": "commercial_airline_brand",
+        "total_flights": 509,
+        "percentage_of_total": "25.68%",
+        "percentage_value": 25.68,
+        "arrival_records": 256,
+        "departure_records": 253,
+        "distinct_flight_numbers": 12,
+        "active_days_count": 67
+      },
+      {
+        "airline_name_ar": "فلاي ناس",
+        "airline_name_en": "Flynas",
+        "airline_iata": "XY",
+        "entity_classification": "commercial_airline_brand",
+        "total_flights": 382,
+        "percentage_of_total": "19.27%",
+        "percentage_value": 19.27,
+        "arrival_records": 191,
+        "departure_records": 191,
+        "distinct_flight_numbers": 13,
+        "active_days_count": 63
+      },
+      {
+        "airline_name_ar": "فلاي دبي",
+        "airline_name_en": "flydubai",
+        "airline_iata": "FZ",
+        "entity_classification": "commercial_airline_brand",
+        "total_flights": 262,
+        "percentage_of_total": "13.22%",
+        "percentage_value": 13.22,
+        "arrival_records": 131,
+        "departure_records": 131,
+        "distinct_flight_numbers": 10,
+        "active_days_count": 63
+      },
+      {
+        "airline_name_ar": "الخطوط التركية",
+        "airline_name_en": "Turkish Airlines",
+        "airline_iata": "TK",
+        "entity_classification": "commercial_airline_brand",
+        "total_flights": 252,
+        "percentage_of_total": "12.71%",
+        "percentage_value": 12.71,
+        "arrival_records": 126,
+        "departure_records": 126,
+        "distinct_flight_numbers": 7,
+        "active_days_count": 63
+      },
+      {
+        "airline_name_ar": "أناضول جت",
+        "airline_name_en": "AJet",
+        "airline_iata": "VF",
+        "entity_classification": "commercial_airline_brand",
+        "total_flights": 180,
+        "percentage_of_total": "9.08%",
+        "percentage_value": 9.08,
+        "arrival_records": 90,
+        "departure_records": 90,
+        "distinct_flight_numbers": 5,
+        "active_days_count": 63
+      },
+      {
+        "airline_name_ar": "الخطوط القطرية",
+        "airline_name_en": "Qatar Airways",
+        "airline_iata": "QR",
+        "entity_classification": "commercial_airline_brand",
+        "total_flights": 118,
+        "percentage_of_total": "5.95%",
+        "percentage_value": 5.95,
+        "arrival_records": 59,
+        "departure_records": 59,
+        "distinct_flight_numbers": 2,
+        "active_days_count": 59
+      },
+      {
+        "airline_name_ar": "الاتحاد",
+        "airline_name_en": "Etihad Airways",
+        "airline_iata": "EY",
+        "entity_classification": "commercial_airline_brand",
+        "total_flights": 72,
+        "percentage_of_total": "3.63%",
+        "percentage_value": 3.63,
+        "arrival_records": 36,
+        "departure_records": 36,
+        "distinct_flight_numbers": 2,
+        "active_days_count": 36
+      },
+      {
+        "airline_name_ar": "فلاي شام",
+        "airline_name_en": "Fly Cham",
+        "airline_iata": "XH",
+        "entity_classification": "commercial_airline_brand",
+        "total_flights": 62,
+        "percentage_of_total": "3.13%",
+        "percentage_value": 3.13,
+        "arrival_records": 31,
+        "departure_records": 31,
+        "distinct_flight_numbers": 31,
+        "active_days_count": 6
+      },
+      {
+        "airline_name_ar": "السورية للطيران",
+        "airline_name_en": "Syrian Airlines",
+        "airline_iata": "RB",
+        "entity_classification": "commercial_airline_brand",
+        "total_flights": 43,
+        "percentage_of_total": "2.17%",
+        "percentage_value": 2.17,
+        "arrival_records": 22,
+        "departure_records": 21,
+        "distinct_flight_numbers": 29,
+        "active_days_count": 5
+      },
+      {
+        "airline_name_ar": "دان أير",
+        "airline_name_en": "Dan Air",
+        "airline_iata": "DN",
+        "entity_classification": "commercial_airline_brand",
+        "total_flights": 36,
+        "percentage_of_total": "1.82%",
+        "percentage_value": 1.82,
+        "arrival_records": 18,
+        "departure_records": 18,
+        "distinct_flight_numbers": 3,
+        "active_days_count": 18
+      },
+      {
+        "airline_name_ar": "طيران الجزيرة",
+        "airline_name_en": "Jazeera Airways",
+        "airline_iata": "J9",
+        "entity_classification": "commercial_airline_brand",
+        "total_flights": 30,
+        "percentage_of_total": "1.51%",
+        "percentage_value": 1.51,
+        "arrival_records": 15,
+        "departure_records": 15,
+        "distinct_flight_numbers": 12,
+        "active_days_count": 5
+      },
+      {
+        "airline_name_ar": "الملكية الأردنية",
+        "airline_name_en": "Royal Jordanian",
+        "airline_iata": "RJ",
+        "entity_classification": "commercial_airline_brand",
+        "total_flights": 20,
+        "percentage_of_total": "1.01%",
+        "percentage_value": 1.01,
+        "arrival_records": 10,
+        "departure_records": 10,
+        "distinct_flight_numbers": 8,
+        "active_days_count": 5
+      },
+      {
+        "airline_name_ar": "فلاي إديل",
+        "airline_name_en": "Flyadeal",
+        "airline_iata": "F3",
+        "entity_classification": "commercial_airline_brand",
+        "total_flights": 12,
+        "percentage_of_total": "0.61%",
+        "percentage_value": 0.61,
+        "arrival_records": 6,
+        "departure_records": 6,
+        "distinct_flight_numbers": 8,
+        "active_days_count": 4
+      },
+      {
+        "airline_name_ar": "الأمم المتحدة",
+        "airline_name_en": "United Nations",
+        "airline_iata": "UN",
+        "entity_classification": "humanitarian_organization",
+        "total_flights": 4,
+        "percentage_of_total": "0.20%",
+        "percentage_value": 0.2,
+        "arrival_records": 2,
+        "departure_records": 2,
+        "distinct_flight_numbers": 1,
+        "active_days_count": 2
+      }
+    ]
+  },
+  "route_and_direction_reconciliation": {
+    "total_arrivals": 993,
+    "total_departures": 989,
+    "total_movements": 1982,
+    "net_directional_balance": 4,
+    "directionality_rules": {
+      "arrivals": "origin is foreign/domestic port, destination is DAM",
+      "departures": "origin is DAM, destination is foreign/domestic port",
+      "direction_inversion_detected": false,
+      "missing_origin_or_dest_inferred": false
+    }
+  },
+  "hourly_distribution_reconciliation": {
+    "timezone": "Asia/Damascus (UTC+3)",
+    "wall_clock_time_strictly_preserved": true,
+    "total_hourly_records": 1982,
+    "hourly_buckets": {
+      "00": {
+        "hour": "00",
+        "arrivals": 2,
+        "departures": 3,
+        "total": 5
+      },
+      "01": {
+        "hour": "01",
+        "arrivals": 2,
+        "departures": 5,
+        "total": 7
+      },
+      "02": {
+        "hour": "02",
+        "arrivals": 0,
+        "departures": 0,
+        "total": 0
+      },
+      "03": {
+        "hour": "03",
+        "arrivals": 0,
+        "departures": 1,
+        "total": 1
+      },
+      "04": {
+        "hour": "04",
+        "arrivals": 2,
+        "departures": 0,
+        "total": 2
+      },
+      "05": {
+        "hour": "05",
+        "arrivals": 2,
+        "departures": 2,
+        "total": 4
+      },
+      "06": {
+        "hour": "06",
+        "arrivals": 136,
+        "departures": 7,
+        "total": 143
+      },
+      "07": {
+        "hour": "07",
+        "arrivals": 28,
+        "departures": 69,
+        "total": 97
+      },
+      "08": {
+        "hour": "08",
+        "arrivals": 1,
+        "departures": 72,
+        "total": 73
+      },
+      "09": {
+        "hour": "09",
+        "arrivals": 193,
+        "departures": 21,
+        "total": 214
+      },
+      "10": {
+        "hour": "10",
+        "arrivals": 65,
+        "departures": 135,
+        "total": 200
+      },
+      "11": {
+        "hour": "11",
+        "arrivals": 7,
+        "departures": 130,
+        "total": 137
+      },
+      "12": {
+        "hour": "12",
+        "arrivals": 196,
+        "departures": 5,
+        "total": 201
+      },
+      "13": {
+        "hour": "13",
+        "arrivals": 7,
+        "departures": 136,
+        "total": 143
+      },
+      "14": {
+        "hour": "14",
+        "arrivals": 3,
+        "departures": 63,
+        "total": 66
+      },
+      "15": {
+        "hour": "15",
+        "arrivals": 134,
+        "departures": 4,
+        "total": 138
+      },
+      "16": {
+        "hour": "16",
+        "arrivals": 166,
+        "departures": 130,
+        "total": 296
+      },
+      "17": {
+        "hour": "17",
+        "arrivals": 35,
+        "departures": 172,
+        "total": 207
+      },
+      "18": {
+        "hour": "18",
+        "arrivals": 0,
+        "departures": 28,
+        "total": 28
+      },
+      "19": {
+        "hour": "19",
+        "arrivals": 0,
+        "departures": 3,
+        "total": 3
+      },
+      "20": {
+        "hour": "20",
+        "arrivals": 0,
+        "departures": 1,
+        "total": 1
+      },
+      "21": {
+        "hour": "21",
+        "arrivals": 4,
+        "departures": 2,
+        "total": 6
+      },
+      "22": {
+        "hour": "22",
+        "arrivals": 8,
+        "departures": 0,
+        "total": 8
+      },
+      "23": {
+        "hour": "23",
+        "arrivals": 2,
+        "departures": 0,
+        "total": 2
+      }
+    }
+  },
+  "duplicate_candidate_reconciliation": {
+    "candidate_pairs_count": 1,
+    "candidate_id": "DUP_CANDIDATE_001",
+    "pair": {
+      "record_1": {
+        "source_uuid": "e5ada70d-5245-46d4-b043-bf469c1d104f",
+        "flight_number": "G9 376",
+        "airline": "طيران العربية"
+      },
+      "record_2": {
+        "source_uuid": "2d2a0935-da5e-42c4-ad15-e10b4e2291ee",
+        "flight_number": "376",
+        "airline": "طيران العربية"
+      }
+    },
+    "scheduled_datetime": "2026-07-08 13:55:00",
+    "movement_type": "departure",
+    "route": "DAM -> SHJ",
+    "duplicate_classification": "possible_prefix_variant_duplicate",
+    "review_status": "requires_manual_review",
+    "audit_invariant": "Preserved in staging and analytics without deletion, mutation, or suppression."
+  },
+  "safety_and_production_isolation": {
+    "production_db_modified": false,
+    "production_db_flight_events_count": 1830,
+    "archived_records_promoted_to_physical_movements": 0,
+    "external_requests_made": 0,
+    "scheduled_background_jobs_created": 0
+  }
+}

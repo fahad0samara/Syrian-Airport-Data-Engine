@@ -1,0 +1,71 @@
+{
+  "generated_at": "2026-10-11T13:56:23.051642+00:00",
+  "version": "v2_18_baseline",
+  "files": {
+    "damascus_airport_db": {
+      "path": "data/damascus_airport.db",
+      "sha256": "c512fd2952976f923010c42da19505d803e3ff96930f713f53284ea74568e28b",
+      "size_bytes": 11132928,
+      "table_counts": {
+        "airports": 7,
+        "raw_source_records": 25,
+        "flight_events": 1830,
+        "daily_airport_movements": 46,
+        "damascus_daily_movements": 32,
+        "historical_daily_movements_2024": 578,
+        "source_registry": 12,
+        "deduplication_audit": 337,
+        "data_quality_audit": 27,
+        "ingestion_runs": 33,
+        "historical_coverage_matrix": 5175,
+        "event_evidence": 1508,
+        "schema_migrations": 1,
+        "evidence_retractions": 0
+      }
+    },
+    "archived_fids_staging_db": {
+      "path": "data/archived_fids_staging.db",
+      "sha256": "a90c5faedb3238e0c283f1ddb7f61e0f1a9cb90ca621fc92f316ecfdc7db61d4",
+      "size_bytes": 3121152,
+      "table_counts": {
+        "archived_snapshots": 1,
+        "archived_fids_raw_records": 1982,
+        "archived_fids_normalized": 1982,
+        "archived_fids_validation_issues": 4050,
+        "archived_fids_daily_coverage": 67
+      }
+    },
+    "archived_fids_analytics_db": {
+      "path": "data/archived_fids_analytics.db",
+      "sha256": "e1f8f0dea0e72f630d52e40a2d3a0a90b49a514da694fa72ceeb35555f48e1fe",
+      "size_bytes": 1105920,
+      "table_counts": {
+        "fids_analytics_records": 1982,
+        "fids_duplicate_candidates": 1
+      }
+    },
+    "archived_fids_history_staging_db": {
+      "path": "data/archived_fids_history_staging.db",
+      "sha256": "39aa323265a6c6ad612cdd4bac0a3ae27deda26e2c16544df0e9f3cc32f83a7f",
+      "size_bytes": 917504,
+      "table_counts": {
+        "archived_snapshot_registry": 1,
+        "archived_snapshot_records": 1982,
+        "snapshot_comparison_results": 0,
+        "snapshot_validation_issues": 0
+      }
+    },
+    "original_fids_raw": {
+      "path": "data/raw/snapshots/wayback_damairport_fids_20260709234230.raw",
+      "sha256": "5a60ee3598c8f6785018c72030b558e472d1b66e7407196eb8cc13b5cc55b4bf",
+      "size_bytes": 68891,
+      "table_counts": null
+    },
+    "original_fids_json": {
+      "path": "data/raw/snapshots/wayback_damairport_fids_20260709234230.json",
+      "sha256": "ba8606e958363e29392743d00a8e84ef37ecbf805f8b48fca66e1f111c416491",
+      "size_bytes": 644922,
+      "table_counts": null
+    }
+  }
+}

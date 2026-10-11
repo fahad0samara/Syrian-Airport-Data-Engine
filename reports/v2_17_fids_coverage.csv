@@ -1,0 +1,5 @@
+month,total_scheduled_records,arrival_records,departure_records,distinct_scheduled_dates,earliest_scheduled_date,latest_scheduled_date,snapshot_source
+July 2026,956,480,476,27,2026-07-05,2026-07-31,wayback_damairport_fids_20260709234230
+August 2026,886,443,443,31,2026-08-01,2026-08-31,wayback_damairport_fids_20260709234230
+September 2026,140,70,70,9,2026-09-01,2026-09-09,wayback_damairport_fids_20260709234230
+Total Baseline,1982,993,989,67,2026-07-05,2026-09-09,wayback_damairport_fids_20260709234230

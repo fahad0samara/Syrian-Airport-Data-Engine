@@ -1,0 +1,9 @@
+dataset_id,title,dam_osdi_explicit_score,target_period_score,actual_movements_score,raw_record_level_score,public_free_access_score,provenance_clarity_score,total_score,evaluation_verdict,action_taken
+DS-ZEN-001,Crowdsourced air traffic data from The OpenSky Network 2020,1,0,4,5,4,5,19,Worth limited sample inspection (19-24),METADATA_INSPECTED_OUT_OF_PERIOD
+DS-ZEN-002,London Gatwick Airport (EGKK) Flight and Weather Dataset (2024),0,5,5,5,5,5,5,Disqualified: Irrelevant to DAM (<12),METADATA_INSPECTED_DISQUALIFIED_WRONG_GEOGRAPHY
+DS-S3-001,OpenSky Network Public Data Samples - FlightsV5,1,0,4,5,5,4,19,Worth limited sample inspection (19-24),SAMPLE_DOWNLOADED_OUT_OF_PERIOD
+DS-S3-002,OpenSky Complete Aircraft Database (2024-01 to 2025-08),0,4,0,4,5,5,18,Weak candidate; inspect metadata only (12-18),METADATA_INSPECTED_NO_MOVEMENTS
+DS-DTV-001,A Quasi-Experimental Study of Contagion and Coordination in Damascus,2,0,0,2,5,4,13,Weak candidate; inspect metadata only (12-18),METADATA_INSPECTED_NON_AVIATION
+DS-LOL-001,ADS-B.lol Global Daily Tarball Archives (2024-Present),1,5,3,5,4,3,21,Worth limited sample inspection (19-24),METADATA_INSPECTED_REJECTED_TERABYTE_UNINDEXED
+DS-GOV-001,Syria Economic Monitor 2024 Commercial Air Traffic Gateway Aggregate (DAM_ALP_LTK),1,5,3,2,5,4,20,Worth limited sample inspection (19-24),PRESERVED_AS_REGIONAL_AGGREGATE
+DS-WBY-001,Damascus International Airport Official FIDS API Historical Snapshot,5,5,0,5,5,5,25,High-priority candidate (25-30),ACQUIRED_AND_VALIDATED

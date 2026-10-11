@@ -1,0 +1,39 @@
+route_pair,origin_iata,destination_iata,movement_type,scheduled_records_count,unique_displayed_flight_numbers,distinct_airlines_count,airlines_list
+SHJ-DAM,SHJ,DAM,arrival,202,7,3,"Fly Cham,Air Arabia,Syrian Airlines"
+DAM-SHJ,DAM,SHJ,departure,199,11,3,"Fly Cham,Air Arabia,Syrian Airlines"
+DXB-DAM,DXB,DAM,arrival,142,10,3,"flydubai,Syrian Airlines,Fly Cham"
+DAM-DXB,DAM,DXB,departure,140,11,3,"Syrian Airlines,flydubai,Fly Cham"
+IST-DAM,IST,DAM,arrival,131,5,2,"Syrian Airlines,Turkish Airlines"
+DAM-IST,DAM,IST,departure,130,6,2,"Turkish Airlines,Syrian Airlines"
+DAM-RUH,DAM,RUH,departure,115,7,3,"Syrian Airlines,Flynas,Flyadeal"
+RUH-DAM,RUH,DAM,arrival,115,7,3,"Flynas,Syrian Airlines,Flyadeal"
+AUH-DAM,AUH,DAM,arrival,103,6,4,"Air Arabia,Fly Cham,Etihad Airways,Syrian Airlines"
+DAM-AUH,DAM,AUH,departure,103,7,4,"Fly Cham,Air Arabia,Etihad Airways,Syrian Airlines"
+DAM-SAW,DAM,SAW,departure,68,4,2,"AJet,Fly Cham"
+DAM-JED,DAM,JED,departure,67,5,3,"Flynas,Syrian Airlines,Flyadeal"
+JED-DAM,JED,DAM,arrival,67,4,3,"Flynas,Syrian Airlines,Flyadeal"
+SAW-DAM,SAW,DAM,arrival,67,3,2,"Fly Cham,AJet"
+DAM-DOH,DAM,DOH,departure,60,2,2,"Qatar Airways,Syrian Airlines"
+DOH-DAM,DOH,DAM,arrival,60,2,2,"Qatar Airways,Syrian Airlines"
+DAM-ESB,DAM,ESB,departure,27,1,1,AJet
+ESB-DAM,ESB,DAM,arrival,27,1,1,AJet
+DAM-KWI,DAM,KWI,departure,21,9,3,"Jazeera Airways,Fly Cham,Syrian Airlines"
+KWI-DAM,KWI,DAM,arrival,21,9,3,"Jazeera Airways,Fly Cham,Syrian Airlines"
+DAM-DMM,DAM,DMM,departure,19,2,1,Flynas
+DMM-DAM,DMM,DAM,arrival,19,1,1,Flynas
+BUH-DAM,BUH,DAM,arrival,18,1,1,Dan Air
+DAM-BUH,DAM,BUH,departure,18,2,1,Dan Air
+AMM-DAM,AMM,DAM,arrival,10,5,1,Royal Jordanian
+DAM-AMM,DAM,AMM,departure,10,4,1,Royal Jordanian
+DAM-EBL,DAM,EBL,departure,3,2,1,Fly Cham
+ALP-DAM,ALP,DAM,arrival,2,1,1,United Nations
+AMS-DAM,AMS,DAM,arrival,2,1,1,Syrian Airlines
+BGW-DAM,BGW,DAM,arrival,2,1,1,Fly Cham
+DAM-ALP,DAM,ALP,departure,2,1,1,United Nations
+DAM-AMS,DAM,AMS,departure,2,1,1,Syrian Airlines
+DAM-BGW,DAM,BGW,departure,2,1,1,Fly Cham
+DAM-MCT,DAM,MCT,departure,2,1,1,Fly Cham
+EBL-DAM,EBL,DAM,arrival,2,1,1,Fly Cham
+MCT-DAM,MCT,DAM,arrival,2,1,1,Fly Cham
+DAM-MED,DAM,MED,departure,1,1,1,Syrian Airlines
+MED-DAM,MED,DAM,arrival,1,1,1,Syrian Airlines

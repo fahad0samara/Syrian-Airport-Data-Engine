@@ -1,0 +1,68 @@
+[
+  {
+    "provider": "ADS-B.lol",
+    "type": "live_sample",
+    "url": "https://api.adsb.lol/v2/point/33.4115/36.5156/81",
+    "local_file": "data/raw/adsb/v2_17\\adsb_lol_live_damascus_150km.json",
+    "retrieved_at": "2026-10-11T13:34:48.863360+00:00",
+    "http_status": 200,
+    "sha256": "8d3db200a09f9827c9e2defe135d887701ee84fef3bd78f3682fd971cf754ba9",
+    "byte_count": 6367,
+    "access_result": "HTTP 200 OK"
+  },
+  {
+    "provider": "ADSB.fi",
+    "type": "live_sample",
+    "url": "https://opendata.adsb.fi/api/v2/lat/33.4115/lon/36.5156/dist/81",
+    "local_file": "data/raw/adsb/v2_17\\adsb_fi_live_damascus_150km.json",
+    "retrieved_at": "2026-10-11T13:34:50.401987+00:00",
+    "http_status": 200,
+    "sha256": "6bb9c9669acd9931baee88ba38b533a0632f3bc3f62e507360ce62fba85b008a",
+    "byte_count": 5038,
+    "access_result": "HTTP 200 OK"
+  },
+  {
+    "provider": "OpenSky Network",
+    "type": "live_sample",
+    "url": "https://opensky-network.org/api/states/all?lamin=32.0&lamax=34.8&lomin=35.0&lomax=38.0",
+    "local_file": "data/raw/adsb/v2_17\\opensky_live_damascus_region.json",
+    "retrieved_at": "2026-10-11T13:34:50.704406+00:00",
+    "http_status": 200,
+    "sha256": "f0ae6fc2e7e0aa71a2f25f3955b76403e4a9663514d97932fdae5293c9af7de8",
+    "byte_count": 1619,
+    "access_result": "HTTP 200 OK"
+  },
+  {
+    "provider": "OpenSky Network",
+    "type": "historical_attempt",
+    "url": "https://opensky-network.org/api/flights/arrival?airport=OSDI&begin=1704067200&end=1704153600",
+    "local_file": "data/raw/adsb/v2_17\\opensky_historical_arrival_denied.json",
+    "retrieved_at": "2026-10-11T13:34:50.955580+00:00",
+    "http_status": 403,
+    "sha256": "910e4b1803a30cdca9b35dbc4e550d8343bdbf7f442988ab402af85312bd2e4f",
+    "byte_count": 36,
+    "access_result": "HTTP 403: "
+  },
+  {
+    "provider": "OpenSky Network",
+    "type": "historical_attempt",
+    "url": "https://opensky-network.org/api/states/all?time=1704067200&lamin=32.0&lamax=34.8&lomin=35.0&lomax=38.0",
+    "local_file": "data/raw/adsb/v2_17\\opensky_historical_states_denied.json",
+    "retrieved_at": "2026-10-11T13:34:54.168945+00:00",
+    "http_status": 403,
+    "sha256": "82f6ea08c64990b31dc63121dce0e64263f65028e61122a2f27051b1ac0abdf8",
+    "byte_count": 35,
+    "access_result": "HTTP 403: "
+  },
+  {
+    "provider": "ADS-B.lol",
+    "type": "historical_attempt",
+    "url": "https://api.adsb.lol/v2/history/point/33.4115/36.5156/81/2024-01-01",
+    "local_file": "data/raw/adsb/v2_17\\adsb_lol_historical_point_503.json",
+    "retrieved_at": "2026-10-11T13:34:54.690808+00:00",
+    "http_status": 503,
+    "sha256": "32f4c1e4c036d78d5bce0ddad05acdba6da51f8ccacf6deec8bb3fe529ec6ea7",
+    "byte_count": 592,
+    "access_result": "HTTP 503: Service Temporarily Unavailable"
+  }
+]

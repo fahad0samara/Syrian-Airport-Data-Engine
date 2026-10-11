@@ -1,0 +1,17 @@
+{
+  "provider": "Airplanes.live",
+  "endpoint": "https://api.airplanes.live/v2/point/33.4115/36.5156/81",
+  "request_timestamp": "2026-10-11T10:02:28.194097+00:00",
+  "test_radius_km": 150,
+  "airport_coordinates": {
+    "lat": 33.4115,
+    "lon": 36.5156,
+    "icao": "OSDI"
+  },
+  "http_status": 403,
+  "response_record_count": 0,
+  "errors": "HTTP 403: Forbidden",
+  "documentation_url": "https://airplanes.live/",
+  "response_file": "data\\free_api_research\\airplanes_live\\airplanes_live_osdi_150km_20261011T100229Z.json",
+  "file_sha256": "234d6a20d0fe3afb6078bc69f663cdb46f7f3dc3ea2817d910532b69b9c7bc9a"
+}

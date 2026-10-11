@@ -1,0 +1,12 @@
+{
+  "ok": true,
+  "flights": [],
+  "settings": {
+    "pageSize": 10,
+    "hideOlderThanDays": 3,
+    "flightIconArrival": "",
+    "flightIconDeparture": "",
+    "defaultLang": "ar"
+  },
+  "airlines": []
+}

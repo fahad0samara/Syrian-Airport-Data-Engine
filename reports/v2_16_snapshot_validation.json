@@ -1,0 +1,180 @@
+{
+  "version": "2.16",
+  "generated_at": "2026-10-11T15:18:47.721556",
+  "total_snapshots_validated": 1,
+  "snapshots": [
+    {
+      "snapshot_id": "snap_wayback_20260709234230",
+      "json_path": "data/raw/snapshots\\wayback_damairport_fids_20260709234230.json",
+      "raw_path": "data/raw/snapshots\\wayback_damairport_fids_20260709234230.raw",
+      "raw_sha256": "5a60ee3598c8f6785018c72030b558e472d1b66e7407196eb8cc13b5cc55b4bf",
+      "json_sha256": "ba8606e958363e29392743d00a8e84ef37ecbf805f8b48fca66e1f111c416491",
+      "file_size_bytes": 644922,
+      "validation_status": "VALID_WITH_CANDIDATE_DUPLICATES",
+      "schema": {
+        "top_level_keys": [
+          "airlines",
+          "ok",
+          "flights",
+          "settings"
+        ],
+        "missing_expected_keys": [],
+        "extra_keys": []
+      },
+      "identity_metrics": {
+        "total_records": 1982,
+        "unique_source_uuids": 1982,
+        "missing_uuids_count": 0,
+        "invalid_uuid_format_count": 0,
+        "exact_duplicate_objects_count": 0,
+        "duplicate_source_uuids_count": 0
+      },
+      "coverage_metrics": {
+        "scheduled_dates_count": 67,
+        "earliest_date": "2026-07-05",
+        "latest_date": "2026-09-09",
+        "daily_records_distribution": {
+          "2026-07-05": 64,
+          "2026-07-06": 69,
+          "2026-07-07": 60,
+          "2026-07-08": 63,
+          "2026-07-09": 68,
+          "2026-07-10": 32,
+          "2026-07-11": 26,
+          "2026-07-12": 32,
+          "2026-07-13": 28,
+          "2026-07-14": 28,
+          "2026-07-15": 28,
+          "2026-07-16": 28,
+          "2026-07-17": 30,
+          "2026-07-18": 26,
+          "2026-07-19": 32,
+          "2026-07-20": 28,
+          "2026-07-21": 28,
+          "2026-07-22": 28,
+          "2026-07-23": 28,
+          "2026-07-24": 30,
+          "2026-07-25": 26,
+          "2026-07-26": 32,
+          "2026-07-27": 28,
+          "2026-07-28": 28,
+          "2026-07-29": 28,
+          "2026-07-30": 28,
+          "2026-07-31": 30,
+          "2026-08-01": 26,
+          "2026-08-02": 32,
+          "2026-08-03": 28,
+          "2026-08-04": 28,
+          "2026-08-05": 28,
+          "2026-08-06": 28,
+          "2026-08-07": 30,
+          "2026-08-08": 26,
+          "2026-08-09": 32,
+          "2026-08-10": 28,
+          "2026-08-11": 28,
+          "2026-08-12": 28,
+          "2026-08-13": 28,
+          "2026-08-14": 30,
+          "2026-08-15": 26,
+          "2026-08-16": 32,
+          "2026-08-17": 28,
+          "2026-08-18": 28,
+          "2026-08-19": 28,
+          "2026-08-20": 28,
+          "2026-08-21": 30,
+          "2026-08-22": 26,
+          "2026-08-23": 32,
+          "2026-08-24": 28,
+          "2026-08-25": 28,
+          "2026-08-26": 28,
+          "2026-08-27": 28,
+          "2026-08-28": 30,
+          "2026-08-29": 26,
+          "2026-08-30": 32,
+          "2026-08-31": 28,
+          "2026-09-01": 28,
+          "2026-09-02": 26,
+          "2026-09-03": 26,
+          "2026-09-04": 28,
+          "2026-09-05": 24,
+          "2026-09-06": 2,
+          "2026-09-07": 2,
+          "2026-09-08": 2,
+          "2026-09-09": 2
+        }
+      },
+      "directional_metrics": {
+        "arrival": 993,
+        "departure": 989,
+        "other": 0
+      },
+      "status_distribution": {
+        "scheduled": 1981,
+        "arrived": 1
+      },
+      "airline_distribution": {
+        "السورية للطيران": 43,
+        "فلاي شام": 62,
+        "الملكية الأردنية": 20,
+        "الخطوط التركية": 252,
+        "طيران الجزيرة": 30,
+        "دان أير": 36,
+        "طيران العربية": 509,
+        "فلاي ناس": 382,
+        "فلاي دبي": 262,
+        "الخطوط القطرية": 118,
+        "أناضول جت": 180,
+        "الاتحاد": 72,
+        "فلاي إديل": 12,
+        "الأمم المتحدة": 4
+      },
+      "missing_fields": {
+        "aircraft": 1978,
+        "gate": 1982
+      },
+      "duplicate_candidates_count": 1,
+      "duplicate_candidates": [
+        {
+          "slot": "2026-07-08 13:55 (departure) DAM->SHJ",
+          "records": [
+            {
+              "source_uuid": "e5ada70d-5245-46d4-b043-bf469c1d104f",
+              "flight_number": "G9 376",
+              "original_date": "2026-07-08",
+              "original_time": "13:55",
+              "timezone_local": "Asia/Damascus (UTC+3)",
+              "derived_utc_timestamp": "2026-07-08 10:55:00Z",
+              "direction": "departure",
+              "origin": "DAM",
+              "destination": "SHJ",
+              "displayed_airline": "طيران العربية",
+              "displayed_status": "scheduled",
+              "source_created_at": "2026-07-04T15:45:44Z",
+              "actual_movement_evidence": 0
+            },
+            {
+              "source_uuid": "2d2a0935-da5e-42c4-ad15-e10b4e2291ee",
+              "flight_number": "376",
+              "original_date": "2026-07-08",
+              "original_time": "13:55",
+              "timezone_local": "Asia/Damascus (UTC+3)",
+              "derived_utc_timestamp": "2026-07-08 10:55:00Z",
+              "direction": "departure",
+              "origin": "DAM",
+              "destination": "SHJ",
+              "displayed_airline": "طيران العربية",
+              "displayed_status": "scheduled",
+              "source_created_at": "2026-07-07T19:00:22Z",
+              "actual_movement_evidence": 0
+            }
+          ],
+          "classification": "possible_prefix_variant_duplicate"
+        }
+      ],
+      "issues_count": 0,
+      "issues": [],
+      "physical_movement_evidence_count": 0,
+      "validated_at": "2026-10-11T15:18:47.718599"
+    }
+  ]
+}

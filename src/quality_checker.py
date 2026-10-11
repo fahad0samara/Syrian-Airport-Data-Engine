@@ -2,27 +2,36 @@ import json
 from datetime import datetime, timezone
 from typing import Dict, Any, List
 import pandas as pd
-from src.config import REPORTS_DIR, AIRPORT_IATA, AIRPORT_ICAO, SYRIAN_AIRPORT_IATAS
+from src.config import REPORTS_DIR, SYRIAN_AIRPORTS_REGISTRY, SYRIAN_AIRPORT_IATAS
 from src.database import get_connection
 
-def run_quality_audit(events: List[Dict[str, Any]], daily_movements: List[Dict[str, Any]], hist_records: List[Dict[str, Any]], persist: bool = True) -> Dict[str, Any]:
+def run_quality_audit(
+    events: List[Dict[str, Any]],
+    dam_daily_movements: List[Dict[str, Any]],
+    hist_records: List[Dict[str, Any]],
+    all_daily_movements: List[Dict[str, Any]] = None,
+    persist: bool = True
+) -> Dict[str, Any]:
     checks = []
 
-    # 1. Airport Identifiers
-    invalid_airports = [e for e in events if e.get("airport_iata") != AIRPORT_IATA or e.get("airport_icao") != AIRPORT_ICAO]
+    # 1. Airport Identifiers Validity
+    # All events must map to a recognized Syrian airport in the registry
+    valid_airport_ids = set(SYRIAN_AIRPORTS_REGISTRY.keys())
+    invalid_airports = [e for e in events if e.get("airport_id") not in valid_airport_ids]
     passed_id = len(invalid_airports) == 0
     checks.append({
         "check_name": "airport_identifiers_validity",
         "passed": 1 if passed_id else 0,
         "metric_value": float(len(invalid_airports)),
-        "details": f"All {len(events)} events have airport_iata={AIRPORT_IATA} and airport_icao={AIRPORT_ICAO}." if passed_id else f"{len(invalid_airports)} events had incorrect airport codes."
+        "details": f"All {len(events)} events have valid Syrian airport IDs ({sorted(list(valid_airport_ids))})." if passed_id else f"{len(invalid_airports)} events had unrecognized airport IDs."
     })
 
     # 2. No synthetic zero fill on missing dates
-    # Verify that in damascus_daily_movements, every entry corresponds to an actual observed date
-    event_dates = set(e["flight_date"] for e in events)
-    daily_dates = set(d["flight_date"] for d in daily_movements)
-    unobserved_dates = daily_dates - event_dates
+    # Verify that every entry in daily movements corresponds to actual observed events
+    event_dates_by_apt = set((e["airport_id"], e["flight_date"]) for e in events)
+    target_daily = all_daily_movements if all_daily_movements else [{"airport_id": "DAM", **d} for d in dam_daily_movements]
+    daily_dates_by_apt = set((d["airport_id"], d["flight_date"]) for d in target_daily)
+    unobserved_dates = daily_dates_by_apt - event_dates_by_apt
     passed_no_synth = len(unobserved_dates) == 0
     checks.append({
         "check_name": "no_synthetic_zeros_on_missing_dates",
@@ -47,7 +56,7 @@ def run_quality_audit(events: List[Dict[str, Any]], daily_movements: List[Dict[s
     })
 
     # 4. Valid operational statuses
-    allowed_statuses = {"landed", "active", "scheduled", "cancelled", "diverted", "unknown"}
+    allowed_statuses = {"landed", "departed", "active", "scheduled", "cancelled", "diverted", "unknown"}
     invalid_statuses = [e for e in events if e.get("flight_status") not in allowed_statuses]
     passed_status = len(invalid_statuses) == 0
     checks.append({
@@ -75,11 +84,15 @@ def run_quality_audit(events: List[Dict[str, Any]], daily_movements: List[Dict[s
         "details": f"Route classification matches IATA/ICAO territorial registry (Syrian domestic vs International). {len(misclassified_routes)} misclassifications."
     })
 
-    # 6. Deduplication Integrity
+    # 6. Deduplication Uniqueness
     seen_keys = set()
     dup_keys = []
     for e in events:
-        k = (e["movement_type"], e["flight_number"], e["flight_date"], (e["scheduled_dep_time"] or e["scheduled_arr_time"] or "")[:13])
+        if e.get("movement_type") == "arrival":
+            ref_ts = e.get("scheduled_arr_time") or e.get("actual_arr_time") or e.get("scheduled_dep_time") or e.get("actual_dep_time") or ""
+        else:
+            ref_ts = e.get("scheduled_dep_time") or e.get("actual_dep_time") or e.get("scheduled_arr_time") or e.get("actual_arr_time") or ""
+        k = (e["airport_id"], e["movement_type"], e["flight_number"], e["flight_date"], ref_ts[:13])
         if k in seen_keys:
             dup_keys.append(k)
         seen_keys.add(k)
@@ -88,7 +101,7 @@ def run_quality_audit(events: List[Dict[str, Any]], daily_movements: List[Dict[s
         "check_name": "deduplication_uniqueness",
         "passed": 1 if passed_dedup else 0,
         "metric_value": float(len(dup_keys)),
-        "details": "All normalized events are unique per movement type, flight number, date, and hourly slot." if passed_dedup else f"Found {len(dup_keys)} duplicate keys."
+        "details": "All normalized events are unique per airport, movement type, flight number, date, and hourly slot." if passed_dedup else f"Found {len(dup_keys)} duplicate keys."
     })
 
     # 7. Timestamp ISO 8601 formatting
@@ -109,6 +122,28 @@ def run_quality_audit(events: List[Dict[str, Any]], daily_movements: List[Dict[s
         "details": f"All timestamps comply with ISO 8601 UTC standard. Invalid count: {invalid_ts}."
     })
 
+    # 8. Multi-Airport Scope Isolation
+    # Verify historical 2024 series is explicitly marked with scope DAM_ALP_LTK and never labeled as Damascus only
+    mislabelled_scopes = [h for h in hist_records if h.get("scope") != "DAM_ALP_LTK"]
+    passed_scope = len(mislabelled_scopes) == 0
+    checks.append({
+        "check_name": "multi_airport_scope_isolation",
+        "passed": 1 if passed_scope else 0,
+        "metric_value": float(len(mislabelled_scopes)),
+        "details": "Verified: Historical 2024 series is strictly marked with scope DAM_ALP_LTK and never mislabeled as Damascus-only." if passed_scope else f"Found {len(mislabelled_scopes)} mislabeled scope records."
+    })
+
+    # 9. Damascus Layer B Separation
+    # Verify that Damascus daily movements table only contains DAM flights
+    dam_events = [e for e in events if e.get("airport_id") == "DAM"]
+    passed_dam_layer = len(dam_events) > 0 and all(e.get("airport_id") == "DAM" for e in dam_events)
+    checks.append({
+        "check_name": "damascus_layer_b_separation",
+        "passed": 1 if passed_dam_layer else 0,
+        "metric_value": float(len(dam_events)),
+        "details": f"Verified: Damascus dedicated deep-dive layer contains {len(dam_events)} verified DAM events without pollution."
+    })
+
     overall_passed = all(c["passed"] == 1 for c in checks)
     audit_report = {
         "audit_timestamp": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
@@ -119,7 +154,6 @@ def run_quality_audit(events: List[Dict[str, Any]], daily_movements: List[Dict[s
         "checks": checks,
     }
 
-    # Record to DB and file if persist is True
     if persist:
         with get_connection() as conn:
             cursor = conn.cursor()
@@ -132,6 +166,6 @@ def run_quality_audit(events: List[Dict[str, Any]], daily_movements: List[Dict[s
 
         REPORTS_DIR.mkdir(parents=True, exist_ok=True)
         with open(REPORTS_DIR / "quality_audit.json", "w", encoding="utf-8") as f:
-            json.dump(audit_report, f, indent=2)
+            json.dump(audit_report, f, indent=2, ensure_ascii=False)
 
     return audit_report

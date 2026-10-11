@@ -1,0 +1,80 @@
+{
+  "metadata": {
+    "version": "2.16",
+    "generated_at": "2026-10-11T15:20:01.506109",
+    "target_aerodrome": "DAM / OSDI (Damascus International Airport)",
+    "api_endpoint": "https://damairport.gov.sy/api/flights.php",
+    "governance_rule": "These records represent historical FIDS timetable display schedules, not verified physical radar touchdowns."
+  },
+  "snapshot_capture_coverage": {
+    "total_snapshots_discovered": 5,
+    "total_snapshots_registered": 1,
+    "monthly_breakdown": [
+      {
+        "month": "2026-07",
+        "captures_discovered": 2,
+        "unique_digests": 2,
+        "locally_preserved": 1
+      },
+      {
+        "month": "2026-08",
+        "captures_discovered": 1,
+        "unique_digests": 1,
+        "locally_preserved": 0
+      },
+      {
+        "month": "2026-09",
+        "captures_discovered": 2,
+        "unique_digests": 2,
+        "locally_preserved": 0
+      }
+    ]
+  },
+  "scheduled_service_coverage": [
+    {
+      "month": "2026-07",
+      "snapshot_capture_count": 2,
+      "unique_snapshot_digests_count": 2,
+      "scheduled_service_date_range": "2026-07-05 to 2026-07-31",
+      "distinct_scheduled_dates_count": 27,
+      "total_fids_record_observations": 956,
+      "deduplicated_source_uuids_count": 956,
+      "deduplicated_flight_slots_count": 956,
+      "scheduled_arrivals_observations": 480,
+      "scheduled_departures_observations": 476,
+      "displayed_airlines_count": 14
+    },
+    {
+      "month": "2026-08",
+      "snapshot_capture_count": 1,
+      "unique_snapshot_digests_count": 1,
+      "scheduled_service_date_range": "2026-08-01 to 2026-08-31",
+      "distinct_scheduled_dates_count": 31,
+      "total_fids_record_observations": 886,
+      "deduplicated_source_uuids_count": 886,
+      "deduplicated_flight_slots_count": 886,
+      "scheduled_arrivals_observations": 443,
+      "scheduled_departures_observations": 443,
+      "displayed_airlines_count": 8
+    },
+    {
+      "month": "2026-09",
+      "snapshot_capture_count": 2,
+      "unique_snapshot_digests_count": 2,
+      "scheduled_service_date_range": "2026-09-01 to 2026-09-09",
+      "distinct_scheduled_dates_count": 9,
+      "total_fids_record_observations": 140,
+      "deduplicated_source_uuids_count": 140,
+      "deduplicated_flight_slots_count": 140,
+      "scheduled_arrivals_observations": 70,
+      "scheduled_departures_observations": 70,
+      "displayed_airlines_count": 8
+    }
+  ],
+  "cross_snapshot_comparisons": {
+    "total_comparisons": 0,
+    "identical_records": 0,
+    "changed_or_new_records": 0,
+    "change_categories_distribution": {}
+  }
+}

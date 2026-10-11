@@ -1,0 +1,49 @@
+{
+  "audit_version": "2.16.2",
+  "generated_at": "2026-10-11T16:17:46.665485",
+  "total_source_records": 1982,
+  "overall_arrivals": 993,
+  "overall_departures": 989,
+  "overall_dates": 67,
+  "monthly_breakdown": [
+    {
+      "month": "2026-07",
+      "total_records": 956,
+      "arrivals_count": 480,
+      "departures_count": 476,
+      "distinct_scheduled_dates": 27,
+      "min_scheduled_date": "2026-07-05",
+      "max_scheduled_date": "2026-07-31",
+      "missing_dates_in_span_count": 0,
+      "missing_dates_in_span": "none",
+      "displayed_airlines_count": 14,
+      "distinct_flight_numbers_count": 159
+    },
+    {
+      "month": "2026-08",
+      "total_records": 886,
+      "arrivals_count": 443,
+      "departures_count": 443,
+      "distinct_scheduled_dates": 31,
+      "min_scheduled_date": "2026-08-01",
+      "max_scheduled_date": "2026-08-31",
+      "missing_dates_in_span_count": 0,
+      "missing_dates_in_span": "none",
+      "displayed_airlines_count": 8,
+      "distinct_flight_numbers_count": 34
+    },
+    {
+      "month": "2026-09",
+      "total_records": 140,
+      "arrivals_count": 70,
+      "departures_count": 70,
+      "distinct_scheduled_dates": 9,
+      "min_scheduled_date": "2026-09-01",
+      "max_scheduled_date": "2026-09-09",
+      "missing_dates_in_span_count": 0,
+      "missing_dates_in_span": "none",
+      "displayed_airlines_count": 8,
+      "distinct_flight_numbers_count": 34
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+observation_id,provider,icao24,callsign,distance_to_dam_km,altitude_ft,speed_kts,vertrate_fpm,onground,classification,classification_reason,is_dam_movement,confirmed_physical_movement
+obs_lol_748021_1,ADS-B.lol,748021,MEA428,136.86,10175,304.1,2688,0,regional_observation,Aircraft located 136.9km from OSDI in neighboring airspace,0,0
+obs_lol_89408c_2,ADS-B.lol,89408c,GFA004,137.72,38975,472.2,0,0,overflight_observation,High-altitude transit (38975 ft) over Syrian/regional airspace,0,0
+obs_lol_748028_3,ADS-B.lol,748028,MEA325,96.24,22375,388.2,-2496,0,overflight_observation,High-altitude transit (22375 ft) over Syrian/regional airspace,0,0
+obs_lol_896459_4,ADS-B.lol,896459,UAE7V,126.22,40000,471.1,0,0,overflight_observation,High-altitude transit (40000 ft) over Syrian/regional airspace,0,0
+obs_lol_896319_5,ADS-B.lol,896319,UAE7TR,134.57,36000,507.6,0,0,overflight_observation,High-altitude transit (36000 ft) over Syrian/regional airspace,0,0
+obs_lol_800732_6,ADS-B.lol,800732,AIC151,130.43,40000,476.4,-128,0,overflight_observation,High-altitude transit (40000 ft) over Syrian/regional airspace,0,0
+obs_lol_896473_7,ADS-B.lol,896473,UAE216,129.8,41000,436.4,0,0,overflight_observation,High-altitude transit (41000 ft) over Syrian/regional airspace,0,0
+obs_lol_80158c_8,ADS-B.lol,80158c,AIC153,136.63,38000,473.2,0,0,overflight_observation,High-altitude transit (38000 ft) over Syrian/regional airspace,0,0
+obs_lol_4bb0e4_9,ADS-B.lol,4bb0e4,THY209,141.58,40000,502.6,0,0,overflight_observation,High-altitude transit (40000 ft) over Syrian/regional airspace,0,0
+obs_fi_89408c_10,ADSB.fi,89408c,GFA004,137.72,39000,472.2,0,0,overflight_observation,High-altitude transit (39000 ft) over Syrian/regional airspace,0,0
+obs_fi_896459_11,ADSB.fi,896459,UAE7V,125.58,40000,471.1,64,0,overflight_observation,High-altitude transit (40000 ft) over Syrian/regional airspace,0,0
+obs_fi_896319_12,ADSB.fi,896319,UAE7TR,134.42,36000,507.6,64,0,overflight_observation,High-altitude transit (36000 ft) over Syrian/regional airspace,0,0
+obs_fi_800732_13,ADSB.fi,800732,AIC151,130.63,39975,476.4,-128,0,overflight_observation,High-altitude transit (39975 ft) over Syrian/regional airspace,0,0
+obs_fi_896473_14,ADSB.fi,896473,UAE216,127.67,41000,444.7,-64,0,overflight_observation,High-altitude transit (41000 ft) over Syrian/regional airspace,0,0
+obs_fi_80158c_15,ADSB.fi,80158c,AIC153,137.62,38000,474.5,-256,0,overflight_observation,High-altitude transit (38000 ft) over Syrian/regional airspace,0,0
+obs_fi_4bb0e4_16,ADSB.fi,4bb0e4,THY209,141.95,40025,502.6,0,0,overflight_observation,High-altitude transit (40025 ft) over Syrian/regional airspace,0,0

@@ -1,0 +1,36 @@
+{
+  "engine_version": "2.0-all-syrian-airports",
+  "supported_airports": [
+    "DAM",
+    "ALP",
+    "LTK",
+    "DEZ",
+    "KAC",
+    "PMS",
+    "OMDM"
+  ],
+  "total_canonical_events": 1830,
+  "events_per_airport": {
+    "DAM": 1563,
+    "ALP": 261,
+    "LTK": 0,
+    "DEZ": 6,
+    "KAC": 0,
+    "PMS": 0,
+    "OMDM": 0
+  },
+  "daily_movement_dates_per_airport": {
+    "DAM": 32,
+    "ALP": 13,
+    "LTK": 0,
+    "DEZ": 1,
+    "KAC": 0,
+    "PMS": 0,
+    "OMDM": 0
+  },
+  "historical_2024_scope": "DAM_ALP_LTK (Syrian Gateways Combined)",
+  "historical_2024_rows": 578,
+  "historical_2024_earliest_date": "2024-01-01",
+  "historical_2024_latest_date": "2024-10-15",
+  "deduplication_audited_count": 337
+}

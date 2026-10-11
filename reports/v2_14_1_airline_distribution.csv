@@ -1,0 +1,15 @@
+displayed_airline_brand_ar,displayed_airline_brand_en,source_iata_code,carrier_role_classification,is_operating_carrier_verified,total_reported_flights,percentage_of_total,arrival_flights,departure_flights,unique_scheduled_flight_numbers
+طيران العربية,Air Arabia,G9,displayed_airline_brand,FALSE,509,25.68%,256,253,12
+فلاي ناس,Flynas,XY,displayed_airline_brand,FALSE,382,19.27%,191,191,13
+فلاي دبي,flydubai,FZ,displayed_airline_brand,FALSE,262,13.22%,131,131,10
+الخطوط التركية,Turkish Airlines,TK,displayed_airline_brand,FALSE,252,12.71%,126,126,7
+أناضول جت,AJet,VF,displayed_airline_brand,FALSE,180,9.08%,90,90,5
+الخطوط القطرية,Qatar Airways,QR,displayed_airline_brand,FALSE,118,5.95%,59,59,2
+الاتحاد,Etihad Airways,EY,displayed_airline_brand,FALSE,72,3.63%,36,36,2
+فلاي شام,Fly Cham,XH,displayed_airline_brand,FALSE,62,3.13%,31,31,31
+السورية للطيران,Syrian Airlines,RB,displayed_airline_brand,FALSE,43,2.17%,22,21,29
+دان أير,Dan Air,DN,displayed_airline_brand,FALSE,36,1.82%,18,18,3
+طيران الجزيرة,Jazeera Airways,J9,displayed_airline_brand,FALSE,30,1.51%,15,15,12
+الملكية الأردنية,Royal Jordanian,RJ,displayed_airline_brand,FALSE,20,1.01%,10,10,8
+فلاي إديل,Flyadeal,F3,displayed_airline_brand,FALSE,12,0.61%,6,6,8
+الأمم المتحدة,United Nations,UN,displayed_airline_brand,FALSE,4,0.20%,2,2,1

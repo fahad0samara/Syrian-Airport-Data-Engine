@@ -1,0 +1,8 @@
+weekday_index,weekday_name,day_occurrences,total_flights,arrival_flights,departure_flights,average_flights_per_weekday
+0,Monday,10,295,148,147,29.5
+1,Tuesday,10,286,143,143,28.6
+2,Wednesday,10,287,144,143,28.7
+3,Thursday,9,290,145,145,32.22
+4,Friday,9,270,135,135,30.0
+5,Saturday,9,232,116,116,25.78
+6,Sunday,10,322,162,160,32.2

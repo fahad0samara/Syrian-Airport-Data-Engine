@@ -10,17 +10,184 @@ REPORTS_DIR = BASE_DIR / "reports"
 STATIC_DIR = BASE_DIR / "static"
 DB_PATH = DATA_DIR / "damascus_airport.db"
 
-# Airport Reference
+# Primary Target Airport (Damascus Deep-Dive)
 AIRPORT_IATA = "DAM"
 AIRPORT_ICAO = "OSDI"
 AIRPORT_NAME = "Damascus International Airport"
 AIRPORT_COUNTRY = "Syria"
-AIRPORT_LAT = 33.415001
-AIRPORT_LON = 36.515202
+AIRPORT_LAT = 33.4115
+AIRPORT_LON = 36.5156
 
-# Domestic Syrian Airports
-SYRIAN_AIRPORT_IATAS = {"DAM", "ALP", "LTK", "KAC", "PMS"}
-SYRIAN_AIRPORT_ICAOS = {"OSDI", "OSAP", "OSLK", "OSKL"}
+# Domestic Syrian Airport Identifiers
+SYRIAN_AIRPORT_IATAS = {"DAM", "ALP", "LTK", "KAC", "PMS", "DEZ"}
+SYRIAN_AIRPORT_ICAOS = {"OSDI", "OSAP", "OSLK", "OSKL", "OSDZ", "OSPM"}
 
-# AviationStack Access Key from Syria Economic Monitor research
-AVIATIONSTACK_KEY = os.environ.get("AVIATIONSTACK_KEY", "12925396bddce38222e47eed53e76e6c")
+# Authoritative Syrian Aerodromes Registry (Syrian eAIP & OurAirports)
+SYRIAN_AIRPORTS_REGISTRY = {
+    "DAM": {
+        "airport_id": "DAM",
+        "iata_code": "DAM",
+        "icao_code": "OSDI",
+        "name": "Damascus International Airport",
+        "name_ar": "مطار دمشق الدولي",
+        "city": "Damascus",
+        "city_ar": "دمشق",
+        "country": "Syria",
+        "timezone": "Asia/Damascus",
+        "airport_type": "international",
+        "classification": "civil",
+        "operational_status": "active",
+        "latitude": 33.4115,
+        "longitude": 36.5156,
+        "elevation_ft": 2021,
+        "runways": [
+            {"ident": "05R/23L", "length_m": 3600, "length_ft": 11811, "surface": "Asphalt"},
+            {"ident": "05L/23R", "length_m": 3000, "length_ft": 9843, "surface": "Asphalt"}
+        ],
+        "official_portal_url": "https://damairport.gov.sy/",
+        "api_endpoint": "https://damairport.gov.sy/api/flights.php",
+        "metadata_source": "Syrian eAIP & OurAirports",
+    },
+    "ALP": {
+        "airport_id": "ALP",
+        "iata_code": "ALP",
+        "icao_code": "OSAP",
+        "name": "Aleppo International Airport",
+        "name_ar": "مطار حلب الدولي",
+        "city": "Aleppo",
+        "city_ar": "حلب",
+        "country": "Syria",
+        "timezone": "Asia/Damascus",
+        "airport_type": "international",
+        "classification": "civil",
+        "operational_status": "active",
+        "latitude": 36.1806,
+        "longitude": 37.2242,
+        "elevation_ft": 1276,
+        "runways": [
+            {"ident": "09/27", "length_m": 3110, "length_ft": 10203, "surface": "Asphalt"}
+        ],
+        "official_portal_url": "https://alpairport.gov.sy/",
+        "api_endpoint": "https://alpairport.gov.sy/api/flights.php",
+        "metadata_source": "Syrian eAIP & OurAirports",
+    },
+    "LTK": {
+        "airport_id": "LTK",
+        "iata_code": "LTK",
+        "icao_code": "OSLK",
+        "name": "Latakia International Airport (Bassel Al-Assad)",
+        "name_ar": "مطار اللاذقية الدولي (باسل الأسد)",
+        "city": "Latakia",
+        "city_ar": "اللاذقية",
+        "country": "Syria",
+        "timezone": "Asia/Damascus",
+        "airport_type": "international",
+        "classification": "joint_civil_military",
+        "operational_status": "active",
+        "latitude": 35.4008,
+        "longitude": 35.9486,
+        "elevation_ft": 174,
+        "runways": [
+            {"ident": "17L/35R", "length_m": 2797, "length_ft": 9176, "surface": "Asphalt"},
+            {"ident": "17R/35L", "length_m": 2797, "length_ft": 9176, "surface": "Asphalt"}
+        ],
+        "official_portal_url": "https://gaca.gov.sy/aerodromes",
+        "api_endpoint": None,
+        "metadata_source": "Syrian eAIP & OurAirports",
+    },
+    "DEZ": {
+        "airport_id": "DEZ",
+        "iata_code": "DEZ",
+        "icao_code": "OSDZ",
+        "name": "Deir ez-Zor Airport",
+        "name_ar": "مطار دير الزور",
+        "city": "Deir ez-Zor",
+        "city_ar": "دير الزور",
+        "country": "Syria",
+        "timezone": "Asia/Damascus",
+        "airport_type": "domestic",
+        "classification": "civil",
+        "operational_status": "active",
+        "latitude": 35.2858,
+        "longitude": 40.1756,
+        "elevation_ft": 700,
+        "runways": [
+            {"ident": "10/28", "length_m": 3000, "length_ft": 9843, "surface": "Asphalt"}
+        ],
+        "official_portal_url": "https://deirezzorairport.gov.sy/",
+        "api_endpoint": "https://deirezzorairport.gov.sy/api/flights.php",
+        "metadata_source": "Syrian eAIP & OurAirports",
+    },
+    "KAC": {
+        "airport_id": "KAC",
+        "iata_code": "KAC",
+        "icao_code": "OSKL",
+        "name": "Qamishli Airport",
+        "name_ar": "مطار القامشلي",
+        "city": "Qamishli",
+        "city_ar": "القامشلي",
+        "country": "Syria",
+        "timezone": "Asia/Damascus",
+        "airport_type": "domestic",
+        "classification": "civil",
+        "operational_status": "active",
+        "latitude": 37.0228,
+        "longitude": 41.1969,
+        "elevation_ft": 1480,
+        "runways": [
+            {"ident": "03/21", "length_m": 3615, "length_ft": 11860, "surface": "Asphalt"}
+        ],
+        "official_portal_url": "https://qamishliairport.gov.sy/",
+        "api_endpoint": "https://qamishliairport.gov.sy/api/flights.php",
+        "metadata_source": "Syrian eAIP & OurAirports",
+    },
+    "PMS": {
+        "airport_id": "PMS",
+        "iata_code": "PMS",
+        "icao_code": "OSPM",
+        "name": "Palmyra Airport",
+        "name_ar": "مطار تدمر",
+        "city": "Palmyra",
+        "city_ar": "تدمر",
+        "country": "Syria",
+        "timezone": "Asia/Damascus",
+        "airport_type": "domestic",
+        "classification": "civil_restricted",
+        "operational_status": "limited",
+        "latitude": 34.5572,
+        "longitude": 38.3172,
+        "elevation_ft": 1322,
+        "runways": [
+            {"ident": "08/26", "length_m": 2880, "length_ft": 9449, "surface": "Asphalt"}
+        ],
+        "official_portal_url": "https://eaip.gaca.gov.sy/",
+        "api_endpoint": None,
+        "metadata_source": "Syrian eAIP & OurAirports",
+    },
+    "OMDM": {
+        "airport_id": "OMDM",
+        "iata_code": None,
+        "icao_code": "OMDM",
+        "name": "Damascus Mezzeh Military Airport",
+        "name_ar": "مطار المزة العسكري",
+        "city": "Damascus Mezzeh",
+        "city_ar": "المزة",
+        "country": "Syria",
+        "timezone": "Asia/Damascus",
+        "airport_type": "military",
+        "classification": "military",
+        "operational_status": "restricted",
+        "latitude": 33.4775,
+        "longitude": 36.2233,
+        "elevation_ft": 2407,
+        "runways": [
+            {"ident": "06/24", "length_m": 2980, "length_ft": 9777, "surface": "Asphalt"}
+        ],
+        "official_portal_url": None,
+        "api_endpoint": None,
+        "metadata_source": "Aeronautical Charts",
+    }
+}
+
+# AviationStack API Key (read strictly from environment variable)
+AVIATIONSTACK_KEY = os.environ.get("AVIATIONSTACK_KEY", "")

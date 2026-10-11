@@ -1,0 +1,318 @@
+{
+  "metadata": {
+    "title": "Archived FIDS Analytics Layer Summary",
+    "version": "2.15.0",
+    "dataset_source": "Wayback Machine Snapshot of Damascus Airport FIDS API",
+    "snapshot_id": "snap_wayback_20260709234230",
+    "memento_timestamp": "2026-07-09T23:42:30Z",
+    "source_url": "https://damairport.gov.sy/api/flights.php",
+    "date_coverage": "2026-07-05 to 2026-09-09 (67 consecutive days)",
+    "wall_clock_timezone": "Asia/Damascus (UTC+3)",
+    "semantic_warning": "These records represent archived scheduled/displayed flight information, not verified physical aircraft movements.",
+    "physical_movement_evidence_count": 0,
+    "limitations": [
+      "Represents scheduled timetable displays, not verified radar touchdowns.",
+      "Airline names represent displayed passenger brands, not certified AOC operators.",
+      "Single 'arrived' status is an unverified display board label without sensor proof.",
+      "Candidate pair G9 376 / 376 preserved as a prefix-variant duplicate candidate."
+    ]
+  },
+  "summary": {
+    "total_archived_fids_records": 1982,
+    "scheduled_arrivals": 993,
+    "scheduled_departures": 989,
+    "calendar_days_covered": 67,
+    "date_range": {
+      "earliest_scheduled_date": "2026-07-05",
+      "latest_scheduled_date": "2026-09-09"
+    },
+    "displayed_airline_brands_count": 14,
+    "unique_scheduled_flight_numbers": 143,
+    "status_distribution": {
+      "scheduled": 1981,
+      "arrived": 1
+    },
+    "duplicate_candidates_count": 2,
+    "physical_movement_evidence_count": 0
+  },
+  "period_patterns": {
+    "total_calendar_days": 67,
+    "total_scheduled_records": 1982,
+    "average_records_per_calendar_day": 29.58,
+    "average_arrivals_per_calendar_day": 14.82,
+    "average_departures_per_calendar_day": 14.76
+  },
+  "top_airlines": [
+    {
+      "displayed_airline_brand_ar": "طيران العربية",
+      "displayed_airline_brand_en": "Air Arabia",
+      "source_iata_code": "G9",
+      "carrier_role_classification": "displayed_airline_brand",
+      "total_displayed_records": 509,
+      "arrival_records": 256,
+      "departure_records": 253,
+      "distinct_flight_numbers": 12,
+      "active_days_count": 67,
+      "first_active_date": "2026-07-05",
+      "last_active_date": "2026-09-09",
+      "percentage_of_total": "25.68%",
+      "percentage_value": 25.68,
+      "daily_frequency_active_days": 7.6,
+      "daily_frequency_67_days": 7.6,
+      "is_operating_carrier_verified": false
+    },
+    {
+      "displayed_airline_brand_ar": "فلاي ناس",
+      "displayed_airline_brand_en": "Flynas",
+      "source_iata_code": "XY",
+      "carrier_role_classification": "displayed_airline_brand",
+      "total_displayed_records": 382,
+      "arrival_records": 191,
+      "departure_records": 191,
+      "distinct_flight_numbers": 13,
+      "active_days_count": 63,
+      "first_active_date": "2026-07-05",
+      "last_active_date": "2026-09-05",
+      "percentage_of_total": "19.27%",
+      "percentage_value": 19.27,
+      "daily_frequency_active_days": 6.06,
+      "daily_frequency_67_days": 5.7,
+      "is_operating_carrier_verified": false
+    },
+    {
+      "displayed_airline_brand_ar": "فلاي دبي",
+      "displayed_airline_brand_en": "flydubai",
+      "source_iata_code": "FZ",
+      "carrier_role_classification": "displayed_airline_brand",
+      "total_displayed_records": 262,
+      "arrival_records": 131,
+      "departure_records": 131,
+      "distinct_flight_numbers": 10,
+      "active_days_count": 63,
+      "first_active_date": "2026-07-05",
+      "last_active_date": "2026-09-05",
+      "percentage_of_total": "13.22%",
+      "percentage_value": 13.22,
+      "daily_frequency_active_days": 4.16,
+      "daily_frequency_67_days": 3.91,
+      "is_operating_carrier_verified": false
+    },
+    {
+      "displayed_airline_brand_ar": "الخطوط التركية",
+      "displayed_airline_brand_en": "Turkish Airlines",
+      "source_iata_code": "TK",
+      "carrier_role_classification": "displayed_airline_brand",
+      "total_displayed_records": 252,
+      "arrival_records": 126,
+      "departure_records": 126,
+      "distinct_flight_numbers": 7,
+      "active_days_count": 63,
+      "first_active_date": "2026-07-05",
+      "last_active_date": "2026-09-05",
+      "percentage_of_total": "12.71%",
+      "percentage_value": 12.71,
+      "daily_frequency_active_days": 4.0,
+      "daily_frequency_67_days": 3.76,
+      "is_operating_carrier_verified": false
+    },
+    {
+      "displayed_airline_brand_ar": "أناضول جت",
+      "displayed_airline_brand_en": "AJet",
+      "source_iata_code": "VF",
+      "carrier_role_classification": "displayed_airline_brand",
+      "total_displayed_records": 180,
+      "arrival_records": 90,
+      "departure_records": 90,
+      "distinct_flight_numbers": 5,
+      "active_days_count": 63,
+      "first_active_date": "2026-07-05",
+      "last_active_date": "2026-09-05",
+      "percentage_of_total": "9.08%",
+      "percentage_value": 9.08,
+      "daily_frequency_active_days": 2.86,
+      "daily_frequency_67_days": 2.69,
+      "is_operating_carrier_verified": false
+    }
+  ],
+  "top_routes": [
+    {
+      "route_pair": "SHJ-DAM",
+      "origin_iata": "SHJ",
+      "destination_iata": "DAM",
+      "movement_type": "arrival",
+      "scheduled_records_count": 202,
+      "unique_displayed_flight_numbers": 7,
+      "distinct_airlines_count": 3,
+      "airlines_list": "Fly Cham,Air Arabia,Syrian Airlines"
+    },
+    {
+      "route_pair": "DAM-SHJ",
+      "origin_iata": "DAM",
+      "destination_iata": "SHJ",
+      "movement_type": "departure",
+      "scheduled_records_count": 199,
+      "unique_displayed_flight_numbers": 11,
+      "distinct_airlines_count": 3,
+      "airlines_list": "Fly Cham,Air Arabia,Syrian Airlines"
+    },
+    {
+      "route_pair": "DXB-DAM",
+      "origin_iata": "DXB",
+      "destination_iata": "DAM",
+      "movement_type": "arrival",
+      "scheduled_records_count": 142,
+      "unique_displayed_flight_numbers": 10,
+      "distinct_airlines_count": 3,
+      "airlines_list": "flydubai,Syrian Airlines,Fly Cham"
+    },
+    {
+      "route_pair": "DAM-DXB",
+      "origin_iata": "DAM",
+      "destination_iata": "DXB",
+      "movement_type": "departure",
+      "scheduled_records_count": 140,
+      "unique_displayed_flight_numbers": 11,
+      "distinct_airlines_count": 3,
+      "airlines_list": "Syrian Airlines,flydubai,Fly Cham"
+    },
+    {
+      "route_pair": "IST-DAM",
+      "origin_iata": "IST",
+      "destination_iata": "DAM",
+      "movement_type": "arrival",
+      "scheduled_records_count": 131,
+      "unique_displayed_flight_numbers": 5,
+      "distinct_airlines_count": 2,
+      "airlines_list": "Syrian Airlines,Turkish Airlines"
+    }
+  ],
+  "busiest_days": [
+    {
+      "flight_date": "2026-07-06",
+      "total_flights": 69,
+      "arrival_count": 35,
+      "departure_count": 34
+    },
+    {
+      "flight_date": "2026-07-09",
+      "total_flights": 68,
+      "arrival_count": 34,
+      "departure_count": 34
+    },
+    {
+      "flight_date": "2026-07-05",
+      "total_flights": 64,
+      "arrival_count": 33,
+      "departure_count": 31
+    },
+    {
+      "flight_date": "2026-07-08",
+      "total_flights": 63,
+      "arrival_count": 32,
+      "departure_count": 31
+    },
+    {
+      "flight_date": "2026-07-07",
+      "total_flights": 60,
+      "arrival_count": 30,
+      "departure_count": 30
+    }
+  ],
+  "quietest_days": [
+    {
+      "flight_date": "2026-09-09",
+      "total_flights": 2,
+      "arrival_count": 1,
+      "departure_count": 1
+    },
+    {
+      "flight_date": "2026-09-08",
+      "total_flights": 2,
+      "arrival_count": 1,
+      "departure_count": 1
+    },
+    {
+      "flight_date": "2026-09-07",
+      "total_flights": 2,
+      "arrival_count": 1,
+      "departure_count": 1
+    },
+    {
+      "flight_date": "2026-09-06",
+      "total_flights": 2,
+      "arrival_count": 1,
+      "departure_count": 1
+    },
+    {
+      "flight_date": "2026-09-05",
+      "total_flights": 24,
+      "arrival_count": 12,
+      "departure_count": 12
+    }
+  ],
+  "busiest_weekdays": [
+    {
+      "weekday_index": 3,
+      "weekday_name": "Thursday",
+      "day_occurrences": 9,
+      "total_flights": 290,
+      "arrival_flights": 145,
+      "departure_flights": 145,
+      "average_flights_per_weekday": 32.22
+    },
+    {
+      "weekday_index": 6,
+      "weekday_name": "Sunday",
+      "day_occurrences": 10,
+      "total_flights": 322,
+      "arrival_flights": 162,
+      "departure_flights": 160,
+      "average_flights_per_weekday": 32.2
+    },
+    {
+      "weekday_index": 4,
+      "weekday_name": "Friday",
+      "day_occurrences": 9,
+      "total_flights": 270,
+      "arrival_flights": 135,
+      "departure_flights": 135,
+      "average_flights_per_weekday": 30.0
+    },
+    {
+      "weekday_index": 0,
+      "weekday_name": "Monday",
+      "day_occurrences": 10,
+      "total_flights": 295,
+      "arrival_flights": 148,
+      "departure_flights": 147,
+      "average_flights_per_weekday": 29.5
+    },
+    {
+      "weekday_index": 2,
+      "weekday_name": "Wednesday",
+      "day_occurrences": 10,
+      "total_flights": 287,
+      "arrival_flights": 144,
+      "departure_flights": 143,
+      "average_flights_per_weekday": 28.7
+    },
+    {
+      "weekday_index": 1,
+      "weekday_name": "Tuesday",
+      "day_occurrences": 10,
+      "total_flights": 286,
+      "arrival_flights": 143,
+      "departure_flights": 143,
+      "average_flights_per_weekday": 28.6
+    },
+    {
+      "weekday_index": 5,
+      "weekday_name": "Saturday",
+      "day_occurrences": 9,
+      "total_flights": 232,
+      "arrival_flights": 116,
+      "departure_flights": 116,
+      "average_flights_per_weekday": 25.78
+    }
+  ]
+}

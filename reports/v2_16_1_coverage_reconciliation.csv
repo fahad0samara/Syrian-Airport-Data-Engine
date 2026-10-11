@@ -1,0 +1,5 @@
+month,snapshot_record_observations,unique_source_record_identities,arrivals,departures,scheduled_dates_count,start_date,end_date,reconciliation_status
+2026-07,956,956,480,476,27,2026-07-05,2026-07-31,EXACT_MATCH
+2026-08,886,886,443,443,31,2026-08-01,2026-08-31,EXACT_MATCH
+2026-09,140,140,70,70,9,2026-09-01,2026-09-09,EXACT_MATCH
+TOTAL_BASELINE_ONLY,1982,1982,993,989,67,2026-07-05,2026-09-09,EXACT_MATCH

@@ -291,20 +291,20 @@
       },
       "status": {
         "live": false,
-        "text": "Estimated 16:51*",
-        "icon": "green",
+        "text": "Unknown",
+        "icon": null,
         "estimated": null,
-        "ambiguous": true,
+        "ambiguous": false,
         "generic": {
           "status": {
-            "text": "estimated",
+            "text": "unknown",
             "type": "arrival",
-            "color": "green",
+            "color": null,
             "diverted": null
           },
           "eventTime": {
-            "utc": 1791640300,
-            "local": 1791651100
+            "utc": null,
+            "local": null
           }
         }
       },
@@ -410,7 +410,7 @@
           "arrival": 1791640300
         },
         "other": {
-          "eta": 1791640300,
+          "eta": null,
           "duration": null
         }
       }
@@ -9068,145 +9068,6 @@
         "other": {
           "eta": null,
           "duration": null
-        }
-      }
-    }
-  },
-  {
-    "flight": {
-      "identification": {
-        "id": "4209e61c",
-        "row": 5873458836,
-        "number": {
-          "default": "FYC782",
-          "alternative": null
-        },
-        "callsign": "FYC782",
-        "codeshare": null
-      },
-      "status": {
-        "live": false,
-        "text": "Landed 05:37",
-        "icon": "green",
-        "estimated": null,
-        "ambiguous": false,
-        "generic": {
-          "status": {
-            "text": "landed",
-            "type": "arrival",
-            "color": "green",
-            "diverted": null
-          },
-          "eventTime": {
-            "utc": 1791513465,
-            "local": 1791524265
-          }
-        }
-      },
-      "aircraft": {
-        "model": {
-          "code": "A320",
-          "text": "Airbus A320-232"
-        },
-        "registration": "YK-BAC",
-        "country": {
-          "id": 217,
-          "name": "Syria",
-          "alpha2": "SY",
-          "alpha3": "SYR"
-        },
-        "hex": "778823",
-        "restricted": false,
-        "serialNo": null,
-        "age": {
-          "availability": true
-        },
-        "availability": {
-          "serialNo": true,
-          "age": true
-        }
-      },
-      "owner": {
-        "name": "Fly Cham",
-        "code": {
-          "iata": null,
-          "icao": "FYC"
-        },
-        "logo": null
-      },
-      "airline": {
-        "name": "Fly Cham",
-        "code": {
-          "iata": null,
-          "icao": "FYC"
-        },
-        "short": "Fly Cham"
-      },
-      "airport": {
-        "origin": {
-          "code": {
-            "iata": "MCT",
-            "icao": "OOMS"
-          },
-          "timezone": {
-            "name": "Asia/Muscat",
-            "offset": 14400,
-            "abbr": "+04",
-            "abbrName": null,
-            "isDst": false
-          },
-          "info": {
-            "terminal": null,
-            "baggage": null,
-            "gate": null
-          },
-          "name": "Muscat International Airport",
-          "position": {
-            "latitude": 23.593269,
-            "longitude": 58.284439,
-            "country": {
-              "name": "Oman",
-              "code": "OM",
-              "id": 166
-            },
-            "region": {
-              "city": "Muscat"
-            }
-          },
-          "visible": true
-        },
-        "destination": {
-          "timezone": {
-            "name": "Asia/Damascus",
-            "offset": 10800,
-            "abbr": "+03",
-            "abbrName": null,
-            "isDst": false
-          },
-          "info": {
-            "terminal": null,
-            "baggage": null,
-            "gate": null
-          }
-        },
-        "real": null
-      },
-      "time": {
-        "scheduled": {
-          "departure": 1791500400,
-          "arrival": 1791513900
-        },
-        "real": {
-          "departure": 1791502137,
-          "arrival": 1791513465
-        },
-        "estimated": {
-          "departure": null,
-          "arrival": null
-        },
-        "other": {
-          "eta": 1791513465,
-          "duration": 11340
         }
       }
     }

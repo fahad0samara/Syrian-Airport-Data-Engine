@@ -1,0 +1,17 @@
+{
+  "provider": "ADSB.fi (Community)",
+  "endpoint": "https://opendata.adsb.fi/api/v2/lat/33.4115/lon/36.5156/dist/81",
+  "request_timestamp": "2026-10-11T10:02:30.284038+00:00",
+  "test_radius_km": 150,
+  "airport_coordinates": {
+    "lat": 33.4115,
+    "lon": 36.5156,
+    "icao": "OSDI"
+  },
+  "http_status": 200,
+  "response_record_count": 4,
+  "errors": null,
+  "documentation_url": "https://adsb.fi/",
+  "response_file": "data\\free_api_research\\other_sources\\adsb_fi_osdi_150km_20261011T100230Z.json",
+  "file_sha256": "7fd45b6cdfc81ba60bfe0c7267e471730a7afc304fa0fd58ba4324203e515b4d"
+}

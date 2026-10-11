@@ -1,0 +1,3 @@
+original_raw_status,normalized_status,record_count,percentage_of_total,scheduled_status_concept,displayed_status_concept,actual_movement_evidence_flag,physical_movement_classification,source_supported_meaning
+scheduled,scheduled,1981,99.95%,scheduled,scheduled,0,PROHIBITED_UNVERIFIED_SENSOR_EVIDENCE,Forward flight timetable schedule listing on airport web portal
+arrived,arrived,1,0.05%,scheduled,arrived,0,PROHIBITED_UNVERIFIED_SENSOR_EVIDENCE,Archived passenger display-status board flag; lacks transponder/radar/runway sensor proof
