@@ -1,0 +1,1324 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>مرصد الحركة الجوية السورية | Syrian Air Traffic Monitor</title>
+
+  <!-- Typography: Google Fonts IBM Plex Sans Arabic -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary-dark: #123827;
+      --primary: #174D39;
+      --primary-light: #246B50;
+      --primary-subtle: #EBF4F0;
+      --accent: #2563EB;
+      --accent-subtle: #EFF6FF;
+      --warning: #B45309;
+      --warning-subtle: #FFFBEB;
+      --surface: #FFFFFF;
+      --background: #F4F7F5;
+      --border: #D2DFD7;
+      --border-light: #E5EFE9;
+      --text-main: #13221A;
+      --text-muted: #52665B;
+      --text-light: #7E9387;
+      --radius-sm: 6px;
+      --radius-md: 10px;
+      --radius-lg: 14px;
+      --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05);
+      --shadow-md: 0 4px 12px rgba(18, 56, 39, 0.08);
+      --font-family: 'IBM Plex Sans Arabic', system-ui, -apple-system, Segoe UI, Roboto, Tahoma, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--font-family);
+      background-color: var(--background);
+      color: var(--text-main);
+      direction: rtl;
+      text-align: right;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Top Institutional Header */
+    .top-bar {
+      background-color: var(--primary-dark);
+      color: #E2ECE6;
+      font-size: 0.82rem;
+      padding: 6px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .top-bar .emblem-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 500;
+    }
+    .top-bar .emblem-dot {
+      width: 8px;
+      height: 8px;
+      background-color: #22C55E;
+      border-radius: 50%;
+      box-shadow: 0 0 6px rgba(34, 197, 94, 0.6);
+    }
+    .top-bar a.switch-link {
+      color: #C8E1D3;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 3px 10px;
+      border-radius: var(--radius-sm);
+      background: rgba(255, 255, 255, 0.08);
+      transition: all 0.2s ease;
+    }
+    .top-bar a.switch-link:hover {
+      background: rgba(255, 255, 255, 0.18);
+      color: #FFFFFF;
+    }
+
+    /* Main App Header */
+    .app-header {
+      background: linear-gradient(135deg, var(--primary) 0%, #113828 100%);
+      color: #FFFFFF;
+      padding: 24px 24px 28px 24px;
+      border-bottom: 3px solid #C59B27;
+      box-shadow: var(--shadow-md);
+    }
+    .header-container {
+      max-width: 1280px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .brand-section h1 {
+      font-size: 1.75rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 4px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .brand-section p {
+      font-size: 0.95rem;
+      color: #CBE2D6;
+      max-width: 760px;
+    }
+    .brand-badge {
+      font-size: 0.75rem;
+      font-weight: 600;
+      background: rgba(255, 255, 255, 0.15);
+      padding: 3px 10px;
+      border-radius: 20px;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+    }
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .btn-secondary-link {
+      background: #FFFFFF;
+      color: var(--primary-dark);
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-decoration: none;
+      padding: 10px 18px;
+      border-radius: var(--radius-md);
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .btn-secondary-link:hover {
+      background: #EAF4EE;
+      transform: translateY(-1px);
+    }
+
+    /* Main Container */
+    .main-container {
+      max-width: 1280px;
+      margin: 24px auto;
+      padding: 0 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+    }
+
+    /* Notice & Methodological Banner */
+    .methodology-banner {
+      background-color: var(--surface);
+      border: 1px solid var(--border);
+      border-right: 5px solid var(--primary);
+      border-radius: var(--radius-md);
+      padding: 14px 20px;
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      box-shadow: var(--shadow-sm);
+    }
+    .methodology-icon {
+      font-size: 1.4rem;
+      line-height: 1;
+      margin-top: 2px;
+      color: var(--primary);
+    }
+    .methodology-text strong {
+      color: var(--text-main);
+    }
+    .methodology-text ul {
+      margin-top: 6px;
+      margin-right: 18px;
+      font-size: 0.84rem;
+    }
+    .methodology-text li {
+      margin-bottom: 2px;
+    }
+
+    /* Filter Bar */
+    .filter-card {
+      background-color: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 16px 20px;
+      box-shadow: var(--shadow-sm);
+    }
+    .filter-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 14px;
+      align-items: flex-end;
+    }
+    .filter-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .filter-group label {
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--text-muted);
+    }
+    .filter-group select,
+    .filter-group input {
+      font-family: inherit;
+      font-size: 0.9rem;
+      padding: 9px 12px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      background-color: #FAFCFA;
+      color: var(--text-main);
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    .filter-group select:focus,
+    .filter-group input:focus {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(23, 77, 57, 0.1);
+    }
+    .filter-actions {
+      display: flex;
+      gap: 8px;
+    }
+    .btn-apply {
+      flex: 2;
+      background-color: var(--primary);
+      color: #FFFFFF;
+      border: none;
+      font-family: inherit;
+      font-size: 0.9rem;
+      font-weight: 600;
+      padding: 9px 14px;
+      border-radius: var(--radius-sm);
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+    .btn-apply:hover {
+      background-color: var(--primary-light);
+    }
+    .btn-reset {
+      flex: 1;
+      background-color: #F1F5F2;
+      color: var(--text-muted);
+      border: 1px solid var(--border);
+      font-family: inherit;
+      font-size: 0.85rem;
+      padding: 9px 12px;
+      border-radius: var(--radius-sm);
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .btn-reset:hover {
+      background-color: #E2ECE6;
+      color: var(--text-main);
+    }
+
+    /* KPI Cards Grid */
+    .kpi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+    }
+    .kpi-card {
+      background-color: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 18px 20px;
+      box-shadow: var(--shadow-sm);
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 145px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .kpi-card:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+    .kpi-card.highlight-actual {
+      border-top: 4px solid var(--primary);
+    }
+    .kpi-card.highlight-sched {
+      border-top: 4px solid var(--accent);
+    }
+    .kpi-card.highlight-general {
+      border-top: 4px solid #78909C;
+    }
+    .kpi-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 8px;
+    }
+    .kpi-title {
+      font-size: 0.86rem;
+      font-weight: 600;
+      color: var(--text-muted);
+    }
+    .kpi-badge {
+      font-size: 0.72rem;
+      font-weight: 600;
+      padding: 2px 7px;
+      border-radius: 4px;
+      white-space: nowrap;
+    }
+    .kpi-badge.badge-actual {
+      background-color: var(--primary-subtle);
+      color: var(--primary-dark);
+    }
+    .kpi-badge.badge-sched {
+      background-color: var(--accent-subtle);
+      color: #1D4ED8;
+    }
+    .kpi-badge.badge-neutral {
+      background-color: #ECEFF1;
+      color: #455A64;
+    }
+    .kpi-value-row {
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+      margin: 10px 0 6px 0;
+    }
+    .kpi-value {
+      font-size: 2.2rem;
+      font-weight: 700;
+      line-height: 1;
+      color: var(--text-main);
+    }
+    .kpi-value.val-null {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--warning);
+    }
+    .kpi-unit {
+      font-size: 0.85rem;
+      color: var(--text-light);
+    }
+    .kpi-footer {
+      font-size: 0.76rem;
+      color: var(--text-light);
+      border-top: 1px dashed var(--border-light);
+      padding-top: 6px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .kpi-scope {
+      font-weight: 500;
+      color: var(--text-muted);
+    }
+
+    /* Analytical Sections */
+    .section-card {
+      background-color: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 22px;
+      box-shadow: var(--shadow-sm);
+    }
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 18px;
+      flex-wrap: wrap;
+      gap: 12px;
+      border-bottom: 1px solid var(--border-light);
+      padding-bottom: 12px;
+    }
+    .section-title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--text-main);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .section-subtitle {
+      font-size: 0.82rem;
+      color: var(--text-light);
+      margin-top: 2px;
+    }
+
+    /* Comparison Chart CSS/SVG */
+    .chart-legend {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+    }
+    .legend-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .legend-color {
+      width: 12px;
+      height: 12px;
+      border-radius: 2px;
+    }
+    .legend-color.color-actual { background-color: var(--primary); }
+    .legend-color.color-sched { background-color: var(--accent); }
+    .legend-color.color-gap {
+      background: repeating-linear-gradient(45deg, #CBD5E1, #CBD5E1 3px, #F1F5F9 3px, #F1F5F9 6px);
+      border: 1px solid #94A3B8;
+    }
+
+    .chart-container {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-top: 10px;
+    }
+    .chart-bar-group {
+      background: #FAFCFA;
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-sm);
+      padding: 14px 18px;
+      display: grid;
+      grid-template-columns: 180px 1fr;
+      gap: 18px;
+      align-items: center;
+    }
+    .bar-group-meta {
+      display: flex;
+      flex-direction: column;
+    }
+    .bar-group-meta .group-title {
+      font-weight: 700;
+      font-size: 0.96rem;
+      color: var(--text-main);
+    }
+    .bar-group-meta .group-sub {
+      font-size: 0.78rem;
+      color: var(--text-light);
+    }
+    .bar-group-bars {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .bar-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.82rem;
+    }
+    .bar-label {
+      width: 100px;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+    .bar-track {
+      flex: 1;
+      height: 22px;
+      background-color: #EDF2EE;
+      border-radius: 4px;
+      overflow: hidden;
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+    .bar-fill {
+      height: 100%;
+      border-radius: 4px;
+      transition: width 0.6s ease;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      padding-left: 8px;
+      padding-right: 8px;
+      color: #FFFFFF;
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+    .bar-fill.fill-actual { background-color: var(--primary); }
+    .bar-fill.fill-sched { background-color: var(--accent); }
+    .bar-track.gap-state {
+      background: repeating-linear-gradient(45deg, #F1F5F9, #F1F5F9 5px, #E2E8F0 5px, #E2E8F0 10px);
+      border: 1px dashed #94A3B8;
+      display: flex;
+      align-items: center;
+      padding-right: 12px;
+      font-size: 0.75rem;
+      color: #475569;
+      font-weight: 500;
+    }
+    .bar-count-label {
+      font-weight: 600;
+      min-width: 48px;
+      text-align: left;
+    }
+
+    /* Monthly Summary Table */
+    .table-wrapper {
+      overflow-x: auto;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+    }
+    table.data-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.88rem;
+      text-align: right;
+    }
+    table.data-table thead {
+      background-color: #EDF4F0;
+      color: var(--primary-dark);
+      font-weight: 700;
+      border-bottom: 2px solid var(--border);
+    }
+    table.data-table th {
+      padding: 12px 14px;
+      white-space: nowrap;
+    }
+    table.data-table td {
+      padding: 10px 14px;
+      border-bottom: 1px solid var(--border-light);
+      white-space: nowrap;
+    }
+    table.data-table tbody tr:hover {
+      background-color: #F8FCF9;
+    }
+    .cell-numeric {
+      font-variant-numeric: tabular-nums;
+      font-weight: 600;
+    }
+    .cell-actual-val {
+      color: var(--primary-dark);
+      background-color: rgba(23, 77, 57, 0.05);
+      border-radius: 4px;
+      padding: 2px 6px;
+    }
+    .cell-sched-val {
+      color: #1E40AF;
+    }
+    .cell-unobserved {
+      color: #64748B;
+      font-size: 0.78rem;
+      background: #F1F5F9;
+      border: 1px dashed #CBD5E1;
+      border-radius: 4px;
+      padding: 2px 8px;
+      display: inline-block;
+    }
+    .cell-null-passengers {
+      color: #94A3B8;
+      font-style: italic;
+      font-size: 0.8rem;
+    }
+
+    /* Dual Export Action Area */
+    .export-box {
+      background: linear-gradient(to left, #FAFCFA, #F2F7F4);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 20px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 18px;
+    }
+    .export-info h3 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--text-main);
+      margin-bottom: 4px;
+    }
+    .export-info p {
+      font-size: 0.83rem;
+      color: var(--text-muted);
+      max-width: 600px;
+    }
+    .export-buttons-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .export-btn-set {
+      display: flex;
+      align-items: center;
+      background: #FFFFFF;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+    }
+    .export-btn-label {
+      padding: 8px 12px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      background-color: #F8FAF8;
+      border-left: 1px solid var(--border-light);
+    }
+    .export-btn {
+      background: #FFFFFF;
+      border: none;
+      font-family: inherit;
+      font-size: 0.82rem;
+      font-weight: 600;
+      padding: 8px 12px;
+      cursor: pointer;
+      color: var(--primary-dark);
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      transition: background-color 0.2s;
+    }
+    .export-btn:hover {
+      background-color: var(--primary-subtle);
+    }
+    .export-btn.btn-excel {
+      color: #107C41;
+      border-right: 1px solid var(--border-light);
+    }
+    .export-btn.btn-excel:hover {
+      background-color: #EBF8F1;
+    }
+
+    /* Footer */
+    .app-footer {
+      background-color: var(--surface);
+      border-top: 1px solid var(--border);
+      padding: 24px 20px;
+      margin-top: 40px;
+      font-size: 0.8rem;
+      color: var(--text-light);
+      text-align: center;
+    }
+    .footer-inner {
+      max-width: 1280px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    /* Toast Notification */
+    .toast-msg {
+      position: fixed;
+      bottom: 24px;
+      left: 24px;
+      background-color: var(--primary-dark);
+      color: #FFFFFF;
+      padding: 12px 20px;
+      border-radius: var(--radius-sm);
+      font-size: 0.86rem;
+      font-weight: 500;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+      z-index: 1000;
+      display: none;
+      animation: fadeIn 0.3s ease;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 768px) {
+      .header-container { flex-direction: column; align-items: flex-start; }
+      .chart-bar-group { grid-template-columns: 1fr; gap: 8px; }
+      .export-box { flex-direction: column; align-items: flex-start; }
+      .footer-inner { flex-direction: column; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 1. Top Institutional Nav -->
+  <div class="top-bar">
+    <div class="emblem-tag">
+      <span class="emblem-dot"></span>
+      <span>الجمهورية العربية السورية — قاعدة بيانات الطيران والمطارات الوطنية</span>
+    </div>
+    <div>
+      <a href="/" class="switch-link" title="الانتقال إلى المحرك التحليلي المفصل للرحلات">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="9 18 15 12 9 6"></polyline>
+        </svg>
+        <span>العودة إلى المنصة التحليلية الشاملة (Syrian Airport Data Engine)</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- 2. Main App Header -->
+  <header class="app-header">
+    <div class="header-container">
+      <div class="brand-section">
+        <h1>
+          <span>مرصد الحركة الجوية السورية</span>
+          <span class="brand-badge">Syrian Air Traffic Monitor</span>
+        </h1>
+        <p>نظام تحليلي مستقل وموجز يتيح لأصحاب القرار والباحثين فهم مؤشرات الحركة الجوية الفعلية والمجدولة في المطارات السورية خلال 30 ثانية مع الحفاظ على صرامة التوثيق المنهجي.</p>
+      </div>
+      <div class="header-actions">
+        <a href="/" class="btn-secondary-link">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="3" width="7" height="7"></rect>
+            <rect x="14" y="3" width="7" height="7"></rect>
+            <rect x="14" y="14" width="7" height="7"></rect>
+            <rect x="3" y="14" width="7" height="7"></rect>
+          </svg>
+          <span>لوحة العمليات والتحليلات المعمقة</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- 3. Main Content Container -->
+  <main class="main-container">
+
+    <!-- Methodological Rigor & Data Integrity Notice -->
+    <div class="methodology-banner">
+      <div class="methodology-icon">ℹ️</div>
+      <div class="methodology-text">
+        <strong>المعايير المنهجية وحوكمة البيانات:</strong>
+        <ul>
+          <li><strong>الفصل بين الفعلي والمجدول:</strong> الحركات المرصودة عبر بث ADS-B (بيانات التتبع التجاري المتاحة) تعكس حصراً الحركات الفيزيائية الفردية (هبوط/إقلاع) الموثقة برمجياً بطوابع زمنية عبر أجهزة الإرسال والاستقبال، وتمثل <strong>عينة 9-10 تشرين الأول/أكتوبر 2026 فقط (48 ساعة)</strong>، مع استبعاد تام للرحلات المشتركة كودياً (Codeshares - 20 رحلة) والسجلات غير المثبتة (3 سجلات). الرحلات المجدولة (Scheduled Flights) تمثل الجداول الزمنية المعلنة على شاشات FIDS لكامل الشهر.</li>
+          <li><strong>معالجة الفترات غير المرصودة:</strong> الفترات التي غاب عنها التتبع التجاري لبث ADS-B (مثل أيلول/سبتمبر 2026) تُصنف كفجوة بيانات معلنة (غير متوفرة / Null) ولا تُحوّل إلى أصفار إحصائية مصطنعة تجنباً للتضليل.</li>
+          <li><strong>أعداد المسافرين:</strong> تُترك الحقول فارغة (Null) لعدم توفر إفصاحات رسمية أو بيانات أولية موثوقة لأعداد الركاب، دون أي تقدير تخميني لسعة المقاعد.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Filter Control Bar -->
+    <section class="filter-card">
+      <div class="filter-grid">
+        <div class="filter-group">
+          <label for="filter-airport">المطار المستهدف:</label>
+          <select id="filter-airport">
+            <option value="ALL">كافة المطارات السورية (All Syrian Aerodromes)</option>
+            <option value="DAM">مطار دمشق الدولي (DAM / OSDI)</option>
+            <option value="ALP">مطار حلب الدولي (ALP / OSAP)</option>
+            <option value="DEZ">مطار دير الزور (DEZ / OSDZ)</option>
+            <option value="LTK">مطار اللاذقية / حميميم (LTK / OSLK)</option>
+            <option value="KAC">مطار القامشلي (KAC / OSKL)</option>
+          </select>
+        </div>
+
+        <div class="filter-group">
+          <label for="filter-month">الفترة الزمنية / الشهر:</label>
+          <select id="filter-month">
+            <option value="2026-10">تشرين الأول / أكتوبر 2026 (أحدث فترة متاحة)</option>
+            <option value="2026-09">أيلول / سبتمبر 2026</option>
+            <option value="">كامل السجل التاريخي المتوفر</option>
+          </select>
+        </div>
+
+        <div class="filter-group">
+          <label for="filter-airline">شركة الطيران:</label>
+          <select id="filter-airline">
+            <option value="">كافة شركات الطيران (All Airlines)</option>
+          </select>
+        </div>
+
+        <div class="filter-group">
+          <label for="filter-destination">الوجهة / المطار المقابل:</label>
+          <select id="filter-destination">
+            <option value="">كافة الوجهات (All Destinations)</option>
+          </select>
+        </div>
+
+        <div class="filter-actions">
+          <button type="button" class="btn-apply" id="btn-apply-filters">تطبيق التصفية</button>
+          <button type="button" class="btn-reset" id="btn-reset-filters">إعادة ضبط</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5 KPI Cards -->
+    <section class="kpi-grid">
+      <!-- 1. Actual Movements -->
+      <div class="kpi-card highlight-actual">
+        <div class="kpi-header">
+          <span class="kpi-title">حركات مرصودة عبر بث ADS-B</span>
+          <span class="kpi-badge badge-actual">ADS-B Commercial Tracking</span>
+        </div>
+        <div class="kpi-value-row">
+          <span class="kpi-value" id="kpi-actual-val">—</span>
+          <span class="kpi-unit">حركة إقلاع / هبوط</span>
+        </div>
+        <div class="kpi-footer">
+          <span class="kpi-scope" id="kpi-actual-scope" style="color:var(--warning); font-weight:600;">عينة 9-10 تشرين الأول فقط (لا تمثل إجمالي الشهر)</span>
+          <span title="حركات فيزيائية فعلية مستبعد منها 20 رحلة مكررة تسويقياً و3 غير موثقة">مستبعد التسويق المشترك ℹ️</span>
+        </div>
+      </div>
+
+      <!-- 2. Scheduled Flights -->
+      <div class="kpi-card highlight-sched">
+        <div class="kpi-header">
+          <span class="kpi-title">الرحلات المجدولة المعلنة</span>
+          <span class="kpi-badge badge-sched">Timetable / FIDS</span>
+        </div>
+        <div class="kpi-value-row">
+          <span class="kpi-value" id="kpi-sched-val">—</span>
+          <span class="kpi-unit">رحلة مجدولة</span>
+        </div>
+        <div class="kpi-footer">
+          <span class="kpi-scope" id="kpi-sched-scope">كامل الشهر المحدد (جداول رسمية)</span>
+          <span>شاشات العرض الرسمية</span>
+        </div>
+      </div>
+
+      <!-- 3. Active Airlines -->
+      <div class="kpi-card highlight-general">
+        <div class="kpi-header">
+          <span class="kpi-title">شركات الطيران في النطاق</span>
+          <span class="kpi-badge badge-neutral">Dataset Carriers</span>
+        </div>
+        <div class="kpi-value-row">
+          <span class="kpi-value" id="kpi-airlines-val">—</span>
+          <span class="kpi-unit">شركة مسجلة</span>
+        </div>
+        <div class="kpi-footer">
+          <span class="kpi-scope">تشمل الجداول والرمز المشترك (17 مشغلة فعلياً في عينة 9-10 تشرين الأول)</span>
+          <span>ناقلات تجارية</span>
+        </div>
+      </div>
+
+      <!-- 4. Active Destinations -->
+      <div class="kpi-card highlight-general">
+        <div class="kpi-header">
+          <span class="kpi-title">الوجهات المتصلة</span>
+          <span class="kpi-badge badge-neutral">Destinations</span>
+        </div>
+        <div class="kpi-value-row">
+          <span class="kpi-value" id="kpi-destinations-val">—</span>
+          <span class="kpi-unit">مطار متصل</span>
+        </div>
+        <div class="kpi-footer">
+          <span class="kpi-scope">محطات خليجية، إقليمية، ومحلية</span>
+          <span>شبكة الربط الجوي</span>
+        </div>
+      </div>
+
+      <!-- 5. Covered Airports -->
+      <div class="kpi-card highlight-general">
+        <div class="kpi-header">
+          <span class="kpi-title">المطارات المغطاة بالرصد</span>
+          <span class="kpi-badge badge-neutral">Aerodromes</span>
+        </div>
+        <div class="kpi-value-row">
+          <span class="kpi-value" id="kpi-airports-val">—</span>
+          <span class="kpi-unit">من أصل 7 مطارات</span>
+        </div>
+        <div class="kpi-footer">
+          <span class="kpi-scope" id="kpi-airports-scope">DAM, ALP, DEZ, LTK</span>
+          <span>سجل المطارات الوطنية</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Monthly Comparison Chart Section -->
+    <section class="section-card">
+      <div class="section-header">
+        <div>
+          <h2 class="section-title">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="18" y1="20" x2="18" y2="10"></line>
+              <line x1="12" y1="20" x2="12" y2="4"></line>
+              <line x1="6" y1="20" x2="6" y2="14"></line>
+            </svg>
+            <span>استعراض الرحلات المجدولة وعينة الرصد التجاري المتاحة (فصل مرئي)</span>
+          </h2>
+          <p class="section-subtitle">فصل مرئي قاطع: الرحلات المجدولة تغطي كامل الشهر، بينما حركات ADS-B تمثل عينة 48 ساعة فقط (9-10 تشرين الأول) لتفادي أي مقارنة مضللة بنسب الإنجاز.</p>
+        </div>
+        <div class="chart-legend">
+          <div class="legend-item">
+            <span class="legend-color color-actual"></span>
+            <span>حركات مرصودة عبر بث ADS-B (عينة 9-10 تشرين الأول فقط)</span>
+          </div>
+          <div class="legend-item">
+            <span class="legend-color color-sched"></span>
+            <span>رحلات مجدولة (FIDS — كامل الشهر)</span>
+          </div>
+          <div class="legend-item">
+            <span class="legend-color color-gap"></span>
+            <span>فترة غير مرصودة في التتبع التجاري (فجوة بيانات وليست صفراً)</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="chart-container" id="chart-bars-list">
+        <!-- Injected via JavaScript -->
+        <div style="text-align:center; padding: 24px; color: var(--text-light);">جارٍ تحميل المخطط البياني...</div>
+      </div>
+    </section>
+
+    <!-- Monthly Summary Table Section -->
+    <section class="section-card">
+      <div class="section-header">
+        <div>
+          <h2 class="section-title">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+              <polyline points="14 2 14 8 20 8"></polyline>
+              <line x1="16" y1="13" x2="8" y2="13"></line>
+              <line x1="16" y1="17" x2="8" y2="17"></line>
+              <polyline points="10 9 9 9 8 9"></polyline>
+            </svg>
+            <span>جدول الملخص الشهري المجمّع للعمليات الجوية</span>
+          </h2>
+          <p class="section-subtitle">تجميع شهري موثق يوضح توزيع الرحلات المجدولة (وصول ومغادرة) وعينة الحركات المرصودة دون خلط أو افتراض نسب إنجاز.</p>
+        </div>
+      </div>
+
+      <div class="table-wrapper">
+        <table class="data-table" id="table-monthly-summary">
+          <thead>
+            <tr>
+              <th>الشهر</th>
+              <th>رمز المطار</th>
+              <th>حركات مرصودة عبر بث ADS-B (عينة 9-10 تشرين الأول فقط)</th>
+              <th>الرحلات المجدولة</th>
+              <th>الرحلات المجدولة (وصول)</th>
+              <th>الرحلات المجدولة (مغادرة)</th>
+              <th>المسافرون</th>
+              <th>شركات الطيران</th>
+              <th>الوجهات المتصلة</th>
+            </tr>
+          </thead>
+          <tbody id="table-monthly-body">
+            <tr>
+              <td colspan="9" style="text-align:center; padding: 20px; color: var(--text-light);">جارٍ استعلام وتجميع البيانات الميدانية...</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Dual Export Action Box -->
+    <section class="export-box">
+      <div class="export-info">
+        <h3>تصدير البيانات المعتمدة بصيغتي CSV و Excel</h3>
+        <p>تصدير فوري متوافق مع معايير التدقيق وحوكمة البيانات؛ يحترم التصفية الحالية ويُبقي الحقول غير المرصودة فارغة (Null) تجنباً للتضليل الإحصائي.</p>
+      </div>
+
+      <div class="export-buttons-group">
+        <!-- Detailed Flight Events -->
+        <div class="export-btn-set">
+          <span class="export-btn-label">سجلات الرحلات المفصلة:</span>
+          <button type="button" class="export-btn" id="btn-export-events-csv">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+            <span>CSV</span>
+          </button>
+          <button type="button" class="export-btn btn-excel" id="btn-export-events-xlsx">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="8" y1="13" x2="16" y2="17"></line><line x1="16" y1="13" x2="8" y2="17"></line></svg>
+            <span>Excel (.xlsx)</span>
+          </button>
+        </div>
+
+        <!-- Monthly Summary -->
+        <div class="export-btn-set">
+          <span class="export-btn-label">جدول الملخص الشهري:</span>
+          <button type="button" class="export-btn" id="btn-export-monthly-csv">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+            <span>CSV</span>
+          </button>
+          <button type="button" class="export-btn btn-excel" id="btn-export-monthly-xlsx">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="8" y1="13" x2="16" y2="17"></line><line x1="16" y1="13" x2="8" y2="17"></line></svg>
+            <span>Excel (.xlsx)</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 4. Footer -->
+  <footer class="app-footer">
+    <div class="footer-inner">
+      <div>
+        <span>منظومة بيانات المطارات السورية — الإصدار التحليلي الموجه 2.0.0</span>
+      </div>
+      <div>
+        <span>بصمة البيانات المرجعية: SHA-256 Verified • قاعدة بيانات دمشق والمطارات السورية</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast Notification Message -->
+  <div class="toast-msg" id="toast"></div>
+
+  <!-- JavaScript Logic -->
+  <script>
+    (function() {
+      // Elements
+      const airportSelect = document.getElementById('filter-airport');
+      const monthSelect = document.getElementById('filter-month');
+      const airlineSelect = document.getElementById('filter-airline');
+      const destinationSelect = document.getElementById('filter-destination');
+      const btnApply = document.getElementById('btn-apply-filters');
+      const btnReset = document.getElementById('btn-reset-filters');
+
+      const kpiActualVal = document.getElementById('kpi-actual-val');
+      const kpiActualScope = document.getElementById('kpi-actual-scope');
+      const kpiSchedVal = document.getElementById('kpi-sched-val');
+      const kpiSchedScope = document.getElementById('kpi-sched-scope');
+      const kpiAirlinesVal = document.getElementById('kpi-airlines-val');
+      const kpiDestinationsVal = document.getElementById('kpi-destinations-val');
+      const kpiAirportsVal = document.getElementById('kpi-airports-val');
+      const kpiAirportsScope = document.getElementById('kpi-airports-scope');
+
+      const chartList = document.getElementById('chart-bars-list');
+      const tableBody = document.getElementById('table-monthly-body');
+      const toast = document.getElementById('toast');
+
+      // Export Buttons
+      const btnExportEventsCsv = document.getElementById('btn-export-events-csv');
+      const btnExportEventsXlsx = document.getElementById('btn-export-events-xlsx');
+      const btnExportMonthlyCsv = document.getElementById('btn-export-monthly-csv');
+      const btnExportMonthlyXlsx = document.getElementById('btn-export-monthly-xlsx');
+
+      function showToast(msg) {
+        toast.textContent = msg;
+        toast.style.display = 'block';
+        setTimeout(() => {
+          toast.style.display = 'none';
+        }, 3200);
+      }
+
+      function buildQueryParams() {
+        const p = new URLSearchParams();
+        const airport = airportSelect.value;
+        const month = monthSelect.value;
+        const airline = airlineSelect.value;
+        const destination = destinationSelect.value;
+
+        if (airport && airport !== 'ALL') p.append('airport_id', airport);
+        if (month) p.append('month', month);
+        if (airline) p.append('airline', airline);
+        if (destination) p.append('destination', destination);
+
+        return p;
+      }
+
+      // 1. Load Filter Options
+      async function loadFilterOptions() {
+        try {
+          const res = await fetch('/api/air-traffic/filter-options');
+          if (!res.ok) return;
+          const data = await res.json();
+
+          // Populate Airlines
+          if (data.airlines && data.airlines.length > 0) {
+            airlineSelect.innerHTML = '<option value="">كافة شركات الطيران (All Airlines)</option>';
+            data.airlines.forEach(a => {
+              const opt = document.createElement('option');
+              opt.value = a;
+              opt.textContent = a;
+              airlineSelect.appendChild(opt);
+            });
+          }
+
+          // Populate Destinations
+          if (data.destinations && data.destinations.length > 0) {
+            destinationSelect.innerHTML = '<option value="">كافة الوجهات (All Destinations)</option>';
+            data.destinations.forEach(d => {
+              const opt = document.createElement('option');
+              opt.value = d.connected_airport_iata;
+              const nameStr = d.connected_city ? ` (${d.connected_city})` : '';
+              opt.textContent = `${d.connected_airport_iata}${nameStr}`;
+              destinationSelect.appendChild(opt);
+            });
+          }
+        } catch (err) {
+          console.warn('Failed to load dynamic filter options', err);
+        }
+      }
+
+      // 2. Load KPIs
+      async function loadKPIs() {
+        try {
+          const p = buildQueryParams();
+          const res = await fetch(`/api/air-traffic/kpis?${p.toString()}`);
+          if (!res.ok) throw new Error('KPI fetch failed');
+          const data = await res.json();
+          const k = data.kpis;
+
+          // Actual movements
+          if (k.actual_movements !== null && k.actual_movements !== undefined) {
+            kpiActualVal.textContent = Number(k.actual_movements).toLocaleString('ar-SY');
+            kpiActualVal.className = 'kpi-value';
+          } else {
+            kpiActualVal.textContent = 'غير متوفر (فجوة)';
+            kpiActualVal.className = 'kpi-value val-null';
+          }
+
+          // Scheduled
+          kpiSchedVal.textContent = Number(k.scheduled_flights || 0).toLocaleString('ar-SY');
+
+          // Airlines & Destinations
+          kpiAirlinesVal.textContent = Number(k.active_airlines || 0).toLocaleString('ar-SY');
+          kpiDestinationsVal.textContent = Number(k.active_destinations || 0).toLocaleString('ar-SY');
+
+          // Covered Airports
+          kpiAirportsVal.textContent = Number(k.airports_covered || 0).toLocaleString('ar-SY');
+
+          // Scopes & Labels
+          if (data.period && data.period.label) {
+            kpiSchedScope.textContent = data.period.label;
+          }
+          if (data.airport_scope) {
+            kpiAirportsScope.textContent = data.airport_scope === 'DAM' ? 'مطار دمشق الدولي' : data.airport_scope;
+          }
+        } catch (err) {
+          console.error(err);
+          kpiActualVal.textContent = '—';
+          kpiSchedVal.textContent = '—';
+        }
+      }
+
+      // 3. Load Monthly Summary & Chart
+      async function loadMonthlySummary() {
+        try {
+          const p = buildQueryParams();
+          const res = await fetch(`/api/air-traffic/monthly-summary?${p.toString()}`);
+          if (!res.ok) throw new Error('Monthly summary fetch failed');
+          const data = await res.json();
+          const rows = data.summary || [];
+
+          renderTable(rows);
+          renderChart(rows);
+        } catch (err) {
+          console.error(err);
+          tableBody.innerHTML = `<tr><td colspan="9" style="text-align:center; padding: 20px; color: #DC2626;">تعذر تحميل ملخص البيانات: ${err.message}</td></tr>`;
+          chartList.innerHTML = `<div style="text-align:center; padding: 20px; color: #DC2626;">تعذر تحميل المخطط البياني.</div>`;
+        }
+      }
+
+      function renderTable(rows) {
+        if (!rows || rows.length === 0) {
+          tableBody.innerHTML = '<tr><td colspan="9" style="text-align:center; padding: 24px; color: var(--text-light);">لا توجد سجلات مطابقة لمعايير التصفية المحددة.</td></tr>';
+          return;
+        }
+
+        let html = '';
+        rows.forEach(r => {
+          const actualCell = r.actual_movements !== null
+            ? `<span class="cell-actual-val" title="عينة 9-10 تشرين الأول فقط">${Number(r.actual_movements).toLocaleString('ar-SY')} <small style="font-weight:500; color:var(--text-muted);">(عينة 48 ساعة)</small></span>`
+            : `<span class="cell-unobserved" title="فترة غير مرصودة في التتبع التجاري: لا تُعتبر أصفاراً بل فجوة بيانات معلنة">غير متوفر (فجوة تتبع)</span>`;
+
+          const passengerCell = `<span class="cell-null-passengers" title="بيانات المسافرين غير منشورة رسمياً دون تخمين">غير متوفر / Null</span>`;
+
+          html += `
+            <tr>
+              <td class="cell-numeric" style="font-weight:700;">${r.month}</td>
+              <td><strong>${r.airport_id}</strong></td>
+              <td class="cell-numeric">${actualCell}</td>
+              <td class="cell-numeric cell-sched-val">${Number(r.scheduled_flights).toLocaleString('ar-SY')}</td>
+              <td class="cell-numeric">${Number(r.scheduled_arrivals || 0).toLocaleString('ar-SY')}</td>
+              <td class="cell-numeric">${Number(r.scheduled_departures || 0).toLocaleString('ar-SY')}</td>
+              <td>${passengerCell}</td>
+              <td class="cell-numeric">${Number(r.active_airlines).toLocaleString('ar-SY')}</td>
+              <td class="cell-numeric">${Number(r.active_destinations).toLocaleString('ar-SY')}</td>
+            </tr>
+          `;
+        });
+        tableBody.innerHTML = html;
+      }
+
+      function renderChart(rows) {
+        if (!rows || rows.length === 0) {
+          chartList.innerHTML = '<div style="text-align:center; padding: 24px; color: var(--text-light);">لا تتوفر بيانات للمخطط.</div>';
+          return;
+        }
+
+        // Find max scheduled or actual for proportional scaling
+        let maxVal = 100;
+        rows.forEach(r => {
+          if (r.scheduled_flights > maxVal) maxVal = r.scheduled_flights;
+          if (r.actual_movements && r.actual_movements > maxVal) maxVal = r.actual_movements;
+        });
+
+        const airportNames = {
+          'DAM': 'مطار دمشق الدولي (DAM)',
+          'ALP': 'مطار حلب الدولي (ALP)',
+          'DEZ': 'مطار دير الزور (DEZ)',
+          'LTK': 'مطار اللاذقية / حميميم (LTK)',
+          'KAC': 'مطار القامشلي (KAC)'
+        };
+
+        let html = '';
+        rows.forEach(r => {
+          const apName = airportNames[r.airport_id] || r.airport_id;
+          const schedPct = Math.min(100, Math.max(3, (r.scheduled_flights / maxVal) * 100));
+
+          let actualBarContent = '';
+          if (r.actual_movements !== null) {
+            const actualPct = Math.min(100, Math.max(3, (r.actual_movements / maxVal) * 100));
+            actualBarContent = `
+              <div class="bar-track">
+                <div class="bar-fill fill-actual" style="width: ${actualPct}%;">
+                  <span>${r.actual_movements}</span>
+                </div>
+              </div>
+              <span class="bar-count-label">${Number(r.actual_movements).toLocaleString('ar-SY')} حركة <small style="color:#B45309; font-weight:600;">(عينة 9-10 تشرين الأول فقط)</small></span>
+            `;
+          } else {
+            actualBarContent = `
+              <div class="bar-track gap-state">
+                <span>⚠️ فترة غير مرصودة في التتبع التجاري (فجوة بيانات معلنة — لا تمثل صفراً)</span>
+              </div>
+              <span class="bar-count-label" style="color:var(--text-light);">Null</span>
+            `;
+          }
+
+          html += `
+            <div class="chart-bar-group">
+              <div class="bar-group-meta">
+                <span class="group-title">${apName}</span>
+                <span class="group-sub">شهر: ${r.month}</span>
+              </div>
+              <div class="bar-group-bars">
+                <!-- Actual Movements Bar (Explicit Sample) -->
+                <div class="bar-row">
+                  <span class="bar-label" style="font-weight:600; color:var(--primary);">حركات ADS-B (عينة 48 ساعة):</span>
+                  ${actualBarContent}
+                </div>
+                <!-- Scheduled Flights Bar (Full Month) -->
+                <div class="bar-row">
+                  <span class="bar-label" style="font-weight:600; color:var(--accent);">الرحلات المجدولة (كامل الشهر):</span>
+                  <div class="bar-track">
+                    <div class="bar-fill fill-sched" style="width: ${schedPct}%;">
+                      <span>${r.scheduled_flights}</span>
+                    </div>
+                  </div>
+                  <span class="bar-count-label">${Number(r.scheduled_flights).toLocaleString('ar-SY')} رحلة <small style="color:var(--text-light);">(كامل الشهر)</small></span>
+                </div>
+              </div>
+            </div>
+          `;
+        });
+
+        chartList.innerHTML = html;
+      }
+
+      // Exports Handlers
+      function triggerDownload(url, filename) {
+        showToast('جارٍ تجهيز ملف التصدير وبدء التنزيل...');
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = filename;
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+      }
+
+      btnExportEventsCsv.addEventListener('click', () => {
+        const p = buildQueryParams();
+        p.append('format', 'csv');
+        triggerDownload(`/api/air-traffic/export/events?${p.toString()}`, 'syrian_flight_events.csv');
+      });
+
+      btnExportEventsXlsx.addEventListener('click', () => {
+        const p = buildQueryParams();
+        p.append('format', 'xlsx');
+        triggerDownload(`/api/air-traffic/export/events?${p.toString()}`, 'syrian_flight_events.xlsx');
+      });
+
+      btnExportMonthlyCsv.addEventListener('click', () => {
+        const p = buildQueryParams();
+        p.append('format', 'csv');
+        triggerDownload(`/api/air-traffic/export/monthly?${p.toString()}`, 'syrian_air_traffic_monthly_summary.csv');
+      });
+
+      btnExportMonthlyXlsx.addEventListener('click', () => {
+        const p = buildQueryParams();
+        p.append('format', 'xlsx');
+        triggerDownload(`/api/air-traffic/export/monthly?${p.toString()}`, 'syrian_air_traffic_monthly_summary.xlsx');
+      });
+
+      // Filter Handlers
+      btnApply.addEventListener('click', () => {
+        showToast('جارٍ تحديث مؤشرات ولوحة المرصد...');
+        loadKPIs();
+        loadMonthlySummary();
+      });
+
+      btnReset.addEventListener('click', () => {
+        airportSelect.value = 'ALL';
+        monthSelect.value = '2026-10';
+        airlineSelect.value = '';
+        destinationSelect.value = '';
+        showToast('تمت إعادة ضبط الفلاتر إلى القيم الافتراضية');
+        loadKPIs();
+        loadMonthlySummary();
+      });
+
+      // Initialize
+      loadFilterOptions();
+      loadKPIs();
+      loadMonthlySummary();
+    })();
+  </script>
+</body>
+</html>

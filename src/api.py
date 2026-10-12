@@ -53,6 +53,9 @@ app.include_router(archived_fids_router)
 from src.archived_fids_history_api import router as archived_fids_history_router
 app.include_router(archived_fids_history_router)
 
+from src.air_traffic_api import router as air_traffic_router
+app.include_router(air_traffic_router)
+
 @app.get("/", response_class=HTMLResponse)
 @app.get("/data", response_class=HTMLResponse)
 def get_data_tab():
