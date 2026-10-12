@@ -1,397 +1,1052 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Syrian Airport Data Engine & Damascus Deep-Dive</title>
+  <title>محرك بيانات المطارات السورية | المنظومة التحليلية لحركة الطيران المدني</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
   <style>
     :root {
-      --primary: #1e3a8a;
-      --primary-light: #2563eb;
-      --bg: #f8fafc;
-      --card-bg: #ffffff;
-      --text: #0f172a;
-      --text-muted: #64748b;
-      --border: #e2e8f0;
-      --success: #10b981;
-      --warning: #f59e0b;
-      --danger: #ef4444;
-      --radius: 8px;
+      /* Institutional Green + White Palette */
+      --primary: #174D39;
+      --primary-hover: #113A2B;
+      --secondary: #39765A;
+      --light-green: #EAF2EC;
+      --light-green-border: #C8DCD0;
+      --bg: #F7F9F6;
+      --card-bg: #FFFFFF;
+      --text: #26352D;
+      --text-muted: #64756B;
+      --border: #E1E8E2;
+      --border-dark: #CDD7D0;
+      --muted-gray: #8A968E;
+
+      /* Semantic States - Restrained & Professional */
+      --success: #174D39;
+      --success-bg: #EAF2EC;
+      --success-border: #C6D8CD;
+
+      --warning: #8A5816;
+      --warning-bg: #FEF7ED;
+      --warning-border: #F5DFC3;
+
+      --danger: #963426;
+      --danger-bg: #FDF2F0;
+      --danger-border: #F7D2CC;
+
+      --info: #205963;
+      --info-bg: #EEF6F7;
+      --info-border: #CCE2E6;
+
+      --purple: #4D3370;
+      --purple-bg: #F3EEF9;
+      --purple-border: #D8CCE8;
+
+      --radius: 6px;
+      --radius-sm: 4px;
+      --radius-lg: 8px;
+      --shadow-subtle: 0 1px 3px rgba(23, 77, 57, 0.05);
+      --shadow-card: 0 1px 2px rgba(23, 77, 57, 0.04), 0 4px 12px rgba(23, 77, 57, 0.02);
     }
+
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); line-height: 1.5; padding: 24px; }
-    .header { background: var(--card-bg); border: 1px solid var(--border); padding: 24px; border-radius: var(--radius); margin-bottom: 24px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
-    .header h1 { font-size: 24px; font-weight: 700; color: var(--primary); display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
-    .badge { display: inline-block; padding: 4px 8px; border-radius: 4px; font-size: 12px; font-weight: 600; text-transform: uppercase; }
-    .badge-primary { background: #e0e7ff; color: #3730a3; }
-    .badge-success { background: #d1fae5; color: #065f46; }
-    .badge-warning { background: #fef3c7; color: #92400e; }
-    .badge-danger { background: #fee2e2; color: #991b1b; }
-    .badge-purple { background: #f3e8ff; color: #6b21a8; }
-    .badge-cyan { background: #cffafe; color: #0e7490; }
-    .badge-info { background: #e0f2fe; color: #0369a1; }
-    .badge-gray { background: #f1f5f9; color: #475569; }
-    .meta-row { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 16px; font-size: 14px; color: var(--text-muted); }
-    .meta-item strong { color: var(--text); }
-    
-    .selector-bar { display: flex; align-items: center; gap: 12px; margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--border); }
-    .selector-bar label { font-weight: 600; font-size: 14px; color: var(--text); }
-    .selector-bar select { padding: 8px 12px; border-radius: 6px; border: 1px solid var(--border); font-size: 14px; font-weight: 600; background: #fff; }
 
-    .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-bottom: 24px; }
-    .stat-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
-    .stat-title { font-size: 12px; text-transform: uppercase; font-weight: 600; color: var(--text-muted); margin-bottom: 6px; }
-    .stat-value { font-size: 28px; font-weight: 700; color: var(--primary); }
-    .stat-desc { font-size: 12px; color: var(--text-muted); margin-top: 4px; }
+    body {
+      font-family: 'IBM Plex Sans Arabic', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans Arabic", Tahoma, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding: 24px;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
 
-    .tabs { display: flex; gap: 8px; border-bottom: 2px solid var(--border); margin-bottom: 20px; flex-wrap: wrap; }
-    .tab-btn { background: none; border: none; padding: 10px 18px; font-size: 14px; font-weight: 600; color: var(--text-muted); cursor: pointer; border-bottom: 2px solid transparent; margin-bottom: -2px; }
-    .tab-btn.active { color: var(--primary-light); border-bottom-color: var(--primary-light); }
+    /* Monospace elements strictly LTR for proper formatting */
+    .mono, code, .code, .iata-code, .icao-code, .timestamp, .flight-no {
+      font-family: 'JetBrains Mono', 'SF Mono', 'Cascadia Code', Consolas, monospace;
+      direction: ltr;
+      display: inline-block;
+      unicode-bidi: embed;
+    }
+
+    /* Top Brand Bar / Header */
+    .header {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-top: 4px solid var(--primary);
+      padding: 24px 28px;
+      border-radius: var(--radius-lg);
+      margin-bottom: 24px;
+      box-shadow: var(--shadow-card);
+    }
+
+    .header-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .brand-title {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .brand-icon {
+      width: 44px;
+      height: 44px;
+      background: var(--light-green);
+      border: 1px solid var(--light-green-border);
+      color: var(--primary);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .brand-text h1 {
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--primary);
+      letter-spacing: -0.3px;
+      margin-bottom: 2px;
+    }
+
+    .brand-text p {
+      font-size: 13px;
+      color: var(--text-muted);
+      font-weight: 400;
+    }
+
+    .header-badges {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    /* Clean Institutional Badges */
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 4px 10px;
+      border-radius: var(--radius-sm);
+      font-size: 12px;
+      font-weight: 600;
+      line-height: 1.4;
+      white-space: nowrap;
+      border: 1px solid transparent;
+    }
+    .badge-primary { background: var(--light-green); color: var(--primary); border-color: var(--light-green-border); }
+    .badge-success { background: #EAF5EE; color: #174D39; border-color: #BBDCC8; }
+    .badge-warning { background: var(--warning-bg); color: var(--warning); border-color: var(--warning-border); }
+    .badge-danger { background: var(--danger-bg); color: var(--danger); border-color: var(--danger-border); }
+    .badge-purple { background: var(--purple-bg); color: var(--purple); border-color: var(--purple-border); }
+    .badge-info { background: var(--info-bg); color: var(--info); border-color: var(--info-border); }
+    .badge-cyan { background: #E6F6F7; color: #175C66; border-color: #C5E6E9; }
+    .badge-gray { background: #F1F4F2; color: #4B5A52; border-color: #DDE4E0; }
+    .badge-secondary { background: #EEF2EF; color: var(--secondary); border-color: #D2DFD7; }
+
+    /* Metadata Bar */
+    .meta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-top: 18px;
+      padding-top: 16px;
+      border-top: 1px solid var(--border);
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+    .meta-item { display: flex; align-items: center; gap: 6px; }
+    .meta-item strong { color: var(--text); font-weight: 600; }
+
+    /* Selector Bar */
+    .selector-bar {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-top: 16px;
+      padding: 12px 16px;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      flex-wrap: wrap;
+    }
+    .selector-bar label {
+      font-weight: 600;
+      font-size: 13px;
+      color: var(--primary);
+    }
+    .selector-bar select {
+      flex: 1;
+      min-width: 260px;
+      max-width: 520px;
+      padding: 8px 14px;
+      border-radius: 6px;
+      border: 1px solid var(--border-dark);
+      font-size: 13px;
+      font-weight: 500;
+      background: #FFFFFF;
+      color: var(--text);
+      font-family: inherit;
+    }
+    .selector-bar select:focus {
+      outline: none;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 2px rgba(23, 77, 57, 0.12);
+    }
+
+    /* Warning / Integrity Panel */
+    .integrity-panel {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-right: 4px solid var(--secondary);
+      border-radius: var(--radius);
+      padding: 18px 22px;
+      margin-bottom: 24px;
+      box-shadow: var(--shadow-subtle);
+    }
+    .integrity-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 12px;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .integrity-header h2 {
+      color: var(--primary);
+      font-size: 15px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .integrity-list {
+      font-size: 13px;
+      color: var(--text);
+      padding-right: 20px;
+      line-height: 1.7;
+    }
+    .integrity-list li { margin-bottom: 6px; }
+    .integrity-list strong { color: var(--primary); }
+
+    /* Top Stats Grid */
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+    .stat-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px;
+      box-shadow: var(--shadow-card);
+      transition: border-color 0.2s ease, transform 0.1s ease;
+    }
+    .stat-card:hover {
+      border-color: var(--secondary);
+    }
+    .stat-title {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--text-muted);
+      margin-bottom: 8px;
+      letter-spacing: 0.2px;
+    }
+    .stat-value {
+      font-size: 30px;
+      font-weight: 700;
+      color: var(--primary);
+      font-feature-settings: "tnum";
+      line-height: 1.1;
+    }
+    .stat-desc {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-top: 8px;
+      line-height: 1.4;
+    }
+
+    /* Tabs Navigation */
+    .tabs-wrapper {
+      position: relative;
+      margin-bottom: 24px;
+      border-bottom: 1px solid var(--border);
+    }
+    .tabs {
+      display: flex;
+      gap: 4px;
+      overflow-x: auto;
+      scrollbar-width: thin;
+      scrollbar-color: var(--border) transparent;
+      padding-bottom: 1px;
+    }
+    .tab-btn {
+      background: transparent;
+      border: none;
+      padding: 12px 18px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text-muted);
+      cursor: pointer;
+      border-bottom: 3px solid transparent;
+      white-space: nowrap;
+      transition: all 0.15s ease;
+      font-family: inherit;
+      border-radius: var(--radius) var(--radius) 0 0;
+    }
+    .tab-btn:hover {
+      color: var(--primary);
+      background: #F0F4F1;
+    }
+    .tab-btn.active {
+      color: var(--primary);
+      border-bottom-color: var(--primary);
+      background: #FFFFFF;
+      box-shadow: 0 -1px 2px rgba(0,0,0,0.02);
+    }
+
     .tab-content { display: none; }
     .tab-content.active { display: block; }
 
-    .panel { background: var(--card-bg); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); margin-bottom: 24px; }
-    .panel h2 { font-size: 18px; margin-bottom: 16px; color: var(--text); }
+    /* Panels & Cards */
+    .panel {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 24px;
+      box-shadow: var(--shadow-card);
+      margin-bottom: 24px;
+    }
+    .panel h2 {
+      font-size: 17px;
+      font-weight: 700;
+      margin-bottom: 18px;
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .panel h3 {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--text);
+    }
 
-    .controls { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 16px; align-items: center; }
-    input, select { padding: 8px 12px; border: 1px solid var(--border); border-radius: 6px; font-size: 14px; }
-    button.btn { background: var(--primary-light); color: #fff; border: none; padding: 8px 16px; border-radius: 6px; font-size: 14px; font-weight: 600; cursor: pointer; }
-    button.btn:hover { background: var(--primary); }
-    button.btn-outline { background: transparent; border: 1px solid var(--border); color: var(--text); }
-    button.btn-outline:hover { background: var(--border); }
+    /* Form Controls & Filter Bars */
+    .controls {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 20px;
+      align-items: center;
+      background: var(--bg);
+      padding: 16px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+    }
+    .control-group {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .control-group label {
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--text-muted);
+    }
+    input, select {
+      padding: 8px 12px;
+      border: 1px solid var(--border-dark);
+      border-radius: 6px;
+      font-size: 13px;
+      font-family: inherit;
+      background: #FFFFFF;
+      color: var(--text);
+      transition: border-color 0.15s ease, box-shadow 0.15s ease;
+    }
+    input:focus, select:focus {
+      outline: none;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 2px rgba(23, 77, 57, 0.12);
+    }
 
-    table { width: 100%; border-collapse: collapse; font-size: 13px; text-align: left; }
-    th { background: #f1f5f9; padding: 10px 12px; border-bottom: 2px solid var(--border); color: var(--text); font-weight: 600; }
-    td { padding: 10px 12px; border-bottom: 1px solid var(--border); }
-    tr:hover { background: #f8fafc; }
-    .table-container { overflow-x: auto; max-height: 520px; }
+    /* Buttons */
+    button.btn, a.btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      background: var(--primary);
+      color: #FFFFFF;
+      border: 1px solid var(--primary);
+      padding: 8px 18px;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      font-family: inherit;
+      text-decoration: none;
+      transition: all 0.15s ease;
+    }
+    button.btn:hover, a.btn:hover {
+      background: var(--primary-hover);
+      border-color: var(--primary-hover);
+    }
+    button.btn-outline, a.btn-outline {
+      background: transparent;
+      border: 1px solid var(--border-dark);
+      color: var(--text);
+    }
+    button.btn-outline:hover, a.btn-outline:hover {
+      background: var(--light-green);
+      border-color: var(--secondary);
+      color: var(--primary);
+    }
+    button.btn-sm, a.btn-sm {
+      padding: 4px 10px;
+      font-size: 12px;
+      border-radius: 4px;
+    }
 
-    .coverage-card { border-left: 4px solid var(--primary-light); padding: 12px 16px; background: #f8fafc; margin-bottom: 12px; border-radius: 0 var(--radius) var(--radius) 0; }
-    .coverage-card.paid { border-left-color: var(--warning); }
-    .coverage-card.blocked { border-left-color: var(--danger); }
-    .coverage-title { font-weight: 700; font-size: 14px; display: flex; justify-content: space-between; }
-    .coverage-meta { font-size: 12px; color: var(--text-muted); margin-top: 4px; }
+    /* Tables */
+    .table-container {
+      overflow-x: auto;
+      max-height: 560px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: #FFFFFF;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+      text-align: right;
+    }
+    th {
+      background: #F1F5F2;
+      padding: 12px 14px;
+      border-bottom: 2px solid var(--border-dark);
+      color: var(--primary);
+      font-weight: 700;
+      white-space: nowrap;
+      position: sticky;
+      top: 0;
+      z-index: 2;
+    }
+    td {
+      padding: 11px 14px;
+      border-bottom: 1px solid var(--border);
+      color: var(--text);
+      vertical-align: middle;
+    }
+    tr:hover td {
+      background: #F9FAF8;
+    }
+    tr:last-child td {
+      border-bottom: none;
+    }
 
-    .download-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; }
-    .download-card { border: 1px solid var(--border); border-radius: var(--radius); padding: 16px; }
-    .download-card h3 { font-size: 15px; margin-bottom: 6px; }
-    .download-card p { font-size: 13px; color: var(--text-muted); margin-bottom: 12px; }
-    .btn-group { display: flex; gap: 8px; }
+    /* Coverage & Audit Cards */
+    .coverage-card {
+      border-right: 4px solid var(--secondary);
+      border-left: none;
+      padding: 14px 18px;
+      background: #FFFFFF;
+      margin-bottom: 12px;
+      border-radius: var(--radius) 0 0 var(--radius);
+      border: 1px solid var(--border);
+      border-right-width: 4px;
+      border-right-color: var(--secondary);
+      box-shadow: var(--shadow-subtle);
+    }
+    .coverage-card.paid { border-right-color: var(--warning); background: #FFFCF7; }
+    .coverage-card.blocked { border-right-color: var(--danger); background: #FFFDFD; }
+    .coverage-title {
+      font-weight: 700;
+      font-size: 14px;
+      color: var(--primary);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+    }
+    .coverage-meta {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-top: 6px;
+      line-height: 1.6;
+    }
 
-    .chart-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(360px, 1fr)); gap: 16px; margin-bottom: 24px; }
-    .chart-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: var(--radius); padding: 18px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
-    .chart-title { font-size: 14px; font-weight: 700; margin-bottom: 12px; color: var(--primary); display: flex; justify-content: space-between; align-items: center; }
-    .chart-legend { display: flex; gap: 12px; font-size: 11px; font-weight: 600; color: var(--text-muted); }
-    .legend-box { display: inline-block; width: 10px; height: 10px; border-radius: 2px; margin-right: 4px; vertical-align: middle; }
-    .bar-row { display: flex; align-items: center; margin-bottom: 6px; font-size: 12px; gap: 8px; }
-    .bar-label { width: 120px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-weight: 600; }
-    .bar-track { flex: 1; height: 18px; background: #f1f5f9; border-radius: 4px; overflow: hidden; display: flex; }
-    .bar-fill-arr { height: 100%; background: #10b981; }
-    .bar-fill-dep { height: 100%; background: #2563eb; }
-    .bar-fill-total { height: 100%; background: #4f46e5; }
-    .bar-val { width: 65px; text-align: right; font-weight: 600; color: var(--text-muted); font-size: 11px; }
-    .daily-bars-container { display: flex; align-items: flex-end; gap: 2px; height: 120px; padding: 10px 0; border-bottom: 1px solid var(--border); overflow-x: auto; }
-    .daily-bar-col { flex: 1; min-width: 8px; display: flex; flex-direction: column; justify-content: flex-end; height: 100%; position: relative; }
-    .daily-bar-arr { background: #10b981; width: 100%; }
-    .daily-bar-dep { background: #2563eb; width: 100%; }
+    /* Downloads Grid */
+    .download-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+      gap: 18px;
+    }
+    .download-card {
+      background: #FFFFFF;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: var(--shadow-subtle);
+      transition: border-color 0.2s ease;
+    }
+    .download-card:hover {
+      border-color: var(--secondary);
+    }
+    .download-card h3 {
+      font-size: 15px;
+      margin-bottom: 8px;
+      color: var(--primary);
+    }
+    .download-card p {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-bottom: 16px;
+      line-height: 1.5;
+    }
+    .btn-group {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
 
+    /* Chart Cards & Visual Schedule Bars */
+    .chart-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+      gap: 18px;
+      margin-bottom: 24px;
+    }
+    .chart-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px;
+      box-shadow: var(--shadow-subtle);
+    }
+    .chart-title {
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 16px;
+      color: var(--primary);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .chart-legend {
+      display: flex;
+      gap: 14px;
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--text-muted);
+    }
+    .legend-box {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      border-radius: 2px;
+      margin-left: 5px;
+      margin-right: 0;
+      vertical-align: middle;
+    }
+
+    .bar-row {
+      display: flex;
+      align-items: center;
+      margin-bottom: 8px;
+      font-size: 12px;
+      gap: 10px;
+    }
+    .bar-label {
+      width: 140px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      font-weight: 600;
+      color: var(--text);
+    }
+    .bar-track {
+      flex: 1;
+      height: 18px;
+      background: var(--light-green);
+      border-radius: 4px;
+      overflow: hidden;
+      display: flex;
+    }
+    /* Restrained green and neutral tones */
+    .bar-fill-arr { height: 100%; background: #39765A; }
+    .bar-fill-dep { height: 100%; background: #174D39; }
+    .bar-fill-total { height: 100%; background: #264A38; }
+    .bar-val {
+      width: 90px;
+      text-align: left;
+      font-weight: 600;
+      color: var(--text-muted);
+      font-size: 11px;
+      direction: ltr;
+    }
+
+    .daily-bars-container {
+      display: flex;
+      align-items: flex-end;
+      gap: 2px;
+      height: 130px;
+      padding: 10px 0;
+      border-bottom: 1px solid var(--border);
+      overflow-x: auto;
+    }
+    .daily-bar-col {
+      flex: 1;
+      min-width: 8px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      height: 100%;
+      position: relative;
+    }
+    .daily-bar-arr { background: #39765A; width: 100%; }
+    .daily-bar-dep { background: #174D39; width: 100%; }
+
+    /* Footer */
+    .footer {
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+    .footer a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* Responsive Adjustments */
+    @media (max-width: 992px) {
+      body { padding: 16px; }
+      .header { padding: 20px; }
+      .stats-grid { grid-template-columns: repeat(2, 1fr); }
+      .chart-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 600px) {
+      body { padding: 12px; }
+      .header { padding: 16px; }
+      .stats-grid { grid-template-columns: 1fr; }
+      .brand-title { flex-direction: column; align-items: flex-start; }
+      .selector-bar { flex-direction: column; align-items: stretch; }
+      .selector-bar select { max-width: 100%; }
+    }
   </style>
 </head>
 <body>
 
-  <div class="header">
-    <h1>
-      <span>✈️ Syrian Airport Data Engine</span>
-      <span class="badge badge-primary">Scope: All Syrian Aerodromes</span>
-      <span class="badge badge-success">Damascus Deep-Dive Active</span>
-    </h1>
-    <div class="meta-row">
-      <div class="meta-item"><strong>Aeronautical Authority:</strong> Syrian eAIP (GACA) & OurAirports</div>
-      <div class="meta-item"><strong>Operational Status:</strong> DAM & ALP Active Portals; DEZ & KAC Responsive; LTK Monitored</div>
-      <div class="meta-item"><strong>Engine Architecture:</strong> SQLite Partitioned Layer A & Layer B + FastAPI + Strict Audit</div>
+  <!-- Top Brand Bar & Global Selector -->
+  <header class="header">
+    <div class="header-top">
+      <div class="brand-title">
+        <div class="brand-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/>
+          </svg>
+        </div>
+        <div class="brand-text">
+          <h1>محرك بيانات المطارات السورية <span style="font-size: 14px; font-weight: 500; color: var(--text-muted);">(Syrian Airport Data Engine)</span></h1>
+          <p>المنظومة الوطنية الموحدة لمعالجة عمليات الطيران ومطابقة الجداول والتحليل التاريخي</p>
+        </div>
+      </div>
+      <div class="header-badges">
+        <span class="badge badge-primary">نطاق التغطية: كافة المطارات السورية</span>
+        <span class="badge badge-success">التحليل المعمق: مطار دمشق الدولي</span>
+      </div>
     </div>
+
+    <div class="meta-row">
+      <div class="meta-item">
+        <strong>المرجعية الجوية:</strong>
+        <span>دليل الطيران السوري eAIP (سلطة الطيران المدني) وقاعدة OurAirports</span>
+      </div>
+      <div class="meta-item">
+        <strong>حالة المنافذ:</strong>
+        <span>بوابات DAM و ALP نشطة؛ DEZ و KAC متجاوبة؛ LTK تحت الرصد المجمع</span>
+      </div>
+      <div class="meta-item">
+        <strong>المنطقة الزمنية:</strong>
+        <code class="timestamp">Asia/Damascus (UTC+3)</code>
+      </div>
+    </div>
+
+    <!-- Global Airport Selector -->
     <div class="selector-bar">
-      <label for="global-airport-select">Select Airport View:</label>
+      <label for="global-airport-select">اختر مطار العرض:</label>
       <select id="global-airport-select" onchange="onAirportSelectChanged()">
-        <option value="">All Syrian Airports (Overview)</option>
-        <option value="DAM" selected>Damascus International Airport (DAM / OSDI) [Deep-Dive]</option>
-        <option value="ALP">Aleppo International Airport (ALP / OSAP)</option>
-        <option value="LTK">Latakia International Airport (LTK / OSLK)</option>
-        <option value="DEZ">Deir ez-Zor Airport (DEZ / OSDZ)</option>
-        <option value="KAC">Qamishli Airport (KAC / OSKL)</option>
-        <option value="PMS">Palmyra Airport (PMS / OSPM)</option>
-        <option value="OMDM">Damascus Mezzeh Military (OMDM)</option>
+        <option value="">كافة المطارات السورية (نظرة عامة شاملة)</option>
+        <option value="DAM" selected>مطار دمشق الدولي (DAM / OSDI) [تحليل معمق]</option>
+        <option value="ALP">مطار حلب الدولي (ALP / OSAP)</option>
+        <option value="LTK">مطار اللاذقية الدولي (LTK / OSLK)</option>
+        <option value="DEZ">مطار دير الزور (DEZ / OSDZ)</option>
+        <option value="KAC">مطار القامشلي (KAC / OSKL)</option>
+        <option value="PMS">مطار تدمر المدني (PMS / OSPM)</option>
+        <option value="OMDM">مطار المزة العسكري بدمشق (OMDM)</option>
       </select>
     </div>
-  </div>
+  </header>
 
-  <div class="panel" style="border-left: 6px solid var(--warning); background: #fffbeb; margin-bottom: 24px;">
-    <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px;">
-      <h2 style="color: #92400e; font-size: 16px; margin: 0; display: flex; align-items: center; gap: 8px;">
-        <span>⚠️</span> Platform Data Product Integrity & Research Readiness Warnings
+  <!-- Platform Integrity & Methodological Warnings Banner -->
+  <section class="integrity-panel" aria-label="تنبيهات سلامة البيانات">
+    <div class="integrity-header">
+      <h2>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/>
+          <line x1="12" y1="9" x2="12" y2="13"/>
+          <line x1="12" y1="17" x2="12.01" y2="17"/>
+        </svg>
+        <span>ضوابط نزاهة منتج البيانات والمحاذير البحثية (Platform Data Product Integrity & Research Readiness Warnings)</span>
       </h2>
-      <span class="badge badge-warning">Strict Evidence Invariants</span>
+      <span class="badge badge-warning">ضوابط إسناد الأدلة الصارمة</span>
     </div>
-    <ul style="font-size: 13px; color: #78350f; padding-left: 20px; line-height: 1.6;">
-      <li><strong>2024 Macro Series:</strong> The 2024 <code>DAM_ALP_LTK</code> series is a three-airport aggregate (Damascus, Aleppo, Latakia combined). Zero DAM-only disaggregation exists in source data.</li>
-      <li><strong>No 2024 DAM Historical Physical Movements:</strong> No verified DAM-specific historical physical movements have been recovered for the 2024 series.</li>
-      <li><strong>Archived FIDS Timetable:</strong> The archived FIDS snapshot (July–September 2026, 1,982 records) contains scheduled timetable display data, NOT verified physical aircraft movements.</li>
-      <li><strong>October 2026 Live ADS-B Sample:</strong> The October 2026 ADS-B sample consists of 16 live regional/overflight fixes (15 overflights, 1 regional transit); it is NOT full-month or airport-level DAM coverage.</li>
-      <li><strong>Unrecovered Data Gaps:</strong> The designation <code>no_verified_dam_data</code> strictly signifies historical intervals where no verifiable data has been recovered by this platform; it NEVER implies zero flights operated or airport closure.</li>
-      <li><strong>Aircraft Metric Deprecation & Timestamp Provenance:</strong> The metrics <code>total_unique_aircraft</code> and <code>unique_aircraft_tracked</code> are deprecated in favor of <code>distinct_reported_aircraft_registrations</code> (60 reported commercial tails); tail codes must not be equated with airframes. Estimated and actual timestamps are strictly separated into dedicated fields (missing actuals remain null).</li>
+    <ul class="integrity-list">
+      <li><strong>السلسلة الإقليمية الكلية 2024 (2024 Macro Series):</strong> The 2024 <code>DAM_ALP_LTK</code> series is a three-airport aggregate (Damascus, Aleppo, Latakia combined). Zero DAM-only disaggregation exists in source data. (تمثل إحصائية مجمعة لثلاثة مطارات؛ ولا تتوفر بيانات تفصيلية لدمشق وحدها).</li>
+      <li><strong>غياب الحركات التشغيلية لمطار دمشق 2024 (No 2024 DAM Historical Physical Movements):</strong> No verified DAM-specific historical physical movements have been recovered for the 2024 series. (لم تُسترجع أي حركات تشغيلية فعلية مثبتة لمطار دمشق منفرداً في هذه السلسلة).</li>
+      <li><strong>جداول شاشات FIDS المؤرشفة (Archived FIDS Timetable):</strong> The archived FIDS snapshot (July–September 2026, 1,982 records) contains scheduled timetable display data, NOT verified physical aircraft movements. (تتضمن رحلات مجدولة وليست حركات فعلية على المدرج).</li>
+      <li><strong>عينة رصد ADS-B لشهر أكتوبر 2026 (October 2026 Live ADS-B Sample):</strong> The October 2026 ADS-B sample consists of 16 live regional/overflight fixes (15 overflights, 1 regional transit); it is NOT full-month or airport-level DAM coverage.</li>
+      <li><strong>فجوات التغطية غير المسترجعة (Unrecovered Data Gaps):</strong> The designation <code>no_verified_dam_data</code> in the 34-month audit window strictly signifies historical intervals where no verifiable data has been recovered by this platform; it NEVER implies zero flights operated or airport closure.</li>
+      <li><strong>فصل الطوابع الزمنية وهوية الطائرات (Aircraft Metric Deprecation &amp; Timestamp Provenance):</strong> The metrics <code>total_unique_aircraft</code> and <code>unique_aircraft_tracked</code> are deprecated in favor of <code>distinct_reported_aircraft_registrations</code> (60 reported commercial tails); tail codes must not be equated with airframes. Estimated and actual timestamps are strictly separated into dedicated fields (missing actuals remain null).</li>
     </ul>
-  </div>
+  </section>
 
-  <div class="stats-grid">
+  <!-- Top KPI Stats Grid -->
+  <section class="stats-grid" aria-label="المؤشرات الرئيسية">
     <div class="stat-card">
-      <div class="stat-title">Canonical Flight Events</div>
+      <div class="stat-title">إجمالي أحداث الرحلات المسجلة</div>
       <div class="stat-value" id="stat-total-flights">1,830</div>
-      <div class="stat-desc">DAM (1,563), ALP (261), DEZ (6) total events</div>
+      <div class="stat-desc">دمشق (1,563)، حلب (261)، دير الزور (6)</div>
     </div>
     <div class="stat-card">
-      <div class="stat-title">Commercial Operational Movements</div>
+      <div class="stat-title">أحداث تشغيلية مرصودة تجارياً</div>
       <div class="stat-value" id="stat-verified-movements">131</div>
-      <div class="stat-desc">DAM (98), ALP (32), DEZ (1) commercial status actual times</div>
+      <div class="stat-desc">دمشق (98)، حلب (32)، دير الزور (1) بأوقات فعلية معلنة</div>
     </div>
     <div class="stat-card">
-      <div class="stat-title">Scheduled Services</div>
+      <div class="stat-title">الخدمات المجدولة المعلنة</div>
       <div class="stat-value" id="stat-scheduled-movements">1,662</div>
-      <div class="stat-desc">DAM (1,428), ALP (229), DEZ (5) flight board slots</div>
+      <div class="stat-desc">دمشق (1,428)، حلب (229)، دير الزور (5) من شاشات العرض</div>
     </div>
     <div class="stat-card">
-      <div class="stat-title">Unverified Operations</div>
+      <div class="stat-title">عمليات غير مؤكدة بمصادر متعددة</div>
       <div class="stat-value" id="stat-unverified-movements">3</div>
-      <div class="stat-desc">DAM (3) completed lacking ground radar</div>
+      <div class="stat-desc">سجلات تاريخية في دمشق تفتقر للإثبات الراداري المستقل</div>
     </div>
     <div class="stat-card">
-      <div class="stat-title">Active Syrian Aerodromes</div>
+      <div class="stat-title">المطارات السورية المقيدة</div>
       <div class="stat-value" id="stat-airports-count">7</div>
-      <div class="stat-desc">DAM, ALP, LTK, DEZ, KAC, PMS, OMDM</div>
+      <div class="stat-desc">سجلات المطارات في جدول <code class="mono">airports</code></div>
     </div>
     <div class="stat-card">
-      <div class="stat-title">Integrity & Quality Checks</div>
-      <div class="stat-value" id="stat-quality">9 / 9 PASSED</div>
-      <div class="stat-desc">Zero synthetic zeros, zero capacity guessing</div>
+      <div class="stat-title">فحوصات الجودة ونزاهة البيانات</div>
+      <div class="stat-value" id="stat-quality">9 / 9 اجتياز</div>
+      <div class="stat-desc">خلو تام من الأصفار المصطنعة أو التقديرات التخمينية</div>
     </div>
-  </div>
+  </section>
 
-  <div class="tabs">
-    <button class="tab-btn active" onclick="switchTab('tab-flights')">Flight Events Browser</button>
-    <button class="tab-btn" onclick="switchTab('tab-daily')">Daily Airport Movements</button>
-    <button class="tab-btn" onclick="switchTab('tab-airports')">Aerodromes Registry</button>
-    <button class="tab-btn" onclick="switchTab('tab-historical')">2024 Historical (DAM_ALP_LTK)</button>
-    <button class="tab-btn" onclick="switchTab('tab-matrix')">Historical Coverage Matrix</button>
-    <button class="tab-btn" onclick="switchTab('tab-ingestion')">Ingestion & Source Health</button>
-    <button class="tab-btn" onclick="switchTab('tab-coverage')">Coverage & Provenance</button>
-    <button class="tab-btn" onclick="switchTab('tab-dedup')">Deduplication Audit</button>
-    <button class="tab-btn" onclick="switchTab('tab-quality')">Data Quality Checks</button>
-    <button class="tab-btn" onclick="switchTab('tab-fids')">Archived FIDS Analytics</button>
-    <button class="tab-btn" onclick="switchTab('tab-historical-archive')">Historical Archive Explorer</button>
-    <button class="tab-btn" onclick="switchTab('tab-exports')">Exports & API</button>
+  <!-- Navigation Tabs -->
+  <div class="tabs-wrapper">
+    <nav class="tabs" role="tablist">
+      <button class="tab-btn active" role="tab" onclick="switchTab('tab-flights')">استعراض أحداث الرحلات</button>
+      <button class="tab-btn" role="tab" onclick="switchTab('tab-daily')">حركات المطارات اليومية</button>
+      <button class="tab-btn" role="tab" onclick="switchTab('tab-airports')">سجل المطارات المعتمد</button>
+      <button class="tab-btn" role="tab" onclick="switchTab('tab-historical')">سلاسل 2024 الإقليمية</button>
+      <button class="tab-btn" role="tab" onclick="switchTab('tab-matrix')">مصفوفة التغطية التاريخية</button>
+      <button class="tab-btn" role="tab" onclick="switchTab('tab-ingestion')">صحة التغذية وتدفق البيانات</button>
+      <button class="tab-btn" role="tab" onclick="switchTab('tab-coverage')">التغطية وسلسلة الأدلة</button>
+      <button class="tab-btn" role="tab" onclick="switchTab('tab-dedup')">تدقيق فض الاشتباك</button>
+      <button class="tab-btn" role="tab" onclick="switchTab('tab-quality')">فحوصات جودة البيانات</button>
+      <button class="tab-btn" role="tab" onclick="switchTab('tab-fids')">تحليلات جداول FIDS المؤرشفة</button>
+      <button class="tab-btn" role="tab" onclick="switchTab('tab-historical-archive')">مستكشف الأرشيف التاريخي</button>
+      <button class="tab-btn" role="tab" onclick="switchTab('tab-exports')">كتالوج التصدير وواجهات API</button>
+    </nav>
   </div>
 
   <!-- TAB 1: FLIGHTS -->
-  <div id="tab-flights" class="tab-content active">
-    <!-- Research Product UX: Comparison & Timeline Panels -->
-    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 20px;">
+  <main id="tab-flights" class="tab-content active" role="tabpanel">
+    <!-- Comparison and Timeline Panels -->
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 20px; margin-bottom: 24px;">
+
       <!-- Panel 1: Scheduled vs Commercially Reported Comparison -->
       <div class="panel" style="margin-bottom: 0;">
-        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
-          <h3 style="margin: 0; font-size: 15px;">📊 Scheduled vs. Commercially Reported Comparison</h3>
-          <span class="badge badge-primary" id="comparison-airport-badge">Airport: DAM</span>
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; gap: 8px;">
+          <h3 style="margin: 0; font-size: 15px;">📊 مقارنة الرحلات المجدولة بالمرصودة تجارياً <span style="font-size:11px; font-weight:normal; color:var(--text-muted);">(Scheduled vs Commercially Reported Comparison)</span></h3>
+          <span class="badge badge-primary" id="comparison-airport-badge">المطار: DAM</span>
         </div>
-        <p style="font-size: 12px; color: var(--text-muted); margin-bottom: 10px;">
-          Directly compares published timetable slots against commercially reported operational events with actual timestamps.
+        <p style="font-size: 12px; color: var(--text-muted); margin-bottom: 12px;">
+          مقارنة مباشرة بين الرحلات المجدولة في شاشات العرض والأحداث التشغيلية المرصودة تجارياً بأوقات فعلية.
         </p>
-        <div class="table-container" style="max-height: 200px; overflow-y: auto;">
+        <div class="table-container" style="max-height: 220px;">
           <table style="font-size: 12px;">
             <thead>
               <tr>
-                <th>Date</th>
-                <th>Scheduled Slots</th>
-                <th>Commercially Reported</th>
-                <th>Unique Operating</th>
-                <th>Codeshares (Matched / Ambiguous)</th>
-                <th>Ratio</th>
+                <th>التاريخ / Date</th>
+                <th>المجدولة / Scheduled Slots</th>
+                <th>المرصودة تجارياً / Commercially Reported</th>
+                <th>رحلات فريدة / Unique Operating</th>
+                <th>الرمز المشترك / Codeshares (Matched / Ambiguous)</th>
+                <th>النسبة / Ratio</th>
               </tr>
             </thead>
             <tbody id="comparison-table-body">
-              <tr><td colspan="6" style="text-align: center;">Loading comparison metrics...</td></tr>
+              <tr><td colspan="6" style="text-align: center; color: var(--text-muted);">جاري تحميل مؤشرات المقارنة...</td></tr>
             </tbody>
           </table>
         </div>
-        <small style="color: var(--text-muted); display: block; margin-top: 6px; font-size: 11px;">
-          Marketing codeshares represent partner listings for existing operating aircraft and are not added to operational flight totals.
+        <small style="color: var(--text-muted); display: block; margin-top: 8px; font-size: 11px;">
+          Marketing codeshares represent partner listings for existing operating aircraft and are not added to operational flight totals. (تمثل رحلات الرمز المشترك شراكات تسويقية ولا تُضاف كحركات طائرات مستقلة).
         </small>
       </div>
 
-      <!-- Panel 2: Historical Coverage Timeline (34 Months) -->
+      <!-- Panel 2: Historical Coverage Timeline -->
       <div class="panel" style="margin-bottom: 0;">
-        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
-          <h3 style="margin: 0; font-size: 15px;">⏳ Historical Coverage Timeline (2024–2026)</h3>
-          <span class="badge badge-warning">Evidence Tiers</span>
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; gap: 8px;">
+          <h3 style="margin: 0; font-size: 15px;">⏳ المخطط الزمني للتغطية التاريخية <span style="font-size:11px; font-weight:normal; color:var(--text-muted);">(Historical Coverage Timeline 2024–2026)</span></h3>
+          <span class="badge badge-warning">مستويات الأدلة</span>
         </div>
-        <p style="font-size: 12px; color: var(--text-muted); margin-bottom: 10px;">
-          34-month audit window: <code>no_verified_dam_data</code> represents platform data gaps, never zero flights or airport closure.
+        <p style="font-size: 12px; color: var(--text-muted); margin-bottom: 12px;">
+          نافذة تدقيق تمتد لـ 34 شهراً (34-month audit window): السجلات <code class="mono">no_verified_dam_data</code> تمثل فجوات تغطية في البيانات المسترجعة وليست توقفاً للرحلات.
         </p>
-        <div style="display: flex; flex-direction: column; gap: 6px; font-size: 12px;">
-          <div style="display: flex; justify-content: space-between; align-items: center; padding: 4px 8px; background: #eff6ff; border-radius: 4px;">
-            <span><strong>2024-01 to 2024-10 (10 mo)</strong></span>
-            <span class="badge badge-primary">regional_aggregate (DAM_ALP_LTK, 578 rows)</span>
+        <div style="display: flex; flex-direction: column; gap: 6px; font-size: 12px; max-height: 220px; overflow-y: auto;">
+          <div style="display: flex; justify-content: space-between; align-items: center; padding: 6px 10px; background: #EBF2EE; border-radius: 4px; border: 1px solid #D2DFD7;">
+            <span><strong>2024-01 إلى 2024-10 (10 أشهر)</strong></span>
+            <span class="badge badge-primary">إحصاء إقليمي مجمع (DAM_ALP_LTK, 578 سجلاً)</span>
           </div>
-          <div style="display: flex; justify-content: space-between; align-items: center; padding: 4px 8px; background: #fef2f2; border-radius: 4px;">
-            <span><strong>2024-11 to 2024-12 (2 mo)</strong></span>
-            <span class="badge badge-danger">no_verified_dam_data (Series ended Oct 15)</span>
+          <div style="display: flex; justify-content: space-between; align-items: center; padding: 6px 10px; background: #FDF2F0; border-radius: 4px; border: 1px solid #F7D2CC;">
+            <span><strong>2024-11 إلى 2024-12 (شهران)</strong></span>
+            <span class="badge badge-danger">no_verified_dam_data (انقطاع السلسلة بعد 15 تشرين الأول)</span>
           </div>
-          <div style="display: flex; justify-content: space-between; align-items: center; padding: 4px 8px; background: #fef2f2; border-radius: 4px;">
-            <span><strong>2025-01 to 2026-06 (18 mo)</strong></span>
-            <span class="badge badge-danger">no_verified_dam_data (Unrecovered data gap)</span>
+          <div style="display: flex; justify-content: space-between; align-items: center; padding: 6px 10px; background: #FDF2F0; border-radius: 4px; border: 1px solid #F7D2CC;">
+            <span><strong>2025-01 إلى 2026-06 (18 شهراً)</strong></span>
+            <span class="badge badge-danger">no_verified_dam_data (فجوة تغطية غير مسترجعة)</span>
           </div>
-          <div style="display: flex; justify-content: space-between; align-items: center; padding: 4px 8px; background: #faf5ff; border-radius: 4px;">
-            <span><strong>2026-07 to 2026-09 (3 mo)</strong></span>
-            <span class="badge badge-purple">dam_scheduled_fids (1,982 timetable slots)</span>
+          <div style="display: flex; justify-content: space-between; align-items: center; padding: 6px 10px; background: #F3EEF9; border-radius: 4px; border: 1px solid #D8CCE8;">
+            <span><strong>2026-07 إلى 2026-09 (3 أشهر)</strong></span>
+            <span class="badge badge-purple">جداول FIDS المؤرشفة (1,982 رحلة مجدولة)</span>
           </div>
-          <div style="display: flex; justify-content: space-between; align-items: center; padding: 4px 8px; background: #f0fdf4; border-radius: 4px;">
-            <span><strong>2026-10 (1 mo)</strong></span>
-            <span class="badge badge-success">live_regional_adsb (16 regional/overflight fixes)</span>
+          <div style="display: flex; justify-content: space-between; align-items: center; padding: 6px 10px; background: #EAF5EE; border-radius: 4px; border: 1px solid #BBDCC8;">
+            <span><strong>2026-10 (شهر واحد)</strong></span>
+            <span class="badge badge-success">عينة رصد ADS-B إقليمية (16 رصد عبور جوي)</span>
           </div>
         </div>
-        <details style="margin-top: 10px; font-size: 12px;" id="timeline-details">
+        <details style="margin-top: 12px; font-size: 12px;">
           <summary style="cursor: pointer; font-weight: 600; color: var(--primary);">
-            Expand Month-by-Month Verified Timeline (34 Months)
+            Expand Month-by-Month Verified Timeline (34 Months) / استعراض المخطط الزمني الشهري المفصل
           </summary>
-          <div style="max-height: 220px; overflow-y: auto; margin-top: 8px; border: 1px solid var(--border); border-radius: 4px;">
+          <div style="max-height: 220px; overflow-y: auto; margin-top: 8px; border: 1px solid var(--border); border-radius: var(--radius-sm);">
             <table style="width: 100%; font-size: 11px; border-collapse: collapse;">
               <thead>
-                <tr style="background: var(--bg); text-align: left;">
-                  <th style="padding: 4px 6px;">Month</th>
-                  <th style="padding: 4px 6px;">Geographic Scope</th>
-                  <th style="padding: 4px 6px;">Category</th>
-                  <th style="padding: 4px 6px;">Evidence Level</th>
-                  <th style="padding: 4px 6px;">Records</th>
-                  <th style="padding: 4px 6px;">Explicit Warning / Integrity Notes</th>
+                <tr style="background: var(--bg); text-align: right;">
+                  <th style="padding: 6px 8px;">الشهر / Month</th>
+                  <th style="padding: 6px 8px;">النطاق / Geographic Scope</th>
+                  <th style="padding: 6px 8px;">التصنيف / Category</th>
+                  <th style="padding: 6px 8px;">الأدلة / Evidence Level</th>
+                  <th style="padding: 6px 8px;">السجلات / Records</th>
+                  <th style="padding: 6px 8px;">ملاحظات النزاهة / Explicit Warning / Integrity Notes</th>
                 </tr>
               </thead>
               <tbody id="timeline-month-tbody">
-                <tr><td colspan="6" style="text-align: center; padding: 8px;">Loading month-by-month timeline...</td></tr>
+                <tr><td colspan="6" style="text-align: center; padding: 10px; color: var(--text-muted);">جاري تحميل المخطط الشهري (Loading month-by-month timeline)...</td></tr>
               </tbody>
             </table>
           </div>
-          <p style="font-size: 11px; color: var(--text-muted); margin-top: 6px;">
+          <p style="font-size: 11px; color: var(--text-muted); margin-top: 8px;">
             <strong>Semantic Boundary:</strong> Do not display regional aggregates, archived schedules, and live regional ADS-B samples as one continuous DAM movement series.
           </p>
         </details>
       </div>
     </div>
 
+    <!-- Main Flight Records Browser Panel -->
     <div class="panel">
-      <h2>Normalized Flight Events</h2>
-      <div class="controls">
-        <select id="flight-airport" onchange="loadFlights()">
-          <option value="">All Airports</option>
-          <option value="DAM">Damascus (DAM)</option>
-          <option value="ALP">Aleppo (ALP)</option>
-          <option value="DEZ">Deir ez-Zor (DEZ)</option>
-          <option value="LTK">Latakia (LTK)</option>
-          <option value="KAC">Qamishli (KAC)</option>
-        </select>
-        <select id="flight-nature" onchange="loadFlights()">
-          <option value="">All Record Natures</option>
-          <option value="physical_movement">Commercially Reported Operational Events</option>
-          <option value="marketing_codeshare">Marketing Codeshare</option>
-          <option value="scheduled_service">Scheduled Service (Flight Board)</option>
-          <option value="unverified_movement">Unverified Movement</option>
-        </select>
-        <select id="flight-evidence-level" onchange="loadFlights()">
-          <option value="">All Evidence Levels</option>
-          <option value="commercial_status_corroborated">Commercial Status Corroborated</option>
-          <option value="scheduled_timetable_display">Scheduled Timetable Display</option>
-          <option value="commercial_partner_listing">Commercial Partner Listing</option>
-          <option value="unverified_claim">Unverified Claim</option>
-        </select>
-        <input type="date" id="flight-start-date" title="Start Date" onchange="loadFlights()" style="padding: 6px; border: 1px solid var(--border); border-radius: 4px; font-size: 13px;">
-        <input type="date" id="flight-end-date" title="End Date" onchange="loadFlights()" style="padding: 6px; border: 1px solid var(--border); border-radius: 4px; font-size: 13px;">
-        <select id="flight-direction" onchange="loadFlights()">
-          <option value="">All Movements</option>
-          <option value="arrival">Arrivals</option>
-          <option value="departure">Departures</option>
-        </select>
-        <select id="flight-status" onchange="loadFlights()">
-          <option value="">All Statuses</option>
-          <option value="landed">Landed</option>
-          <option value="active">Active / En-Route</option>
-          <option value="scheduled">Scheduled</option>
-          <option value="cancelled">Cancelled</option>
-          <option value="diverted">Diverted</option>
-        </select>
-        <input type="text" id="flight-airline" placeholder="Filter Airline..." oninput="loadFlights()">
-        <button class="btn" onclick="loadFlights()">Apply Filters</button>
-        <button class="btn btn-outline" onclick="resetFlightFilters()">Reset</button>
-        <span id="flights-count" style="margin-left: auto; font-size: 13px; color: var(--text-muted);"></span>
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; flex-wrap: wrap; gap: 12px;">
+        <h2>
+          <span>سجل حركات وأحداث الرحلات الموحدة</span>
+          <span style="font-size: 13px; font-weight: normal; color: var(--text-muted);">(Normalized Flight Events)</span>
+        </h2>
+        <span id="flights-count" style="font-size: 13px; font-weight: 600; color: var(--primary);">جاري تحميل السجلات...</span>
       </div>
+
+      <!-- Controls & Filters -->
+      <div class="controls">
+        <div class="control-group">
+          <label for="flight-airport">المطار المستهدف:</label>
+          <select id="flight-airport" onchange="loadFlights()">
+            <option value="">كافة المطارات</option>
+            <option value="DAM" selected>مطار دمشق (DAM)</option>
+            <option value="ALP">مطار حلب (ALP)</option>
+            <option value="DEZ">مطار دير الزور (DEZ)</option>
+            <option value="LTK">مطار اللاذقية (LTK)</option>
+            <option value="KAC">مطار القامشلي (KAC)</option>
+            <option value="PMS">مطار تدمر (PMS)</option>
+            <option value="OMDM">مطار المزة (OMDM)</option>
+          </select>
+        </div>
+
+        <div class="control-group">
+          <label for="flight-nature">طبيعة السجل التشغيلي:</label>
+          <select id="flight-nature" onchange="loadFlights()">
+            <option value="">كافة التصنيفات</option>
+            <option value="physical_movement">أحداث تشغيلية مرصودة تجارياً (Commercially Reported Operational Events)</option>
+            <option value="scheduled_service">رحلات مجدولة عبر شاشات العرض (Scheduled Service)</option>
+            <option value="marketing_codeshare">رمز مشترك تسويقي (Marketing Codeshare)</option>
+            <option value="unverified_movement">حركات غير مؤكدة بمصادر متعددة (Unverified Movement)</option>
+          </select>
+        </div>
+
+        <div class="control-group">
+          <label for="flight-evidence-level">مستوى التوثيق والأدلة:</label>
+          <select id="flight-evidence-level" onchange="loadFlights()">
+            <option value="">كافة المستويات</option>
+            <option value="multi_source_verified">توثيق بمصادر متعددة (Multi-Source Verified)</option>
+            <option value="single_source_corroborated">توثيق بمصدر أحادي معزز (Single-Source)</option>
+            <option value="official_fids_timetable_only">جداول FIDS الرسمية فقط (Official FIDS)</option>
+            <option value="unverified_historical_record">سجل تاريخي غير مؤكد (Unverified)</option>
+          </select>
+        </div>
+
+        <div class="control-group">
+          <label for="flight-direction">نوع الحركة:</label>
+          <select id="flight-direction" onchange="loadFlights()">
+            <option value="">الكل (وصول ومغادرة)</option>
+            <option value="arrival">رحلات وصول (Arrival)</option>
+            <option value="departure">رحلات مغادرة (Departure)</option>
+          </select>
+        </div>
+
+        <div class="control-group">
+          <label for="flight-status">الحالة التشغيلية:</label>
+          <select id="flight-status" onchange="loadFlights()">
+            <option value="">كافة الحالات</option>
+            <option value="landed">هبطت (Landed)</option>
+            <option value="scheduled">مجدولة (Scheduled)</option>
+            <option value="active">في الجو (Active)</option>
+            <option value="departed">أقلعت (Departed)</option>
+            <option value="cancelled">ملغاة (Cancelled)</option>
+            <option value="diverted">تحويل مسار (Diverted)</option>
+            <option value="unknown">غير محدد (Unknown)</option>
+          </select>
+        </div>
+
+        <div class="control-group">
+          <label for="flight-airline">شركة الطيران:</label>
+          <input type="text" id="flight-airline" placeholder="الاسم أو الرمز..." onchange="loadFlights()">
+        </div>
+
+        <div class="control-group">
+          <label for="flight-start-date">من تاريخ:</label>
+          <input type="date" id="flight-start-date" onchange="loadFlights()">
+        </div>
+
+        <div class="control-group">
+          <label for="flight-end-date">إلى تاريخ:</label>
+          <input type="date" id="flight-end-date" onchange="loadFlights()">
+        </div>
+
+        <div style="display: flex; gap: 8px; align-self: flex-end;">
+          <button class="btn" onclick="loadFlights()">تحديث</button>
+          <button class="btn btn-outline" onclick="resetFlightFilters()">إعادة تعيين</button>
+        </div>
+      </div>
+
+      <!-- Flights Table -->
       <div class="table-container">
         <table>
           <thead>
             <tr>
-              <th>Airport</th>
-              <th>Direction</th>
-              <th>Flight #</th>
-              <th>Record Nature</th>
-              <th>Airline</th>
-              <th>Route</th>
-              <th>Local Date</th>
-              <th>Scheduled (UTC)</th>
-              <th>Estimated (UTC)</th>
-              <th>Actual (UTC)</th>
-              <th>Aircraft</th>
-              <th>Evidence & Scope</th>
-              <th>Status</th>
-              <th>Source</th>
+              <th>المطار</th>
+              <th>الحركة</th>
+              <th>رقم الرحلة</th>
+              <th>طبيعة السجل</th>
+              <th>الناقل الجوي</th>
+              <th>المطار المرتبط</th>
+              <th>التاريخ</th>
+              <th>التوقيت المجدول</th>
+              <th>التوقيت التقديري</th>
+              <th>التوقيت الفعلي</th>
+              <th>تسجيل / طراز الطائرة</th>
+              <th>الأدلة والتوثيق</th>
+              <th>الحالة</th>
+              <th>المصدر</th>
             </tr>
           </thead>
           <tbody id="flights-table-body">
-            <tr><td colspan="14" style="text-align: center;">Loading flights data...</td></tr>
+            <tr><td colspan="14" style="text-align: center; color: var(--text-muted); padding: 24px;">جاري تحميل بيانات الرحلات...</td></tr>
           </tbody>
         </table>
       </div>
     </div>
-  </div>
+  </main>
 
   <!-- TAB 2: DAILY MOVEMENTS -->
-  <div id="tab-daily" class="tab-content">
+  <div id="tab-daily" class="tab-content" role="tabpanel">
     <div class="panel">
-      <h2>Daily Airport Movements (Layer A & Layer B)</h2>
+      <h2>
+        <span>حركات المطارات اليومية المجمعة</span>
+        <span style="font-size: 13px; font-weight: normal; color: var(--text-muted);">(Daily Airport Movements)</span>
+      </h2>
       <div class="controls">
-        <select id="daily-airport-select" onchange="loadDailyMovements()">
-          <option value="DAM" selected>Damascus International (DAM) [Deep-Dive]</option>
-          <option value="ALP">Aleppo International (ALP)</option>
-          <option value="DEZ">Deir ez-Zor (DEZ)</option>
-          <option value="all">All Syrian Airports Combined</option>
-        </select>
-        <span style="font-size: 12px; color: var(--text-muted); margin-left: 12px;">
-          Note: Missing dates are omitted (never filled with synthetic zeros). Completed movements strictly separate physical operations from future schedules.
-        </span>
+        <div class="control-group">
+          <label for="daily-airport-select">تصفية حسب المطار:</label>
+          <select id="daily-airport-select" onchange="loadDailyMovements()">
+            <option value="all">كافة المطارات السورية</option>
+            <option value="DAM" selected>مطار دمشق الدولي (DAM)</option>
+            <option value="ALP">مطار حلب الدولي (ALP)</option>
+            <option value="DEZ">مطار دير الزور (DEZ)</option>
+            <option value="LTK">مطار اللاذقية (LTK)</option>
+            <option value="KAC">مطار القامشلي (KAC)</option>
+          </select>
+        </div>
+        <button class="btn" onclick="loadDailyMovements()" style="align-self: flex-end;">تحديث السجلات</button>
       </div>
+
       <div class="table-container">
         <table>
           <thead>
             <tr>
-              <th>Airport</th>
-              <th>Date</th>
-              <th>Arrivals</th>
-              <th>Departures</th>
-              <th>Completed Movements</th>
-              <th>Scheduled Flights</th>
-              <th>Total Movements</th>
-              <th>Domestic</th>
-              <th>International</th>
-              <th>Unique Aircraft</th>
-              <th>Unique Airlines</th>
-              <th>Coverage Status</th>
+              <th>المطار</th>
+              <th>التاريخ</th>
+              <th>حركات الوصول</th>
+              <th>حركات المغادرة</th>
+              <th>العمليات المنفذة</th>
+              <th>الرحلات المجدولة</th>
+              <th>إجمالي الحركات</th>
+              <th>حركات داخلية</th>
+              <th>حركات دولية</th>
+              <th>طائرات فريدة</th>
+              <th>شركات طيران</th>
+              <th>حالة التغطية</th>
             </tr>
           </thead>
           <tbody id="daily-table-body">
-            <tr><td colspan="12" style="text-align: center;">Loading daily movements...</td></tr>
+            <tr><td colspan="12" style="text-align: center; color: var(--text-muted); padding: 24px;">جاري تحميل الحركات اليومية...</td></tr>
           </tbody>
         </table>
       </div>
@@ -399,240 +1054,638 @@
   </div>
 
   <!-- TAB 3: AIRPORTS REGISTRY -->
-  <div id="tab-airports" class="tab-content">
+  <div id="tab-airports" class="tab-content" role="tabpanel">
     <div class="panel">
-      <h2>Official Syrian Aerodromes Registry (Syrian eAIP & OurAirports)</h2>
+      <h2>
+        <span>سجل المطارات المعتمد في الجمهورية العربية السورية</span>
+        <span style="font-size: 13px; font-weight: normal; color: var(--text-muted);">(Official Syrian Aerodromes Registry)</span>
+      </h2>
+      <p style="font-size: 13px; color: var(--text-muted); margin-bottom: 16px;">
+        يتضمن جدول <code class="mono">airports</code> 7 سجلات مطارات مسجلة؛ وتجدر الإشارة لوجود تعارض في سجل مطار المزة (رمز ICAO هو OMDM حيث بادئة OM تخص دولة الإمارات، بينما بادئة المطارات في سوريا هي OS).
+      </p>
       <div class="table-container">
         <table>
           <thead>
             <tr>
-              <th>ID</th>
+              <th>معرّف المطار</th>
               <th>IATA / ICAO</th>
-              <th>Airport Name</th>
-              <th>City</th>
-              <th>Type / Class</th>
-              <th>Status</th>
-              <th>Coordinates</th>
-              <th>Elevation</th>
-              <th>Runways</th>
-              <th>Official Portal</th>
+              <th>اسم المطار الرسمي</th>
+              <th>المدينة</th>
+              <th>التصنيف والنوع</th>
+              <th>الحالة التشغيلية</th>
+              <th>الإحداثيات الجغرافية</th>
+              <th>الارتفاع (قدم)</th>
+              <th>المدرجات النشطة</th>
+              <th>البوابة الرسمية</th>
             </tr>
           </thead>
           <tbody id="airports-table-body">
-            <tr><td colspan="10" style="text-align: center;">Loading airports registry...</td></tr>
+            <tr><td colspan="10" style="text-align: center; color: var(--text-muted); padding: 24px;">جاري تحميل سجل المطارات...</td></tr>
           </tbody>
         </table>
       </div>
     </div>
   </div>
 
-  <!-- TAB 4: 2024 HISTORICAL -->
-  <div id="tab-historical" class="tab-content">
+  <!-- TAB 4: HISTORICAL 2024 -->
+  <div id="tab-historical" class="tab-content" role="tabpanel">
     <div class="panel">
-      <h2>Historical Daily Gateway Operations 2024 (Syria Economic Monitor)</h2>
-      <p style="font-size: 13px; color: var(--text-muted); margin-bottom: 16px;">
-        <strong>CRITICAL PROVENANCE RULE:</strong> Scope is explicitly <code>DAM_ALP_LTK</code> (combined Syrian gateway operations across Damascus, Aleppo, and Latakia).
-        This historical series represents 578 daily rows extracted from World Bank / Data Partnership research notebooks and must never be labeled as Damascus-only.
-      </p>
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; flex-wrap: wrap; gap: 12px;">
+        <h2>
+          <span>حركات البوابات الجوية الإقليمية لعام 2024</span>
+          <span style="font-size: 13px; font-weight: normal; color: var(--text-muted);">(Syria Economic Monitor Series - DAM_ALP_LTK)</span>
+        </h2>
+        <span id="hist-count" style="font-size: 13px; font-weight: 600; color: var(--primary);">إجمالي: 578 سجلاً يومياً</span>
+      </div>
+      <div class="integrity-panel" style="padding: 12px 16px; margin-bottom: 16px; border-right-color: var(--warning);">
+        <p style="font-size: 13px; color: #8A5816; margin: 0;">
+          <strong>تنبيه منهجي إلزامي:</strong> تجمع هذه السلاسل بين مطارات دمشق وحلب واللاذقية في رقم يومي واحد مدمج؛ ويُحظر منهجياً نسب أرقامها إلى مطار دمشق منفرداً.
+        </p>
+      </div>
       <div class="controls">
-        <select id="hist-movement-type" onchange="loadHistorical2024()">
-          <option value="">All Movement Types</option>
-          <option value="departure">Departures</option>
-          <option value="arrival">Arrivals</option>
-        </select>
-        <span id="hist-count" style="margin-left: auto; font-size: 13px; color: var(--text-muted);"></span>
+        <div class="control-group">
+          <label for="hist-movement-type">تصفية نوع الحركة:</label>
+          <select id="hist-movement-type" onchange="loadHistorical2024()">
+            <option value="">كافة الحركات (وصول ومغادرة)</option>
+            <option value="arrival">وصول (Arrival)</option>
+            <option value="departure">مغادرة (Departure)</option>
+          </select>
+        </div>
+        <button class="btn" onclick="loadHistorical2024()" style="align-self: flex-end;">تحديث السلسلة</button>
       </div>
       <div class="table-container">
         <table>
           <thead>
             <tr>
-              <th>Flight Date</th>
-              <th>Direction</th>
-              <th>Scope</th>
-              <th>Landed</th>
-              <th>Active</th>
-              <th>Scheduled</th>
-              <th>Cancelled</th>
-              <th>Diverted</th>
-              <th>Unknown</th>
-              <th>Total Recorded Operations</th>
+              <th>التاريخ</th>
+              <th>الحركة</th>
+              <th>النطاق الجغرافي</th>
+              <th>هبطت</th>
+              <th>نشطة</th>
+              <th>مجدولة</th>
+              <th>ملغاة</th>
+              <th>تحويل مسار</th>
+              <th>غير محدد</th>
+              <th>إجمالي العمليات المرصودة</th>
             </tr>
           </thead>
           <tbody id="hist-table-body">
-            <tr><td colspan="10" style="text-align: center;">Loading 2024 time series...</td></tr>
+            <tr><td colspan="10" style="text-align: center; color: var(--text-muted); padding: 24px;">جاري تحميل بيانات عام 2024...</td></tr>
           </tbody>
         </table>
       </div>
     </div>
   </div>
 
-  <!-- TAB: HISTORICAL COVERAGE MATRIX -->
-  <div id="tab-matrix" class="tab-content">
+  <!-- TAB 5: COVERAGE MATRIX -->
+  <div id="tab-matrix" class="tab-content" role="tabpanel">
     <div class="panel">
-      <h2>2024-2026 Historical Coverage Matrix (Daily Empirical Classification)</h2>
-      <p style="font-size: 13px; color: var(--text-muted); margin-bottom: 16px;">
-        Evaluates every calendar date from 2024-01-01 to 2026-10-31 across Syrian aerodromes (DAM, ALP, LTK, DEZ, KAC) into 5 strict empirical categories. Empty API responses are strictly maintained as <code>unverified_data_gap</code> (never assumed zero operations).
-      </p>
-      <div class="controls">
-        <select id="matrix-airport" onchange="loadCoverageMatrix()">
-          <option value="">All Syrian Airports</option>
-          <option value="DAM">Damascus (DAM)</option>
-          <option value="ALP">Aleppo (ALP)</option>
-          <option value="LTK">Latakia (LTK)</option>
-          <option value="DEZ">Deir ez-Zor (DEZ)</option>
-          <option value="KAC">Qamishli (KAC)</option>
-        </select>
-        <select id="matrix-classification" onchange="loadCoverageMatrix()">
-          <option value="">All 5 Classifications</option>
-          <option value="verified_coverage">Verified Coverage (Radar / Telemetry)</option>
-          <option value="commercial_schedule_only">Commercial Schedule Only</option>
-          <option value="source_checked_no_records">Source Checked, No Records</option>
-          <option value="unverified_data_gap">Unverified Data Gap</option>
-          <option value="future_schedule">Future Schedule (Published Timetable)</option>
-        </select>
-        <button class="btn" onclick="loadCoverageMatrix()">Filter</button>
-        <span id="matrix-count" style="margin-left: auto; font-size: 13px; color: var(--text-muted);"></span>
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; flex-wrap: wrap; gap: 12px;">
+        <h2>
+          <span>مصفوفة التغطية التاريخية (2024–2026)</span>
+          <span style="font-size: 13px; font-weight: normal; color: var(--text-muted);">(Daily Empirical Classification)</span>
+        </h2>
+        <span id="matrix-count" style="font-size: 13px; font-weight: 600; color: var(--primary);">جاري تحميل المصفوفة...</span>
       </div>
       <div id="matrix-summary-badges" style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 16px;"></div>
+      <div class="controls">
+        <div class="control-group">
+          <label for="matrix-airport">المطار:</label>
+          <select id="matrix-airport" onchange="loadCoverageMatrix()">
+            <option value="">كافة المطارات الخمسة</option>
+            <option value="DAM">مطار دمشق (DAM)</option>
+            <option value="ALP">مطار حلب (ALP)</option>
+            <option value="LTK">مطار اللاذقية (LTK)</option>
+            <option value="DEZ">مطار دير الزور (DEZ)</option>
+            <option value="KAC">مطار القامشلي (KAC)</option>
+          </select>
+        </div>
+        <div class="control-group">
+          <label for="matrix-classification">تصنيف التغطية:</label>
+          <select id="matrix-classification" onchange="loadCoverageMatrix()">
+            <option value="">كافة التصنيفات</option>
+            <option value="verified_coverage">تغطية تشغيلية مرصودة (Verified Coverage)</option>
+            <option value="commercial_schedule_only">جداول تجارية فقط (Schedule Only)</option>
+            <option value="source_checked_no_records">فُحص المصدر ولا توجد سجلات (No Records)</option>
+            <option value="unverified_data_gap">فجوة تغطية غير مسترجعة (Data Gap)</option>
+            <option value="future_schedule">جدول مستقبلي (Future Schedule)</option>
+          </select>
+        </div>
+        <button class="btn" onclick="loadCoverageMatrix()" style="align-self: flex-end;">تطبيق التصفية</button>
+      </div>
       <div class="table-container">
         <table>
           <thead>
             <tr>
-              <th>Airport</th>
-              <th>Date</th>
-              <th>Classification</th>
-              <th>Verified Movements</th>
-              <th>Commercial Records</th>
-              <th>Sources Checked</th>
-              <th>Evidence Basis</th>
-              <th>Notes</th>
+              <th>المطار</th>
+              <th>التاريخ</th>
+              <th>تصنيف التغطية</th>
+              <th>حركات مؤكدة</th>
+              <th>سجلات تجارية</th>
+              <th>المصادر المفحوصة</th>
+              <th>أساس الأدلة</th>
+              <th>ملاحظات التدقيق</th>
             </tr>
           </thead>
           <tbody id="matrix-table-body">
-            <tr><td colspan="8" style="text-align: center;">Loading coverage matrix...</td></tr>
+            <tr><td colspan="8" style="text-align: center; color: var(--text-muted); padding: 24px;">جاري تحميل مصفوفة التغطية...</td></tr>
           </tbody>
         </table>
       </div>
     </div>
   </div>
 
-  <!-- TAB: INGESTION HEALTH -->
-  <div id="tab-ingestion" class="tab-content">
+  <!-- TAB 6: INGESTION HEALTH -->
+  <div id="tab-ingestion" class="tab-content" role="tabpanel">
     <div class="panel">
-      <h2>Automated Ingestion Health & Source Freshness</h2>
-      <div id="ingestion-summary-cards" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; margin-bottom: 20px;"></div>
-      <h3 style="font-size: 16px; margin-bottom: 12px;">Active Source Adapters</h3>
+      <h2>
+        <span>صحة خطوط الاستيعاب وجاهزية المصادر</span>
+        <span style="font-size: 13px; font-weight: normal; color: var(--text-muted);">(Automated Ingestion Health & Source Freshness)</span>
+      </h2>
+      <div id="ingestion-summary-cards" class="stats-grid" style="margin-bottom: 20px;"></div>
+
+      <h3 style="margin-bottom: 12px;">محولات المصادر النشطة (Source Adapters)</h3>
       <div class="table-container" style="margin-bottom: 24px;">
         <table>
           <thead>
             <tr>
-              <th>Source ID</th>
-              <th>Provider</th>
-              <th>Type</th>
-              <th>Airports</th>
-              <th>Status</th>
-              <th>Freshness</th>
-              <th>Reliability</th>
-              <th>Last Ingested</th>
-              <th>Known Limitations</th>
+              <th>معرّف المصدر</th>
+              <th>اسم المزود</th>
+              <th>نوع المصدر</th>
+              <th>المطارات المدعومة</th>
+              <th>حالة الوصول</th>
+              <th>مؤشر الحداثة</th>
+              <th>الموثوقية</th>
+              <th>آخر استرجاع ناجح</th>
+              <th>المحددات والقيود</th>
             </tr>
           </thead>
           <tbody id="sources-health-body">
-            <tr><td colspan="9" style="text-align: center;">Loading sources health...</td></tr>
+            <tr><td colspan="9" style="text-align: center; color: var(--text-muted);">جاري فحص المصادر...</td></tr>
           </tbody>
         </table>
       </div>
-      <h3 style="font-size: 16px; margin-bottom: 12px;">Recent Ingestion Pipeline Executions</h3>
+
+      <h3 style="margin-bottom: 12px;">سجل عمليات تشغيل خطوط الاستيعاب الأخيرة</h3>
       <div class="table-container">
         <table>
           <thead>
             <tr>
-              <th>Timestamp</th>
-              <th>Source Adapter</th>
-              <th>Airport</th>
-              <th>Status</th>
-              <th>Records</th>
-              <th>HTTP</th>
-              <th>Duration</th>
-              <th>Error Details</th>
+              <th>وقت التشغيل (UTC)</th>
+              <th>المصدر</th>
+              <th>المطار المستهدف</th>
+              <th>حالة التشغيل</th>
+              <th>السجلات المسترجعة</th>
+              <th>رمز HTTP</th>
+              <th>مدة التنفيذ</th>
+              <th>رسائل الخطأ أو الملاحظات</th>
             </tr>
           </thead>
           <tbody id="ingest-runs-body">
-            <tr><td colspan="8" style="text-align: center;">Loading ingestion runs...</td></tr>
+            <tr><td colspan="8" style="text-align: center; color: var(--text-muted);">جاري تحميل سجلات الاستيعاب...</td></tr>
           </tbody>
         </table>
       </div>
     </div>
   </div>
 
-  <!-- TAB 5: COVERAGE & PROVENANCE -->
-  <div id="tab-coverage" class="tab-content">
+  <!-- TAB 7: COVERAGE & PROVENANCE -->
+  <div id="tab-coverage" class="tab-content" role="tabpanel">
     <div class="panel">
-      <h2>Evidence-Based Coverage & Provenance Inventory</h2>
-      <div id="coverage-container">Loading coverage report...</div>
+      <h2>
+        <span>سجل التغطية الموثقة وسلسلة الأدلة</span>
+        <span style="font-size: 13px; font-weight: normal; color: var(--text-muted);">(Evidence-Based Coverage & Provenance Inventory)</span>
+      </h2>
+      <p style="font-size: 13px; color: var(--text-muted); margin-bottom: 16px;">
+        توثيق شامل لكافة مصادر البيانات المعتمدة في المنظومة، مع تحديد فترات الرصد، مستويات الموثوقية، وشروط الترخيص.
+      </p>
+      <div id="coverage-container">
+        <div style="text-align: center; color: var(--text-muted); padding: 24px;">جاري تحميل سجل التغطية...</div>
+      </div>
     </div>
   </div>
 
-  <!-- TAB 6: DEDUPLICATION -->
-  <div id="tab-dedup" class="tab-content">
+  <!-- TAB 8: DEDUPLICATION AUDIT -->
+  <div id="tab-dedup" class="tab-content" role="tabpanel">
     <div class="panel">
-      <h2>Deduplication Audit Trail</h2>
-      <p style="font-size: 13px; color: var(--text-muted); margin-bottom: 16px;">
-        Audits cross-source matching. Rules: Direction must match (arrivals never merge with departures); delta &le; 60m merges; delta 60&ndash;180m is flagged as ambiguous and kept separate.
-      </p>
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; flex-wrap: wrap; gap: 12px;">
+        <h2>
+          <span>سجل تدقيق فض اشتباك الرحلات المكررة</span>
+          <span style="font-size: 13px; font-weight: normal; color: var(--text-muted);">(Deduplication Audit Trail)</span>
+        </h2>
+        <span id="dedup-count" style="font-size: 13px; font-weight: 600; color: var(--primary);">جاري تحميل التدقيق...</span>
+      </div>
       <div class="controls">
-        <select id="dedup-resolution" onchange="loadDedupAudit()">
-          <option value="">All Resolutions</option>
-          <option value="MERGED_VERIFIED">MERGED_VERIFIED (&le; 60 min)</option>
-          <option value="AMBIGUOUS_KEPT_SEPARATE">AMBIGUOUS_KEPT_SEPARATE (60-180 min)</option>
-          <option value="SPLIT_DISTINCT_LEG">SPLIT_DISTINCT_LEG (&gt; 180 min)</option>
-        </select>
-        <span id="dedup-count" style="margin-left: auto; font-size: 13px; color: var(--text-muted);"></span>
+        <div class="control-group">
+          <label for="dedup-resolution">حالة التسوية والدمج:</label>
+          <select id="dedup-resolution" onchange="loadDedupAudit()">
+            <option value="">كافة الحالات</option>
+            <option value="MERGED_VERIFIED">تم الدمج والتأكيد (Merged Verified)</option>
+            <option value="AMBIGUOUS_KEPT_SEPARATE">ملتبسة وأُبقيت منفصلة (Ambiguous Kept Separate)</option>
+            <option value="DISTINCT_ROTATION">رحلة دورانية مستقلة (Distinct Rotation)</option>
+          </select>
+        </div>
+        <button class="btn" onclick="loadDedupAudit()" style="align-self: flex-end;">تطبيق التصفية</button>
       </div>
       <div class="table-container">
         <table>
           <thead>
             <tr>
-              <th>Airport</th>
-              <th>Flight #</th>
-              <th>Direction</th>
-              <th>Date</th>
-              <th>Source A & Time</th>
-              <th>Source B & Time</th>
-              <th>Delta (Min)</th>
-              <th>Matching Rule</th>
-              <th>Resolution Status</th>
+              <th>المطار</th>
+              <th>رقم الرحلة</th>
+              <th>الحركة</th>
+              <th>التاريخ</th>
+              <th>المصدر الأول والتوقيت</th>
+              <th>المصدر الثاني والتوقيت</th>
+              <th>الفارق الزمني</th>
+              <th>قاعدة المطابقة المطبقة</th>
+              <th>قرار التسوية</th>
             </tr>
           </thead>
           <tbody id="dedup-table-body">
-            <tr><td colspan="9" style="text-align: center;">Loading deduplication audit...</td></tr>
+            <tr><td colspan="9" style="text-align: center; color: var(--text-muted); padding: 24px;">جاري تحميل سجل فض الاشتباك...</td></tr>
           </tbody>
         </table>
       </div>
     </div>
   </div>
 
-  <!-- TAB 7: QUALITY CHECKS -->
-  <div id="tab-quality" class="tab-content">
+  <!-- TAB 9: QUALITY CHECKS -->
+  <div id="tab-quality" class="tab-content" role="tabpanel">
     <div class="panel">
-      <h2>Automated Data Quality & Integrity Checks</h2>
-      <div id="quality-container">Loading quality checks...</div>
+      <h2>
+        <span>فحوصات الجودة الآلية والنزاهة الهيكلية</span>
+        <span style="font-size: 13px; font-weight: normal; color: var(--text-muted);">(Automated Data Quality & Integrity Checks)</span>
+      </h2>
+      <div id="quality-container">
+        <div style="text-align: center; color: var(--text-muted); padding: 24px;">جاري فحص مؤشرات الجودة...</div>
+      </div>
     </div>
   </div>
 
-  <!-- TAB 8: EXPORTS & API -->
-  <div id="tab-exports" class="tab-content">
+  <!-- TAB 10: ARCHIVED FIDS ANALYTICS -->
+  <div id="tab-fids" class="tab-content" role="tabpanel">
     <div class="panel">
-      <h2>Verified Data Exports & Research Catalog</h2>
-      
+      <h2>
+        <span>تحليلات جداول شاشات العرض المؤرشفة (FIDS)</span>
+        <span style="font-size: 13px; font-weight: normal; color: var(--text-muted);">(July–September 2026 Archive Deep-Dive)</span>
+      </h2>
+
+      <!-- FIDS Controls -->
+      <div class="controls">
+        <div class="control-group">
+          <label for="fids-start-date">من تاريخ:</label>
+          <input type="date" id="fids-start-date" value="2026-07-05" onchange="loadFidsAnalytics()">
+        </div>
+        <div class="control-group">
+          <label for="fids-end-date">إلى تاريخ:</label>
+          <input type="date" id="fids-end-date" value="2026-09-09" onchange="loadFidsAnalytics()">
+        </div>
+        <div class="control-group">
+          <label for="fids-direction">نوع الحركة:</label>
+          <select id="fids-direction" onchange="loadFidsAnalytics()">
+            <option value="">الكل (وصول ومغادرة)</option>
+            <option value="arrival">وصول (Arrival)</option>
+            <option value="departure">مغادرة (Departure)</option>
+          </select>
+        </div>
+        <div class="control-group">
+          <label for="fids-airline">شركة الطيران:</label>
+          <input type="text" id="fids-airline" placeholder="الاسم أو الرمز..." onchange="loadFidsAnalytics()">
+        </div>
+        <div style="display: flex; gap: 8px; align-self: flex-end; flex-wrap: wrap;">
+          <button class="btn" onclick="loadFidsAnalytics()">تطبيق</button>
+          <button class="btn btn-outline" onclick="resetFidsFilters()">إعادة تعيين</button>
+          <button class="btn btn-outline" onclick="downloadFidsCsv()">تصدير CSV</button>
+          <button class="btn btn-outline" onclick="downloadFidsJson()">تصدير JSON</button>
+        </div>
+      </div>
+
+      <!-- FIDS KPI Cards -->
+      <div class="stats-grid" style="margin-bottom: 24px;">
+        <div class="stat-card">
+          <div class="stat-title">إجمالي السجلات المؤرشفة</div>
+          <div class="stat-value" id="fids-stat-total">1,982</div>
+          <div class="stat-desc">سجلات شاشات عرض مطار دمشق</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-title">رحلات الوصول المجدولة</div>
+          <div class="stat-value" id="fids-stat-arrivals">993</div>
+          <div class="stat-desc">طاقة استيعابية معلنة للمسافرين</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-title">رحلات المغادرة المجدولة</div>
+          <div class="stat-value" id="fids-stat-departures">989</div>
+          <div class="stat-desc">رحلات إقلاع مسجلة في الجداول</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-title">الأيام المغطاة في الأرشيف</div>
+          <div class="stat-value" id="fids-stat-days">67</div>
+          <div class="stat-desc" id="fids-stat-range">2026-07-05 إلى 2026-09-09</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-title">الشركات والناقلون المعلنون</div>
+          <div class="stat-value" id="fids-stat-airlines">14</div>
+          <div class="stat-desc">علامات تجارية مسجلة على الشاشات</div>
+        </div>
+      </div>
+
+      <!-- Visual Charts Grid -->
+      <div class="chart-grid">
+        <!-- Daily Volume Timeline -->
+        <div class="chart-card" style="grid-column: 1 / -1;">
+          <div class="chart-title">
+            <span>التوزيع اليومي للرحلات المجدولة (وصول ومغادرة)</span>
+            <div class="chart-legend">
+              <span><span class="legend-box" style="background: #174D39;"></span>مغادرة</span>
+              <span><span class="legend-box" style="background: #39765A;"></span>وصول</span>
+            </div>
+          </div>
+          <div id="chart-daily-timeline" class="daily-bars-container"></div>
+        </div>
+
+        <!-- Airline Brand Distribution -->
+        <div class="chart-card">
+          <div class="chart-title">
+            <span>الحصص السوقية للناقلين المعلنين (أعلى 8 شركات)</span>
+          </div>
+          <div id="chart-airline-bars"></div>
+        </div>
+
+        <!-- Top Destinations -->
+        <div class="chart-card">
+          <div class="chart-title">
+            <span>أبرز المحطات والوجهات الدولية المجدولة</span>
+          </div>
+          <div id="chart-destination-bars"></div>
+        </div>
+
+        <!-- Top Route Pairs -->
+        <div class="chart-card">
+          <div class="chart-title">
+            <span>أزواج المسارات والوجهات الأكثر تردداً (Top Displayed Route Pairs)</span>
+            <span class="badge badge-purple">Origin-Destination</span>
+          </div>
+          <div id="chart-route-bars"></div>
+        </div>
+
+        <!-- Hourly Schedule Pattern -->
+        <div class="chart-card">
+          <div class="chart-title">
+            <span>كثافة الرحلات المجدولة على مدار ساعات اليوم</span>
+            <div class="chart-legend">
+              <span><span class="legend-box" style="background: #39765A;"></span>وصول</span>
+              <span><span class="legend-box" style="background: #174D39;"></span>مغادرة</span>
+            </div>
+          </div>
+          <div id="chart-hourly-bars"></div>
+        </div>
+
+        <!-- Weekday Patterns -->
+        <div class="chart-card">
+          <div class="chart-title">
+            <span>متوسط الكثافة المجدولة حسب أيام الأسبوع</span>
+          </div>
+          <div id="chart-weekday-bars"></div>
+        </div>
+      </div>
+
+      <!-- FIDS Data Tables -->
+      <h3 style="margin: 20px 0 12px 0;">سجل الجداول اليومية التفصيلية</h3>
+      <div class="table-container" style="margin-bottom: 24px;">
+        <table>
+          <thead>
+            <tr>
+              <th>التاريخ</th>
+              <th>إجمالي المجدول</th>
+              <th>وصول</th>
+              <th>مغادرة</th>
+              <th>أرقام رحلات فريدة</th>
+              <th>شركات طيران</th>
+              <th>حالة مجدولة</th>
+              <th>حالات أخرى (وصلت)</th>
+              <th>حالات تكرار مرشحة</th>
+            </tr>
+          </thead>
+          <tbody id="fids-daily-table-body">
+            <tr><td colspan="9" style="text-align: center; color: var(--text-muted);">جاري تحميل الجداول اليومية...</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 style="margin: 20px 0 12px 0;">إحصاءات شركات الطيران المشغلة والمسوقة</h3>
+      <div class="table-container" style="margin-bottom: 24px;">
+        <table>
+          <thead>
+            <tr>
+              <th>الشركة (بالعربية)</th>
+              <th>الاسم بالإنجليزية</th>
+              <th>رمز IATA</th>
+              <th>التصنيف التشغيلي</th>
+              <th>إجمالي السجلات</th>
+              <th>النسبة من الإجمالي</th>
+              <th>سجلات وصول</th>
+              <th>سجلات مغادرة</th>
+              <th>رحلات فريدة</th>
+              <th>أيام النشاط</th>
+              <th>معدل التردد اليومي</th>
+            </tr>
+          </thead>
+          <tbody id="fids-airlines-table-body">
+            <tr><td colspan="11" style="text-align: center; color: var(--text-muted);">جاري تحميل إحصاءات الشركات...</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 style="margin: 20px 0 12px 0;">المسارات والوجهات الأكثر تردداً</h3>
+      <div class="table-container" style="margin-bottom: 24px;">
+        <table>
+          <thead>
+            <tr>
+              <th>زوج المسار (المحطة)</th>
+              <th>مطار الانطلاق</th>
+              <th>مطار الوصول</th>
+              <th>نوع الحركة</th>
+              <th>إجمالي السجلات المجدولة</th>
+              <th>أرقام الرحلات المسجلة</th>
+              <th>شركات الطيران العاملة</th>
+            </tr>
+          </thead>
+          <tbody id="fids-routes-table-body">
+            <tr><td colspan="7" style="text-align: center; color: var(--text-muted);">جاري تحميل المسارات...</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 style="margin: 20px 0 12px 0;">سجل السجلات المشتبه بتكرارها (Duplicate Candidates)</h3>
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>المعرّف</th>
+              <th>تصنيف التكرار</th>
+              <th>السجل الأول</th>
+              <th>السجل الثاني المقارن</th>
+              <th>التاريخ المجدول</th>
+              <th>نوع الحركة</th>
+              <th>المسار</th>
+              <th>حالة المراجعة</th>
+              <th>نتيجة التدقيق</th>
+            </tr>
+          </thead>
+          <tbody id="fids-duplicates-table-body">
+            <tr><td colspan="9" style="text-align: center; color: var(--text-muted);">جاري تحميل حالات التدقيق...</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- TAB 11: HISTORICAL ARCHIVE EXPLORER -->
+  <div id="tab-historical-archive" class="tab-content" role="tabpanel">
+    <div class="panel">
+      <h2>
+        <span>مستكشف الأرشيف التاريخي واللقطات المؤرشفة</span>
+        <span style="font-size: 13px; font-weight: normal; color: var(--text-muted);">(Wayback Machine Archive Integration)</span>
+      </h2>
+
+      <div class="stats-grid" style="margin-bottom: 20px;">
+        <div class="stat-card">
+          <div class="stat-title">إجمالي اللقطات المكتشفة</div>
+          <div class="stat-value" id="ha-stat-captures">5</div>
+          <div class="stat-desc">لقطات موثقة في أرشيف Wayback</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-title">اللقطات المسترجعة بنجاح</div>
+          <div class="stat-value" id="ha-stat-retrieved">1</div>
+          <div class="stat-desc">لقطة كاملة مع التحقق التشفيري</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-title">لقطات تم التحقق من سلامتها</div>
+          <div class="stat-value" id="ha-stat-validated">1</div>
+          <div class="stat-desc">بصمة SHA-256 مطابقة وموثقة</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-title">لقطات مؤهلة للمقارنة المتقاطعة</div>
+          <div class="stat-value" id="ha-stat-ready">1</div>
+          <div class="stat-desc">جاهزة للتحليل المقارن للجداول</div>
+        </div>
+      </div>
+
+      <div class="integrity-panel" id="ha-alert-banner" style="margin-bottom: 20px; border-right-color: var(--info);">
+        <p id="ha-alert-text" style="font-size: 13px; margin: 0; color: var(--text);">
+          تم اكتشاف 5 لقطات تاريخية لواجهة FIDS الرسمية في أرشيف الإنترنت؛ تم استرجاع لقطة تموز 2026 بنجاح والتحقق من بصمتها التشفيرية، بينما واجهت اللقطات الأخرى قيود معدل الطلب (HTTP 429).
+        </p>
+      </div>
+
+      <h3 style="margin: 20px 0 12px 0;">1. المخطط الزمني للقطات المكتشفة في أرشيف Wayback</h3>
+      <div class="table-container" style="margin-bottom: 24px;">
+        <table>
+          <thead>
+            <tr>
+              <th>طابع اللقطة الزمني</th>
+              <th>السنة</th>
+              <th>رمز الاستجابة</th>
+              <th>نوع اللقطة</th>
+              <th>معايير التصفية</th>
+              <th>البصمة التشفيرية (Digest)</th>
+              <th>حالة الاسترجاع</th>
+              <th>رابط المعاينة</th>
+            </tr>
+          </thead>
+          <tbody id="ha-captures-table-body">
+            <tr><td colspan="8" style="text-align: center; color: var(--text-muted);">جاري تحميل اللقطات...</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 style="margin: 20px 0 12px 0;">2. التغطية الشهرية للأرشيف مقابل تواريخ الرحلات المجدولة</h3>
+      <div class="table-container" style="margin-bottom: 24px;">
+        <table>
+          <thead>
+            <tr>
+              <th>الشهر</th>
+              <th>إجمالي المشاهدات المؤرشفة</th>
+              <th>مشاهدات وصول</th>
+              <th>مشاهدات مغادرة</th>
+              <th>أيام التغطية الفعلية</th>
+              <th>معدل الرحلات اليومية</th>
+              <th>اللقطات الممثلة للشهر</th>
+            </tr>
+          </thead>
+          <tbody id="ha-coverage-table-body">
+            <tr><td colspan="7" style="text-align: center; color: var(--text-muted);">جاري تحميل التغطية الشهرية...</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 style="margin: 20px 0 12px 0;">3. سجل اللقطات المعتمدة والتحقق التشفيري</h3>
+      <div class="table-container" style="margin-bottom: 24px;">
+        <table>
+          <thead>
+            <tr>
+              <th>معرّف اللقطة</th>
+              <th>طابع الأرشفة</th>
+              <th>عدد السجلات</th>
+              <th>حالة التحقق</th>
+              <th>أهلية المقارنة</th>
+              <th>نطاق المقارنة</th>
+              <th>بصمة JSON (SHA-256)</th>
+              <th>بصمة الملف الخام (SHA-256)</th>
+            </tr>
+          </thead>
+          <tbody id="ha-snapshots-table-body">
+            <tr><td colspan="8" style="text-align: center; color: var(--text-muted);">جاري تحميل سجل اللقطات...</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 style="margin: 20px 0 12px 0;">4. المقارنة المتقاطعة وتطور الجداول بين اللقطات</h3>
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>لقطة الأساس</th>
+              <th>لقطة المقارنة</th>
+              <th>سجلات الأساس</th>
+              <th>سجلات المقارنة</th>
+              <th>سجلات متطابقة</th>
+              <th>تعديل توقيت</th>
+              <th>تعديل حالة</th>
+              <th>تعديل مسار</th>
+              <th>تعديل الناقل</th>
+              <th>تغييرات ملتبسة</th>
+              <th>سجلات محذوفة</th>
+              <th>سجلات مضافة</th>
+            </tr>
+          </thead>
+          <tbody id="ha-comparisons-table-body">
+            <tr><td colspan="12" style="text-align: center; color: var(--text-muted);">جاري تحميل المقارنات...</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- TAB 12: EXPORTS & API -->
+  <div id="tab-exports" class="tab-content" role="tabpanel">
+    <div class="panel">
+      <h2>
+        <span>كتالوج تصدير البيانات الموثقة وواجهات البرمجة REST API</span>
+        <span style="font-size: 13px; font-weight: normal; color: var(--text-muted);">(Verified Data Exports & Research Catalog)</span>
+      </h2>
+      <p style="font-size: 13px; color: var(--text-muted); margin-bottom: 20px;">
+        تتيح المنظومة تصدير مجموعات البيانات بصيغتي CSV و JSON، مع توليد ملف البيانات الوصفية الجانبي (Metadata Sidecar) المتضمن شروط الاستعلام والقيود المنهجية لضمان سلامة التدقيق الأكاديمي.
+      </p>
+
       <!-- Research Integrity Warnings in Exports -->
-      <div class="coverage-card paid" style="margin-bottom: 20px;">
-        <div class="coverage-title">
-          <span>⚠️ MANDATORY RESEARCH SCOPE & DATASET INVARIANTS</span>
+      <div class="coverage-card paid" style="margin-bottom: 20px; background: #FEF7ED; border: 1px solid #F5DFC3; border-radius: var(--radius); padding: 16px;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+          <span style="font-weight: 700; color: #8A5816;">⚠️ ضوابط ومحددات نطاق البيانات البحثية (MANDATORY RESEARCH SCOPE &amp; DATASET INVARIANTS)</span>
           <span class="badge badge-warning">DISCIPLINED DATA CATEGORIES</span>
         </div>
-        <div class="coverage-meta" style="margin-top: 8px; line-height: 1.6;">
-          <strong>1. 2024 Macro Series:</strong> The 2024 <code>DAM_ALP_LTK</code> series is a three-airport aggregate (Damascus, Aleppo, Latakia combined). It is NOT DAM-specific.<br>
+        <div style="font-size: 12px; line-height: 1.7; color: var(--text);">
+          <strong>1. 2024 Macro Series:</strong> The 2024 <code>DAM_ALP_LTK</code> series is a three-airport aggregate (Damascus, Aleppo, Latakia combined). Zero DAM-only disaggregation exists in source data. It is NOT DAM-specific.<br>
           <strong>2. No 2024 DAM Historical Physical Movements:</strong> No verified DAM-specific historical physical movements have been recovered for the 2024 series.<br>
           <strong>3. Archived FIDS Snapshot:</strong> The archived FIDS snapshot (July–September 2026, 1,982 records) contains scheduled timetable display data, NOT verified physical aircraft movements.<br>
           <strong>4. October 2026 Live ADS-B Sample:</strong> The October 2026 ADS-B sample consists of 16 live regional/overflight fixes (15 overflights, 1 regional transit); it is NOT full-month or airport-level DAM coverage.
@@ -640,10 +1693,11 @@
       </div>
 
       <div class="download-grid">
+        <!-- 1. Damascus Deep Dive -->
         <div class="download-card">
-          <h3>Damascus Flight Events (Deep-Dive)</h3>
-          <div style="font-size: 12px; margin-bottom: 10px; line-height: 1.5; color: var(--text);">
-            <div><strong>Geographic Scope:</strong> DAM / OSDI (Damascus only)</div>
+          <h3>أحداث رحلات مطار دمشق الدولي / Damascus Flight Events (Deep-Dive)</h3>
+          <div style="font-size: 12px; margin-bottom: 12px; line-height: 1.6; color: var(--text);">
+            <div><strong>Geographic Scope:</strong> DAM / OSDI (Damascus only) [مطار دمشق حصراً]</div>
             <div><strong>Date Horizon:</strong> 2026-09-30 to 2026-10-31</div>
             <div><strong>Record Count:</strong> 1,563 canonical events</div>
             <div><strong>Data Category:</strong> <code>dam_verified_physical_movement</code> (98) &amp; <code>dam_scheduled_fids</code> (1,428)</div>
@@ -652,55 +1706,58 @@
             <div><strong>Limitations:</strong> Limited to rolling operational window; historical dates prior to 2026-09-30 unpublished; direct runway sensor telemetry pending.</div>
           </div>
           <div class="btn-group">
-            <a href="/api/export/damascus_flight_events?format=csv" class="btn">CSV</a>
-            <a href="/api/export/damascus_flight_events?format=json" class="btn btn-outline">JSON</a>
-            <a href="/api/export/damascus_flight_events/sidecar" class="btn btn-outline" style="font-size: 11px;">Sidecar JSON</a>
-            <a href="/api/export/damascus_flight_events/metadata" target="_blank" class="btn btn-outline" style="font-size: 11px;">Metadata</a>
+            <a href="/api/export/damascus_flight_events?format=csv" class="btn btn-sm">CSV</a>
+            <a href="/api/export/damascus_flight_events?format=json" class="btn btn-outline btn-sm">JSON</a>
+            <a href="/api/export/damascus_flight_events/sidecar" class="btn btn-outline btn-sm" style="font-size: 11px;">Sidecar JSON</a>
+            <a href="/api/export/damascus_flight_events/metadata" target="_blank" class="btn btn-outline btn-sm" style="font-size: 11px;">Metadata ↗</a>
           </div>
         </div>
 
+        <!-- 2. All Syrian Flight Events -->
         <div class="download-card">
-          <h3>All Syrian Flight Events</h3>
-          <div style="font-size: 12px; margin-bottom: 10px; line-height: 1.5; color: var(--text);">
-            <div><strong>Geographic Scope:</strong> National (DAM, ALP, DEZ)</div>
+          <h3>كافة أحداث رحلات المطارات السورية / All Syrian Flight Events</h3>
+          <div style="font-size: 12px; margin-bottom: 12px; line-height: 1.6; color: var(--text);">
+            <div><strong>Geographic Scope:</strong> National (DAM, ALP, DEZ) [المطارات السورية الوطنية]</div>
             <div><strong>Date Horizon:</strong> 2026-09-30 to 2026-10-31</div>
             <div><strong>Record Count:</strong> 1,830 canonical events</div>
             <div><strong>Data Category:</strong> Multi-airport operational events</div>
-            <div><strong>Nature:</strong> Commercially reported physical movements (131), scheduled slots (1,662), unverified (3), codeshares (34)</div>
+            <div><strong>Nature:</strong> Segregated commercially reported operational events vs published timetable slots</div>
             <div><strong>Provenance:</strong> Official airport authorities (damairport, alpairport) &amp; commercial flight feeds</div>
             <div><strong>Limitations:</strong> KAC &amp; DEZ portals publish 0 active flights; LTK passenger flights unlisted; ground runway sensors pending.</div>
           </div>
           <div class="btn-group">
-            <a href="/api/export/all_syrian_flight_events?format=csv" class="btn">CSV</a>
-            <a href="/api/export/all_syrian_flight_events?format=json" class="btn btn-outline">JSON</a>
-            <a href="/api/export/all_syrian_flight_events/sidecar" class="btn btn-outline" style="font-size: 11px;">Sidecar JSON</a>
-            <a href="/api/export/all_syrian_flight_events/metadata" target="_blank" class="btn btn-outline" style="font-size: 11px;">Metadata</a>
+            <a href="/api/export/all_syrian_flight_events?format=csv" class="btn btn-sm">CSV</a>
+            <a href="/api/export/all_syrian_flight_events?format=json" class="btn btn-outline btn-sm">JSON</a>
+            <a href="/api/export/all_syrian_flight_events/sidecar" class="btn btn-outline btn-sm" style="font-size: 11px;">Sidecar JSON</a>
+            <a href="/api/export/all_syrian_flight_events/metadata" target="_blank" class="btn btn-outline btn-sm" style="font-size: 11px;">Metadata ↗</a>
           </div>
         </div>
 
+        <!-- 3. Historical 2024 -->
         <div class="download-card">
-          <h3>2024 Gateway Operations Time Series</h3>
-          <div style="font-size: 12px; margin-bottom: 10px; line-height: 1.5; color: var(--text);">
-            <div><strong>Geographic Scope:</strong> <code>DAM_ALP_LTK</code> (Three-airport gateway aggregate)</div>
-            <div><strong>Date Horizon:</strong> 2024-01-01 to 2024-10-15 (289 dates)</div>
-            <div><strong>Record Count:</strong> 578 daily rows (289 arrival + 289 departure)</div>
-            <div><strong>Data Category:</strong> <code>regional_aggregate</code></div>
-            <div><strong>Nature:</strong> Aggregate commercial gateway operations by status</div>
-            <div><strong>Provenance:</strong> Syria Economic Monitor (World Bank / Data Partnership / AviationStack)</div>
-            <div><strong>Limitations:</strong> Combined gateway total only. Zero DAM-specific disaggregation. NOT DAM-only.</div>
+          <h3>السلسلة التاريخية للبوابات الجوية 2024 / Historical 2024 Gateway Series</h3>
+          <div style="font-size: 12px; margin-bottom: 12px; line-height: 1.6; color: var(--text);">
+            <div><strong>Geographic Scope:</strong> DAM_ALP_LTK (Three-airport aggregate: Damascus, Aleppo, Latakia)</div>
+            <div><strong>Date Horizon:</strong> 2024-01-01 to 2024-10-15</div>
+            <div><strong>Record Count:</strong> 578 daily rows (289 arrival, 289 departure)</div>
+            <div><strong>Data Category:</strong> regional_aggregate</div>
+            <div><strong>Nature:</strong> Aggregate flight operations reported in World Bank monitor</div>
+            <div><strong>Provenance:</strong> World Bank Syrian Economic Monitor / Air Transport dataset</div>
+            <div><strong>Limitations:</strong> No 2024 DAM Historical Physical Movements recovered; three-airport aggregate only.</div>
           </div>
           <div class="btn-group">
-            <a href="/api/export/historical_2024?format=csv" class="btn">CSV</a>
-            <a href="/api/export/historical_2024?format=json" class="btn btn-outline">JSON</a>
-            <a href="/api/export/historical_2024/sidecar" class="btn btn-outline" style="font-size: 11px;">Sidecar JSON</a>
-            <a href="/api/export/historical_2024/metadata" target="_blank" class="btn btn-outline" style="font-size: 11px;">Metadata</a>
+            <a href="/api/export/historical_2024?format=csv" class="btn btn-sm">CSV</a>
+            <a href="/api/export/historical_2024?format=json" class="btn btn-outline btn-sm">JSON</a>
+            <a href="/api/export/historical_2024/sidecar" class="btn btn-outline btn-sm" style="font-size: 11px;">Sidecar JSON</a>
+            <a href="/api/export/historical_2024/metadata" target="_blank" class="btn btn-outline btn-sm" style="font-size: 11px;">Metadata ↗</a>
           </div>
         </div>
 
+        <!-- 4. Historical Coverage Matrix -->
         <div class="download-card">
-          <h3>Historical Coverage Matrix (2024-2026)</h3>
-          <div style="font-size: 12px; margin-bottom: 10px; line-height: 1.5; color: var(--text);">
-            <div><strong>Geographic Scope:</strong> All 5 Evaluated Aerodromes (DAM, ALP, LTK, DEZ, KAC)</div>
+          <h3>مصفوفة التغطية التاريخية اليومية / Historical Coverage Matrix (2024–2026)</h3>
+          <div style="font-size: 12px; margin-bottom: 12px; line-height: 1.6; color: var(--text);">
+            <div><strong>Geographic Scope:</strong> 5 Syrian Aerodromes (DAM, ALP, LTK, DEZ, KAC)</div>
             <div><strong>Date Horizon:</strong> 2024-01-01 to 2026-10-31 (1,035 days &times; 5 airports)</div>
             <div><strong>Record Count:</strong> 5,175 classified daily cells</div>
             <div><strong>Data Category:</strong> Evidence-backed daily audit matrix</div>
@@ -709,14 +1766,15 @@
             <div><strong>Limitations:</strong> Distinguishes data gaps from confirmed zero operations.</div>
           </div>
           <div class="btn-group">
-            <a href="/api/export/historical_coverage_matrix?format=csv" class="btn">CSV</a>
-            <a href="/api/export/historical_coverage_matrix?format=json" class="btn btn-outline">JSON</a>
+            <a href="/api/export/historical_coverage_matrix?format=csv" class="btn btn-sm">CSV</a>
+            <a href="/api/export/historical_coverage_matrix?format=json" class="btn btn-outline btn-sm">JSON</a>
           </div>
         </div>
 
+        <!-- 5. Damascus Monthly Historical Coverage Audit -->
         <div class="download-card">
-          <h3>Damascus Monthly Historical Coverage Audit</h3>
-          <div style="font-size: 12px; margin-bottom: 10px; line-height: 1.5; color: var(--text);">
+          <h3>تدقيق التغطية الشهرية لمطار دمشق / Damascus Monthly Historical Coverage Audit</h3>
+          <div style="font-size: 12px; margin-bottom: 12px; line-height: 1.6; color: var(--text);">
             <div><strong>Geographic Scope:</strong> Damascus International (DAM / OSDI) &amp; Region</div>
             <div><strong>Date Horizon:</strong> 2024-01 through 2026-10 (34 consecutive months)</div>
             <div><strong>Record Count:</strong> 34 monthly audit rows</div>
@@ -726,14 +1784,15 @@
             <div><strong>Limitations:</strong> Confirms 0 historical DAM physical movements recovered for 2024.</div>
           </div>
           <div class="btn-group">
-            <a href="/api/export/coverage_correction?format=csv" class="btn">CSV</a>
-            <a href="/api/export/damascus_coverage?format=csv" class="btn btn-outline">Baseline CSV</a>
+            <a href="/api/export/coverage_correction?format=csv" class="btn btn-sm">CSV</a>
+            <a href="/api/export/damascus_coverage?format=csv" class="btn btn-outline btn-sm">Baseline CSV</a>
           </div>
         </div>
 
+        <!-- 6. Public Dataset Inventory & Scope Audit -->
         <div class="download-card">
-          <h3>Public Dataset Inventory & Scope Audit</h3>
-          <div style="font-size: 12px; margin-bottom: 10px; line-height: 1.5; color: var(--text);">
+          <h3>سجل جرد وتدقيق مجموعات البيانات العامة / Public Dataset Inventory &amp; Scope Audit</h3>
+          <div style="font-size: 12px; margin-bottom: 12px; line-height: 1.6; color: var(--text);">
             <div><strong>Geographic Scope:</strong> Public Repositories (Zenodo, OpenSky S3, Harvard, ADS-B.lol)</div>
             <div><strong>Date Horizon:</strong> Historical candidate evaluations</div>
             <div><strong>Record Count:</strong> 8 candidate datasets audited</div>
@@ -743,14 +1802,15 @@
             <div><strong>Limitations:</strong> Gatwick EGKK disqualified; only README/metadata downloaded for S3/Harvard.</div>
           </div>
           <div class="btn-group">
-            <a href="/api/export/dataset_scope_audit?format=csv" class="btn">CSV</a>
-            <a href="/api/export/dataset_scoring?format=csv" class="btn btn-outline">Scoring CSV</a>
+            <a href="/api/export/dataset_scope_audit?format=csv" class="btn btn-sm">CSV</a>
+            <a href="/api/export/dataset_scoring?format=csv" class="btn btn-outline btn-sm">Scoring CSV</a>
           </div>
         </div>
 
+        <!-- 7. Daily Airport Movements -->
         <div class="download-card">
-          <h3>Daily Airport Movements</h3>
-          <div style="font-size: 12px; margin-bottom: 10px; line-height: 1.5; color: var(--text);">
+          <h3>حركات المطارات اليومية المجمعة / Daily Airport Movements</h3>
+          <div style="font-size: 12px; margin-bottom: 12px; line-height: 1.6; color: var(--text);">
             <div><strong>Geographic Scope:</strong> DAM (32 dates), ALP (13 dates), DEZ (1 date)</div>
             <div><strong>Date Horizon:</strong> 2026-09-30 to 2026-10-31</div>
             <div><strong>Record Count:</strong> 46 airport-date movement records</div>
@@ -760,14 +1820,15 @@
             <div><strong>Limitations:</strong> Completed counts derived strictly from verified physical telemetry.</div>
           </div>
           <div class="btn-group">
-            <a href="/api/export/daily_airport_movements?format=csv" class="btn">CSV</a>
-            <a href="/api/export/daily_airport_movements?format=json" class="btn btn-outline">JSON</a>
+            <a href="/api/export/daily_airport_movements?format=csv" class="btn btn-sm">CSV</a>
+            <a href="/api/export/daily_airport_movements?format=json" class="btn btn-outline btn-sm">JSON</a>
           </div>
         </div>
 
+        <!-- 8. Syrian Aerodromes Registry -->
         <div class="download-card">
-          <h3>Syrian Aerodromes Registry</h3>
-          <div style="font-size: 12px; margin-bottom: 10px; line-height: 1.5; color: var(--text);">
+          <h3>سجل المطارات والمهابط السورية / Syrian Aerodromes Registry</h3>
+          <div style="font-size: 12px; margin-bottom: 12px; line-height: 1.6; color: var(--text);">
             <div><strong>Geographic Scope:</strong> 7 Syrian Aerodromes (DAM, ALP, LTK, DEZ, KAC, PMS, OMDM)</div>
             <div><strong>Date Horizon:</strong> Current official aeronautical publication</div>
             <div><strong>Record Count:</strong> 7 airport specifications</div>
@@ -777,14 +1838,15 @@
             <div><strong>Limitations:</strong> Operational status dynamically tracked per airport authority.</div>
           </div>
           <div class="btn-group">
-            <a href="/api/export/syrian_airports?format=csv" class="btn">CSV</a>
-            <a href="/api/export/syrian_airports?format=json" class="btn btn-outline">JSON</a>
+            <a href="/api/export/syrian_airports?format=csv" class="btn btn-sm">CSV</a>
+            <a href="/api/export/syrian_airports?format=json" class="btn btn-outline btn-sm">JSON</a>
           </div>
         </div>
 
+        <!-- 9. Deduplication Audit Trail -->
         <div class="download-card">
-          <h3>Deduplication Audit Trail</h3>
-          <div style="font-size: 12px; margin-bottom: 10px; line-height: 1.5; color: var(--text);">
+          <h3>مسار تدقيق إزالة التكرار والمطابقة / Deduplication Audit Trail</h3>
+          <div style="font-size: 12px; margin-bottom: 12px; line-height: 1.6; color: var(--text);">
             <div><strong>Geographic Scope:</strong> Cross-source comparisons for Syrian flight events</div>
             <div><strong>Date Horizon:</strong> 2026-09-30 to 2026-10-31</div>
             <div><strong>Record Count:</strong> 337 pairwise audit comparisons</div>
@@ -794,466 +1856,57 @@
             <div><strong>Limitations:</strong> Ambiguous delta pairs (60-180m) strictly preserved separately.</div>
           </div>
           <div class="btn-group">
-            <a href="/api/export/deduplication_audit?format=csv" class="btn">CSV</a>
-            <a href="/api/export/deduplication_audit?format=json" class="btn btn-outline">JSON</a>
+            <a href="/api/export/deduplication_audit?format=csv" class="btn btn-sm">CSV</a>
+            <a href="/api/export/deduplication_audit?format=json" class="btn btn-outline btn-sm">JSON</a>
           </div>
         </div>
+
+        <!-- 10. Evidence Taxonomy Forensic Audit -->
         <div class="download-card">
-          <h3>Evidence Taxonomy Forensic Audit (76 Records)</h3>
-          <div style="font-size: 12px; margin-bottom: 10px; line-height: 1.5; color: var(--text);">
-            <div><strong>Geographic Scope:</strong> DAM & ALP Aerodromes</div>
+          <h3>تدقيق تصنيف الأدلة الجنائية / Evidence Taxonomy Forensic Audit (76 Records)</h3>
+          <div style="font-size: 12px; margin-bottom: 12px; line-height: 1.6; color: var(--text);">
+            <div><strong>Geographic Scope:</strong> DAM &amp; ALP Aerodromes</div>
             <div><strong>Date Horizon:</strong> 2026-10-09 to 2026-10-10</div>
             <div><strong>Record Count:</strong> 76 mislabeled evidence rows (35 takeoff, 41 touchdown)</div>
-            <div><strong>Data Category:</strong> Forensic evidence audit & reclassification</div>
+            <div><strong>Data Category:</strong> Forensic evidence audit &amp; reclassification</div>
             <div><strong>Nature:</strong> Estimated timestamps mapped to telemetry; reclassified to estimated</div>
             <div><strong>Provenance:</strong> V2.20.6 Forensic Evidence Taxonomy Audit</div>
             <div><strong>Limitations:</strong> Immutable ledger preserved; reclassified at read time.</div>
           </div>
           <div class="btn-group">
-            <a href="/api/export/v2_20_6_mislabeled_evidence_audit?format=csv" class="btn">CSV</a>
-            <a href="/api/export/v2_20_6_mislabeled_evidence_audit?format=json" class="btn btn-outline">JSON</a>
-            <a href="/api/evidence/audit" target="_blank" class="btn btn-outline" style="font-size: 11px;">Forensic API</a>
+            <a href="/api/export/v2_20_6_mislabeled_evidence_audit?format=csv" class="btn btn-sm">CSV</a>
+            <a href="/api/export/v2_20_6_mislabeled_evidence_audit?format=json" class="btn btn-outline btn-sm">JSON</a>
+            <a href="/api/evidence/audit" target="_blank" class="btn btn-outline btn-sm" style="font-size: 11px;">Forensic API ↗</a>
           </div>
         </div>
       </div>
-    </div>
-  </div>
 
-
-  <!-- TAB 11: ARCHIVED FIDS ANALYTICS -->
-  <div id="tab-fids" class="tab-content">
-    <!-- Semantic Warning Banner -->
-    <div class="coverage-card paid" style="margin-bottom: 20px;">
-      <div class="coverage-title">
-        <span>⚠️ ARCHIVED FIDS ANALYTICS LAYER (2026-07-05 TO 2026-09-09)</span>
-        <span class="badge badge-warning">SCHEDULED / DISPLAYED SERVICES ONLY</span>
-      </div>
-      <div class="coverage-meta" style="margin-top: 8px;">
-        <strong>Dataset Provenance:</strong> Wayback Machine API Snapshot (2026-07-09T23:42:30Z) &mdash; <em>damairport.gov.sy/api/flights.php</em><br>
-        <strong>Semantic Invariant:</strong> These records represent archived scheduled/displayed flight information, not verified physical aircraft movements. Total records: 1,982 (Arrivals: 993, Departures: 989). Physical movement evidence count: 0.<br>
-        <strong>Airline Semantics:</strong> Displayed airline brands represent commercial marketing brands, not certified AOC operators. Original Arabic names and IATA codes preserved.
-      </div>
-    </div>
-
-    <!-- Filters Panel -->
-    <div class="panel">
-      <h2>Filters & Analytics Controls</h2>
-      <div class="controls">
-        <label style="font-size: 13px; font-weight: 600;">Date Range:</label>
-        <input type="date" id="fids-start-date" value="2026-07-05" min="2026-07-05" max="2026-09-09" onchange="loadFidsAnalytics()">
-        <span>to</span>
-        <input type="date" id="fids-end-date" value="2026-09-09" min="2026-07-05" max="2026-09-09" onchange="loadFidsAnalytics()">
-        
-        <select id="fids-direction" onchange="loadFidsAnalytics()">
-          <option value="">All Movements (Arrivals & Departures)</option>
-          <option value="arrival">Arrivals Only</option>
-          <option value="departure">Departures Only</option>
-        </select>
-
-        <select id="fids-airline" onchange="loadFidsAnalytics()">
-          <option value="">All Displayed Airline Brands (14)</option>
-          <option value="Air Arabia">طيران العربية (Air Arabia, G9)</option>
-          <option value="Flynas">فلاي ناس (Flynas, XY)</option>
-          <option value="flydubai">فلاي دبي (flydubai, FZ)</option>
-          <option value="Turkish Airlines">الخطوط التركية (Turkish Airlines, TK)</option>
-          <option value="AJet">أناضول جت (AJet, VF)</option>
-          <option value="Qatar Airways">الخطوط القطرية (Qatar Airways, QR)</option>
-          <option value="Etihad Airways">الاتحاد (Etihad Airways, EY)</option>
-          <option value="Fly Cham">فلاي شام (Fly Cham, XH)</option>
-          <option value="Syrian Airlines">السورية للطيران (Syrian Airlines, RB)</option>
-          <option value="Dan Air">دان أير (Dan Air, DN)</option>
-          <option value="Jazeera Airways">طيران الجزيرة (Jazeera Airways, J9)</option>
-          <option value="Royal Jordanian">الملكية الأردنية (Royal Jordanian, RJ)</option>
-          <option value="Flyadeal">فلاي إديل (Flyadeal, F3)</option>
-          <option value="United Nations">الأمم المتحدة (United Nations, UN)</option>
-        </select>
-
-        <button class="btn" onclick="loadFidsAnalytics()">Apply Filters</button>
-        <button class="btn btn-outline" onclick="resetFidsFilters()">Reset Filters</button>
-
-        <div style="margin-left: auto; display: flex; gap: 8px;">
-          <button class="btn" onclick="downloadFidsCsv()">Download CSV</button>
-          <button class="btn btn-outline" onclick="downloadFidsJson()">Download JSON</button>
+      <!-- API Documentation Links -->
+      <div style="margin-top: 30px; padding: 20px; background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;">
+        <div>
+          <h3 style="margin-bottom: 4px;">توثيق واجهة برمجة التطبيقات التفاعلية (REST API Documentation)</h3>
+          <p style="font-size: 13px; color: var(--text-muted); margin: 0;">يمكن للمطورين والباحثين استعراض وتجربة كافة المسارات البرمجية عبر أدوات التوثيق التفاعلية المدمجة.</p>
+        </div>
+        <div style="display: flex; gap: 10px;">
+          <a href="/docs" target="_blank" class="btn">Swagger UI ↗</a>
+          <a href="/redoc" target="_blank" class="btn btn-outline">ReDoc ↗</a>
         </div>
       </div>
     </div>
+  </main>
 
-    <!-- Summary Cards -->
-    <div class="stats-grid">
-      <div class="stat-card">
-        <div class="stat-title">Total Archived FIDS Records</div>
-        <div class="stat-value" id="fids-stat-total">1,982</div>
-        <div class="stat-desc">Filtered flight timetable entries</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-title">Scheduled Arrivals</div>
-        <div class="stat-value" id="fids-stat-arrivals" style="color: var(--success);">993</div>
-        <div class="stat-desc">Inbound scheduled services</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-title">Scheduled Departures</div>
-        <div class="stat-value" id="fids-stat-departures" style="color: var(--primary-light);">989</div>
-        <div class="stat-desc">Outbound scheduled services</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-title">Calendar Coverage</div>
-        <div class="stat-value" id="fids-stat-days">67</div>
-        <div class="stat-desc" id="fids-stat-range">2026-07-05 to 2026-09-09</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-title">Displayed Airline Brands</div>
-        <div class="stat-value" id="fids-stat-airlines">14</div>
-        <div class="stat-desc">Commercial passenger brands</div>
-      </div>
+  <!-- Footer -->
+  <footer class="footer">
+    <div>
+      <strong>محرك بيانات المطارات السورية</strong> &copy; 2026 &mdash; منصة بيانات وأبحاث تجريبية لحركة الطيران المدني.
     </div>
-
-    <!-- 6 Analytical Visual Charts -->
-    <div class="panel">
-      <h2>Visual Schedule Analytics</h2>
-      <div class="chart-grid">
-        <!-- Chart 1: Daily Timeline -->
-        <div class="chart-card" style="grid-column: 1 / -1;">
-          <div class="chart-title">
-            <span>Daily Scheduled Flights Timeline (67 Consecutive Days)</span>
-            <div class="chart-legend">
-              <span><span class="legend-box" style="background: #10b981;"></span> Arrivals</span>
-              <span><span class="legend-box" style="background: #2563eb;"></span> Departures</span>
-            </div>
-          </div>
-          <div id="chart-daily-timeline" class="daily-bars-container">
-            <!-- Populated via JS -->
-          </div>
-          <div style="display: flex; justify-content: space-between; font-size: 11px; color: var(--text-muted); margin-top: 6px;">
-            <span>2026-07-05</span>
-            <span>August 2026</span>
-            <span>2026-09-09</span>
-          </div>
-        </div>
-
-        <!-- Chart 2: Displayed Airline Distribution -->
-        <div class="chart-card">
-          <div class="chart-title">
-            <span>Displayed Airline Distribution</span>
-            <span class="badge badge-primary">Volume & Share</span>
-          </div>
-          <div id="chart-airline-bars">
-            <!-- Populated via JS -->
-          </div>
-        </div>
-
-        <!-- Chart 3: Top Destinations -->
-        <div class="chart-card">
-          <div class="chart-title">
-            <span>Top Destination Airports</span>
-            <span class="badge badge-info">Outbound Slots</span>
-          </div>
-          <div id="chart-destination-bars">
-            <!-- Populated via JS -->
-          </div>
-        </div>
-
-        <!-- Chart 4: Top Route Pairs -->
-        <div class="chart-card">
-          <div class="chart-title">
-            <span>Top Displayed Route Pairs</span>
-            <span class="badge badge-purple">Origin-Destination</span>
-          </div>
-          <div id="chart-route-bars">
-            <!-- Populated via JS -->
-          </div>
-        </div>
-
-        <!-- Chart 5: Hourly Schedule Distribution -->
-        <div class="chart-card">
-          <div class="chart-title">
-            <span>Hourly Schedule Distribution (Damascus Local Time)</span>
-            <span class="badge badge-success">Asia/Damascus (UTC+3)</span>
-          </div>
-          <div id="chart-hourly-bars">
-            <!-- Populated via JS -->
-          </div>
-        </div>
-
-        <!-- Chart 6: Weekday Schedule Distribution -->
-        <div class="chart-card">
-          <div class="chart-title">
-            <span>Weekday Schedule Distribution</span>
-            <span class="badge badge-warning">Day-of-Week Frequency</span>
-          </div>
-          <div id="chart-weekday-bars">
-            <!-- Populated via JS -->
-          </div>
-        </div>
-      </div>
+    <div style="display: flex; gap: 16px;">
+      <a href="/docs" target="_blank">واجهة API</a>
+      <a href="https://github.com/fahad0samara/Syrian-Airport-Data-Engine" target="_blank">المستودع البرمجي ↗</a>
     </div>
+  </footer>
 
-    <!-- Data Tables -->
-    <!-- Table 1: Daily Schedule Records -->
-    <div class="panel">
-      <h2>Daily Schedule Records</h2>
-      <div class="table-container">
-        <table>
-          <thead>
-            <tr>
-              <th>Date</th>
-              <th>Total Scheduled</th>
-              <th>Arrivals</th>
-              <th>Departures</th>
-              <th>Unique Flight #</th>
-              <th>Unique Airlines</th>
-              <th>Status 'scheduled'</th>
-              <th>Other Status</th>
-              <th>Duplicate Candidates</th>
-            </tr>
-          </thead>
-          <tbody id="fids-daily-table-body">
-            <tr><td colspan="9" style="text-align: center;">Loading daily schedule...</td></tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-
-    <!-- Table 2: Displayed Airline Statistics -->
-    <div class="panel">
-      <h2>Displayed Airline Brand Statistics</h2>
-      <div class="table-container">
-        <table>
-          <thead>
-            <tr>
-              <th>Brand (Arabic)</th>
-              <th>Brand (English)</th>
-              <th>IATA</th>
-              <th>Carrier Role</th>
-              <th>Total Records</th>
-              <th>Share (%)</th>
-              <th>Arrivals</th>
-              <th>Departures</th>
-              <th>Distinct Flights</th>
-              <th>Active Days</th>
-              <th>Daily Freq (Active)</th>
-            </tr>
-          </thead>
-          <tbody id="fids-airlines-table-body">
-            <tr><td colspan="11" style="text-align: center;">Loading airline statistics...</td></tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-
-    <!-- Table 3: Most Frequent Routes -->
-    <div class="panel">
-      <h2>Most Frequent Displayed Routes</h2>
-      <div class="table-container">
-        <table>
-          <thead>
-            <tr>
-              <th>Route Pair</th>
-              <th>Origin</th>
-              <th>Destination</th>
-              <th>Direction</th>
-              <th>Scheduled Flights</th>
-              <th>Unique Flight #</th>
-              <th>Airlines Operating</th>
-            </tr>
-          </thead>
-          <tbody id="fids-routes-table-body">
-            <tr><td colspan="7" style="text-align: center;">Loading route analysis...</td></tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-
-    <!-- Table 4: Duplicate Candidates -->
-    <div class="panel">
-      <h2>Suspected Duplicate Candidates Ledger</h2>
-      <p style="font-size: 13px; color: var(--text-muted); margin-bottom: 12px;">
-        Policy: All suspected duplicate records are preserved unaltered in staging without deletion, merging, or suppression.
-      </p>
-      <div class="table-container">
-        <table>
-          <thead>
-            <tr>
-              <th>Candidate ID</th>
-              <th>Classification</th>
-              <th>Record 1 (UUID / Flight / Time)</th>
-              <th>Record 2 (UUID / Flight / Time)</th>
-              <th>Date</th>
-              <th>Direction</th>
-              <th>Route</th>
-              <th>Review Status</th>
-              <th>Audit Finding</th>
-            </tr>
-          </thead>
-          <tbody id="fids-duplicates-table-body">
-            <tr><td colspan="9" style="text-align: center;">Loading duplicate candidates...</td></tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </div>
-
-  <!-- TAB 12: HISTORICAL ARCHIVE EXPLORER -->
-  <div id="tab-historical-archive" class="tab-content">
-    <!-- Semantic Warning Banner -->
-    <div class="coverage-card paid" style="margin-bottom: 20px;">
-      <div class="coverage-title">
-        <span>⚠️ HISTORICAL ARCHIVE EXPLORER &mdash; WAYBACK MACHINE FIDS DISCOVERY & MULTI-SNAPSHOT COMPARISON</span>
-        <span class="badge badge-warning">SCHEDULED / DISPLAYED TIMETABLE SERVICES ONLY</span>
-      </div>
-      <div class="coverage-meta" style="margin-top: 8px;">
-        <strong>Dataset Provenance:</strong> Internet Archive Wayback Machine CDX Discovery & Snapshots (<code>damairport.gov.sy/api/flights.php</code>)<br>
-        <strong>Telemetric Boundary:</strong> These records reflect archived flight information display system (FIDS) schedules and statuses as presented to passengers. They contain <strong>zero physical ADS-B radar / sensor evidence</strong> (<code>physical_movement_evidence_count = 0</code>). Replay captures are subject to Internet Archive server-side rate-limiting (HTTP 429).
-      </div>
-    </div>
-
-    <!-- Acquisition Status Alert Banner -->
-    <div id="ha-alert-banner" class="coverage-card blocked" style="margin-bottom: 20px;">
-      <div class="coverage-title">
-        <span>🛑 ARCHIVE ACQUISITION INTEGRITY STATUS:</span>
-        <span class="badge badge-warning" id="ha-alert-badge">REPLAY RATE-LIMITED</span>
-      </div>
-      <div class="coverage-meta" style="margin-top: 8px;">
-        <strong id="ha-alert-text">4 captures discovered but not acquired due to HTTP 429</strong><br>
-        <em>Historical coverage has NOT expanded beyond the baseline July 9 snapshot because subsequent replay queries are blocked by Internet Archive server-side rate limits. No synthetic records were fabricated.</em>
-      </div>
-    </div>
-
-    <!-- Quick Stats Grid -->
-    <div class="stat-grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); margin-bottom: 24px;">
-      <div class="stat-card">
-        <div class="stat-label">1. Discovered Captures</div>
-        <div class="stat-value" id="ha-stat-captures">5</div>
-        <div class="stat-sub">Wayback CDX API Index</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-label">2. Retrieved Snapshots</div>
-        <div class="stat-value" id="ha-stat-retrieved">1</div>
-        <div class="stat-sub">1 Local Baseline (4 Rate-Limited)</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-label">3. Validated Snapshots</div>
-        <div class="stat-value" id="ha-stat-validated">1</div>
-        <div class="stat-sub">1,982 records verified</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-label">4. Comparison-Ready</div>
-        <div class="stat-value" id="ha-stat-ready">1</div>
-        <div class="stat-sub">Baseline-only (requires &ge; 2)</div>
-      </div>
-    </div>
-
-    <!-- Section 1: Wayback Capture Discovery Timeline -->
-    <div class="panel">
-      <h2>1. Wayback Machine Capture Discovery Timeline (<code>damairport.gov.sy/api/flights.php</code>)</h2>
-      <p style="color: var(--text-muted); font-size: 13px; margin-bottom: 12px;">
-        Complete chronological audit of all captures indexed by the Internet Archive Wayback Machine CDX API. Shows capture status, content digests, and replay acquisition state.
-      </p>
-      <div class="table-container">
-        <table>
-          <thead>
-            <tr>
-              <th>Timestamp (UTC)</th>
-              <th>Year</th>
-              <th>HTTP</th>
-              <th>Capture Classification</th>
-              <th>Query Filters</th>
-              <th>Wayback Digest</th>
-              <th>Acquisition Status</th>
-              <th>Replay URL</th>
-            </tr>
-          </thead>
-          <tbody id="ha-captures-table-body">
-            <tr><td colspan="8" style="text-align: center;">Loading discovery log...</td></tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-
-    <!-- Section 2: Historical Archive Coverage Matrix -->
-    <div class="panel">
-      <h2>2. Historical Archive Coverage (Capture Timeline vs Scheduled Service Dates)</h2>
-      <p style="color: var(--text-muted); font-size: 13px; margin-bottom: 12px;">
-        Clear segregation between when the snapshot was captured (snapshot timestamp) and the flight schedule dates displayed within the snapshot.
-      </p>
-      <div class="table-container">
-        <table>
-          <thead>
-            <tr>
-              <th>Calendar Month</th>
-              <th>Total Scheduled Records</th>
-              <th>Arrivals</th>
-              <th>Departures</th>
-              <th>Distinct Days Covered</th>
-              <th>Daily Avg Flights</th>
-              <th>Covering Snapshots</th>
-            </tr>
-          </thead>
-          <tbody id="ha-coverage-table-body">
-            <tr><td colspan="7" style="text-align: center;">Loading monthly coverage matrix...</td></tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-
-    <!-- Section 3: Registered Snapshots & Validation Status -->
-    <div class="panel">
-      <h2>3. Archived Snapshot Registry & Cryptographic Integrity</h2>
-      <p style="color: var(--text-muted); font-size: 13px; margin-bottom: 12px;">
-        Registered snapshots in <code>data/archived_fids_history_staging.db</code> with SHA-256 integrity verification, JSON structure validation, and timezone preservation.
-      </p>
-      <div class="table-container">
-        <table>
-          <thead>
-            <tr>
-              <th>Snapshot ID</th>
-              <th>Wayback Timestamp</th>
-              <th>Total Records</th>
-              <th>Validation Status</th>
-              <th>Comparison Eligibility</th>
-              <th>Scope</th>
-              <th>JSON SHA-256</th>
-              <th>Raw SHA-256</th>
-            </tr>
-          </thead>
-          <tbody id="ha-snapshots-table-body">
-            <tr><td colspan="8" style="text-align: center;">Loading snapshot registry...</td></tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-
-    <!-- Section 4: Cross-Snapshot Comparison & Schedule Changes -->
-    <div class="panel">
-      <h2>4. Cross-Snapshot Comparison & Schedule Evolution Audit</h2>
-      <p style="color: var(--text-muted); font-size: 13px; margin-bottom: 12px;">
-        Pairwise differential analysis comparing baseline vs comparison snapshots across deterministic change categories.
-      </p>
-      <div class="table-container">
-        <table>
-          <thead>
-            <tr>
-              <th>Baseline Snapshot</th>
-              <th>Comparison Snapshot</th>
-              <th>Total Baseline</th>
-              <th>Total Comparison</th>
-              <th>Identical</th>
-              <th>Time Rescheduled</th>
-              <th>Status Altered</th>
-              <th>Route Changed</th>
-              <th>Displayed Airline Changed</th>
-              <th>Ambiguous</th>
-              <th>Removed Records</th>
-              <th>Added Records</th>
-            </tr>
-          </thead>
-          <tbody id="ha-comparisons-table-body">
-            <tr><td colspan="12" style="text-align: center;">Loading snapshot comparison data...</td></tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </div>
-
+  <!-- Application Logic -->
   <script>
     function switchTab(tabId) {
       document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
@@ -1345,43 +1998,54 @@
       try {
         const res = await fetch(url);
         const data = await res.json();
-        document.getElementById('flights-count').textContent = `Showing ${data.flights.length} of ${data.total_matching} records`;
+        document.getElementById('flights-count').textContent = `عرض ${data.flights.length} من أصل ${data.total_matching.toLocaleString()} سجلاً مطابقاً`;
         const tbody = document.getElementById('flights-table-body');
         if (!data.flights.length) {
-          tbody.innerHTML = `<tr><td colspan="13" style="text-align: center; color: var(--text-muted);">No flights found matching criteria.</td></tr>`;
+          tbody.innerHTML = `<tr><td colspan="14" style="text-align: center; color: var(--text-muted); padding: 24px;">لا توجد رحلات مطابقة لمعايير البحث المحددة.</td></tr>`;
           return;
         }
 
         tbody.innerHTML = data.flights.map(f => {
           let natureBadge = '';
           if (f.record_nature === 'physical_movement') {
-            natureBadge = '<span class="badge badge-success">Commercially Reported</span>';
+            natureBadge = '<span class="badge badge-success">مرصودة تجارياً (Commercially Reported)</span>';
           } else if (f.record_nature === 'marketing_codeshare') {
-            natureBadge = `<span class="badge badge-primary">Codeshare</span>${f.operating_flight_number ? '<br><small style="color:var(--text-muted);">(op: ' + f.operating_flight_number + ')</small>' : ''}`;
+            natureBadge = `<span class="badge badge-primary">رمز مشترك (Codeshare)</span>${f.operating_flight_number ? '<br><small style="color:var(--text-muted);">(مشغلة: ' + f.operating_flight_number + ')</small>' : ''}`;
           } else if (f.record_nature === 'unverified_movement') {
-            natureBadge = '<span class="badge badge-warning">Unverified</span>';
+            natureBadge = '<span class="badge badge-warning">غير مؤكدة (Unverified)</span>';
           } else {
-            natureBadge = '<span class="badge badge-purple">Scheduled</span>';
+            natureBadge = '<span class="badge badge-purple">خدمة مجدولة (Scheduled)</span>';
           }
 
-          let runwayStatus = f.runway_movement_evidence === true ? '<span style="color:#059669;">Verified</span>' : '<span style="color:#b45309;">Pending Ground Sensor</span>';
+          let runwayStatus = f.runway_movement_evidence === true ? '<span style="color:var(--primary); font-weight:600;">مثبتة بالمدرج</span>' : '<span style="color:var(--warning); font-weight:500;">بانتظار مستشعر أرضي</span>';
+
+          let statusBadgeClass = 'badge-primary';
+          let statusTextAr = f.flight_status;
+          if (f.flight_status === 'landed') { statusBadgeClass = 'badge-success'; statusTextAr = 'هبطت (Landed)'; }
+          else if (f.flight_status === 'scheduled') { statusBadgeClass = 'badge-purple'; statusTextAr = 'مجدولة (Scheduled)'; }
+          else if (f.flight_status === 'departed') { statusBadgeClass = 'badge-primary'; statusTextAr = 'أقلعت (Departed)'; }
+          else if (f.flight_status === 'active') { statusBadgeClass = 'badge-info'; statusTextAr = 'في الجو (Active)'; }
+          else if (f.flight_status === 'cancelled') { statusBadgeClass = 'badge-danger'; statusTextAr = 'ملغاة (Cancelled)'; }
+          else if (f.flight_status === 'diverted') { statusBadgeClass = 'badge-warning'; statusTextAr = 'تحويل مسار (Diverted)'; }
+
+          let moveTypeBadge = f.movement_type === 'arrival' ? '<span class="badge badge-success">وصول (Arr)</span>' : '<span class="badge badge-primary">مغادرة (Dep)</span>';
 
           return `
           <tr>
             <td><strong>${f.airport_id || f.airport_iata}</strong></td>
-            <td><span class="badge ${f.movement_type === 'arrival' ? 'badge-success' : 'badge-primary'}">${f.movement_type}</span></td>
-            <td><strong>${f.flight_number}</strong></td>
+            <td>${moveTypeBadge}</td>
+            <td><strong class="mono">${f.flight_number}</strong></td>
             <td>${natureBadge}</td>
             <td>${f.airline_name || f.airline_iata || '-'}</td>
             <td>${f.connected_airport_name ? f.connected_airport_name + ' (' + (f.connected_airport_iata || f.connected_airport_icao) + ')' : (f.connected_airport_iata || '-')}</td>
-            <td>${f.flight_date}</td>
-            <td>${(f.scheduled_dep_time || f.scheduled_arr_time || '-').replace('T', ' ').replace('Z', '')}</td>
-            <td>${(f.estimated_dep_time || f.estimated_arr_time || '-').replace('T', ' ').replace('Z', '')}</td>
-            <td>${(f.actual_dep_time || f.actual_arr_time || '-').replace('T', ' ').replace('Z', '')}</td>
-            <td>${f.aircraft_registration || f.aircraft_model || '-'}</td>
-            <td><small><strong>Scope:</strong> ${f.geographic_scope || f.airport_id}<br><strong>Tier:</strong> ${f.evidence_level || '-'}<br><strong>Runway:</strong> ${runwayStatus}<br><strong>Providers:</strong> ${f.provider_count ?? 1} (Indep: ${f.independent_provider_count ?? 'Unverified'})</small></td>
-            <td><span class="badge badge-${f.flight_status === 'landed' ? 'success' : (f.flight_status === 'scheduled' ? 'primary' : 'warning')}">${f.flight_status}</span></td>
-            <td><small>${f.source}</small></td>
+            <td><span class="mono">${f.flight_date}</span></td>
+            <td><span class="mono">${(f.scheduled_dep_time || f.scheduled_arr_time || '-').replace('T', ' ').replace('Z', '')}</span></td>
+            <td><span class="mono">${(f.estimated_dep_time || f.estimated_arr_time || '-').replace('T', ' ').replace('Z', '')}</span></td>
+            <td><span class="mono">${(f.actual_dep_time || f.actual_arr_time || '-').replace('T', ' ').replace('Z', '')}</span></td>
+            <td><span class="mono">${f.aircraft_registration || f.aircraft_model || '-'}</span></td>
+            <td><small><strong>النطاق:</strong> ${f.geographic_scope || f.airport_id}<br><strong>المستوى:</strong> ${f.evidence_level || '-'}<br><strong>المدرج:</strong> ${runwayStatus}<br><strong>المزودون:</strong> ${f.provider_count ?? 1} (مستقل: ${f.independent_provider_count ?? 'غير مؤكد'})</small></td>
+            <td><span class="badge ${statusBadgeClass}">${statusTextAr}</span></td>
+            <td><small class="mono">${f.source}</small></td>
           </tr>
         `;
         }).join('');
@@ -1396,10 +2060,10 @@
         const data = await res.json();
         const tbody = document.getElementById('comparison-table-body');
         const badge = document.getElementById('comparison-airport-badge');
-        if (badge) badge.textContent = `Airport: ${apt || 'DAM'}`;
+        if (badge) badge.textContent = `المطار: ${apt || 'DAM'}`;
         if (!tbody) return;
         if (!data.comparison || !data.comparison.length) {
-          tbody.innerHTML = '<tr><td colspan="6" style="text-align:center;">No comparative movement data available.</td></tr>';
+          tbody.innerHTML = '<tr><td colspan="6" style="text-align:center; padding: 20px;">لا تتوفر بيانات مقارنة للحركات في هذا النطاق.</td></tr>';
           return;
         }
         tbody.innerHTML = data.comparison.map(c => {
@@ -1412,12 +2076,12 @@
           const ratio = sched > 0 ? ((comm / sched) * 100).toFixed(0) + '%' : (comm > 0 ? '100%' : '0%');
           return `
             <tr>
-              <td><strong>${c.flight_date}</strong></td>
-              <td><span class="badge badge-purple">${sched} slots</span></td>
-              <td><span class="badge badge-success">${comm} events</span></td>
+              <td><strong class="mono">${c.flight_date}</strong></td>
+              <td><span class="badge badge-purple">${sched} مجدول</span></td>
+              <td><span class="badge badge-success">${comm} مرصود</span></td>
               <td><strong>${uniqueOp}</strong></td>
-              <td>${csTotal} <small>(${csMatched} matched / ${csAmbig} unmat)</small></td>
-              <td><strong>${ratio}</strong></td>
+              <td>${csTotal} <small>(${csMatched} مطابق / ${csAmbig} ملتبس)</small></td>
+              <td><strong class="mono">${ratio}</strong></td>
             </tr>
           `;
         }).join('');
@@ -1441,12 +2105,12 @@
         };
         tbody.innerHTML = data.timeline.map(m => `
           <tr style="border-bottom: 1px solid var(--border);">
-            <td style="padding: 4px 6px;"><strong>${m.source_period}</strong></td>
-            <td style="padding: 4px 6px;"><small>${m.geographic_scope}</small></td>
-            <td style="padding: 4px 6px;"><span class="badge ${catBadges[m.dataset_category] || 'badge-secondary'}">${m.dataset_category}</span></td>
-            <td style="padding: 4px 6px;"><small>${m.evidence_level}</small></td>
-            <td style="padding: 4px 6px;"><strong>${m.record_count}</strong></td>
-            <td style="padding: 4px 6px;"><small style="color: var(--text-muted);">${m.explicit_warning}</small></td>
+            <td style="padding: 6px 10px;"><strong class="mono">${m.source_period}</strong></td>
+            <td style="padding: 6px 10px;"><small>${m.geographic_scope}</small></td>
+            <td style="padding: 6px 10px;"><span class="badge ${catBadges[m.dataset_category] || 'badge-secondary'}">${m.dataset_category}</span></td>
+            <td style="padding: 6px 10px;"><small>${m.evidence_level}</small></td>
+            <td style="padding: 6px 10px;"><strong>${m.record_count}</strong></td>
+            <td style="padding: 6px 10px;"><small style="color: var(--text-muted);">${m.explicit_warning}</small></td>
           </tr>
         `).join('');
       } catch (e) {
@@ -1489,11 +2153,11 @@
             <span class="badge ${classColors[k] || 'badge-primary'}">${k.replace(/_/g, ' ')}: <strong>${v}</strong></span>
           `).join('');
         }
-        document.getElementById('matrix-count').textContent = `Showing ${data.matrix.length} of ${data.total_cells} cells`;
+        document.getElementById('matrix-count').textContent = `عرض ${data.matrix.length} من أصل ${data.total_cells} خلية`;
 
         const tbody = document.getElementById('matrix-table-body');
         if (!data.matrix.length) {
-          tbody.innerHTML = `<tr><td colspan="8" style="text-align: center; color: var(--text-muted);">No records found.</td></tr>`;
+          tbody.innerHTML = `<tr><td colspan="8" style="text-align: center; color: var(--text-muted); padding: 24px;">لا توجد سجلات مطابقة في المصفوفة.</td></tr>`;
           return;
         }
 
@@ -1508,7 +2172,7 @@
         tbody.innerHTML = data.matrix.map(r => `
           <tr>
             <td><strong>${r.airport_id}</strong></td>
-            <td>${r.flight_date}</td>
+            <td><span class="mono">${r.flight_date}</span></td>
             <td><span class="badge ${classBadgeMap[r.coverage_classification] || 'badge-primary'}">${r.coverage_classification.replace(/_/g, ' ')}</span></td>
             <td>${r.verified_movements_count}</td>
             <td>${r.commercial_records_count}</td>
@@ -1526,49 +2190,46 @@
       try {
         const res = await fetch('/api/ingestion/health');
         const data = await res.json();
-        
-        // Summary Cards
+
         const cardCont = document.getElementById('ingestion-summary-cards');
         if (cardCont && data.summary) {
           cardCont.innerHTML = Object.entries(data.summary).map(([k, v]) => `
-            <div class="stat-card" style="padding: 12px;">
+            <div class="stat-card" style="padding: 16px;">
               <div class="stat-title">${k}</div>
-              <div class="stat-value" style="font-size: 20px;">${v.count}</div>
-              <div class="stat-desc">${v.records} records fetched</div>
+              <div class="stat-value" style="font-size: 24px;">${v.count}</div>
+              <div class="stat-desc">${v.records} سجلاً مسترجعاً</div>
             </div>
           `).join('');
         }
 
-        // Sources Health Table
         const sBody = document.getElementById('sources-health-body');
         if (sBody && data.sources_health) {
           sBody.innerHTML = data.sources_health.map(s => `
             <tr>
-              <td><strong>${s.source_id}</strong></td>
+              <td><strong class="mono">${s.source_id}</strong></td>
               <td>${s.provider_name}</td>
               <td><span class="badge badge-primary">${s.source_type}</span></td>
               <td>${s.supported_airports}</td>
-              <td><span class="badge ${s.access_status === 'available' ? 'badge-success' : 'badge-danger'}">${s.access_status}</span></td>
+              <td><span class="badge ${s.access_status === 'available' ? 'badge-success' : 'badge-danger'}">${s.access_status === 'available' ? 'متاح (Available)' : 'محظور (Restricted)'}</span></td>
               <td><span class="badge ${s.freshness_indicator === 'fresh' ? 'badge-success' : 'badge-warning'}">${s.freshness_indicator}</span></td>
               <td><small>${s.reliability_indicator}</small></td>
-              <td>${s.last_successful_retrieval || 'N/A'}</td>
+              <td><span class="mono">${s.last_successful_retrieval || 'غير متوفر'}</span></td>
               <td><small style="color:var(--text-muted);">${s.known_limitations || '-'}</small></td>
             </tr>
           `).join('');
         }
 
-        // Ingest Runs Table
         const rBody = document.getElementById('ingest-runs-body');
         if (rBody && data.recent_runs) {
           rBody.innerHTML = data.recent_runs.map(r => `
             <tr>
-              <td><small>${r.run_timestamp.replace('T', ' ').substring(0, 19)}</small></td>
-              <td><strong>${r.source_id}</strong></td>
-              <td>${r.airport_id || 'ALL'}</td>
+              <td><small class="mono">${r.run_timestamp.replace('T', ' ').substring(0, 19)}</small></td>
+              <td><strong class="mono">${r.source_id}</strong></td>
+              <td><strong>${r.airport_id || 'ALL'}</strong></td>
               <td><span class="badge ${r.status === 'SUCCESS' ? 'badge-success' : (r.status === 'EMPTY' ? 'badge-warning' : (r.status.includes('RESTRICTED') ? 'badge-purple' : 'badge-danger'))}">${r.status}</span></td>
-              <td>${r.records_fetched}</td>
-              <td>${r.http_status || '-'}</td>
-              <td>${r.duration_seconds ? r.duration_seconds.toFixed(2) + 's' : '-'}</td>
+              <td><strong>${r.records_fetched}</strong></td>
+              <td><span class="mono">${r.http_status || '-'}</span></td>
+              <td><span class="mono">${r.duration_seconds ? r.duration_seconds.toFixed(2) + ' ث' : '-'}</span></td>
               <td><small style="color:var(--text-muted);">${r.error_message || '-'}</small></td>
             </tr>
           `).join('');
@@ -1585,14 +2246,14 @@
         const data = await res.json();
         const tbody = document.getElementById('daily-table-body');
         if (!data.daily_movements.length) {
-          tbody.innerHTML = `<tr><td colspan="12" style="text-align: center; color: var(--text-muted);">No daily movements recorded for this selection.</td></tr>`;
+          tbody.innerHTML = `<tr><td colspan="12" style="text-align: center; color: var(--text-muted); padding: 24px;">لا توجد حركات يومية مسجلة لهذا الاختيار.</td></tr>`;
           return;
         }
 
         tbody.innerHTML = data.daily_movements.map(r => `
           <tr>
             <td><strong>${r.airport_id}</strong></td>
-            <td>${r.flight_date}</td>
+            <td><span class="mono">${r.flight_date}</span></td>
             <td>${r.arrival_count}</td>
             <td>${r.departure_count}</td>
             <td><strong>${r.completed_movements}</strong></td>
@@ -1618,15 +2279,15 @@
         tbody.innerHTML = rows.map(a => `
           <tr>
             <td><strong>${a.airport_id}</strong></td>
-            <td>${a.iata_code || '-'} / ${a.icao_code}</td>
-            <td><strong>${a.name}</strong><br><small style="color: var(--text-muted);">${a.name_ar || ''}</small></td>
-            <td>${a.city}</td>
+            <td><span class="mono">${a.iata_code || '-'} / ${a.icao_code}</span></td>
+            <td><strong>${a.name_ar || a.name}</strong><br><small style="color: var(--text-muted);">${a.name}</small></td>
+            <td>${a.city_ar || a.city}</td>
             <td><span class="badge badge-primary">${a.airport_type}</span> <small>${a.classification}</small></td>
             <td><span class="badge badge-${a.operational_status === 'active' ? 'success' : 'warning'}">${a.operational_status}</span></td>
-            <td>${a.latitude ? a.latitude.toFixed(4) + '°, ' + a.longitude.toFixed(4) + '°' : '-'}</td>
-            <td>${a.elevation_ft ? a.elevation_ft + ' ft' : '-'}</td>
-            <td>${(a.runways || []).map(r => r.ident + ' (' + r.length_ft + ' ft)').join('<br>') || '-'}</td>
-            <td>${a.official_portal_url ? '<a href="' + a.official_portal_url + '" target="_blank">' + a.official_portal_url.replace('https://', '') + '</a>' : '-'}</td>
+            <td><span class="mono">${a.latitude ? a.latitude.toFixed(4) + '°, ' + a.longitude.toFixed(4) + '°' : '-'}</span></td>
+            <td><span class="mono">${a.elevation_ft ? a.elevation_ft + ' قدم' : '-'}</span></td>
+            <td><small>${(a.runways || []).map(r => '<span class="mono">' + r.ident + '</span> (' + r.length_ft + ' قدم)').join('<br>') || '-'}</small></td>
+            <td>${a.official_portal_url ? '<a href="' + a.official_portal_url + '" target="_blank" class="mono" style="color:var(--primary); font-size:12px;">' + a.official_portal_url.replace('https://', '') + ' ↗</a>' : '-'}</td>
           </tr>
         `).join('');
       } catch (e) {
@@ -1641,12 +2302,12 @@
       try {
         const res = await fetch(url);
         const data = await res.json();
-        document.getElementById('hist-count').textContent = `Total: ${data.count} daily records`;
+        document.getElementById('hist-count').textContent = `إجمالي: ${data.count} سجلاً يومياً`;
         const tbody = document.getElementById('hist-table-body');
         tbody.innerHTML = data.records.map(r => `
           <tr>
-            <td>${r.flight_date}</td>
-            <td><span class="badge ${r.movement_type === 'arrival' ? 'badge-success' : 'badge-primary'}">${r.movement_type}</span></td>
+            <td><span class="mono">${r.flight_date}</span></td>
+            <td><span class="badge ${r.movement_type === 'arrival' ? 'badge-success' : 'badge-primary'}">${r.movement_type === 'arrival' ? 'وصول' : 'مغادرة'}</span></td>
             <td><small><strong>${r.scope}</strong></small></td>
             <td>${r.landed}</td>
             <td>${r.active}</td>
@@ -1678,10 +2339,10 @@
                 <span class="badge ${cardClass === 'blocked' ? 'badge-danger' : (cardClass === 'paid' ? 'badge-warning' : 'badge-success')}">${r.data_category}</span>
               </div>
               <div class="coverage-meta">
-                <strong>Metric:</strong> ${r.metric} | <strong>Type:</strong> ${r.metric_type}<br>
-                <strong>Observed Window:</strong> ${r.earliest_observed_date} to ${r.latest_observed_date} (${r.observed_dates_count} observed dates, ${r.total_observed_records} records)<br>
-                <strong>Status:</strong> ${r.verification_status}<br>
-                <strong>Licensing:</strong> ${r.source_licensing}
+                <strong>المقياس:</strong> ${r.metric} | <strong>النوع:</strong> ${r.metric_type}<br>
+                <strong>نافذة الرصد:</strong> <span class="mono">${r.earliest_observed_date}</span> إلى <span class="mono">${r.latest_observed_date}</span> (${r.observed_dates_count} يوماً مرصوداً، ${r.total_observed_records} سجلاً)<br>
+                <strong>حالة التحقق:</strong> ${r.verification_status}<br>
+                <strong>الترخيص:</strong> ${r.source_licensing}
               </div>
             </div>
           `;
@@ -1698,17 +2359,17 @@
       try {
         const res = await fetch(url);
         const data = await res.json();
-        document.getElementById('dedup-count').textContent = `Total Comparisons: ${data.total_comparisons_logged}`;
+        document.getElementById('dedup-count').textContent = `إجمالي المقارنات المسجلة: ${data.total_comparisons_logged}`;
         const tbody = document.getElementById('dedup-table-body');
         tbody.innerHTML = data.records.map(r => `
           <tr>
             <td><strong>${r.airport_id}</strong></td>
-            <td><strong>${r.flight_number}</strong></td>
-            <td><span class="badge ${r.movement_type === 'arrival' ? 'badge-success' : 'badge-primary'}">${r.movement_type}</span></td>
-            <td>${r.flight_date}</td>
-            <td><small><strong>${r.source_a}</strong>: ${r.source_a_raw_time || '-'}</small></td>
-            <td><small><strong>${r.source_b}</strong>: ${r.source_b_raw_time || '-'}</small></td>
-            <td>${r.time_difference_minutes !== null ? r.time_difference_minutes + ' m' : '-'}</td>
+            <td><strong class="mono">${r.flight_number}</strong></td>
+            <td><span class="badge ${r.movement_type === 'arrival' ? 'badge-success' : 'badge-primary'}">${r.movement_type === 'arrival' ? 'وصول' : 'مغادرة'}</span></td>
+            <td><span class="mono">${r.flight_date}</span></td>
+            <td><small><strong>${r.source_a}</strong>: <span class="mono">${r.source_a_raw_time || '-'}</span></small></td>
+            <td><small><strong>${r.source_b}</strong>: <span class="mono">${r.source_b_raw_time || '-'}</span></small></td>
+            <td><span class="mono">${r.time_difference_minutes !== null ? r.time_difference_minutes + ' د' : '-'}</span></td>
             <td><small>${r.matching_rule}</small></td>
             <td><span class="badge ${r.resolution_status === 'MERGED_VERIFIED' ? 'badge-success' : (r.resolution_status === 'AMBIGUOUS_KEPT_SEPARATE' ? 'badge-warning' : 'badge-primary')}">${r.resolution_status}</span></td>
           </tr>
@@ -1724,29 +2385,23 @@
         const d = await res.json();
         const container = document.getElementById('quality-container');
         container.innerHTML = `
-          <div style="margin-bottom: 16px;">
-            <h3>Overall Status: <span class="badge ${d.overall_status === 'PASSED' ? 'badge-success' : 'badge-danger'}">${d.overall_status}</span></h3>
-            <p style="font-size: 13px; color: var(--text-muted);">Passed checks: ${d.passed_checks} / ${d.total_checks} | Audit Time: ${d.audit_timestamp}</p>
+          <div style="margin-bottom: 20px; padding: 16px; background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius);">
+            <h3 style="margin-bottom: 6px;">الحالة الكلية للنزاهة الهيكلية: <span class="badge ${d.overall_status === 'PASSED' ? 'badge-success' : 'badge-danger'}">${d.overall_status === 'PASSED' ? 'اجتياز تام (PASSED)' : 'إخفاق (FAILED)'}</span></h3>
+            <p style="font-size: 13px; color: var(--text-muted); margin: 0;">الفحوصات المجتازة: <strong>${d.passed_checks} من أصل ${d.total_checks}</strong> | توقيت التدقيق الأخير: <span class="mono">${d.audit_timestamp}</span></p>
           </div>
         ` + d.checks.map(c => `
-          <div class="coverage-card ${c.passed ? '' : 'blocked'}" style="margin-bottom: 8px;">
+          <div class="coverage-card ${c.passed ? '' : 'blocked'}" style="margin-bottom: 10px;">
             <div class="coverage-title">
-              <span>Rule: <code>${c.check_name}</code></span>
-              <span class="badge ${c.passed ? 'badge-success' : 'badge-danger'}">${c.passed ? 'PASSED' : 'FAILED'}</span>
+              <span>القاعدة المدققة: <code class="mono">${c.check_name}</code></span>
+              <span class="badge ${c.passed ? 'badge-success' : 'badge-danger'}">${c.passed ? 'اجتياز (PASSED)' : 'إخفاق (FAILED)'}</span>
             </div>
-            <div class="coverage-meta">${c.details}</div>
+            <div class="coverage-meta" style="margin-top: 6px;">${c.details}</div>
           </div>
         `).join('');
       } catch (e) {
         console.error(e);
       }
     }
-
-    // Initial load
-    loadStats();
-    loadFlights();
-    loadComparison('DAM');
-    loadTimelineMonthByMonth();
 
     async function loadFidsAnalytics() {
       const startDate = document.getElementById('fids-start-date').value;
@@ -1762,7 +2417,6 @@
       const qs = queryParams.length > 0 ? '?' + queryParams.join('&') : '';
 
       try {
-        // 1. Summary
         const sumRes = await fetch(`/api/archived-fids/summary${qs}`);
         const sumData = await sumRes.json();
         if (sumRes.ok && sumData.summary) {
@@ -1771,60 +2425,56 @@
           document.getElementById('fids-stat-arrivals').textContent = s.scheduled_arrivals.toLocaleString();
           document.getElementById('fids-stat-departures').textContent = s.scheduled_departures.toLocaleString();
           document.getElementById('fids-stat-days').textContent = s.calendar_days_covered;
-          document.getElementById('fids-stat-range').textContent = `${s.date_range.earliest_scheduled_date} to ${s.date_range.latest_scheduled_date}`;
+          document.getElementById('fids-stat-range').textContent = `${s.date_range.earliest_scheduled_date} إلى ${s.date_range.latest_scheduled_date}`;
           document.getElementById('fids-stat-airlines').textContent = s.displayed_airline_brands_count;
         }
 
-        // 2. Daily Flights & Timeline
         const dailyRes = await fetch(`/api/archived-fids/daily${qs}`);
         const dailyData = await dailyRes.json();
         if (dailyRes.ok && dailyData.daily_records) {
           const records = dailyData.daily_records;
           const maxDaily = Math.max(...records.map(r => r.total_scheduled_records), 1);
-          
-          // Timeline chart
+
           const timelineEl = document.getElementById('chart-daily-timeline');
           timelineEl.innerHTML = records.map(r => {
             const arrH = Math.round((r.arrival_records / maxDaily) * 100);
             const depH = Math.round((r.departure_records / maxDaily) * 100);
             return `
-              <div class="daily-bar-col" title="${r.flight_date}: ${r.total_scheduled_records} flights (Arr: ${r.arrival_records}, Dep: ${r.departure_records})">
+              <div class="daily-bar-col" title="${r.flight_date}: ${r.total_scheduled_records} رحلة (وصول: ${r.arrival_records}، مغادرة: ${r.departure_records})">
                 <div class="daily-bar-dep" style="height: ${depH}%;"></div>
                 <div class="daily-bar-arr" style="height: ${arrH}%;"></div>
               </div>
             `;
           }).join('');
 
-          // Daily Table
           const dailyTbody = document.getElementById('fids-daily-table-body');
           dailyTbody.innerHTML = records.map(r => `
             <tr>
-              <td><strong>${r.flight_date}</strong></td>
+              <td><strong class="mono">${r.flight_date}</strong></td>
               <td><strong>${r.total_scheduled_records}</strong></td>
               <td><span class="badge badge-success">${r.arrival_records}</span></td>
               <td><span class="badge badge-primary">${r.departure_records}</span></td>
               <td>${r.unique_displayed_flight_numbers}</td>
               <td>${r.unique_displayed_airline_brands}</td>
               <td>${r.scheduled_status_count}</td>
-              <td>${r.other_display_status_count > 0 ? '<span class="badge badge-warning">' + r.other_display_status_count + ' (arrived)</span>' : '0'}</td>
-              <td>${r.duplicate_candidates_count > 0 ? '<span class="badge badge-danger">' + r.duplicate_candidates_count + ' candidates</span>' : '0'}</td>
+              <td>${r.other_display_status_count > 0 ? '<span class="badge badge-warning">' + r.other_display_status_count + ' (وصلت)</span>' : '0'}</td>
+              <td>${r.duplicate_candidates_count > 0 ? '<span class="badge badge-danger">' + r.duplicate_candidates_count + ' مرشحة</span>' : '0'}</td>
             </tr>
           `).join('');
         }
 
-        // 3. Airlines & Chart
         const alRes = await fetch(`/api/archived-fids/airlines${qs}`);
         const alData = await alRes.json();
         if (alRes.ok && alData.airlines) {
           const airlines = alData.airlines;
           const maxAl = Math.max(...airlines.map(a => a.total_displayed_records), 1);
-          
+
           const alChart = document.getElementById('chart-airline-bars');
           alChart.innerHTML = airlines.slice(0, 8).map(a => {
             const pct = Math.round((a.total_displayed_records / maxAl) * 100);
             return `
               <div class="bar-row">
-                <span class="bar-label" title="${a.displayed_airline_brand_en}">${a.displayed_airline_brand_en}</span>
+                <span class="bar-label" title="${a.displayed_airline_brand_ar || a.displayed_airline_brand_en}">${a.displayed_airline_brand_ar || a.displayed_airline_brand_en}</span>
                 <div class="bar-track">
                   <div class="bar-fill-total" style="width: ${pct}%;"></div>
                 </div>
@@ -1836,26 +2486,24 @@
           const alTbody = document.getElementById('fids-airlines-table-body');
           alTbody.innerHTML = airlines.map(a => `
             <tr>
-              <td><strong>${a.displayed_airline_brand_ar}</strong></td>
+              <td><strong>${a.displayed_airline_brand_ar || '-'}</strong></td>
               <td>${a.displayed_airline_brand_en}</td>
-              <td><code>${a.source_iata_code || '-'}</code></td>
+              <td><code class="mono">${a.source_iata_code || '-'}</code></td>
               <td><span class="badge badge-primary">${a.carrier_role_classification}</span></td>
               <td><strong>${a.total_displayed_records}</strong></td>
-              <td>${a.percentage_of_total}</td>
+              <td><span class="mono">${a.percentage_of_total}</span></td>
               <td>${a.arrival_records}</td>
               <td>${a.departure_records}</td>
               <td>${a.distinct_flight_numbers}</td>
               <td>${a.active_days_count}</td>
-              <td>${a.daily_frequency_active_days} / day</td>
+              <td><span class="mono">${a.daily_frequency_active_days} / يوم</span></td>
             </tr>
           `).join('');
         }
 
-        // 4. Routes & Destinations
         const rtRes = await fetch(`/api/archived-fids/routes${qs}`);
         const rtData = await rtRes.json();
         if (rtRes.ok) {
-          // Destinations chart
           const dests = rtData.top_destinations || [];
           const maxDest = Math.max(...dests.map(d => d.scheduled_flight_count), 1);
           const destChart = document.getElementById('chart-destination-bars');
@@ -1863,16 +2511,15 @@
             const pct = Math.round((d.scheduled_flight_count / maxDest) * 100);
             return `
               <div class="bar-row">
-                <span class="bar-label">Destination: ${d.airport_code}</span>
+                <span class="bar-label">الوجهة: <span class="mono">${d.airport_code}</span></span>
                 <div class="bar-track">
                   <div class="bar-fill-dep" style="width: ${pct}%;"></div>
                 </div>
-                <span class="bar-val">${d.scheduled_flight_count} slots</span>
+                <span class="bar-val">${d.scheduled_flight_count} رحلة</span>
               </div>
             `;
           }).join('');
 
-          // Routes chart
           const routes = rtData.top_routes || [];
           const maxRt = Math.max(...routes.map(r => r.scheduled_records_count), 1);
           const rtChart = document.getElementById('chart-route-bars');
@@ -1880,23 +2527,22 @@
             const pct = Math.round((r.scheduled_records_count / maxRt) * 100);
             return `
               <div class="bar-row">
-                <span class="bar-label">${r.route_pair}</span>
+                <span class="bar-label"><span class="mono">${r.route_pair}</span></span>
                 <div class="bar-track">
                   <div class="bar-fill-total" style="width: ${pct}%;"></div>
                 </div>
-                <span class="bar-val">${r.scheduled_records_count} fl</span>
+                <span class="bar-val">${r.scheduled_records_count} رحلة</span>
               </div>
             `;
           }).join('');
 
-          // Routes Table
           const rtTbody = document.getElementById('fids-routes-table-body');
           rtTbody.innerHTML = routes.map(r => `
             <tr>
-              <td><strong>${r.route_pair}</strong></td>
-              <td><code>${r.origin_iata}</code></td>
-              <td><code>${r.destination_iata}</code></td>
-              <td><span class="badge ${r.movement_type === 'arrival' ? 'badge-success' : 'badge-primary'}">${r.movement_type}</span></td>
+              <td><strong class="mono">${r.route_pair}</strong></td>
+              <td><code class="mono">${r.origin_iata}</code></td>
+              <td><code class="mono">${r.destination_iata}</code></td>
+              <td><span class="badge ${r.movement_type === 'arrival' ? 'badge-success' : 'badge-primary'}">${r.movement_type === 'arrival' ? 'وصول' : 'مغادرة'}</span></td>
               <td><strong>${r.scheduled_records_count}</strong></td>
               <td>${r.unique_displayed_flight_numbers}</td>
               <td><small>${r.airlines_list || '-'}</small></td>
@@ -1904,7 +2550,6 @@
           `).join('');
         }
 
-        // 5. Hourly Schedule
         const hrRes = await fetch(`/api/archived-fids/hourly${qs}`);
         const hrData = await hrRes.json();
         if (hrRes.ok && hrData.hourly_distribution) {
@@ -1916,18 +2561,17 @@
             const pctDep = Math.round((h.departures / maxHr) * 100);
             return `
               <div class="bar-row">
-                <span class="bar-label">${h.hour_label}</span>
+                <span class="bar-label"><span class="mono">${h.hour_label}</span></span>
                 <div class="bar-track">
                   <div class="bar-fill-arr" style="width: ${pctArr}%;"></div>
                   <div class="bar-fill-dep" style="width: ${pctDep}%;"></div>
                 </div>
-                <span class="bar-val">${h.total} (A:${h.arrivals} D:${h.departures})</span>
+                <span class="bar-val">${h.total} (و:${h.arrivals} م:${h.departures})</span>
               </div>
             `;
           }).join('');
         }
 
-        // 6. Weekday Schedule
         const wkRes = await fetch(`/api/archived-fids/weekly${qs}`);
         const wkData = await wkRes.json();
         if (wkRes.ok && wkData.weekday_distribution) {
@@ -1942,26 +2586,25 @@
                 <div class="bar-track">
                   <div class="bar-fill-total" style="width: ${pct}%;"></div>
                 </div>
-                <span class="bar-val">${w.average_flights_per_weekday} / day</span>
+                <span class="bar-val">${w.average_flights_per_weekday} / يوم</span>
               </div>
             `;
           }).join('');
         }
 
-        // 7. Duplicate Candidates
         const dupRes = await fetch(`/api/archived-fids/duplicate-candidates`);
         const dupData = await dupRes.json();
         if (dupRes.ok && dupData.candidates) {
           const dupTbody = document.getElementById('fids-duplicates-table-body');
           dupTbody.innerHTML = dupData.candidates.map(c => `
             <tr>
-              <td><code>${c.candidate_id}</code></td>
+              <td><code class="mono">${c.candidate_id}</code></td>
               <td><span class="badge badge-warning">${c.duplicate_classification}</span></td>
-              <td><small><strong>${c.flight_number_1}</strong> (${c.airline_1})<br>UUID: ${c.source_uuid_1.substring(0,8)}... @ ${c.scheduled_time}</small></td>
-              <td><small><strong>${c.flight_number_2}</strong> (${c.airline_2})<br>UUID: ${c.source_uuid_2.substring(0,8)}... @ ${c.scheduled_time}</small></td>
-              <td>${c.scheduled_date}</td>
-              <td><span class="badge badge-primary">${c.movement_type}</span></td>
-              <td><code>${c.origin_iata}-${c.destination_iata}</code></td>
+              <td><small><strong class="mono">${c.flight_number_1}</strong> (${c.airline_1})<br><span class="mono">UUID: ${c.source_uuid_1.substring(0,8)}... @ ${c.scheduled_time}</span></small></td>
+              <td><small><strong class="mono">${c.flight_number_2}</strong> (${c.airline_2})<br><span class="mono">UUID: ${c.source_uuid_2.substring(0,8)}... @ ${c.scheduled_time}</span></small></td>
+              <td><span class="mono">${c.scheduled_date}</span></td>
+              <td><span class="badge badge-primary">${c.movement_type === 'arrival' ? 'وصول' : 'مغادرة'}</span></td>
+              <td><code class="mono">${c.origin_iata}-${c.destination_iata}</code></td>
               <td><span class="badge badge-info">${c.review_status}</span></td>
               <td><small>${c.audit_finding}</small></td>
             </tr>
@@ -2005,21 +2648,20 @@
 
     async function loadHistoricalArchive() {
       try {
-        // 1. Captures
         const capRes = await fetch('/api/historical-archive/captures');
         const capData = await capRes.json();
         if (capRes.ok && capData.captures) {
           const tbody = document.getElementById('ha-captures-table-body');
           tbody.innerHTML = capData.captures.map(c => `
             <tr>
-              <td><code>${c.wayback_timestamp || c.timestamp}</code></td>
+              <td><code class="mono">${c.wayback_timestamp || c.timestamp}</code></td>
               <td><strong>${(c.wayback_timestamp || c.timestamp).substring(0, 4)}</strong></td>
               <td><span class="badge ${c.http_status === 200 || c.statuscode === '200' ? 'badge-success' : 'badge-warning'}">${c.http_status || c.statuscode}</span></td>
               <td><span class="badge badge-info">${c.capture_type || 'unfiltered_endpoint'}</span></td>
               <td><small>${c.direction_filter ? 'dir=' + c.direction_filter : 'none'} ${c.date_filter && c.date_filter !== 'none' ? '| ' + c.date_filter : ''}</small></td>
-              <td><small><code>${(c.content_digest || c.digest || '').substring(0, 16)}...</code></small></td>
+              <td><small><code class="mono">${(c.content_digest || c.digest || '').substring(0, 16)}...</code></small></td>
               <td><span class="badge ${c.retrieval_status === 'validated' || c.retrieval_status === 'acquired' ? 'badge-success' : (c.retrieval_status === 'rate_limited_429' ? 'badge-danger' : 'badge-warning')}">${c.retrieval_status}</span></td>
-              <td><a href="https://web.archive.org/web/${c.wayback_timestamp || c.timestamp}id_/${c.original_url || c.original}" target="_blank" class="btn btn-outline" style="padding: 2px 8px; font-size: 11px;">Replay ↗</a></td>
+              <td><a href="https://web.archive.org/web/${c.wayback_timestamp || c.timestamp}id_/${c.original_url || c.original}" target="_blank" class="btn btn-outline btn-sm">معاينة ↗</a></td>
             </tr>
           `).join('');
           document.getElementById('ha-stat-captures').innerText = capData.total_discovered_captures || capData.captures.length;
@@ -2029,7 +2671,6 @@
           }
         }
 
-        // 2. Coverage
         const covRes = await fetch('/api/historical-archive/coverage');
         const covData = await covRes.json();
         const schedCov = covData.scheduled_service_coverage || covData.monthly_archive_coverage || [];
@@ -2037,50 +2678,48 @@
           const tbody = document.getElementById('ha-coverage-table-body');
           tbody.innerHTML = schedCov.map(m => `
             <tr>
-              <td><strong>${m.month}</strong></td>
+              <td><strong class="mono">${m.month}</strong></td>
               <td><strong>${m.total_fids_record_observations || m.total_scheduled_records}</strong></td>
               <td>${m.scheduled_arrivals_observations || m.arrival_count}</td>
               <td>${m.scheduled_departures_observations || m.departure_count}</td>
               <td>${m.distinct_scheduled_dates_count || m.distinct_days_covered}</td>
-              <td>${Math.round(((m.total_fids_record_observations || m.total_scheduled_records) / (m.distinct_scheduled_dates_count || m.distinct_days_covered || 1)) * 10) / 10}</td>
-              <td><code>${m.snapshots_representing ? m.snapshots_representing.join(', ') : (m.covering_snapshots ? m.covering_snapshots.join(', ') : 'snap_wayback_20260709234230')}</code></td>
+              <td><span class="mono">${Math.round(((m.total_fids_record_observations || m.total_scheduled_records) / (m.distinct_scheduled_dates_count || m.distinct_days_covered || 1)) * 10) / 10}</span></td>
+              <td><small><code class="mono">${m.snapshots_representing ? m.snapshots_representing.join(', ') : (m.covering_snapshots ? m.covering_snapshots.join(', ') : 'snap_wayback_20260709234230')}</code></small></td>
             </tr>
           `).join('');
         }
 
-        // 3. Snapshots
         const snapRes = await fetch('/api/historical-archive/snapshots');
         const snapData = await snapRes.json();
         if (snapRes.ok && snapData.snapshots) {
           const tbody = document.getElementById('ha-snapshots-table-body');
           tbody.innerHTML = snapData.snapshots.map(s => `
             <tr>
-              <td><strong>${s.snapshot_id}</strong></td>
-              <td><code>${s.wayback_timestamp}</code></td>
+              <td><strong class="mono">${s.snapshot_id}</strong></td>
+              <td><code class="mono">${s.wayback_timestamp}</code></td>
               <td><strong>${s.total_records}</strong></td>
               <td><span class="badge ${s.validation_status.includes('VALID') || s.validation_status === 'PASSED' ? 'badge-success' : 'badge-warning'}">${s.validation_status}</span></td>
               <td><span class="badge badge-info">${s.comparison_eligibility || 'full_snapshot_comparison'}</span></td>
               <td><small>${s.comparison_scope || 'all_movements'}</small></td>
-              <td><small><code>${s.json_sha256 ? s.json_sha256.substring(0, 16) + '...' : '-'}</code></small></td>
-              <td><small><code>${s.raw_sha256 ? s.raw_sha256.substring(0, 16) + '...' : '-'}</code></small></td>
+              <td><small><code class="mono">${s.json_sha256 ? s.json_sha256.substring(0, 16) + '...' : '-'}</code></small></td>
+              <td><small><code class="mono">${s.raw_sha256 ? s.raw_sha256.substring(0, 16) + '...' : '-'}</code></small></td>
             </tr>
           `).join('');
           document.getElementById('ha-stat-validated').innerText = snapData.total_snapshots || snapData.snapshots.length;
           document.getElementById('ha-stat-ready').innerText = snapData.snapshots.filter(s => s.comparison_eligibility === 'full_snapshot_comparison').length;
         }
 
-        // 4. Comparisons
         const compRes = await fetch('/api/historical-archive/comparisons');
         const compData = await compRes.json();
         if (compRes.ok) {
           const tbody = document.getElementById('ha-comparisons-table-body');
           if (compData.status === 'no_additional_snapshot_available_for_comparison' || !compData.comparisons || compData.comparisons.length === 0) {
-            tbody.innerHTML = `<tr><td colspan="12" style="text-align: center; color: var(--text-muted); padding: 18px;"><strong>No additional snapshots available for comparison.</strong> 4 captures discovered in Wayback Machine were rate-limited (HTTP 429) during replay acquisition. Cross-snapshot comparisons will activate once additional snapshots are retrieved and validated.</td></tr>`;
+            tbody.innerHTML = `<tr><td colspan="12" style="text-align: center; color: var(--text-muted); padding: 24px;"><strong>لا تتوفر لقطات إضافية للمقارنة المتقاطعة حالياً.</strong> أظهرت 4 لقطات مكتشفة في أرشيف Wayback قيوداً في الاسترجاع (HTTP 429)، وسيتم تفعيل المقارنات فور استرجاع لقطات جديدة والتحقق منها.</td></tr>`;
           } else {
             tbody.innerHTML = compData.comparisons.map(c => `
               <tr>
-                <td><strong>${c.baseline_snapshot_id}</strong></td>
-                <td><strong>${c.comparison_snapshot_id}</strong></td>
+                <td><strong class="mono">${c.baseline_snapshot_id}</strong></td>
+                <td><strong class="mono">${c.comparison_snapshot_id}</strong></td>
                 <td>${c.total_baseline_records || '-'}</td>
                 <td>${c.total_comparison_records || '-'}</td>
                 <td><span class="badge badge-success">${c.identical_records || 0}</span></td>
@@ -2100,6 +2739,11 @@
       }
     }
 
+    // Initial Dashboard Load
+    loadStats();
+    loadFlights();
+    loadComparison('DAM');
+    loadTimelineMonthByMonth();
   </script>
 </body>
 </html>
