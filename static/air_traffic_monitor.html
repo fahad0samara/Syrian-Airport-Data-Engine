@@ -35,11 +35,7 @@
       --font-family: 'IBM Plex Sans Arabic', system-ui, -apple-system, Segoe UI, Roboto, Tahoma, sans-serif;
     }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
       font-family: var(--font-family);
@@ -120,7 +116,7 @@
     .brand-section p {
       font-size: 0.95rem;
       color: #CBE2D6;
-      max-width: 760px;
+      max-width: 780px;
     }
     .brand-badge {
       font-size: 0.75rem;
@@ -184,17 +180,13 @@
       margin-top: 2px;
       color: var(--primary);
     }
-    .methodology-text strong {
-      color: var(--text-main);
-    }
+    .methodology-text strong { color: var(--text-main); }
     .methodology-text ul {
       margin-top: 6px;
       margin-right: 18px;
       font-size: 0.84rem;
     }
-    .methodology-text li {
-      margin-bottom: 2px;
-    }
+    .methodology-text li { margin-bottom: 3px; }
 
     /* Filter Bar */
     .filter-card {
@@ -254,9 +246,7 @@
       cursor: pointer;
       transition: background-color 0.2s;
     }
-    .btn-apply:hover {
-      background-color: var(--primary-light);
-    }
+    .btn-apply:hover { background-color: var(--primary-light); }
     .btn-reset {
       flex: 1;
       background-color: #F1F5F2;
@@ -269,107 +259,7 @@
       cursor: pointer;
       transition: all 0.2s;
     }
-    .btn-reset:hover {
-      background-color: #E2ECE6;
-      color: var(--text-main);
-    }
-
-    /* KPI Cards Grid */
-    .kpi-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 16px;
-    }
-    .kpi-card {
-      background-color: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-md);
-      padding: 18px 20px;
-      box-shadow: var(--shadow-sm);
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      min-height: 145px;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-    .kpi-card:hover {
-      transform: translateY(-2px);
-      box-shadow: var(--shadow-md);
-    }
-    .kpi-card.highlight-actual {
-      border-top: 4px solid var(--primary);
-    }
-    .kpi-card.highlight-sched {
-      border-top: 4px solid var(--accent);
-    }
-    .kpi-card.highlight-general {
-      border-top: 4px solid #78909C;
-    }
-    .kpi-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      gap: 8px;
-    }
-    .kpi-title {
-      font-size: 0.86rem;
-      font-weight: 600;
-      color: var(--text-muted);
-    }
-    .kpi-badge {
-      font-size: 0.72rem;
-      font-weight: 600;
-      padding: 2px 7px;
-      border-radius: 4px;
-      white-space: nowrap;
-    }
-    .kpi-badge.badge-actual {
-      background-color: var(--primary-subtle);
-      color: var(--primary-dark);
-    }
-    .kpi-badge.badge-sched {
-      background-color: var(--accent-subtle);
-      color: #1D4ED8;
-    }
-    .kpi-badge.badge-neutral {
-      background-color: #ECEFF1;
-      color: #455A64;
-    }
-    .kpi-value-row {
-      display: flex;
-      align-items: baseline;
-      gap: 8px;
-      margin: 10px 0 6px 0;
-    }
-    .kpi-value {
-      font-size: 2.2rem;
-      font-weight: 700;
-      line-height: 1;
-      color: var(--text-main);
-    }
-    .kpi-value.val-null {
-      font-size: 1.25rem;
-      font-weight: 600;
-      color: var(--warning);
-    }
-    .kpi-unit {
-      font-size: 0.85rem;
-      color: var(--text-light);
-    }
-    .kpi-footer {
-      font-size: 0.76rem;
-      color: var(--text-light);
-      border-top: 1px dashed var(--border-light);
-      padding-top: 6px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .kpi-scope {
-      font-weight: 500;
-      color: var(--text-muted);
-    }
+    .btn-reset:hover { background-color: #E2ECE6; color: var(--text-main); }
 
     /* Analytical Sections */
     .section-card {
@@ -403,13 +293,180 @@
       margin-top: 2px;
     }
 
-    /* Comparison Chart CSS/SVG */
+    /* KPI Cards Grid */
+    .kpi-section-title {
+      font-size: 0.95rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .kpi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 14px;
+      margin-bottom: 16px;
+    }
+    .kpi-card {
+      background-color: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 16px 18px;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 135px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .kpi-card:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+    .kpi-card.highlight-actual { border-top: 4px solid var(--primary); }
+    .kpi-card.highlight-sched { border-top: 4px solid var(--accent); }
+    .kpi-card.highlight-general { border-top: 4px solid #78909C; }
+
+    .kpi-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 8px;
+    }
+    .kpi-title {
+      font-size: 0.84rem;
+      font-weight: 600;
+      color: var(--text-muted);
+    }
+    .kpi-badge {
+      font-size: 0.70rem;
+      font-weight: 600;
+      padding: 2px 6px;
+      border-radius: 4px;
+      white-space: nowrap;
+    }
+    .kpi-badge.badge-actual { background-color: var(--primary-subtle); color: var(--primary-dark); }
+    .kpi-badge.badge-sched { background-color: var(--accent-subtle); color: #1D4ED8; }
+    .kpi-badge.badge-neutral { background-color: #ECEFF1; color: #455A64; }
+
+    .kpi-value-row {
+      display: flex;
+      align-items: baseline;
+      gap: 6px;
+      margin: 8px 0 4px 0;
+    }
+    .kpi-value {
+      font-size: 2rem;
+      font-weight: 700;
+      line-height: 1;
+      color: var(--text-main);
+    }
+    .kpi-value.val-null {
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--warning);
+    }
+    .kpi-unit {
+      font-size: 0.82rem;
+      color: var(--text-light);
+    }
+    .kpi-footer {
+      font-size: 0.74rem;
+      color: var(--text-light);
+      border-top: 1px dashed var(--border-light);
+      padding-top: 5px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    /* Section C — Coverage Comparison Panels */
+    .coverage-panels-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+      margin-top: 12px;
+    }
+    .coverage-panel {
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 18px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .coverage-panel.panel-sched {
+      background-color: #F8FAFD;
+      border-top: 4px solid var(--accent);
+    }
+    .coverage-panel.panel-obs {
+      background-color: #F7FAF8;
+      border-top: 4px solid var(--primary);
+    }
+    .panel-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid var(--border-light);
+      padding-bottom: 10px;
+    }
+    .panel-title {
+      font-size: 1.02rem;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+    .status-pill {
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 3px 10px;
+      border-radius: 20px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .status-pill.status-available { background-color: #DCFCE7; color: #166534; border: 1px solid #BBF7D0; }
+    .status-pill.status-nodata { background-color: #F1F5F9; color: #475569; border: 1px solid #CBD5E1; }
+    .status-pill.status-unknown { background-color: #FEF3C7; color: #92400E; border: 1px solid #FDE68A; }
+
+    .panel-metrics-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 10px;
+    }
+    .metric-item {
+      background: #FFFFFF;
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-sm);
+      padding: 8px 12px;
+    }
+    .metric-label {
+      font-size: 0.74rem;
+      color: var(--text-muted);
+      margin-bottom: 2px;
+    }
+    .metric-val {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+    .panel-notice {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      background: rgba(255, 255, 255, 0.7);
+      border-radius: var(--radius-sm);
+      padding: 8px 12px;
+      border: 1px dashed var(--border);
+    }
+
+    /* Comparison Chart */
     .chart-legend {
       display: flex;
       align-items: center;
       gap: 16px;
       font-size: 0.82rem;
       color: var(--text-muted);
+      flex-wrap: wrap;
     }
     .legend-item {
       display: inline-flex;
@@ -431,7 +488,7 @@
     .chart-container {
       display: flex;
       flex-direction: column;
-      gap: 16px;
+      gap: 14px;
       margin-top: 10px;
     }
     .chart-bar-group {
@@ -444,57 +501,31 @@
       gap: 18px;
       align-items: center;
     }
-    .bar-group-meta {
-      display: flex;
-      flex-direction: column;
-    }
-    .bar-group-meta .group-title {
-      font-weight: 700;
-      font-size: 0.96rem;
-      color: var(--text-main);
-    }
-    .bar-group-meta .group-sub {
-      font-size: 0.78rem;
-      color: var(--text-light);
-    }
-    .bar-group-bars {
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-    }
-    .bar-row {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      font-size: 0.82rem;
-    }
-    .bar-label {
-      width: 100px;
-      color: var(--text-muted);
-      font-weight: 500;
-    }
+    .bar-group-meta { display: flex; flex-direction: column; }
+    .group-title { font-weight: 700; font-size: 0.92rem; color: var(--text-main); }
+    .group-sub { font-size: 0.76rem; color: var(--text-light); }
+    .bar-group-bars { display: flex; flex-direction: column; gap: 8px; }
+    .bar-row { display: flex; align-items: center; gap: 10px; font-size: 0.82rem; }
+    .bar-label { min-width: 190px; text-align: right; }
     .bar-track {
       flex: 1;
-      height: 22px;
-      background-color: #EDF2EE;
+      height: 24px;
+      background-color: #E2ECE6;
       border-radius: 4px;
       overflow: hidden;
       position: relative;
-      display: flex;
-      align-items: center;
     }
     .bar-fill {
       height: 100%;
       border-radius: 4px;
-      transition: width 0.6s ease;
+      transition: width 0.5s ease;
       display: flex;
       align-items: center;
-      justify-content: flex-end;
-      padding-left: 8px;
+      justify-content: flex-start;
       padding-right: 8px;
       color: #FFFFFF;
-      font-size: 0.75rem;
-      font-weight: 600;
+      font-weight: 700;
+      font-size: 0.76rem;
     }
     .bar-fill.fill-actual { background-color: var(--primary); }
     .bar-fill.fill-sched { background-color: var(--accent); }
@@ -508,11 +539,7 @@
       color: #475569;
       font-weight: 500;
     }
-    .bar-count-label {
-      font-weight: 600;
-      min-width: 48px;
-      text-align: left;
-    }
+    .bar-count-label { font-weight: 600; min-width: 48px; text-align: left; }
 
     /* Monthly Summary Table */
     .table-wrapper {
@@ -523,7 +550,7 @@
     table.data-table {
       width: 100%;
       border-collapse: collapse;
-      font-size: 0.88rem;
+      font-size: 0.84rem;
       text-align: right;
     }
     table.data-table thead {
@@ -532,47 +559,33 @@
       font-weight: 700;
       border-bottom: 2px solid var(--border);
     }
-    table.data-table th {
-      padding: 12px 14px;
-      white-space: nowrap;
-    }
+    table.data-table th { padding: 10px 12px; white-space: nowrap; }
     table.data-table td {
-      padding: 10px 14px;
+      padding: 9px 12px;
       border-bottom: 1px solid var(--border-light);
       white-space: nowrap;
     }
-    table.data-table tbody tr:hover {
-      background-color: #F8FCF9;
-    }
-    .cell-numeric {
-      font-variant-numeric: tabular-nums;
-      font-weight: 600;
-    }
+    table.data-table tbody tr:hover { background-color: #F8FCF9; }
+    .cell-numeric { font-variant-numeric: tabular-nums; font-weight: 600; }
     .cell-actual-val {
       color: var(--primary-dark);
-      background-color: rgba(23, 77, 57, 0.05);
+      background-color: rgba(23, 77, 57, 0.06);
       border-radius: 4px;
       padding: 2px 6px;
     }
-    .cell-sched-val {
-      color: #1E40AF;
-    }
+    .cell-sched-val { color: #1E40AF; }
     .cell-unobserved {
       color: #64748B;
-      font-size: 0.78rem;
+      font-size: 0.76rem;
       background: #F1F5F9;
       border: 1px dashed #CBD5E1;
       border-radius: 4px;
-      padding: 2px 8px;
+      padding: 2px 6px;
       display: inline-block;
     }
-    .cell-null-passengers {
-      color: #94A3B8;
-      font-style: italic;
-      font-size: 0.8rem;
-    }
+    .cell-null-passengers { color: #94A3B8; font-style: italic; font-size: 0.78rem; }
 
-    /* Dual Export Action Area */
+    /* Multi-Format Export Action Area */
     .export-box {
       background: linear-gradient(to left, #FAFCFA, #F2F7F4);
       border: 1px solid var(--border);
@@ -591,14 +604,20 @@
       margin-bottom: 4px;
     }
     .export-info p {
-      font-size: 0.83rem;
+      font-size: 0.82rem;
       color: var(--text-muted);
-      max-width: 600px;
+      max-width: 650px;
     }
     .export-buttons-group {
       display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .export-row {
+      display: flex;
+      align-items: center;
       flex-wrap: wrap;
-      gap: 12px;
+      gap: 10px;
     }
     .export-btn-set {
       display: flex;
@@ -610,20 +629,21 @@
       box-shadow: var(--shadow-sm);
     }
     .export-btn-label {
-      padding: 8px 12px;
-      font-size: 0.82rem;
+      padding: 6px 10px;
+      font-size: 0.78rem;
       font-weight: 600;
       color: var(--text-muted);
       background-color: #F8FAF8;
       border-left: 1px solid var(--border-light);
+      min-width: 140px;
     }
     .export-btn {
       background: #FFFFFF;
       border: none;
       font-family: inherit;
-      font-size: 0.82rem;
+      font-size: 0.78rem;
       font-weight: 600;
-      padding: 8px 12px;
+      padding: 6px 10px;
       cursor: pointer;
       color: var(--primary-dark);
       display: inline-flex;
@@ -631,16 +651,9 @@
       gap: 4px;
       transition: background-color 0.2s;
     }
-    .export-btn:hover {
-      background-color: var(--primary-subtle);
-    }
-    .export-btn.btn-excel {
-      color: #107C41;
-      border-right: 1px solid var(--border-light);
-    }
-    .export-btn.btn-excel:hover {
-      background-color: #EBF8F1;
-    }
+    .export-btn:hover { background-color: var(--primary-subtle); }
+    .export-btn.btn-excel { color: #107C41; border-right: 1px solid var(--border-light); }
+    .export-btn.btn-excel:hover { background-color: #EBF8F1; }
 
     /* Footer */
     .app-footer {
@@ -683,7 +696,8 @@
       to { opacity: 1; transform: translateY(0); }
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 900px) {
+      .coverage-panels-grid { grid-template-columns: 1fr; }
       .header-container { flex-direction: column; align-items: flex-start; }
       .chart-bar-group { grid-template-columns: 1fr; gap: 8px; }
       .export-box { flex-direction: column; align-items: flex-start; }
@@ -717,7 +731,7 @@
           <span>مرصد الحركة الجوية السورية</span>
           <span class="brand-badge">Syrian Air Traffic Monitor</span>
         </h1>
-        <p>نظام تحليلي مستقل وموجز يتيح لأصحاب القرار والباحثين فهم مؤشرات الحركة الجوية الفعلية والمجدولة في المطارات السورية خلال 30 ثانية مع الحفاظ على صرامة التوثيق المنهجي.</p>
+        <p>نظام تحليلي مستقل مبني وفق معمارية CSV-First على بيانات <code>all_syrian_flight_events.csv</code>. يفصل بصرامة بين الجداول الزمنية والحركات المرصودة عبر بث ADS-B التجاري، مع التمييز التام بين أبعاد التغطية.</p>
       </div>
       <div class="header-actions">
         <a href="/" class="btn-secondary-link">
@@ -740,11 +754,11 @@
     <div class="methodology-banner">
       <div class="methodology-icon">ℹ️</div>
       <div class="methodology-text">
-        <strong>المعايير المنهجية وحوكمة البيانات:</strong>
+        <strong>المعايير المنهجية وحوكمة البيانات (إفصاح ملزم):</strong>
         <ul>
-          <li><strong>الفصل بين الفعلي والمجدول:</strong> الحركات المرصودة عبر بث ADS-B (بيانات التتبع التجاري المتاحة) تعكس حصراً الحركات الفيزيائية الفردية (هبوط/إقلاع) الموثقة برمجياً بطوابع زمنية عبر أجهزة الإرسال والاستقبال، وتمثل <strong>عينة 9-10 تشرين الأول/أكتوبر 2026 فقط (48 ساعة)</strong>، مع استبعاد تام للرحلات المشتركة كودياً (Codeshares - 20 رحلة) والسجلات غير المثبتة (3 سجلات). الرحلات المجدولة (Scheduled Flights) تمثل الجداول الزمنية المعلنة على شاشات FIDS لكامل الشهر.</li>
-          <li><strong>معالجة الفترات غير المرصودة:</strong> الفترات التي غاب عنها التتبع التجاري لبث ADS-B (مثل أيلول/سبتمبر 2026) تُصنف كفجوة بيانات معلنة (غير متوفرة / Null) ولا تُحوّل إلى أصفار إحصائية مصطنعة تجنباً للتضليل.</li>
-          <li><strong>أعداد المسافرين:</strong> تُترك الحقول فارغة (Null) لعدم توفر إفصاحات رسمية أو بيانات أولية موثوقة لأعداد الركاب، دون أي تقدير تخميني لسعة المقاعد.</li>
+          <li><strong>الحركات المرصودة:</strong> تمثل ملاحظات التتبع التجاري المتاحة عبر بث ADS-B والمصنفة وفق منهجية الأدلة المعتمدة في المشروع. ولا يجوز تفسيرها على أنها حركة المرور الكاملة للمطار أو أنها تأكيد راداري رسمي ومستقل.</li>
+          <li><strong>الفصل بين أبعاد التغطية:</strong> توفر جداول الرحلات لا يثبت تشغيل الطائرات فعلياً، وغياب سجلات الرصد لا يعني انعدام الرحلات بل يعكس <em>حالة مراقبة غير معروفة (Monitoring Coverage Unknown)</em> خارج تواريخ الرصد المتاحة.</li>
+          <li><strong>أعداد المسافرين:</strong> تُترك فارغة تماماً (Null) لعدم توفر بيانات ركاب منشورة رسمياً ومثبتة بالمصدر، مع الامتناع التام عن التخمين.</li>
         </ul>
       </div>
     </div>
@@ -794,85 +808,243 @@
       </div>
     </section>
 
-    <!-- 5 KPI Cards -->
-    <section class="kpi-grid">
-      <!-- 1. Actual Movements -->
-      <div class="kpi-card highlight-actual">
-        <div class="kpi-header">
-          <span class="kpi-title">حركات مرصودة عبر بث ADS-B</span>
-          <span class="kpi-badge badge-actual">ADS-B Commercial Tracking</span>
+    <!-- Section A & B: Key Performance Indicators Grids -->
+    <section>
+      <!-- Section A: Scheduled Services -->
+      <div class="kpi-section-title" style="color:var(--accent);">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+        <span>القسم (أ) — مؤشرات الرحلات المجدولة (Scheduled Services — Timetable / FIDS)</span>
+      </div>
+      <div class="kpi-grid">
+        <div class="kpi-card highlight-sched">
+          <div class="kpi-header">
+            <span class="kpi-title">إجمالي الرحلات المجدولة</span>
+            <span class="kpi-badge badge-sched">Scheduled Flights</span>
+          </div>
+          <div class="kpi-value-row">
+            <span class="kpi-value" id="kpi-sched-total">—</span>
+            <span class="kpi-unit">رحلة مجدولة</span>
+          </div>
+          <div class="kpi-footer">
+            <span class="kpi-scope" id="kpi-sched-dates">النطاق: —</span>
+            <span>جداول رسمية</span>
+          </div>
         </div>
-        <div class="kpi-value-row">
-          <span class="kpi-value" id="kpi-actual-val">—</span>
-          <span class="kpi-unit">حركة إقلاع / هبوط</span>
+
+        <div class="kpi-card highlight-sched">
+          <div class="kpi-header">
+            <span class="kpi-title">رحلات الوصول المجدولة</span>
+            <span class="kpi-badge badge-sched">Scheduled Arrivals</span>
+          </div>
+          <div class="kpi-value-row">
+            <span class="kpi-value" id="kpi-sched-arr">—</span>
+            <span class="kpi-unit">وصول مجدول</span>
+          </div>
+          <div class="kpi-footer">
+            <span class="kpi-scope">نقية (خدمات مجدولة فقط)</span>
+            <span>Arrivals</span>
+          </div>
         </div>
-        <div class="kpi-footer">
-          <span class="kpi-scope" id="kpi-actual-scope" style="color:var(--warning); font-weight:600;">عينة 9-10 تشرين الأول فقط (لا تمثل إجمالي الشهر)</span>
-          <span title="حركات فيزيائية فعلية مستبعد منها 20 رحلة مكررة تسويقياً و3 غير موثقة">مستبعد التسويق المشترك ℹ️</span>
+
+        <div class="kpi-card highlight-sched">
+          <div class="kpi-header">
+            <span class="kpi-title">رحلات المغادرة المجدولة</span>
+            <span class="kpi-badge badge-sched">Scheduled Departures</span>
+          </div>
+          <div class="kpi-value-row">
+            <span class="kpi-value" id="kpi-sched-dep">—</span>
+            <span class="kpi-unit">مغادرة مجدولة</span>
+          </div>
+          <div class="kpi-footer">
+            <span class="kpi-scope">نقية (خدمات مجدولة فقط)</span>
+            <span>Departures</span>
+          </div>
+        </div>
+
+        <div class="kpi-card highlight-sched">
+          <div class="kpi-header">
+            <span class="kpi-title">شركات الطيران المجدولة</span>
+            <span class="kpi-badge badge-sched">Scheduled Airlines</span>
+          </div>
+          <div class="kpi-value-row">
+            <span class="kpi-value" id="kpi-sched-airlines">—</span>
+            <span class="kpi-unit">شركة</span>
+          </div>
+          <div class="kpi-footer">
+            <span class="kpi-scope">حسب الجداول المعلنة</span>
+            <span>Airlines</span>
+          </div>
+        </div>
+
+        <div class="kpi-card highlight-sched">
+          <div class="kpi-header">
+            <span class="kpi-title">الوجهات المجدولة المتصلة</span>
+            <span class="kpi-badge badge-sched">Destinations</span>
+          </div>
+          <div class="kpi-value-row">
+            <span class="kpi-value" id="kpi-sched-destinations">—</span>
+            <span class="kpi-unit">مطار متصل</span>
+          </div>
+          <div class="kpi-footer">
+            <span class="kpi-scope">شبكة الربط الجوي المجدولة</span>
+            <span>Destinations</span>
+          </div>
         </div>
       </div>
 
-      <!-- 2. Scheduled Flights -->
-      <div class="kpi-card highlight-sched">
-        <div class="kpi-header">
-          <span class="kpi-title">الرحلات المجدولة المعلنة</span>
-          <span class="kpi-badge badge-sched">Timetable / FIDS</span>
+      <!-- Section B: Observed Movements -->
+      <div class="kpi-section-title" style="color:var(--primary); margin-top:20px;">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>
+        <span>القسم (ب) — الحركات المرصودة فيزيائياً عبر بث ADS-B (بيانات التتبع التجاري المتاحة)</span>
+      </div>
+      <div class="kpi-grid">
+        <div class="kpi-card highlight-actual">
+          <div class="kpi-header">
+            <span class="kpi-title">الحركات المرصودة عبر ADS-B</span>
+            <span class="kpi-badge badge-actual">ADS-B Observed</span>
+          </div>
+          <div class="kpi-value-row">
+            <span class="kpi-value" id="kpi-actual-val">—</span>
+            <span class="kpi-unit">حركة</span>
+          </div>
+          <div class="kpi-footer">
+            <span class="kpi-scope" id="kpi-actual-scope" style="color:var(--warning); font-weight:600;">عينة 9-10 تشرين الأول فقط (48 ساعة)</span>
+            <span>Mode-S Telemetry</span>
+          </div>
         </div>
-        <div class="kpi-value-row">
-          <span class="kpi-value" id="kpi-sched-val">—</span>
-          <span class="kpi-unit">رحلة مجدولة</span>
+
+        <div class="kpi-card highlight-actual">
+          <div class="kpi-header">
+            <span class="kpi-title">حركات الهبوط المرصودة</span>
+            <span class="kpi-badge badge-actual">Observed Arrivals</span>
+          </div>
+          <div class="kpi-value-row">
+            <span class="kpi-value" id="kpi-actual-arr">—</span>
+            <span class="kpi-unit">هبوط فعلي</span>
+          </div>
+          <div class="kpi-footer">
+            <span class="kpi-scope">موثقة بإشارات الهبوط</span>
+            <span>Touchdowns</span>
+          </div>
         </div>
-        <div class="kpi-footer">
-          <span class="kpi-scope" id="kpi-sched-scope">كامل الشهر المحدد (جداول رسمية)</span>
-          <span>شاشات العرض الرسمية</span>
+
+        <div class="kpi-card highlight-actual">
+          <div class="kpi-header">
+            <span class="kpi-title">حركات الإقلاع المرصودة</span>
+            <span class="kpi-badge badge-actual">Observed Departures</span>
+          </div>
+          <div class="kpi-value-row">
+            <span class="kpi-value" id="kpi-actual-dep">—</span>
+            <span class="kpi-unit">إقلاع فعلي</span>
+          </div>
+          <div class="kpi-footer">
+            <span class="kpi-scope">موثقة بإشارات الإقلاع</span>
+            <span>Takeoffs</span>
+          </div>
+        </div>
+
+        <div class="kpi-card highlight-actual">
+          <div class="kpi-header">
+            <span class="kpi-title">الشركات المشغلة فعلياً بالعينة</span>
+            <span class="kpi-badge badge-actual">Operating Airlines</span>
+          </div>
+          <div class="kpi-value-row">
+            <span class="kpi-value" id="kpi-actual-airlines">—</span>
+            <span class="kpi-unit">شركة مشغلة</span>
+          </div>
+          <div class="kpi-footer">
+            <span class="kpi-scope">ناقلات نفذت رحلات فعلية</span>
+            <span>Physical Operators</span>
+          </div>
+        </div>
+
+        <div class="kpi-card highlight-actual">
+          <div class="kpi-header">
+            <span class="kpi-title">الوجهات المرصودة فعلياً</span>
+            <span class="kpi-badge badge-actual">Observed Destinations</span>
+          </div>
+          <div class="kpi-value-row">
+            <span class="kpi-value" id="kpi-actual-destinations">—</span>
+            <span class="kpi-unit">مطار متصل</span>
+          </div>
+          <div class="kpi-footer">
+            <span class="kpi-scope">محطات الرحلات المرصودة</span>
+            <span>Routes</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section C: Coverage Comparison (Independent Dimensions) -->
+    <section class="section-card">
+      <div class="section-header">
+        <div>
+          <h2 class="section-title">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="8.5" cy="7" r="4"></circle><polyline points="17 11 19 13 23 9"></polyline></svg>
+            <span>القسم (ج) — مقارنة أبعاد التغطية (Schedule Coverage vs Actual Observation Coverage)</span>
+          </h2>
+          <p class="section-subtitle">عرض مستقل تماماً لبُعدي التغطية؛ يمنع مقارنة إجمالي الشهر بعينة يومين كنسبة إنجاز، ويوضح حالة عدم اليقين في المراقبة.</p>
         </div>
       </div>
 
-      <!-- 3. Active Airlines -->
-      <div class="kpi-card highlight-general">
-        <div class="kpi-header">
-          <span class="kpi-title">شركات الطيران في النطاق</span>
-          <span class="kpi-badge badge-neutral">Dataset Carriers</span>
+      <div class="coverage-panels-grid">
+        <!-- Dimension 1: Schedule Coverage -->
+        <div class="coverage-panel panel-sched">
+          <div class="panel-header">
+            <span class="panel-title">1. تغطية الجداول الزمنية (Schedule Coverage)</span>
+            <span class="status-pill status-available" id="cov-sched-status">متاحة (Available)</span>
+          </div>
+          <div class="panel-metrics-list">
+            <div class="metric-item">
+              <div class="metric-label">أيام توفر الجداول:</div>
+              <div class="metric-val" id="cov-sched-days">—</div>
+            </div>
+            <div class="metric-item">
+              <div class="metric-label">أول تاريخ مجدول:</div>
+              <div class="metric-val" id="cov-sched-first" style="font-size:0.95rem;">—</div>
+            </div>
+            <div class="metric-item">
+              <div class="metric-label">آخر تاريخ مجدول:</div>
+              <div class="metric-val" id="cov-sched-last" style="font-size:0.95rem;">—</div>
+            </div>
+            <div class="metric-item">
+              <div class="metric-label">إجمالي سجلات الجداول:</div>
+              <div class="metric-val" id="cov-sched-records">—</div>
+            </div>
+          </div>
+          <div class="panel-notice">
+            <strong>ملاحظة التغطية:</strong> توفر سجلات الجداول الزمنية يثبت فقط النشر المسبق للرحلات على شاشات العرض ولا يُعتبر إثباتاً لتنفيذ الطيران الفعلي.
+          </div>
         </div>
-        <div class="kpi-value-row">
-          <span class="kpi-value" id="kpi-airlines-val">—</span>
-          <span class="kpi-unit">شركة مسجلة</span>
-        </div>
-        <div class="kpi-footer">
-          <span class="kpi-scope">تشمل الجداول والرمز المشترك (17 مشغلة فعلياً في عينة 9-10 تشرين الأول)</span>
-          <span>ناقلات تجارية</span>
-        </div>
-      </div>
 
-      <!-- 4. Active Destinations -->
-      <div class="kpi-card highlight-general">
-        <div class="kpi-header">
-          <span class="kpi-title">الوجهات المتصلة</span>
-          <span class="kpi-badge badge-neutral">Destinations</span>
-        </div>
-        <div class="kpi-value-row">
-          <span class="kpi-value" id="kpi-destinations-val">—</span>
-          <span class="kpi-unit">مطار متصل</span>
-        </div>
-        <div class="kpi-footer">
-          <span class="kpi-scope">محطات خليجية، إقليمية، ومحلية</span>
-          <span>شبكة الربط الجوي</span>
-        </div>
-      </div>
-
-      <!-- 5. Covered Airports -->
-      <div class="kpi-card highlight-general">
-        <div class="kpi-header">
-          <span class="kpi-title">المطارات المغطاة بالرصد</span>
-          <span class="kpi-badge badge-neutral">Aerodromes</span>
-        </div>
-        <div class="kpi-value-row">
-          <span class="kpi-value" id="kpi-airports-val">—</span>
-          <span class="kpi-unit">من أصل 7 مطارات</span>
-        </div>
-        <div class="kpi-footer">
-          <span class="kpi-scope" id="kpi-airports-scope">DAM, ALP, DEZ, LTK</span>
-          <span>سجل المطارات الوطنية</span>
+        <!-- Dimension 2: Observation Coverage -->
+        <div class="coverage-panel panel-obs">
+          <div class="panel-header">
+            <span class="panel-title">2. تغطية الرصد والمراقبة الفعلية (Actual Observation Coverage)</span>
+            <span class="status-pill status-available" id="cov-obs-status">تتوفر حركات مرصودة</span>
+          </div>
+          <div class="panel-metrics-list">
+            <div class="metric-item">
+              <div class="metric-label">أيام الحركات المرصودة:</div>
+              <div class="metric-val" id="cov-obs-days">—</div>
+            </div>
+            <div class="metric-item">
+              <div class="metric-label">أول تاريخ رصد:</div>
+              <div class="metric-val" id="cov-obs-first" style="font-size:0.95rem;">—</div>
+            </div>
+            <div class="metric-item">
+              <div class="metric-label">آخر تاريخ رصد:</div>
+              <div class="metric-val" id="cov-obs-last" style="font-size:0.95rem;">—</div>
+            </div>
+            <div class="metric-item">
+              <div class="metric-label">حركات ADS-B المرصودة:</div>
+              <div class="metric-val" id="cov-obs-movements">—</div>
+            </div>
+          </div>
+          <div class="panel-notice" style="border-color:#FDE68A; background-color:#FFFBEB;">
+            <strong style="color:var(--warning);">حالة المراقبة خارج تواريخ الرصد:</strong> <span id="cov-obs-outside" style="font-weight:700;">Monitoring Coverage Unknown</span>
+            <div style="margin-top:4px;">عدم وجود سجلات حركات مرصودة خارج هذه التواريخ لا يعني انعدام الرحلات بل يعني عدم توفر إشارات استقبال التيليمتري الموثقة في ملف البيانات.</div>
+          </div>
         </div>
       </div>
     </section>
@@ -882,11 +1054,7 @@
       <div class="section-header">
         <div>
           <h2 class="section-title">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <line x1="18" y1="20" x2="18" y2="10"></line>
-              <line x1="12" y1="20" x2="12" y2="4"></line>
-              <line x1="6" y1="20" x2="6" y2="14"></line>
-            </svg>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
             <span>استعراض الرحلات المجدولة وعينة الرصد التجاري المتاحة (فصل مرئي)</span>
           </h2>
           <p class="section-subtitle">فصل مرئي قاطع: الرحلات المجدولة تغطي كامل الشهر، بينما حركات ADS-B تمثل عينة 48 ساعة فقط (9-10 تشرين الأول) لتفادي أي مقارنة مضللة بنسب الإنجاز.</p>
@@ -908,26 +1076,19 @@
       </div>
 
       <div class="chart-container" id="chart-bars-list">
-        <!-- Injected via JavaScript -->
         <div style="text-align:center; padding: 24px; color: var(--text-light);">جارٍ تحميل المخطط البياني...</div>
       </div>
     </section>
 
-    <!-- Monthly Summary Table Section -->
+    <!-- Section D: Monthly Summary Table Section -->
     <section class="section-card">
       <div class="section-header">
         <div>
           <h2 class="section-title">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-              <polyline points="14 2 14 8 20 8"></polyline>
-              <line x1="16" y1="13" x2="8" y2="13"></line>
-              <line x1="16" y1="17" x2="8" y2="17"></line>
-              <polyline points="10 9 9 9 8 9"></polyline>
-            </svg>
-            <span>جدول الملخص الشهري المجمّع للعمليات الجوية</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+            <span>القسم (د) — جدول الملخص الشهري المجمّع للعمليات الجوية</span>
           </h2>
-          <p class="section-subtitle">تجميع شهري موثق يوضح توزيع الرحلات المجدولة (وصول ومغادرة) وعينة الحركات المرصودة دون خلط أو افتراض نسب إنجاز.</p>
+          <p class="section-subtitle">تجميع شهري منفصل تماماً يعرض تفاصيل الجداول وحركات الرصد والشركات والوجهات وحالة أبعاد التغطية.</p>
         </div>
       </div>
 
@@ -937,56 +1098,76 @@
             <tr>
               <th>الشهر</th>
               <th>رمز المطار</th>
-              <th>حركات مرصودة عبر بث ADS-B (عينة 9-10 تشرين الأول فقط)</th>
               <th>الرحلات المجدولة</th>
-              <th>الرحلات المجدولة (وصول)</th>
-              <th>الرحلات المجدولة (مغادرة)</th>
+              <th>وصول مجدول</th>
+              <th>مغادرة مجدولة</th>
+              <th>شركات الجداول</th>
+              <th>وجهات الجداول</th>
+              <th>حالة تغطية الجداول</th>
+              <th>حركات ADS-B (عينة)</th>
+              <th>وصول مرصود</th>
+              <th>مغادرة مرصودة</th>
+              <th>شركات الرصد</th>
+              <th>وجهات الرصد</th>
+              <th>حالة تغطية الرصد</th>
+              <th>المراقبة خارج العينة</th>
               <th>المسافرون</th>
-              <th>شركات الطيران</th>
-              <th>الوجهات المتصلة</th>
             </tr>
           </thead>
           <tbody id="table-monthly-body">
             <tr>
-              <td colspan="9" style="text-align:center; padding: 20px; color: var(--text-light);">جارٍ استعلام وتجميع البيانات الميدانية...</td>
+              <td colspan="16" style="text-align:center; padding: 20px; color: var(--text-light);">جارٍ استعلام وتجميع البيانات الميدانية...</td>
             </tr>
           </tbody>
         </table>
       </div>
     </section>
 
-    <!-- Dual Export Action Box -->
+    <!-- Section 8: Multi-Format Export Action Area -->
     <section class="export-box">
       <div class="export-info">
-        <h3>تصدير البيانات المعتمدة بصيغتي CSV و Excel</h3>
-        <p>تصدير فوري متوافق مع معايير التدقيق وحوكمة البيانات؛ يحترم التصفية الحالية ويُبقي الحقول غير المرصودة فارغة (Null) تجنباً للتضليل الإحصائي.</p>
+        <h3>تصدير البيانات المعتمدة بصيغتي CSV و Excel (CSV-First Architecture)</h3>
+        <p>تصدير معياري مباشر من ملف <code>all_syrian_flight_events.csv</code>؛ يفصل بين الرحلات المجدولة وحركات الرصد الفعلي، ويحافظ على دقة التصنيفات والترميز الأصلي دون أي افتراضات غير موثقة.</p>
       </div>
 
       <div class="export-buttons-group">
-        <!-- Detailed Flight Events -->
-        <div class="export-btn-set">
-          <span class="export-btn-label">سجلات الرحلات المفصلة:</span>
-          <button type="button" class="export-btn" id="btn-export-events-csv">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-            <span>CSV</span>
-          </button>
-          <button type="button" class="export-btn btn-excel" id="btn-export-events-xlsx">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="8" y1="13" x2="16" y2="17"></line><line x1="16" y1="13" x2="8" y2="17"></line></svg>
-            <span>Excel (.xlsx)</span>
-          </button>
+        <div class="export-row">
+          <!-- All Flight Events -->
+          <div class="export-btn-set">
+            <span class="export-btn-label">سجلات الرحلات (الكل):</span>
+            <button type="button" class="export-btn" id="btn-export-events-csv">CSV</button>
+            <button type="button" class="export-btn btn-excel" id="btn-export-events-xlsx">Excel</button>
+          </div>
+
+          <!-- Scheduled Only -->
+          <div class="export-btn-set">
+            <span class="export-btn-label">الرحلات المجدولة فقط:</span>
+            <button type="button" class="export-btn" id="btn-export-sched-csv">CSV</button>
+            <button type="button" class="export-btn btn-excel" id="btn-export-sched-xlsx">Excel</button>
+          </div>
         </div>
 
-        <!-- Monthly Summary -->
-        <div class="export-btn-set">
-          <span class="export-btn-label">جدول الملخص الشهري:</span>
-          <button type="button" class="export-btn" id="btn-export-monthly-csv">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-            <span>CSV</span>
-          </button>
-          <button type="button" class="export-btn btn-excel" id="btn-export-monthly-xlsx">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="8" y1="13" x2="16" y2="17"></line><line x1="16" y1="13" x2="8" y2="17"></line></svg>
-            <span>Excel (.xlsx)</span>
-          </button>
+        <div class="export-row">
+          <!-- Observed Only -->
+          <div class="export-btn-set">
+            <span class="export-btn-label">حركات ADS-B المرصودة:</span>
+            <button type="button" class="export-btn" id="btn-export-obs-csv">CSV</button>
+            <button type="button" class="export-btn btn-excel" id="btn-export-obs-xlsx">Excel</button>
+          </div>
+
+          <!-- Monthly Summary -->
+          <div class="export-btn-set">
+            <span class="export-btn-label">الملخص الشهري:</span>
+            <button type="button" class="export-btn" id="btn-export-monthly-csv">CSV</button>
+            <button type="button" class="export-btn btn-excel" id="btn-export-monthly-xlsx">Excel</button>
+          </div>
+
+          <!-- Coverage Summary -->
+          <div class="export-btn-set">
+            <span class="export-btn-label">ملخص التغطية:</span>
+            <button type="button" class="export-btn" id="btn-export-cov-csv">CSV</button>
+            <button type="button" class="export-btn btn-excel" id="btn-export-cov-xlsx">Excel</button>
+          </div>
         </div>
       </div>
     </section>
@@ -997,7 +1178,7 @@
   <footer class="app-footer">
     <div class="footer-inner">
       <div>
-        <span>منظومة بيانات المطارات السورية — الإصدار التحليلي الموجه 2.0.0</span>
+        <span>منظومة بيانات المطارات السورية — الإصدار التحليلي الموجه 2.0.0 (CSV-First Architecture)</span>
       </div>
       <div>
         <span>بصمة البيانات المرجعية: SHA-256 Verified • قاعدة بيانات دمشق والمطارات السورية</span>
@@ -1019,14 +1200,35 @@
       const btnApply = document.getElementById('btn-apply-filters');
       const btnReset = document.getElementById('btn-reset-filters');
 
+      // Section A: Scheduled Services Elements
+      const kpiSchedTotal = document.getElementById('kpi-sched-total');
+      const kpiSchedArr = document.getElementById('kpi-sched-arr');
+      const kpiSchedDep = document.getElementById('kpi-sched-dep');
+      const kpiSchedAirlines = document.getElementById('kpi-sched-airlines');
+      const kpiSchedDestinations = document.getElementById('kpi-sched-destinations');
+      const kpiSchedDates = document.getElementById('kpi-sched-dates');
+
+      // Section B: Observed Movements Elements
       const kpiActualVal = document.getElementById('kpi-actual-val');
       const kpiActualScope = document.getElementById('kpi-actual-scope');
-      const kpiSchedVal = document.getElementById('kpi-sched-val');
-      const kpiSchedScope = document.getElementById('kpi-sched-scope');
-      const kpiAirlinesVal = document.getElementById('kpi-airlines-val');
-      const kpiDestinationsVal = document.getElementById('kpi-destinations-val');
-      const kpiAirportsVal = document.getElementById('kpi-airports-val');
-      const kpiAirportsScope = document.getElementById('kpi-airports-scope');
+      const kpiActualArr = document.getElementById('kpi-actual-arr');
+      const kpiActualDep = document.getElementById('kpi-actual-dep');
+      const kpiActualAirlines = document.getElementById('kpi-actual-airlines');
+      const kpiActualDestinations = document.getElementById('kpi-actual-destinations');
+
+      // Section C: Coverage Elements
+      const covSchedStatus = document.getElementById('cov-sched-status');
+      const covSchedDays = document.getElementById('cov-sched-days');
+      const covSchedFirst = document.getElementById('cov-sched-first');
+      const covSchedLast = document.getElementById('cov-sched-last');
+      const covSchedRecords = document.getElementById('cov-sched-records');
+
+      const covObsStatus = document.getElementById('cov-obs-status');
+      const covObsDays = document.getElementById('cov-obs-days');
+      const covObsFirst = document.getElementById('cov-obs-first');
+      const covObsLast = document.getElementById('cov-obs-last');
+      const covObsMovements = document.getElementById('cov-obs-movements');
+      const covObsOutside = document.getElementById('cov-obs-outside');
 
       const chartList = document.getElementById('chart-bars-list');
       const tableBody = document.getElementById('table-monthly-body');
@@ -1035,15 +1237,19 @@
       // Export Buttons
       const btnExportEventsCsv = document.getElementById('btn-export-events-csv');
       const btnExportEventsXlsx = document.getElementById('btn-export-events-xlsx');
+      const btnExportSchedCsv = document.getElementById('btn-export-sched-csv');
+      const btnExportSchedXlsx = document.getElementById('btn-export-sched-xlsx');
+      const btnExportObsCsv = document.getElementById('btn-export-obs-csv');
+      const btnExportObsXlsx = document.getElementById('btn-export-obs-xlsx');
       const btnExportMonthlyCsv = document.getElementById('btn-export-monthly-csv');
       const btnExportMonthlyXlsx = document.getElementById('btn-export-monthly-xlsx');
+      const btnExportCovCsv = document.getElementById('btn-export-cov-csv');
+      const btnExportCovXlsx = document.getElementById('btn-export-cov-xlsx');
 
       function showToast(msg) {
         toast.textContent = msg;
         toast.style.display = 'block';
-        setTimeout(() => {
-          toast.style.display = 'none';
-        }, 3200);
+        setTimeout(() => { toast.style.display = 'none'; }, 3200);
       }
 
       function buildQueryParams() {
@@ -1068,7 +1274,6 @@
           if (!res.ok) return;
           const data = await res.json();
 
-          // Populate Airlines
           if (data.airlines && data.airlines.length > 0) {
             airlineSelect.innerHTML = '<option value="">كافة شركات الطيران (All Airlines)</option>';
             data.airlines.forEach(a => {
@@ -1079,7 +1284,6 @@
             });
           }
 
-          // Populate Destinations
           if (data.destinations && data.destinations.length > 0) {
             destinationSelect.innerHTML = '<option value="">كافة الوجهات (All Destinations)</option>';
             data.destinations.forEach(d => {
@@ -1091,11 +1295,11 @@
             });
           }
         } catch (err) {
-          console.warn('Failed to load dynamic filter options', err);
+          console.warn('Failed to load filter options', err);
         }
       }
 
-      // 2. Load KPIs
+      // 2. Load KPIs and Coverage
       async function loadKPIs() {
         try {
           const p = buildQueryParams();
@@ -1103,37 +1307,60 @@
           if (!res.ok) throw new Error('KPI fetch failed');
           const data = await res.json();
           const k = data.kpis;
+          const sched = data.schedule_coverage || {};
+          const obs = data.observation_coverage || {};
 
-          // Actual movements
-          if (k.actual_movements !== null && k.actual_movements !== undefined) {
-            kpiActualVal.textContent = Number(k.actual_movements).toLocaleString('ar-SY');
+          // Section A: Scheduled
+          kpiSchedTotal.textContent = Number(k.scheduled_flights || 0).toLocaleString('ar-SY');
+          kpiSchedArr.textContent = Number(sched.scheduled_arrivals || 0).toLocaleString('ar-SY');
+          kpiSchedDep.textContent = Number(sched.scheduled_departures || 0).toLocaleString('ar-SY');
+          kpiSchedAirlines.textContent = Number(sched.active_scheduled_airlines || 0).toLocaleString('ar-SY');
+          kpiSchedDestinations.textContent = Number(sched.active_scheduled_destinations || 0).toLocaleString('ar-SY');
+          if (sched.first_scheduled_date && sched.last_scheduled_date) {
+            kpiSchedDates.textContent = `${sched.first_scheduled_date} إلى ${sched.last_scheduled_date}`;
+          } else {
+            kpiSchedDates.textContent = 'لا توجد جداول معلنة';
+          }
+
+          // Section B: Observed Movements
+          if (obs.observed_movements !== null && obs.observed_movements !== undefined) {
+            kpiActualVal.textContent = Number(obs.observed_movements).toLocaleString('ar-SY');
             kpiActualVal.className = 'kpi-value';
+            kpiActualArr.textContent = Number(obs.observed_arrivals || 0).toLocaleString('ar-SY');
+            kpiActualDep.textContent = Number(obs.observed_departures || 0).toLocaleString('ar-SY');
+            kpiActualAirlines.textContent = Number(obs.active_observed_airlines || 0).toLocaleString('ar-SY');
+            kpiActualDestinations.textContent = Number(obs.active_observed_destinations || 0).toLocaleString('ar-SY');
+            kpiActualScope.textContent = `عينة ${obs.first_observed_date} إلى ${obs.last_observed_date} فقط`;
           } else {
             kpiActualVal.textContent = 'غير متوفر (فجوة)';
             kpiActualVal.className = 'kpi-value val-null';
+            kpiActualArr.textContent = '—';
+            kpiActualDep.textContent = '—';
+            kpiActualAirlines.textContent = '—';
+            kpiActualDestinations.textContent = '—';
+            kpiActualScope.textContent = 'فترة غير مرصودة في التتبع التجاري (لا تمثل صفراً)';
           }
 
-          // Scheduled
-          kpiSchedVal.textContent = Number(k.scheduled_flights || 0).toLocaleString('ar-SY');
+          // Section C: Coverage Comparison
+          covSchedStatus.textContent = sched.status_ar || sched.status;
+          covSchedStatus.className = sched.status === 'Available' ? 'status-pill status-available' : 'status-pill status-nodata';
+          covSchedDays.textContent = Number(sched.scheduled_dates_count || 0).toLocaleString('ar-SY') + ' يوماً';
+          covSchedFirst.textContent = sched.first_scheduled_date || '—';
+          covSchedLast.textContent = sched.last_scheduled_date || '—';
+          covSchedRecords.textContent = Number(sched.scheduled_service_records || 0).toLocaleString('ar-SY') + ' رحلة';
 
-          // Airlines & Destinations
-          kpiAirlinesVal.textContent = Number(k.active_airlines || 0).toLocaleString('ar-SY');
-          kpiDestinationsVal.textContent = Number(k.active_destinations || 0).toLocaleString('ar-SY');
+          covObsStatus.textContent = obs.status_ar || obs.status;
+          covObsStatus.className = obs.status === 'Observed Movements Available' ? 'status-pill status-available' : 'status-pill status-nodata';
+          covObsDays.textContent = Number(obs.observed_dates_count || 0).toLocaleString('ar-SY') + ' يوماً';
+          covObsFirst.textContent = obs.first_observed_date || '—';
+          covObsLast.textContent = obs.last_observed_date || '—';
+          covObsMovements.textContent = obs.observed_movements !== null ? Number(obs.observed_movements).toLocaleString('ar-SY') + ' حركة' : 'فجوة رصد (Null)';
+          covObsOutside.textContent = obs.monitoring_outside_status || 'Monitoring Coverage Unknown';
 
-          // Covered Airports
-          kpiAirportsVal.textContent = Number(k.airports_covered || 0).toLocaleString('ar-SY');
-
-          // Scopes & Labels
-          if (data.period && data.period.label) {
-            kpiSchedScope.textContent = data.period.label;
-          }
-          if (data.airport_scope) {
-            kpiAirportsScope.textContent = data.airport_scope === 'DAM' ? 'مطار دمشق الدولي' : data.airport_scope;
-          }
         } catch (err) {
           console.error(err);
           kpiActualVal.textContent = '—';
-          kpiSchedVal.textContent = '—';
+          kpiSchedTotal.textContent = '—';
         }
       }
 
@@ -1150,36 +1377,43 @@
           renderChart(rows);
         } catch (err) {
           console.error(err);
-          tableBody.innerHTML = `<tr><td colspan="9" style="text-align:center; padding: 20px; color: #DC2626;">تعذر تحميل ملخص البيانات: ${err.message}</td></tr>`;
+          tableBody.innerHTML = `<tr><td colspan="16" style="text-align:center; padding: 20px; color: #DC2626;">تعذر تحميل ملخص البيانات: ${err.message}</td></tr>`;
           chartList.innerHTML = `<div style="text-align:center; padding: 20px; color: #DC2626;">تعذر تحميل المخطط البياني.</div>`;
         }
       }
 
       function renderTable(rows) {
         if (!rows || rows.length === 0) {
-          tableBody.innerHTML = '<tr><td colspan="9" style="text-align:center; padding: 24px; color: var(--text-light);">لا توجد سجلات مطابقة لمعايير التصفية المحددة.</td></tr>';
+          tableBody.innerHTML = '<tr><td colspan="16" style="text-align:center; padding: 24px; color: var(--text-light);">لا توجد سجلات مطابقة لمعايير التصفية المحددة.</td></tr>';
           return;
         }
 
         let html = '';
         rows.forEach(r => {
           const actualCell = r.actual_movements !== null
-            ? `<span class="cell-actual-val" title="عينة 9-10 تشرين الأول فقط">${Number(r.actual_movements).toLocaleString('ar-SY')} <small style="font-weight:500; color:var(--text-muted);">(عينة 48 ساعة)</small></span>`
-            : `<span class="cell-unobserved" title="فترة غير مرصودة في التتبع التجاري: لا تُعتبر أصفاراً بل فجوة بيانات معلنة">غير متوفر (فجوة تتبع)</span>`;
+            ? `<span class="cell-actual-val" title="عينة 9-10 تشرين الأول فقط">${Number(r.actual_movements).toLocaleString('ar-SY')} <small style="font-weight:500; color:var(--text-muted);">(48 ساعة)</small></span>`
+            : `<span class="cell-unobserved" title="فترة غير مرصودة في التتبع التجاري: فجوة بيانات معلنة">فجوة رصد (Null)</span>`;
 
-          const passengerCell = `<span class="cell-null-passengers" title="بيانات المسافرين غير منشورة رسمياً دون تخمين">غير متوفر / Null</span>`;
+          const passengerCell = `<span class="cell-null-passengers">غير متاح / Null</span>`;
 
           html += `
             <tr>
               <td class="cell-numeric" style="font-weight:700;">${r.month}</td>
               <td><strong>${r.airport_id}</strong></td>
-              <td class="cell-numeric">${actualCell}</td>
               <td class="cell-numeric cell-sched-val">${Number(r.scheduled_flights).toLocaleString('ar-SY')}</td>
               <td class="cell-numeric">${Number(r.scheduled_arrivals || 0).toLocaleString('ar-SY')}</td>
               <td class="cell-numeric">${Number(r.scheduled_departures || 0).toLocaleString('ar-SY')}</td>
+              <td class="cell-numeric">${Number(r.scheduled_airlines || 0).toLocaleString('ar-SY')}</td>
+              <td class="cell-numeric">${Number(r.scheduled_destinations || 0).toLocaleString('ar-SY')}</td>
+              <td><span class="status-pill status-available">${r.schedule_coverage_status}</span></td>
+              <td class="cell-numeric">${actualCell}</td>
+              <td class="cell-numeric">${r.observed_arrivals !== null ? Number(r.observed_arrivals).toLocaleString('ar-SY') : '—'}</td>
+              <td class="cell-numeric">${r.observed_departures !== null ? Number(r.observed_departures).toLocaleString('ar-SY') : '—'}</td>
+              <td class="cell-numeric">${r.observed_airlines !== null ? Number(r.observed_airlines).toLocaleString('ar-SY') : '—'}</td>
+              <td class="cell-numeric">${r.observed_destinations !== null ? Number(r.observed_destinations).toLocaleString('ar-SY') : '—'}</td>
+              <td><span class="${r.actual_movements !== null ? 'status-pill status-available' : 'status-pill status-nodata'}">${r.observation_coverage_status}</span></td>
+              <td><span class="status-pill status-unknown">${r.monitoring_outside_status}</span></td>
               <td>${passengerCell}</td>
-              <td class="cell-numeric">${Number(r.active_airlines).toLocaleString('ar-SY')}</td>
-              <td class="cell-numeric">${Number(r.active_destinations).toLocaleString('ar-SY')}</td>
             </tr>
           `;
         });
@@ -1192,7 +1426,6 @@
           return;
         }
 
-        // Find max scheduled or actual for proportional scaling
         let maxVal = 100;
         rows.forEach(r => {
           if (r.scheduled_flights > maxVal) maxVal = r.scheduled_flights;
@@ -1239,12 +1472,12 @@
                 <span class="group-sub">شهر: ${r.month}</span>
               </div>
               <div class="bar-group-bars">
-                <!-- Actual Movements Bar (Explicit Sample) -->
+                <!-- Actual Movements Bar -->
                 <div class="bar-row">
                   <span class="bar-label" style="font-weight:600; color:var(--primary);">حركات ADS-B (عينة 48 ساعة):</span>
                   ${actualBarContent}
                 </div>
-                <!-- Scheduled Flights Bar (Full Month) -->
+                <!-- Scheduled Flights Bar -->
                 <div class="bar-row">
                   <span class="bar-label" style="font-weight:600; color:var(--accent);">الرحلات المجدولة (كامل الشهر):</span>
                   <div class="bar-track">
@@ -1276,13 +1509,41 @@
       btnExportEventsCsv.addEventListener('click', () => {
         const p = buildQueryParams();
         p.append('format', 'csv');
-        triggerDownload(`/api/air-traffic/export/events?${p.toString()}`, 'syrian_flight_events.csv');
+        triggerDownload(`/api/air-traffic/export/events?${p.toString()}`, 'all_syrian_flight_events.csv');
       });
 
       btnExportEventsXlsx.addEventListener('click', () => {
         const p = buildQueryParams();
         p.append('format', 'xlsx');
-        triggerDownload(`/api/air-traffic/export/events?${p.toString()}`, 'syrian_flight_events.xlsx');
+        triggerDownload(`/api/air-traffic/export/events?${p.toString()}`, 'all_syrian_flight_events.xlsx');
+      });
+
+      btnExportSchedCsv.addEventListener('click', () => {
+        const p = buildQueryParams();
+        p.append('format', 'csv');
+        p.append('record_nature', 'scheduled_service');
+        triggerDownload(`/api/air-traffic/export/events?${p.toString()}`, 'scheduled_services.csv');
+      });
+
+      btnExportSchedXlsx.addEventListener('click', () => {
+        const p = buildQueryParams();
+        p.append('format', 'xlsx');
+        p.append('record_nature', 'scheduled_service');
+        triggerDownload(`/api/air-traffic/export/events?${p.toString()}`, 'scheduled_services.xlsx');
+      });
+
+      btnExportObsCsv.addEventListener('click', () => {
+        const p = buildQueryParams();
+        p.append('format', 'csv');
+        p.append('record_nature', 'physical_movement');
+        triggerDownload(`/api/air-traffic/export/events?${p.toString()}`, 'adsb_observed_movements.csv');
+      });
+
+      btnExportObsXlsx.addEventListener('click', () => {
+        const p = buildQueryParams();
+        p.append('format', 'xlsx');
+        p.append('record_nature', 'physical_movement');
+        triggerDownload(`/api/air-traffic/export/events?${p.toString()}`, 'adsb_observed_movements.xlsx');
       });
 
       btnExportMonthlyCsv.addEventListener('click', () => {
@@ -1295,6 +1556,18 @@
         const p = buildQueryParams();
         p.append('format', 'xlsx');
         triggerDownload(`/api/air-traffic/export/monthly?${p.toString()}`, 'syrian_air_traffic_monthly_summary.xlsx');
+      });
+
+      btnExportCovCsv.addEventListener('click', () => {
+        const p = buildQueryParams();
+        p.append('format', 'csv');
+        triggerDownload(`/api/air-traffic/export/coverage?${p.toString()}`, 'syrian_air_traffic_coverage_summary.csv');
+      });
+
+      btnExportCovXlsx.addEventListener('click', () => {
+        const p = buildQueryParams();
+        p.append('format', 'xlsx');
+        triggerDownload(`/api/air-traffic/export/coverage?${p.toString()}`, 'syrian_air_traffic_coverage_summary.xlsx');
       });
 
       // Filter Handlers
