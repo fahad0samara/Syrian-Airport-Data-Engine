@@ -1,267 +1,225 @@
-# Syrian Airport Data Engine
+# محرك بيانات المطارات السورية (Syrian Airport Data Engine)
 
-An empirical flight operations processing engine, schedule reconciler, and historical aviation analysis platform focused on **Damascus International Airport (IATA: `DAM`, ICAO: `OSDI`)** and regional Syrian aerodromes (**Aleppo `ALP`, Latakia `LTK`, Deir ez-Zor `DEZ`, Qamishli `KAC`, Palmyra `PMS`**).
+منظومة لمعالجة بيانات عمليات الطيران، ومطابقة الجداول الزمنية، والتحليل التاريخي لحركة النقل الجوي، مع التركيز المعمق على **مطار دمشق الدولي (IATA: DAM / ICAO: OSDI)** والمطارات المدنية في الجمهورية العربية السورية (**حلب ALP، واللاذقية LTK، ودير الزور DEZ، والقامشلي KAC، وتدمر PMS**).
 
-The engine collects, normalizes, deduplicates, and audits historical aviation data from airport flight information display systems (FIDS), commercial flight-tracking aggregators, and multilateral economic monitoring datasets. The platform prioritizes source transparency, cryptographic data integrity, and strict separation between published schedules, commercial tracking updates, and regional macro statistics.
-
----
-
-## 1. Project Overview
-
-- **Target Aerodrome**: Damascus International Airport (`DAM` / `OSDI`)
-- **Regional Scope**: Civil and joint civil-military aerodromes across the Syrian Arab Republic
-- **Canonical Timezone**: `Asia/Damascus` (all local timestamps are reconciled to UTC offsets with explicit daylight-saving tracking)
-- **Primary Objective**: Provide an auditable, verifiable record of Syrian flight activity while documenting data provenance, observation limits, and temporal coverage boundaries.
+المنطقة الزمنية المرجعية المعتمدة للمشروع: `Asia/Damascus` (مع تسوية الطوابع الزمنية المحلية وتحويلها إلى التوقيت العالمي المنسق UTC مع مراعاة القيود المنهجية لمصادر البيانات).
 
 ---
 
-## 2. Main Capabilities
+## 1. نبذة عن المشروع
 
-All capabilities described below are implemented, tested, and operational within the codebase:
+يهدف المشروع إلى بناء مرجع بيانات موثق وقابل للمراجعة والتدقيق لحركة الطيران المدني في سوريا، بعيداً عن التقديرات العشوائية أو البيانات المولدة اصطناعياً.
 
-### Flight Movement and Schedule Records
-- **Canonical Event Store**: 1,830 canonical records stored in a normalized relational database (`data/damascus_airport.db`).
-- **Strict Nature Segregation**: Every record is classified into one of four distinct operational natures:
-  - `physical_movement` (131 records): Commercially reported operational flights with actual arrival or departure timestamps corroborated across commercial feeds and airport boards.
-  - `scheduled_service` (1,662 records): Published commercial timetable display slots without verified operational telemetry.
-  - `marketing_codeshare` (34 records): Secondary ticketing partner listings linked to an operating aircraft leg (excluded from movement totals).
-  - `unverified_movement` (3 records): Historical board listings lacking independent multi-source corroboration.
+يقوم المحرك بجمع البيانات التجريبية من شاشات معلومات الرحلات الرسمية (FIDS)، ومنصات تتبع الرحلات التجارية الدولية، ومجموعات البيانات الاقتصادية والإحصائية متعددة الأطراف، ثم يعمل على توحيد بنيتها، وإزالة التكرار، وتوثيق سلسلة الأدلة (Data Provenance) للسجلات التي تتوفر لها مشاهدات ومصادر موثقة.
 
-### Source Traceability and Evidence Provenance
-- **Immutable Evidence Ledger**: An audit table (`event_evidence`) containing 1,508 raw provider observations linked directly to canonical events via foreign keys.
-- **Provider Transparency**: Tracks original provider identity, capture method, raw payload snapshots, and timestamp precision for every data point.
-
-### Movement Classification and Identity Resolution
-- **Deterministic Leg Matching**: Implements diameter-bounded complete-linkage clustering ($\le 60\text{ min}$) to group corroborated records while preventing transitive chaining across rotations.
-- **Turnaround Isolation**: Enforces a $> 180\text{ min}$ threshold to cleanly separate distinct turnarounds and return flights of the same airframe.
-
-### Data Quality and Temporal Validation
-- **Automated Validation Rules**: Verifies UTC timestamp consistency, detects invalid null combinations, flags route mismatches, and audits duplicate candidates.
-- **Timezone Normalization**: Automatically converts varied source representations into canonical ISO-8601 UTC strings (`YYYY-MM-DDTHH:MM:SSZ`) alongside local Damascus representations.
-
-### Historical Coverage Assessment
-- **Timeline Coverage Matrix**: Maps data density across different acquisition epochs, distinguishing between continuous collection periods, point-in-time web archive captures, and macro time series.
-
-### Multi-Airport Comparisons
-- **Aerodromes Registry**: Complete geographic, runway, and operational metadata for 7 Syrian airports.
-- **Regional Isolation**: Explicitly separates single-airport Damascus records from 3-airport regional time series (`DAM`, `ALP`, `LTK`).
-
-### Research-Grade CSV and JSON Exports
-- **Export Streaming**: Dedicated export endpoints for flights, daily movements, and historical records.
-- **Cryptographic Sidecars**: Every export can be generated alongside a metadata sidecar containing query parameters, record counts, timestamp boundaries, and analytical caveats.
-
-### REST API and Interactive Interface
-- **FastAPI Service**: Comprehensive REST API supporting structured queries, pagination, filtering, and JSON schema compliance.
-- **Interactive Data Interface**: Lightweight, accessible web dashboard (`static/index.html`) served at `/` and `/data`, displaying schedule vs. movement comparisons, evidence metrics, and methodology disclosures.
+يركز المشروع على الشفافية المنهجية، حيث تُربط المعلومات بالمصادر والأدلة المتاحة لها، مع توثيق حدود التغطية والفجوات الزمنية، دون ادعاء استقلال تام للمصادر أو اكتمال راداري شامل.
 
 ---
 
-## 3. Data Sources and Methodology
+## 2. القدرات الحالية
 
-The engine ingests data across three distinct methodological tiers:
+تتضمن المنظومة الوظائف البرمجية والتحليلية التالية المطبقة في الكود والمشمولة باختبارات المشروع:
 
-```
-┌────────────────────────────────────────────────────────────────────────┐
-│                        DATA SOURCE TIERS                               │
-├──────────────────────────┬───────────────────────┬─────────────────────┤
-│ 1. Airport FIDS Boards   │ 2. ADS-B & Aggregators│ 3. Macro Aggregates │
-│ (Damascus Airport Portal)│ (AviationStack / FR24)│ (World Bank / SEM)  │
-├──────────────────────────┼───────────────────────┼─────────────────────┤
-│ • Published Timetables   │ • Commercial Statuses │ • 3-Airport Totals  │
-│ • Terminal Display Slots │ • Corroborated Dates  │ • Regional Trends   │
-│ • NOT Radar Touchdowns   │ • Patchy Coverage     │ • NOT DAM-Only      │
-└──────────────────────────┴───────────────────────┴─────────────────────┘
-```
-
-1. **Official Airport FIDS Records**:
-   - Retrieved from official airport information portals (e.g., `damairport.gov.sy`) and preserved historical captures.
-   - **Methodological Role**: Reflects published commercial passenger timetables and scheduled capacity.
-   - **Crucial Distinction**: FIDS records represent timetable listings; they do *not* constitute proof of completed physical runway movements or ground radar contact.
-
-2. **Commercial Flight-Tracking Sources & ADS-B Observations**:
-   - Ingested from international commercial flight-tracking aggregators (e.g., AviationStack, Flightradar24).
-   - **Methodological Role**: Provides multi-source operational status updates, actual reported times, aircraft registrations, and carrier callsigns.
-   - **Crucial Distinction**: ADS-B transponder coverage over Syrian airspace is subject to geographical receiver gaps, terrain masking, and electronic interference. Commercial status updates do *not* constitute direct runway sensor confirmations.
-
-3. **Regional Macro Statistics (`DAM_ALP_LTK`)**:
-   - Compiled from multilateral economic monitoring datasets (World Bank / Data Partnership 2024 series).
-   - **Methodological Role**: Tracks aggregate civil aviation gateway activity across Syria.
-   - **Crucial Distinction**: These datasets combine traffic across Damascus (`DAM`), Aleppo (`ALP`), and Latakia (`LTK`) into a single composite metric. They must *never* be presented as Damascus-only statistics.
+- **تنظيم سجلات الرحلات والحركات**: تخزين علائقي معياري لـ 1,830 سجلاً في جدول `flight_events` ضمن قاعدة بيانات SQLite، موزعة على أربع فئات تشغيلية مستقلة.
+- **تصنيف السجلات التشغيلية**: فصل صارم بين السجلات المصنفة كحركات تشغيلية `physical_movement` (131 سجلاً) مع توضيح أنها مصنفة وفق قواعد المشروع والأدلة التجارية المتاحة وليست إثباتاً مستقلاً لحركة الطائرة على المدرج، والخدمات التجارية المجدولة عبر شاشات العرض دون تتبع مستقل `scheduled_service` (1,662 سجلاً)، ورحلات الرمز المشترك التسويقية التابعة لرحلات تشغيلية أخرى `marketing_codeshare` (34 سجلاً)، والسجلات التاريخية غير المؤكدة بمصادر متعددة `unverified_movement` (3 سجلات).
+- **توثيق مصادر البيانات والأدلة (Evidence Provenance)**: سجل تدقيق غير قابل للتعديل (`event_evidence`) يضم 1,508 مشاهدة خام ترتبط مباشرة بالسجلات الأساسية، مع توثيق اسم المزود، وطريقة الالتقاط، والحمولة الأصلية (Raw Payload)، ودقة الطابع الزمني. مع التوضيح بأن تعدد مزودي البيانات لا يثبت بالضرورة استقلال مصادر الاستشعار، ولا تحظى جميع السجلات بدعم من مصادر متعددة مستقلة.
+- **حل هوية الحركة ومطابقة الرحلات**: خوارزمية مطابقة بحثية قطعية تعتمد حدوداً زمنية استدلالية لتجميع أو فصل المشاهدات المرتبطة بنفس رمز الرحلة أو المسار:
+  - **حتى 60 دقيقة ($\le 60\text{ min}$)**: قابلة للمطابقة والدمج ضمن نفس الحركة التشغيلية في حال توافق رمز الرحلة، مع قبول القيم المفقودة لرقم تسجيل الطائرة عند غياب التعارض وفق بقية شروط المطابقة (Complete Linkage Diameter).
+  - **أكثر من 60 دقيقة وحتى 180 دقيقة ($60\text{m} < \Delta t \le 180\text{m}$)**: تُعامل كحالة ملتبسة (Ambiguous Window) لا تُدمج منعاً للتسلسل التعدي الزائف، ولا تُفصل تلقائياً كحركة جديدة.
+  - **أكثر من 180 دقيقة ($> 180\text{ min}$)**: تُفصل مجموعات المطابقة زمنياً إلى مجموعات مستقلة؛ وهو فصل لمجموعات المطابقة زمنياً لأغراض المعالجة والتحليل، وليس إثباتاً لحركات فعلية مستقلة.
+  - *تعد هذه القواعد ضوابط مطابقة إحصائية وبحثية لأغراض التحليل البرمجي، وليست إثباتاً مادياً لهوية الطائرة أو لحركات فعلية مستقلة على المدرج.*
+- **فحوصات الجودة والتحقق الزمني**: وحدات فحص آلية تتحقق من صياغة الطوابع الزمنية، ورصد القيم المفقودة، ومنع التكرار، والتحقق من اتساق المسارات الجوية والاتجاهات، مع مراعاة أن دلالات الطوابع الزمنية تختلف حسب المصدر ولا يمكن ضمان معالجة موحدة للتوقيت الصيفي عبر كافة المزودين.
+- **مصفوفة التغطية التاريخية**: أداة تقييم لتتبع كثافة وتوفر البيانات عبر الفترات الزمنية المختلفة، مع توثيق فترات الأرشفة والالتقاطات المتقطعة.
+- **المقارنة بين المطارات وعزل البيانات الإقليمية**: يحتوي جدول `airports` في قاعدة البيانات على 7 سجلات مطارات (`DAM`, `ALP`, `LTK`, `DEZ`, `KAC`, `PMS`, `OMDM`). وتجدر الإشارة إلى وجود تعارض بين الرمز والاسم في السجل `OMDM` (حيث قُيّد باسم مطار المزة العسكري رغم أن بادئة `OM` مخصصة في نظام رموز ICAO لدولة الإمارات العربية المتحدة بينما البادئة المعتمدة للمطارات في سوريا هي `OS`)، وهو ما يمثل تعارضاً يحتاج إلى تحقق ولا يمكن استنتاج هوية السجل فيه من الاسم وحده، مع الإشارة إلى أن هذا السجل غير داخل ضمن مصفوفة التغطية التاريخية. في المقابل، تُقيّم مصفوفة التغطية التاريخية (`src/historical_coverage.py`) 5 مطارات رئيسية محددة (`DAM`, `ALP`, `LTK`, `DEZ`, `KAC`). كما تفصل المنظومة برمجياً بين بيانات مطار دمشق الدولي الفردية، والسلاسل الزمنية الإقليمية المجمعة لثلاثة مطارات (`DAM`, `ALP`, `LTK`).
+- **واجهة برمجة التطبيقات (REST API)**: خدمة متكاملة مبنية باستخدام FastAPI تدعم التصفية، والتصفح المجزأ (Pagination)، والاستعلامات المتخصصة، والتوثيق التفاعلي.
+- **تصدير البيانات بصيغتي CSV وJSON مع ملفات الوصف الجانبية**: نقاط نهاية مخصصة لتصدير مجموعات البيانات البحثية، مع توليد ملف وصفي جانبي (Metadata Sidecar) يوثق معايير الاستعلام، وعدد السجلات، والقيود المنهجية.
+- **واجهة تفاعلية لاستعراض البيانات**: لوحة بيانات خفيفة وسريعة (`static/index.html`) تتاح محلياً عبر المسارين `/` و`/data` لعرض مقارنات الجداول مع الحركات المرصودة ومؤشرات الجودة وتنبيهات المنهجية.
 
 ---
 
-## 4. Data Limitations
+## 3. مصادر البيانات والمنهجية
 
-To maintain scientific and analytical integrity, users of this dataset must observe the following documented constraints:
+يعتمد المحرك على ثلاثة مستويات رئيسية من مصادر البيانات، ويطبق تمييزاً منهجياً دقيقاً بينها:
 
-1. **Absence of Record $\ne$ Absence of Flight**:
-   Historical coverage contains collection gaps. Missing data for a specific day or period indicates that no verified records were retrieved during that acquisition window, not that flight activity ceased.
+1. **جداول الرحلات الرسمية (FIDS)**:
+   - تم استخراجها وأرشفتها من البوابات الرسمية للمطارات (مثل بوابة مطار دمشق الدولي `damairport.gov.sy`).
+   - **طبيعتها المنهجية**: تمثل الجداول الزمنية المعلنة للمسافرين والطاقة الاستيعابية المجدولة عبر شاشات العرض.
+   - **التمييز الأساسي**: جداول FIDS تعكس الرحلات المجدولة فقط، ولا تعد إثباتاً قاطعاً لتنفيذ الحركة على المدرج أو رصدها برادارات الهبوط الأرضية.
 
-2. **Historical DAM-Only Coverage is Incomplete**:
-   Continuous, uninterrupted daily flight tracking for Damascus International Airport alone is not available across all historical years. Available records represent specific observation snapshots and collection campaigns.
+2. **بيانات تتبع الرحلات التجارية وملاحظات ADS-B**:
+   - تم جمعها من المنصات التجارية الدولية المعنية ببيانات الطيران (مثل AviationStack وFlightradar24).
+   - **طبيعتها المنهجية**: توفر تحديثات لحالات التشغيل (أقلعت / هبطت)، وأوقاتاً مرصودة تجارياً، وتسجيلات الطائرات المتاحة.
+   - **التمييز الأساسي**: تخضع تغطية أجهزة الاستقبال لمنظومات ADS-B في المجال الجوي السوري لقيود جغرافية وفنية وثغرات تغطية واضحة؛ لذا فإن السجلات الـ 131 المصنفة كـ `physical_movement` هي سجلات مصنفة وفق قواعد المشروع والأدلة التجارية المتاحة، وليست إثباتاً مستقلاً لحركة الطائرة على المدرج أو اتصالاً رادارياً أرضياً بمستشعرات المطار. كما أن تعدد مزودي البيانات لا يثبت بالضرورة استقلال مصادر الاستشعار، لاحتمال اعتماد بعض المزودين على نفس التغذية الأصلية.
 
-3. **Schedules Must Not Be Conflated With Completed Movements**:
-   A scheduled flight entry in a timetable does not guarantee operational execution. Flights may be canceled, diverted, or unoperated without being reflected in static timetable boards.
-
-4. **Regional Aggregates Must Not Be Cited as Damascus Totals**:
-   Data labeled `DAM_ALP_LTK` aggregates three separate airports across Syria. Presenting regional totals as Damascus International Airport traffic is methodologically invalid.
-
-5. **ADS-B Telemetry Sample Limitations**:
-   The available sample of commercially tracked flights does not represent a complete census of all operations at Damascus. Ground movements, uncorroborated military transports, and non-transponder aircraft are not captured.
-
-6. **Preservation of Gaps**:
-   The platform strictly forbids interpolating missing dates with synthetic or simulated flights. If records do not exist for a given date, the engine reports zero recorded events and flags the coverage gap.
+3. **الإحصاءات الإقليمية المجمعة (`DAM_ALP_LTK`)**:
+   - مستمدة من التقارير التنموية ومجموعات البيانات الاقتصادية متعددة الأطراف (سلسلة البنك الدولي / شراكة البيانات 2024).
+   - **طبيعتها المنهجية**: ترصد مؤشرات مجمعة لحركة البوابات الجوية الرئيسية في سوريا.
+   - **التمييز الأساسي**: تجمع هذه الإحصاءات بين مطارات دمشق (`DAM`) وحلب (`ALP`) واللاذقية (`LTK`) في رقم يومي واحد؛ ويحظر منهجياً نسب هذه الأرقام الإقليمية الإجمالية إلى مطار دمشق الدولي منفرداً أو افتراض نسب توزيع ثابتة دون دليل مسند.
 
 ---
 
-## 5. Installation and Usage
+## 4. حدود البيانات
 
-### Prerequisites
-- Python 3.10 or higher (tested and verified on Python 3.13)
-- Windows, macOS, or Linux
+للحفاظ على الدقة والمصداقية العلمية والتحليلية، يجب مراعاة القيود التالية عند استخدام هذا المشروع:
 
-### Installation
+1. **غياب السجل لا يعني عدم وجود رحلة**: تحتوي البيانات على فجوات تاريخية ناتجة عن انقطاع منصات الرصد أو توقف مزودي البيانات؛ وعليه فإن عدم توفر سجلات ليوم محدد يعني عدم توفر بيانات لذلك اليوم وليس توقف حركة الطيران الفعلية.
+2. **التغطية التاريخية الخاصة بمطار دمشق غير مكتملة**: لا تتوفر في المصادر العامة المفتوحة سجلات يومية متصلة ومستمرة لحركة مطار دمشق لكافة السنوات السابقة؛ حيث تغطي البيانات نوافذ زمنية محددة.
+3. **الرحلات المجدولة ليست دليلاً على تنفيذ الحركة**: قد تُلغى الرحلة أو يُحوّل مسارها دون أن ينعكس ذلك فوراً على جداول العرض الثابتة؛ ولهذا يفصل النظام السجلات المجدولة عن الأحداث المرصودة تشغيلياً.
+4. **بيانات ADS-B ومصادر التتبع لا تثبت وحدها الهبوط أو الإقلاع الفعلي**: العينة المتاحة من رحلات التتبع التجاري تمثل ما التقطته مستقبلات تجارية فوق المنطقة وفق شروط معينة، ولا تمثل إثباتاً مادياً مباشراً من مستشعرات أرضية بالمطار.
+5. **البيانات الإقليمية لا يمكن توزيعها على دمشق دون دليل**: لا يجوز تجزئة أرقام `DAM_ALP_LTK` بنسب افتراضية أو تخمينية وافتراض أنها حركة تخص مطار دمشق الدولي.
+6. **اختلاف دلالات الطوابع الزمنية وعدم ضمان معالجة موحدة للتوقيت الصيفي**: يعتمد المشروع `Asia/Damascus` كمنطقة زمنية مرجعية لتسوية الطوابع الزمنية، إلا أن دلالات التوقيت تختلف جوهرياً بين المصادر (بين أوقات محلية مجردة في شاشات العرض بدون إزاحة صريحة، وطوابع Unix عددية، وأوقات مجدولة أو تقديرية لدى المنصات التجارية). ونظراً للتغيرات التاريخية في تطبيق التوقيت الصيفي وإلغائه محلياً، لا يدّعي المشروع معالجة موحدة ومضمونة للتوقيت الصيفي عبر كل المصادر بصورة مطلقة.
+7. **بقاء القيم المفقودة مجهولة وعدم توليد أصفار أو سجلات افتراضية**: يلتزم المحرك بعدم اصطناع أي رحلات وهمية، وتظل الأيام أو الحقول غير المتوفرة مصنفة كفجوات تغطية دون تحويلها تلقائياً إلى قيمة صفرية مضللة.
 
-1. Clone or download the repository:
+---
+
+## 5. التثبيت والتشغيل
+
+### المتطلبات الأساسية
+- Python 3.10 أو أحدث (تم التحقق من تشغيله على بيئة Python 3.13)
+- نظام تشغيل Windows أو Linux أو macOS
+
+### خطوات التثبيت
+
+1. استنساخ المستودع والدخول إلى المجلد:
    ```bash
-   git clone https://github.com/<owner>/syrian-airport-data-engine.git
-   cd "syrian-airport-data-engine"
+   git clone https://github.com/fahad0samara/Syrian-Airport-Data-Engine.git
+   cd "Syrian-Airport-Data-Engine"
    ```
 
-2. Create and activate a virtual environment (optional but recommended):
+2. إنشاء وتفعيل البيئة الافتراضية (اختياري لكن مفضل):
    ```bash
    python -m venv .venv
-   # Windows:
+   # على Windows:
    .venv\Scripts\activate
-   # macOS/Linux:
+   # على Linux/macOS:
    source .venv/bin/activate
    ```
 
-3. Install required dependencies:
+3. تثبيت الاعتماديات البرمجية:
    ```bash
    pip install -r requirements.txt
    ```
 
-### Running the Application
+### تشغيل التطبيق
 
-Start the backend API and web interface:
+تشغيل خادم واجهة التطبيقات البرمجية والواجهة التفاعلية:
 ```bash
 python -m uvicorn src.api:app --host 127.0.0.1 --port 8000
 ```
 
-Once running:
-- **Web Interface**: Open `http://127.0.0.1:8000/` or `http://127.0.0.1:8000/data` in any modern web browser.
-- **Interactive API Documentation (Swagger)**: Visit `http://127.0.0.1:8000/docs`.
-- **Alternative API Documentation (ReDoc)**: Visit `http://127.0.0.1:8000/redoc`.
+بعد بدء التشغيل، يمكن الوصول إلى:
+- **واجهة المستخدم التفاعلية**: عبر الرابط `http://127.0.0.1:8000/` أو `http://127.0.0.1:8000/data`.
+- **توثيق واجهة البرمجة (Swagger UI)**: عبر الرابط `http://127.0.0.1:8000/docs`.
+- **التوثيق البديل (ReDoc)**: عبر الرابط `http://127.0.0.1:8000/redoc`.
 
-### Running Tests
+---
 
-Execute the automated test suite using pytest:
+## 6. واجهات API
+
+توفر المنظومة مجموعة من مسارات REST API المصممة للاستعلام والتحليل:
+
+### المطارات والبيانات المرجعية
+| المسار | الطريقة | الوصف |
+| :--- | :--- | :--- |
+| `/api/airports` | `GET` | استرجاع 7 سجلات مطارات مسجلة في جدول `airports` ومواصفاتها. |
+| `/api/airport?airport_id=DAM` | `GET` | استعلام تفصيلي عن مطار محدد يشمل الإحداثيات والمدرجات والرموز المسجلة. |
+
+### سجلات الرحلات والتصنيفات التشغيلية
+| المسار | الطريقة | الوصف |
+| :--- | :--- | :--- |
+| `/api/flights` | `GET` | استعراض السجلات الموحدة مع إمكانية التصفية بحسب الشركة والمسار والتاريخ وطبيعة السجل. |
+| `/api/movements/comparison` | `GET` | إحصائية مقارنة بين الرحلات المجدولة والأحداث التشغيلية المرصودة تجارياً. |
+| `/api/movements/verified` | `GET` | استرجاع السجلات الـ 131 المصنفة كـ `physical_movement` وفق قواعد المشروع والأدلة التجارية المتاحة (وهي ليست إثباتاً مستقلاً لحركة الطائرة على المدرج). |
+| `/api/movements/scheduled` | `GET` | استرجاع الرحلات المجدولة تجارياً عبر شاشات العرض بدون تتبع مستقل (1,662 سجلاً). |
+| `/api/movements/daily` | `GET` | أعداد الحركات اليومية المجمعة لمطار دمشق مع توضيح أيام التغطية. |
+| `/api/movements/multi-airport` | `GET` | السلاسل اليومية الإقليمية لمطارات دمشق وحلب واللاذقية لعام 2024 (`DAM_ALP_LTK`). |
+
+### الأدلة والتدقيق ومراقبة الجودة
+| المسار | الطريقة | الوصف |
+| :--- | :--- | :--- |
+| `/api/events/{event_id}/evidence` | `GET` | عرض المشاهدات الخام وسلسلة الأدلة الأصلية المرتبطة بحدث محدد. |
+| `/api/evidence/audit` | `GET` | سجل تدقيق لجميع المشاهدات والمصادر التابعة للأدلة المخزنة. |
+| `/api/coverage/matrix` | `GET` | مصفوفة تفصيلية لتوفر البيانات والتغطية للمطارات الخمسة المقيمة حسب المصدر والفترة الزمنية. |
+| `/api/quality` | `GET` | ملخص فحص جودة البيانات ونسب الاكتمال ومؤشرات التحقق. |
+
+### التصدير والبيانات الوصفية
+| المسار | الطريقة | الوصف |
+| :--- | :--- | :--- |
+| `/api/export/{dataset}` | `GET` | تصدير مجموعات البيانات (`flights` أو `daily_movements` أو `historical_2024` أو `archived_fids_records`) بصيغة CSV أو JSON. |
+| `/api/export/{dataset}/sidecar` | `GET` | تحميل ملف البيانات الوصفية الجانبي (Metadata Sidecar) المتضمن شروط الاستعلام والمحاذير المنهجية. |
+
+---
+
+## 7. هيكل المشروع
+
+يمثل المخطط التالي الهيكل المنطقي العام لتنظيم المجلدات والملفات في المشروع، وهو توضيح لبنية المنظومة وليس تأكيداً على تضمين كافة الملفات وقواعد البيانات المحلية في مستودع GitHub:
+
+```
+Syrian-Airport-Data-Engine/
+├── data/                               # قواعد البيانات وقواعد التخزين المؤقت والالتقاطات الخام
+│   ├── damascus_airport.db             # قاعدة البيانات المعيارية الأساسية
+│   ├── archived_fids_staging.db        # قاعدة استيعاب بيانات شاشات العرض المؤرشفة
+│   ├── archived_fids_analytics.db      # تحليلات جداول شاشات العرض التاريخية
+│   ├── archived_fids_history_staging.db# سجل مقارنات اللقطات التاريخية
+│   └── raw/                            # اللقطات والحمولات الخام المحفوظة من المصادر
+├── src/                                # الشيفرة المصدرية للمحرك وواجهات البرمجة
+│   ├── api.py                          # تطبيق FastAPI ومسارات الخدمة والتصدير
+│   ├── config.py                       # السجل الجغرافي للمطارات وإعدادات البيئة
+│   ├── database.py                     # مدير الاتصال بقواعد البيانات
+│   ├── normalizer.py                   # توحيد الطوابع الزمنية والمصطلحات والتحويل إلى UTC
+│   ├── timestamp_provenance.py         # خوارزميات فض الاشتباك ومطابقة حركات الطائرات
+│   ├── aggregator.py                   # خطوط تجميع الحركات اليومية وبناء ملفات التصدير
+│   ├── historical_coverage.py          # بناء مصفوفة التغطية وعزل البيانات الإقليمية
+│   ├── quality_checker.py              # قواعد فحص الجودة والتحقق الزمني والدلالي
+│   └── adapters/                       # محولات الربط مع المصادر المختلفة
+├── static/                             # ملفات الواجهة التفاعلية
+│   └── index.html                      # لوحة البيانات التفاعلية ومقارنات الرحلات
+├── tests/                              # حزمة الاختبارات الآلية المنظمة في المشروع
+├── reports/                            # التقارير التحليلية وسجلات التدقيق المكتملة
+│   ├── Syrian_Airport_Data_Analysis_AR.pdf # التقرير التحليلي الشامل باللغة العربية (8 صفحات)
+│   ├── INDEPENDENT_ANALYTICAL_REVIEW.md    # المراجعة الإحصائية والتحليلية المستقلة
+│   ├── FINAL_ANALYTICAL_CORRECTIONS.md     # جدول مقارنة وتصحيح المؤشرات التحليلية
+│   └── v2_20_12_physical_movement_audit.csv# سجل التدقيق التفصيلي لـ 131 حدثاً تشغيلياً
+├── docs/                               # التوثيق التقني والتقارير المرحلية للتدقيق
+├── requirements.txt                    # الحزم والاعتماديات البرمجية
+├── pytest.ini                          # إعدادات مشغل الاختبارات
+└── README.md                           # وثيقة المشروع الأساسية
+```
+
+*ملاحظة: بعض ملفات قواعد البيانات، واللقطات الخام، والتقارير التفصيلية قد تكون محفوظة محلياً لأغراض التحليل والتدقيق وليست بالضرورة مضمّنة في مستودع GitHub.*
+
+---
+
+## 8. الاختبارات وسلامة البيانات
+
+### تشغيل الاختبارات الآلية
+يحتوي المشروع على حزمة اختبارات انحدار وتدقيق تتضمن اختبارات مخصصة لفحص وظائف المنظومة والخوارزميات ونزاهة البيانات.
+
+لتشغيل الاختبارات:
 ```bash
 pytest
 ```
 
-*Note for environments with external pytest plugins installed (e.g. LangSmith):*
+وفي بيئات العمل التي تتضمن إضافات خارجية مثبتة على Python:
 ```powershell
 $env:PYTEST_DISABLE_PLUGIN_AUTOLOAD="1"; pytest tests/ -v -p no:langsmith
 ```
 
-All 644 automated unit, integration, and regression tests pass without errors or skipped tests.
+**آخر تشغيل مُبلّغ عنه**: اجتياز 644 اختباراً في آخر تشغيل مسجل دون إخفاقات أو اختبارات متجاوزة.
+
+### سلامة البيانات والتحقق منها
+- **حماية البيانات التاريخية**: تقتصر وظائف واجهة الاستعلام ومسارات API المعروضة على استرجاع وقراءة البيانات، دون توفير مسارات لتعديل السجلات التاريخية من خلال واجهة المستخدم.
+- **التحقق من سلامة الأصول**: يمكن حساب بصمات SHA-256 محلياً لملفات البيانات ومقارنتها ببصمات مرجعية موثوقة عند توفرها، للتحقق من تطابق الملفات مع تلك المراجع.
+- تظل اللقطات الخام وسجلات الأدلة التاريخية محفوظة كما وردت من مصادرها المتاحة دون تغيير.
 
 ---
 
-## 6. Key API Endpoints
+## 9. حالة المشروع
 
-The API is organized into logical functional modules:
+يُقدّم المشروع بوصفه **منظومة بيانات وأبحاث تجريبية لحركة الطيران المدني قابلة لتتبع المصادر والتدقيق المنهجي، مع حدود تغطية موثقة ومعلنة بصراحة**.
 
-### Airport & Reference Data
-| Method | Endpoint | Description |
-| :--- | :--- | :--- |
-| `GET` | `/api/airports` | Full Syrian aerodromes registry (DAM, ALP, LTK, DEZ, KAC, PMS, OMDM). |
-| `GET` | `/api/airport?airport_id=DAM` | Detailed technical specifications, coordinates, and runway dimensions. |
-
-### Flight Records & Operational Classifications
-| Method | Endpoint | Description |
-| :--- | :--- | :--- |
-| `GET` | `/api/flights` | Paginated canonical flight events with carrier, date, and status filters. |
-| `GET` | `/api/movements/comparison` | Breakdown comparing scheduled timetable slots vs. operational events. |
-| `GET` | `/api/movements/verified` | Commercially reported operational flights with verified timestamps. |
-| `GET` | `/api/movements/scheduled` | Published commercial timetable display records without independent telemetry. |
-| `GET` | `/api/movements/daily` | Aggregated daily movement counts for Damascus. |
-| `GET` | `/api/movements/multi-airport` | Regional 3-airport (DAM, ALP, LTK) daily time-series records. |
-
-### Provenance, Evidence & Quality Audits
-| Method | Endpoint | Description |
-| :--- | :--- | :--- |
-| `GET` | `/api/events/{event_id}/evidence` | Complete multi-provider raw observation chain for an individual event. |
-| `GET` | `/api/evidence/audit` | Summary audit of all underlying evidence observations. |
-| `GET` | `/api/coverage/matrix` | Historical coverage matrix by source and date range. |
-| `GET` | `/api/quality` | Data quality assessment, completeness rates, and anomaly detection. |
-
-### Research Data Exports
-| Method | Endpoint | Description |
-| :--- | :--- | :--- |
-| `GET` | `/api/export/{dataset}?format=csv` | Stream CSV dataset (`flights`, `daily_movements`, `historical_2024`, `archived_fids_records`). |
-| `GET` | `/api/export/{dataset}?format=json` | Stream JSON dataset. |
-| `GET` | `/api/export/{dataset}/sidecar` | Download cryptographic verification sidecar with source caveats and record counts. |
-
----
-
-## 7. Project Structure
-
-```
-syria-damascus-airport/
-├── data/                               # Protected operational databases and immutable raw captures
-│   ├── damascus_airport.db             # Primary canonical SQLite database (read-only mode)
-│   ├── archived_fids_staging.db        # Archived FIDS raw staging database
-│   ├── archived_fids_analytics.db      # FIDS timetable analytics database
-│   ├── archived_fids_history_staging.db# Historical snapshot comparison registry
-│   └── raw/                            # Immutable raw JSON/RAW capture payloads from providers
-├── src/                                # Application and data processing engine source code
-│   ├── api.py                          # FastAPI application, route handlers, and export logic
-│   ├── config.py                       # Airport registry, coordinate data, and environment settings
-│   ├── database.py                     # Safe read-only SQLite connection manager
-│   ├── normalizer.py                   # Timezone conversion, field normalization, and schema mapping
-│   ├── timestamp_provenance.py         # Multi-factor movement resolver and diameter clustering
-│   ├── aggregator.py                   # Daily aggregation pipelines and export formatters
-│   ├── historical_coverage.py          # Coverage timeline builder and regional isolation logic
-│   ├── quality_checker.py              # Data quality audit rules and anomaly checks
-│   └── adapters/                       # Source-specific ingestion adapters
-├── static/                             # Interactive research web dashboard
-│   └── index.html                      # Single-page data browser, comparisons, and documentation
-├── tests/                              # Comprehensive regression and audit test suite (644 tests)
-├── reports/                            # Detailed audit reports, CSV registers, and analytical PDFs
-│   ├── Syrian_Airport_Data_Analysis_AR.pdf # Comprehensive analytical report in Arabic (8 pages)
-│   ├── INDEPENDENT_ANALYTICAL_REVIEW.md    # Independent statistical and analytical review
-│   ├── FINAL_ANALYTICAL_CORRECTIONS.md     # Itemized analytical correction register
-│   └── v2_20_12_physical_movement_audit.csv# Itemized audit of all 131 operational events
-├── docs/                               # Milestone documentation, specifications, and architecture notes
-├── requirements.txt                    # Python project dependencies
-├── pytest.ini                          # Test configuration
-└── README.md                           # Project documentation
-```
-
----
-
-## 8. Cryptographic Baseline & Data Protection
-
-To guarantee that analytical results remain defensible and reproducible, all database assets are accessed strictly in read-only mode (`mode=ro`). The production database checksum is cryptographically verified:
-
-| File Asset | SHA-256 Checksum | Access Mode |
-| :--- | :--- | :--- |
-| `data/damascus_airport.db` | `c512fd2952976f923010c42da19505d803e3ff96930f713f53284ea74568e28b` | Read-Only |
-| `data/archived_fids_staging.db` | `a90c5faedb3238e0c283f1ddb7f61e0f1a9cb90ca621fc92f316ecfdc7db61d4` | Read-Only |
-| `data/archived_fids_analytics.db` | `e1f8f0dea0e72f630d52e40a2d3a0a90b49a514da694fa72ceeb35555f48e1fe` | Read-Only |
-| `data/archived_fids_history_staging.db` | `39aa323265a6c6ad612cdd4bac0a3ae27deda26e2c16544df0e9f3cc32f83a7f` | Read-Only |
-
-No test, script, or API request writes to or modifies these production database assets.
-
----
-
-## 9. Project Status
-
-The Syrian Airport Data Engine is presented honestly as a **source-traceable, evidence-corroborated aviation research platform with explicitly documented coverage limitations**.
-
-- It does **not** claim complete historical coverage of Syrian civil aviation.
-- It does **not** present scheduled timetable listings as confirmed physical runway movements.
-- It maintains full transparency regarding data gaps, commercial tracking limitations, and regional dataset scopes.
+- لا يدعي المشروع اكتمال التغطية التاريخية لكافة حركات الطيران في سوريا.
+- لا يقدم الرحلات المجدولة كبديل عن الحركات المنفذة فعلياً.
+- يوضح ثغرات الرصد ومحدودية أجهزة الاستقبال الجوية وطبيعة مجموعات البيانات الإقليمية المجمعة.
+- يوضح أن تصنيف الحركات ومطابقتها يرتكز على قواعد استدلالية إحصائية وبحثية وليست إثباتاً مادياً مباشراً من مستشعرات أرضية.
+- يوفر أساساً بحثياً قابلاً للمراجعة والتدقيق ضمن الحدود والقيود الموثقة في المشروع.
